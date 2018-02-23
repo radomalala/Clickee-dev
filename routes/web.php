@@ -213,6 +213,7 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
 
     /* The page test */
     Route::get('zoom-image-test', 'TestController@imageZoom');
+    Route::get('page-test', 'TestController@styleElement');
 
     Route::group(['middleware' => ['auth']], function () {
         Route::post('checkout', 'CheckoutController@storeOrderInfo');

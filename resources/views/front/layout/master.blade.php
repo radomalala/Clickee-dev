@@ -43,7 +43,7 @@
 {!! Html::style('frontend/css/jquery.rating.css') !!}
 {!! Html::style('frontend/css/easy-autocomplete.min.css') !!}
 {!! Html::style('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') !!}
-
+{!! Html::style('frontend/css/style-clickee.css') !!}
 <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 <script src="https://js.stripe.com/v2/"></script>
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
