@@ -1,5 +1,5 @@
 @extends('front.layout.master')
-{!! Html::style('frontend/css/home.css') !!}
+    {!! Html::style('frontend/css/home.css') !!}
 @section('content')
 
 <!-- section-slider-area-start -->

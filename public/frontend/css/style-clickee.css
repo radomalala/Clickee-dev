@@ -1,0 +1,132 @@
+/* google-font */
+@import url('https://fonts.googleapis.com/css?family=Roboto::300,400,500,600,700,900');
+@font-face {font-family:"Roboto Light";src:url("../fonts/Roboto-Light.eot?") format("eot"),url("../fonts/Roboto-Light.woff") format("woff"),url("../fonts/Roboto-Light.ttf") format("truetype"),url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");font-weight:normal;font-style:normal;}
+html, body {height: 100%;}
+.floatleft {float:left}
+.floatright {float:right}
+.alignleft {float:left;margin-right:15px;margin-bottom: 15px}
+.alignright {float:right;margin-left:15px;margin-bottom: 15px}
+.aligncenter {display:block;margin:0 auto 15px}
+a:focus {outline:0px solid}
+img {max-width:100%;height:auto}
+.fix {overflow:hidden}
+a {transition: all 0.3s ease 0s;text-decoration:none;}
+a:hover {
+  text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0 none;
+}
+ul{
+list-style: outside none none;
+margin: 0;
+padding: 0;
+}
+.clear{clear:both}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  font-size:15px;
+  color:#212b52;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.ptb-10{padding:10px 0;}
+.ptb-15{padding:15px 0;}
+.ptb-20{padding:20px 0;}
+.ptb-25{padding:25px 0;}
+.ptb-50{padding:50px 0;}
+.ptb-30{padding:20px 0;}
+.p-lr-0{padding-left: 0px; padding-right: 0px;}
+.pb-20{padding-bottom:20px;}
+.pb-30{padding-bottom:30px;}
+.pb-50{padding-bottom:50px;}
+.pt-0{padding-top: 0px;}
+.pt-20{padding-top:20px;}
+.pt-10{padding-top:10px;}
+.pt-30{padding-top:30px !important;}
+.pt-50{padding-top:50px;}
+.pt-25{padding-top:25px;}
+.pb-40{padding-bottom: 40px;}
+.pb-30{padding-bottom: 30px;}
+.pb-20{padding-bottom: 20px;}
+.pb-10{padding-bottom: 10px;}
+.pb-50{padding-bottom:50px;}
+.p0 {padding: 0px;}
+.mt-5 { margin-top: 5px !important; }
+.mt-20{ margin-top:20px;}
+.mt-25{ margin-top: 25px !important; }
+.mt-30{ margin-top:30px !important;}
+.mt-50{ margin-top:50px !important;}
+.mt-40{ margin-top: 40px !important; }
+.mt-85{ margin-top: 85px !important; }
+.mb-none { margin-bottom: none !important; }
+.mb-0 { margin-bottom: 0px !important; }
+.mt-14{ margin-top:14px;}
+.mb-10{ margin-bottom:10px;}
+.mb-20{ margin-bottom:20px;}
+.mb-26{ margin-bottom:26px;}
+.mb-30{ margin-bottom:30px !important;}
+.mb-35{ margin-bottom:35px !important;}
+.mb-40{ margin-bottom:40px !important;}
+.mb-50{ margin-bottom: 50px !important;}
+.ml--10 { margin-left: -10px; }
+.ml--20 { margin-left: -20px; }
+.mt-0 { margin-top: 0px; }
+.ml-4{ margin-left: 4px; }
+.ml-5{ margin-left: 5px; }
+.ml-10{ margin-left: 10px; }
+.ml-15{ margin-left: 16px; }
+.ml-30{ margin-left: 30px; }
+.ml-40 { margin-left: 40px; }
+.ml-50 { margin-left: 50px; }
+.ml-60 { margin-left: 60px; }
+.ml-70 { margin-left: 70px !important; }
+.mr-5 { margin-right: 5px; }
+.mr-10 { margin-right: 10px; }
+.mr-15 {margin-right: 15px;}
+.mr-10 { margin-right: 10px; }
+.mt-10 { margin-top: 10px; }
+.mt-12 { margin-top: 12px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-50 { margin-top: 50px; }
+.mt-60 { margin-top: 60px; }
+.mt-70 { margin-top: 70px; }
+.pd5 {padding: 5px;}
+.pd10 {padding: 10px;}
+.pd20 {padding: 20px;}
+
+.text-center { text-align: center; }
+.fs-12{ font-size: 14px !important; }
+.fs-13{ font-size: 14px !important; }
+.fs-14{ font-size: 14px !important; }
+.fs-15{ font-size: 14px !important; }
+.fs-16{ font-size: 14px !important; }
+.fs-17{ font-size: 14px !important; }
+.fs-18{ font-size: 14px !important; }
+.fs-19{ font-size: 14px !important; }
+.fs-20{ font-size: 14px !important; }
+.fs-21{ font-size: 14px !important; }
+.fs-22{ font-size: 14px !important; }
+.fs-23{ font-size: 14px !important; }
+.fs-24{ font-size: 14px !important; }
+.fs-25{ font-size: 30px !important; }
+.fs-26{ font-size: 14px !important; }
+.fs-27{ font-size: 14px !important; }
+.fs-28{ font-size: 14px !important; }
+.fs-29{ font-size: 14px !important; }
+.fs-30{ font-size: 14px !important; }
