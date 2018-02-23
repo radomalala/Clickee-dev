@@ -12,4 +12,9 @@ class TestController extends Controller
     {
     	return view('front.test.image.index');
     }
+
+    public function styleElement()
+    {
+    	return view('front.test.page.style-element');
+    }
 }
