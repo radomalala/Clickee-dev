@@ -1,6 +1,9 @@
 @extends('front.layout.master')
 @section('additional-css')
     {!! Html::style('frontend/css/catalog.css') !!}
+    {!! Html::style('frontend/css/style.css') !!}
+    {!! Html::style('frontend/css/responsive.css') !!}
+    {!! Html::style('css/style_custom.css') !!}
 @stop  
 @section('content')
     <div class="product-area ptb-10 product-list"> <!-- ptb-20 inter-ligne entre categorie des produits et recherche -->
