@@ -1645,7 +1645,7 @@ body {
   color: #f7ac33;
 }
 .footer-top-area {
-  background: #212B52 none repeat scroll 0 0;
+  background: #044651 none repeat scroll 0 0;
   border-top: 1px solid #D2D2CD;
   border-bottom: 1px solid #ECECEC;
   color: #ffffff;
@@ -1761,18 +1761,18 @@ body {
   color: #ffffff;
 }
 .footer-title p {
+  color: white;
   font-size: 15px;
   font-family: 'Roboto Light';
 }
 .footer-box {
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 .footer-box form {
   position: relative;
 }
 .footer-box form input {
-  border: 0.5px solid #f6ac33;
+  border: 0.5px solid #ffffff;
   padding: 1px 8px;
   border-radius: 8px;
   width: 100%;
@@ -1781,10 +1781,10 @@ body {
   outline: none;
 }
 .footer-box form button {
-  background: #212B52 none repeat scroll 0 0;
-  border-bottom: 0.5px solid #f6ac33;
-  border-top: 0.5px solid #f6ac33;
-  border-right: 0.5px solid #f6ac33;
+  background: #044651 none repeat scroll 0 0;
+  border-bottom: 0.5px solid #ffffff;
+  border-top: 0.5px solid #ffffff;
+  border-right: 0.5px solid #ffffff;
   border-left: 1px solid #ffffff;
   border-radius: 0px 8px 8px 0px;
   color: #ffffff;

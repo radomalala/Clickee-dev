@@ -9,10 +9,9 @@
     <div class="footer-top-area ptb-10">
         <div class="container">
             <div class="footer-img mb-20 pt-30 footer-logo row">
-                    <div class="logo-footer text-center">
-                            <a href="{!! URL::to('/') !!}" class="col-xs-12"><img src="{!! URL::to('/') !!}/images/logo_blanc-sans_texte.svg" alt="logo"/></a>
-                             <span class="col-xs-12 mt-5">{!! (app('language')->language_code == 'en') ? trans("common/label.logo_buy_local") : "<b>l</b>'achat <b>l</b>oca<b>l</b> faci<b>l</b>e" !!}</span>
-                    </div>
+                <div class="col-lg-12">
+                    <a href="{!! URL::to('/') !!}""><img style="width: 45%;" src="{!! URL::to('/') !!}/images/logo_blanc.svg" alt="logo"/></a>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-top:8px">
@@ -24,12 +23,12 @@
                                 <span class="top-link-footer">{!! trans("common/label.customers")!!}</span>
                                 <li class="footer-menu"> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/how-it-work') !!}">{!! trans("common/label.how_it_work")!!}</a>
                                 </li>
-                                <li> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/ask-a-product') !!}">{!! trans("common/label.ask_a_product")!!}</a>
+                                <li> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/ask-a-product') !!}">Catalogue</a>
                                 </li>
                                 <li> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/') !!}/faq">{!! trans("common/label.faq")!!}</a>
                                 </li>
 
-                                @if(!$is_user_login || Auth::user()->role_id==1)                                
+                                <!-- @if(!$is_user_login || Auth::user()->role_id==1)                                
                                     @if($is_user_login)
                                         <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/logout') !!}">{!! trans('common/label.sign_out')!!}</a></li>
                                     @else
@@ -37,7 +36,7 @@
                                     @endif
                                 @endif
 
-                                <li><a class="hidden" data-toggle="modal" data-target="#myModal" href="#">{!! trans("common/label.register_login")!!}</a></li>
+                                <li><a class="hidden" data-toggle="modal" data-target="#myModal" href="#">{!! trans("common/label.register_login")!!}</a></li> -->
                             
                             </ul>
                         </div>
@@ -55,22 +54,19 @@
                                         <li class="footer-menu">
                                             <a href="{!! url(LaravelLocalization::getCurrentLocale().'/make-money-with-us') !!}">{!! trans("common/label.make_money")!!}</a>
                                         </li>
-                                        <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/knowledge-center') !!}">{!! trans("common/label.knowledge_center")!!}</a>
-                                        </li>
-                                        <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/business-faq') !!}">{!! trans("common/label.business_faq")!!}</a>
-                                        </li>
-
                                         @if(!$is_user_login || Auth::user()->role_id==2)                               
                                             @if($is_user_login)
                                                 <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/logout') !!}">{!! trans('common/label.sign_out')!!}</a></li>
                                             @else
-                                                <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/merchant/login') !!}">{!! trans("common/label.register_your_shop")!!}</a></li>
+                                                <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/merchant/login') !!}">Inscription / Connexion</a></li>
                                             @endif
                                         @endif
-
-                                        
+                                        <!-- <li>
+                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/knowledge-center') !!}">{!! trans("common/label.knowledge_center")!!}</a>
+                                        </li> -->
+                                        <li>
+                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/business-faq') !!}">FAQ pour les magasins</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -79,10 +75,10 @@
                                     <!-- <span class="top-link">
                                             <a href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation') !!}">{!! trans("common/label.alternateeve-footer")!!}</a>
                                      </span> -->
-                                     <span class="top-link-footer">{!! trans("common/label.alternateeve-footer")!!}</span>
+                                     <span class="top-link-footer">CLICKEE</span>
                                     <ul>
                                         <li class="footer-menu">
-                                            <a href="#">{!! trans("common/label.fondation-blog")!!}</a>
+                                            <a href="#">Fondation</a>
                                         </li>
                                         <!-- <li>
                                             <a href="{!! url(LaravelLocalization::getCurrentLocale().'/news-media') !!}">{!! trans("common/label.media")!!}</a>
