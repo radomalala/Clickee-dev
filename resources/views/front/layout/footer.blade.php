@@ -1,11 +1,11 @@
 <!-- footer-area-start -->
 <footer>
     <!-- footer-top-area-start -->
-    <a onclick="$('#scrollUp').trigger('click');" href="#">
+    <!-- <a onclick="$('#scrollUp').trigger('click');" href="#">
         <div class="container-fluid retour-en-haut">
             {!! trans("common/label.back-to-top")!!}
         </div>
-    </a>    
+    </a> -->    
     <div class="footer-top-area ptb-10">
         <div class="container">
             <div class="footer-img mb-20 pt-30 footer-logo row">
