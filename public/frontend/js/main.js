@@ -159,6 +159,24 @@ related-products-active
 	  itemsMobile : [479,1],
   });
 
+/*----------------------------
+ section_marque
+------------------------------ */  
+  $(".owl-section-marque").owlCarousel({
+      autoPlay: false, 
+	  slideSpeed:2000,
+	  pagination:false,
+	  navigation:true,
+	  lazyLoad : true,
+      items : 6,
+	  /* transitionStyle : "fade", */    /* [This code for animation ] */
+	  navigationText:["<a class='prev' data-toggle='tooltip'>&nbsp;</a>","<a class='next' data-toggle='tooltip'>&nbsp;</a>"],
+      itemsDesktop : [1199,4],
+	  itemsDesktopSmall : [980,4],
+	  itemsTablet: [768,2],
+	  itemsMobile : [479,1],
+  });
+
  /*----------------------------
  brand-active
 ------------------------------ */  
