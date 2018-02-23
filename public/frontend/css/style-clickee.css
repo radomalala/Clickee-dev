@@ -1,7 +1,10 @@
 /* google-font */
 @import url('https://fonts.googleapis.com/css?family=Roboto::300,400,500,600,700,900');
 @font-face {font-family:"Roboto Light";src:url("../fonts/Roboto-Light.eot?") format("eot"),url("../fonts/Roboto-Light.woff") format("woff"),url("../fonts/Roboto-Light.ttf") format("truetype"),url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");font-weight:normal;font-style:normal;}
-html, body {height: 100%;}
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"Roboto Regular";src:url("../fonts/Roboto-Regular.eot?") format("eot"),url("../fonts/Roboto-Regular.woff") format("woff"),url("../fonts/Roboto-Regular.ttf") format("truetype"),url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");font-weight:normal;font-style:normal;}
+
+html, body {height: 100%; color: #044651;}
+* {color: #044651;}
 .floatleft {float:left}
 .floatright {float:right}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
@@ -43,6 +46,61 @@ body {
     color: #000;
     padding: 0.2em 0;
 }
+/******* Element style color **********/
+.icon {
+	background: url('../../images/icon/all_icons.svg') no-repeat;
+	width: 30px;
+    height: 30px;
+    display: block;
+    background-size: 400%;
+}
+.icon-loop {
+	background-position: 0;
+}
+.icon-user {
+	background-position: -30px;
+}
+.icon-heart {
+	background-position: -60px;
+}
+.icon-panier {
+	background-position: -90px;
+}
+.btn-default {
+    color: rgb(0, 107, 121);
+    padding: 10px 55px;
+    border: 4px solid #044651;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.btn-default:hover {
+    color: #65bb9f;
+    border-color: #65bb9f;
+    background-color: #fff !important;
+}
+.title {
+	text-align: center;
+}
+.title h2 {
+	color: #044651;
+    display: inline-block;
+    padding: 5px 0px;
+    font-weight: 600;
+}
+.title-active h2 {
+	color: #65bb9f;
+	border-bottom: 5px solid #65bb9f;
+}
+.small-title {
+	color: #044651;
+	font-size: 15px;
+	font-weight: 700;
+}
+.text-center {
+	text-align: center;
+}
+/****** End element style color *********/
 .ptb-10{padding:10px 0;}
 .ptb-15{padding:15px 0;}
 .ptb-20{padding:20px 0;}
