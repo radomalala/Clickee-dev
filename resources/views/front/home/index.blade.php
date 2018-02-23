@@ -116,28 +116,63 @@
 
 <!-- start section marque -->
 <section class="section-marque">
-    <div class="container">
-        
+    <div class="brand-area">
+        <div class="container">
+            <div class="brand-active owl-carousel owl-centered">
+                @foreach($brands as $brand)
+                    @if(!empty($brand->brand_image) && file_exists(public_path().\App\Models\Brand::BRAND_IMAGE_PATH . $brand->brand_image))
+                        <div class="col-lg-10">
+                            <div class="single-brand">
+                                <img class="lazyOwl" data-src="{!! $brand->getImagePath() !!}" alt="{!! $brand->brand_name !!}"/>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
     </div>
 </section>
 <!-- end section marque -->
 
 <!-- start section avantage -->
-<section class="section-avantage"> 
+<section class="section-avantage ptb-15"> 
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                
+                <div class="section-avantage-content border-vert-clair">
+                    <div class="col-lg-3 mt-15">
+                        <span class="avantage avantage-paiement"></span>
+                    </div>
+                    <div class="col-lg-9 mt-10">
+                        <h4 class="fs-15">PAIEMENT 100% SÉCURISÉ</h4>
+                        <span class="fs-13">Passez l’ensemble de vos commandes en toute sécurité.</span>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4">
-                
+                <div class="section-avantage-content border-vert-clair">
+                    <div class="col-lg-3 mt-15">
+                        <span class="avantage avantage-economie"></span>
+                    </div>
+                    <div class="col-lg-9 mt-10">
+                        <h4 class="fs-15">SOUTENEZ L’ÉCONOMIE LOCALE</h4>
+                        <span class="fs-13">Encouragez votre communauté en achetant dans votre quartier</span>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4">
-                
+                <div class="section-avantage-content border-vert-clair">
+                    <div class="col-lg-3 mt-15">
+                        <span class="avantage avantage-temps"></span>
+                    </div>
+                    <div class="col-lg-9 mt-10">
+                        <h4 class="fs-15">GAGNEZ DU TEMPS</h4>
+                        <span class="fs-13">En un click allez réserver vos articles préférés et récupérez-les en boutique.</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- end section avantage -->
-
 @stop
