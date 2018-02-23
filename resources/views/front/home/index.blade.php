@@ -5,22 +5,35 @@
     {!! Html::style('css/style_custom.css') !!}
 @section('content')
 
+
 <!-- start section slider -->
 <section class="section-slider">
-    <div id="owl-slider-banner" class="owl-carousel owl-theme">
+    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
         @foreach($banners as $banner)
-        <article class="thumbnail item" itemscope="" itemtype="" style="border-radius: 0px !important;margin: 0 0px !important;">
-            <a class="blog-thumb-img" href="{!! $banner->url !!}" title="">
-                <img src="{!! $banner->getBannerImage(app('language')->language_code) !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
-            </a>
-
-            <div class="slider-text hidden">
-                <a class="btn_view btn-voir-slide" href="{!! $banner->url !!}" class="btn_view">{{trans("common/label.watch")}}</a>
-            </div>
+        <div class="item {!! ($loop->first) ? 'active' : '' !!}">
+            <img src="{!! URL::to('/').\App\Models\Banner::Banner_IMAGE_PATH.'SLIDER.jpg' !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
             
-        </article>
-        @endforeach
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="slider-title">
+                        <h1>ON A</h1>
+                        <h1>DU NEUF</h1>
+                    </div>
+                    <button type="button" class="btn btn-default">SHOPPER</button>
+                </div>
+            </div>
+        </div>
+       @endforeach
     </div>
+    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
 </section>
 <!-- end section slider -->
 

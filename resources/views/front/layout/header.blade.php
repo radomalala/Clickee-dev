@@ -42,15 +42,14 @@
 <div class="all-header">
 
     <div class="mean-menu-area ptb-30">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
 
                 <!-- header-search-end -->
                 <!-- logo-start -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="logo text-center home-page-logo">
-                            <a href="{!! URL::to('/') !!}" class="col-xs-12 col-sm-10"><img src="{!! URL::to('/') !!}/images/logo_blanc-sans_texte.svg" alt="logo"/></a>
-                            <span class="col-xs-12 col-sm-10">{!! (app('language')->language_code == 'en') ? trans("common/label.logo_buy_local") : "l'achat local facile" !!}</span>
+                            <a href="{!! URL::to('/') !!}" class="col-xs-12 col-sm-10"><img src="{!! URL::to('/') !!}/images/logo.svg" alt="logo"/></a>
                     </div>
                 </div>
                 <!-- logo-end -->
@@ -140,8 +139,7 @@
 
 
                     <!-- Debut recherche -->
-                    {!! Form::open(array('url' => 'search','method' => 'GET','id' => 'form-search')) !!}
-                        <!-- <img src="{!! url('/') !!}/images/fleche_blanc.svg" alt="langue" /> -->
+                  <!--   {!! Form::open(array('url' => 'search','method' => 'GET','id' => 'form-search')) !!}
                         <div class="input-group my-group pull-right"> 
 
                             {!! Form::select('category-search', (app('language')->language_id == 1) ? $categories_search['en'] : $categories_search['fr'], null, ['class' => "selectpicker form-control select_width", 'id' => 'selected-category', 'data-live-search' => 'true' ]) !!}
@@ -154,7 +152,7 @@
                                 </button>
                             </span>
                         </div>
-                    {!! Form::close() !!}  
+                    {!! Form::close() !!}   -->
                     <!-- Fin recherche -->
                     
                 </div>
