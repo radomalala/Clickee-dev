@@ -314,8 +314,8 @@ body {
 /*----------------------------------------*/
 /*  2.2  fixed-header-area
 /*----------------------------------------*/
-.all-header{
-  background-color: #212B52;
+.all-header {
+    background-color: #fff;
 }
 .fixed-header-area .logo {
   margin-top: 9px;
@@ -611,10 +611,10 @@ body {
 /*  2.5  mean-menu-area
 /*----------------------------------------*/
 .mean-menu {
-  background: #212B52 none repeat scroll 0 0;
-  border-top: 1px groove #fff;
-  margin-bottom: -27px;
-  margin-top: 20px;
+    background: #044651 none repeat scroll 0 0;
+    border-top: 1px groove #fff;
+    margin-bottom: -27px;
+    margin-top: 20px;
 }
 .mean-menu ul li {
   display: inline-block;
