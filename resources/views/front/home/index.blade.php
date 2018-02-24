@@ -72,12 +72,20 @@
 <!-- start section two bloc -->
 <section class="section-two-bloc">
     <div class="container">
-        <div class="col-lg-6">
-            
-        </div>
-        <div class="col-lg-6">
-            
-        </div>
+        <div class="section-two-bloc-content">
+            <div class="row">
+                <div class="col-lg-6 section-instagramm-feed-align">
+                    <div class="section-two-bloc-left">
+                        
+                    </div>    
+                </div>
+                <div class="col-lg-6 section-instagramm-feed-align">
+                    <div class="section-two-bloc-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>    
     </div>
 </section>
 <!-- end section two bloc -->
@@ -85,13 +93,13 @@
 <!-- start section instagramm feed -->
 <section class="section-instagramm-feed">
     <div class="container">
-        <div class="section-instagramm-feed-title">
-            <span>INSTAGRAM FEED</span>
+        <div class="section-instagramm-feed-title title title-active">
+            <h2>INSTAGRAM FEED</h2>
         </div>
         <div class="section-instagramm-feed-content">
             <div class="row">
             <?php for ($i = 1; $i <= 8; $i++) { ?>
-                <div class="col-lg-3">
+                <div class="col-lg-3 section-instagramm-feed-align">
                     <img src="{!! URL::to('/') !!}/images/instagram{!! $i !!}.svg" alt="instagramm feed clickee"/>
                 </div>    
             <?php } ?>
@@ -102,13 +110,13 @@
 <!-- end section instagramm feed -->
 
 <!-- start section marque -->
-<section class="section-marque">
+<section class="section-marque ptb-40">
     <div class="brand-area">
         <div class="container">
             <div class="brand-active owl-carousel owl-centered">
                 @foreach($brands as $brand)
                     @if(!empty($brand->brand_image) && file_exists(public_path().\App\Models\Brand::BRAND_IMAGE_PATH . $brand->brand_image))
-                        <div class="col-lg-10">
+                        <div class="col-lg-12">
                             <div class="single-brand">
                                 <img class="lazyOwl" data-src="{!! $brand->getImagePath() !!}" alt="{!! $brand->brand_name !!}"/>
                             </div>

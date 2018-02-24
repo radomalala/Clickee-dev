@@ -1333,9 +1333,9 @@ body {
 /*----------------------------------------*/
 /*  6.  banner-area
 /*----------------------------------------*/
-.banner-area{
+/*.banner-area{
   overflow:hidden;
-}
+}*/
 .text-positon {
   left: 0;
   right: 0;
@@ -1645,10 +1645,10 @@ body {
   color: #f7ac33;
 }
 .footer-top-area {
-  background: #044651 none repeat scroll 0 0;
+  /*background: #044651 none repeat scroll 0 0;
   border-top: 1px solid #D2D2CD;
   border-bottom: 1px solid #ECECEC;
-  color: #ffffff;
+  color: #ffffff;*/
 }
 .footer-address ul li {
   padding: 10px 0;
@@ -1726,62 +1726,62 @@ body {
 }
 
 .footer-menu {
-  margin-top: 15px;
+  /*margin-top: 15px;*/
 }
 .footer-menu .top-link-footer {
-    color: #ffffff;
+/*    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-}
+*/}
 .footer-menu ul{}
 .footer-menu ul li {
-  padding: 5px 0;
-  line-height: 1.5;
+/*  line-height: 1.5;
+  padding: 5px 0;*/
 }
 .footer-menu ul li a {
-  color: #ffffff;
+  /*color: #ffffff;
   text-decoration: none;
   font-size: 15px;
   font-family: 'Roboto Light';
-  /*text-transform: capitalize;*/
+  *//*text-transform: capitalize;*/
 }
 .footer-menu ul li a:hover{
-  color:#59b210;
   /*padding-left:5px;*/
+ /* color:#59b210;*/
 }
 .footer-title {
-  margin-top: 10px;
+ /* margin-top: 10px;*/
 }
 .footer-title h3 {
-  font-size: 16px;
+ /* font-size: 16px;
   font-weight: bold;
   margin-bottom: -5px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #ffffff;*/
 }
 .footer-title p {
-  color: white;
+ /* color: white;
   font-size: 15px;
-  font-family: 'Roboto Light';
+  font-family: 'Roboto Light';*/
 }
 .footer-box {
-  margin-bottom: 20px;
+/*  margin-bottom: 20px;*/
 }
 .footer-box form {
-  position: relative;
+/*  position: relative;*/
 }
 .footer-box form input {
-  border: 0.5px solid #ffffff;
+ /* border: 0.5px solid #ffffff;
   padding: 1px 8px;
   border-radius: 8px;
   width: 100%;
   color: #000000;
   font-size: 13px;
-  outline: none;
+  outline: none;*/
 }
 .footer-box form button {
-  background: #044651 none repeat scroll 0 0;
+ /* background: #044651 none repeat scroll 0 0;
   border-bottom: 0.5px solid #ffffff;
   border-top: 0.5px solid #ffffff;
   border-right: 0.5px solid #ffffff;
@@ -1796,10 +1796,10 @@ body {
   right: 0;
   top: 0;
   width: 50px;
-  transition:.3s;
+  transition:.3s;*/
 }
 .footer-box form button:hover{
-  color:#f8ac31;
+/*  color:#f8ac31;*/
 }
 /*----------------------------------------*/
 /*  13.2 footer-bottom-area
