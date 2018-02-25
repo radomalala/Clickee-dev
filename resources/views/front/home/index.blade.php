@@ -8,7 +8,7 @@
 
 <!-- start section slider -->
 <section class="section-slider">
-    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+    <div id="home-top-slide" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carousel-id" data-slide-to="0" class=""></li>
         <li data-target="#carousel-id" data-slide-to="1" class=""></li>
@@ -16,19 +16,21 @@
     </ol>
     <div class="carousel-inner">
         @foreach($banners as $banner)
-        <div class="item {!! ($loop->first) ? 'active' : '' !!}">
-            <img src="{!! URL::to('/').\App\Models\Banner::Banner_IMAGE_PATH.'SLIDER.jpg' !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
-            
-            <div class="container">
-                <div class="carousel-caption">
-                    <div class="slider-title">
-                        <h1>ON A</h1>
-                        <h1>DU NEUF</h1>
+        @if($loop->first)
+            <div class="item {!! ($loop->first) ? 'active' : '' !!}">
+                <img src="{!! URL::to('/').\App\Models\Banner::Banner_IMAGE_PATH.'SLIDER.png' !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
+                
+                <div class="container container-slider">
+                    <div class="carousel-caption">
+                        <div class="slider-title">
+                            <h1>ON A</h1>
+                            <h1>DU NEUF</h1>
+                        </div>
+                        <button type="button" class="btn btn-default btn-slider">SHOPPER</button>
                     </div>
-                    <button type="button" class="btn btn-default">SHOPPER</button>
                 </div>
             </div>
-        </div>
+        @endif
        @endforeach
     </div>
     <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
