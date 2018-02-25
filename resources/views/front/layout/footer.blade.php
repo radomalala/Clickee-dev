@@ -8,9 +8,9 @@
     </a> -->    
     <div class="footer-top-area ptb-10">
         <div class="container">
-            <div class="footer-img mb-20 pt-30 footer-logo row">
+            <div class="footer-img pt-30 footer-logo row">
                 <div class="col-lg-12">
-                    <a href="{!! URL::to('/') !!}""><img style="width: 45%;" src="{!! URL::to('/') !!}/images/logo_blanc.svg" alt="logo"/></a>
+                    <a href="{!! URL::to('/') !!}""><img class="footer-area-logo-width" src="{!! URL::to('/') !!}/images/logo_blanc.svg" alt="logo"/></a>
                 </div>
             </div>
             <div class="row">
@@ -21,23 +21,9 @@
                         <div class="footer-menu">
                             <ul>
                                 <span class="top-link-footer">{!! trans("common/label.customers")!!}</span>
-                                <li class="footer-menu"> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/how-it-work') !!}">{!! trans("common/label.how_it_work")!!}</a>
-                                </li>
-                                <li> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/ask-a-product') !!}">Catalogue</a>
-                                </li>
-                                <li> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/') !!}/faq">{!! trans("common/label.faq")!!}</a>
-                                </li>
-
-                                <!-- @if(!$is_user_login || Auth::user()->role_id==1)                                
-                                    @if($is_user_login)
-                                        <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/logout') !!}">{!! trans('common/label.sign_out')!!}</a></li>
-                                    @else
-                                        <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/login') !!}">{!! trans("common/label.register_login")!!}</a></li>
-                                    @endif
-                                @endif
-
-                                <li><a class="hidden" data-toggle="modal" data-target="#myModal" href="#">{!! trans("common/label.register_login")!!}</a></li> -->
-                            
+                                <li class="footer-menu"> <a href="#">{!! trans("common/label.how_it_work")!!}</a></li>
+                                <li> <a href="#">Catalogue</a></li>
+                                <li> <a href="#">{!! trans("common/label.faq")!!}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -52,42 +38,33 @@
                                     <span class="top-link-footer">{!! trans("common/label.merchants")!!}</span>
                                     <ul>
                                         <li class="footer-menu">
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/make-money-with-us') !!}">{!! trans("common/label.make_money")!!}</a>
+                                            <a href="#">{!! trans("common/label.make_money")!!}</a>
                                         </li>
                                         @if(!$is_user_login || Auth::user()->role_id==2)                               
                                             @if($is_user_login)
-                                                <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/logout') !!}">{!! trans('common/label.sign_out')!!}</a></li>
+                                                <li><a href="#">{!! trans('common/label.sign_out')!!}</a></li>
                                             @else
-                                                <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/merchant/login') !!}">Inscription / Connexion</a></li>
+                                                <li><a href="#">Inscription / Connexion</a></li>
                                             @endif
                                         @endif
-                                        <!-- <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/knowledge-center') !!}">{!! trans("common/label.knowledge_center")!!}</a>
-                                        </li> -->
                                         <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/business-faq') !!}">FAQ pour les magasins</a>
+                                            <a href="#">FAQ pour les magasins</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-xs-12">
                                 <div class="footer-menu">
-                                    <!-- <span class="top-link">
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation') !!}">{!! trans("common/label.alternateeve-footer")!!}</a>
-                                     </span> -->
                                      <span class="top-link-footer">CLICKEE</span>
                                     <ul>
                                         <li class="footer-menu">
                                             <a href="#">Fondation</a>
                                         </li>
-                                        <!-- <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/news-media') !!}">{!! trans("common/label.media")!!}</a>
-                                        </li> -->
                                         <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/investors') !!}">{!! trans("common/label.investor")!!}</a>
+                                            <a href="#">{!! trans("common/label.investor")!!}</a>
                                         </li>
                                         <li>
-                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/contact-us') !!}">{!! trans("common/label.contact_us")!!}</a>
+                                            <a href="#">{!! trans("common/label.contact_us")!!}</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -100,12 +77,7 @@
                         <div class="footer-icon"> <!-- block2 -->
                             <!-- <div class="container"> -->
                                 <div class="row">
-                                    <!-- <a class="fb col-lg-3" href="#" data-toggle="tooltip" title='{!! trans("common/label.share_on_facebook")!!}'>&nbsp;</a>
-                                    <a class="tt col-lg-3" href="#" data-toggle="tooltip" title='{!! trans("common/label.share_on_twitter")!!}'>&nbsp;</a> -->
-                                    <!-- <a href="#" data-toggle="tooltip" title='{!! trans("common/label.email_to_friend")!!}'><i class="fa fa-envelope-o"></i></a> -->
-                                    <!-- <a class="pt col-lg-3" href="#" data-toggle="tooltip" title='{!! trans("common/label.pin_on_pintrest")!!}'>&nbsp;</a>
-                                    <a class="gg col-lg-3" href="#" data-toggle="tooltip" title='{!! trans("common/label.share_on_google")!!}'>&nbsp;</a> -->
-
+                                    
                                     <a class="fb col-lg-3 col-md-3 col-sm-6 col-xs-12" href="#" data-toggle="tooltip">&nbsp;</a>
                                     <a class="tt col-lg-3 col-md-3 col-sm-6 col-xs-12" href="#" data-toggle="tooltip">&nbsp;</a>
                                     <a class="pt col-lg-3 col-md-3 col-sm-6 col-xs-12" href="#" data-toggle="tooltip">&nbsp;</a>
@@ -139,7 +111,7 @@
                 <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12">
                     <!-- single-footer-area-start -->
                     <div class="copy-right">
-                        <p>© 2016-2018 <font color="#212B52">ALTERNATEEVE</font> {!! trans("common/label.all_right_reserved")!!}</p>
+                        <p>© 2018 <font color="#212B52">ALTERNATEEVE</font> {!! trans("common/label.all_right_reserved")!!}</p>
                     </div>
                     <!-- single-footer-area-end -->
                 </div>
@@ -160,11 +132,6 @@
         </div>
     </div>
     <!-- footer-bottom-area-end -->
-     <!-- the last popup of localization -->
-        @include('front.modals.store-area.change-area')
-   
-
-    <!--  end of the last popup of localization -->
 </footer>
 <!-- footer-area-end -->
 <!-- all js here -->
