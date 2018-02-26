@@ -26,7 +26,7 @@
 
     <div class="mean-menu-area" style="margin-bottom: -21px;">
         <div class="container ptb-20">
-            <div class="row mt-20">
+            <div class="row mt-20" style="line-height: 3.5;">
 
                 <!-- header-search-end -->
                 <!-- logo-start -->
