@@ -45,6 +45,34 @@ body {
     background: #b3d4fc;
     text-shadow: none;
 }
+.banner-caption-left {
+    position: absolute;
+    top: 36%;
+    width: 98%;
+    color: #fff;
+    line-height: 1.5 !important;
+}
+.banner-caption-left h1, .banner-caption-right-top h1, .banner-caption-right-bottom h1 {
+    padding: 0px;
+    margin: 5px 0px;
+    font-size: 30px;  
+    font-family: Roboto Regular;
+}
+.banner-caption-left h1:first-child, .banner-caption-right-top h1:first-child, .banner-caption-right-bottom h1 {
+    font-weight: bold;
+}
+.banner-caption-right-top {
+    position: absolute;
+    top: 18%;
+    color: white;
+    width: 97%; 
+}
+.banner-caption-right-bottom {
+    position: absolute;
+    color: #fff;
+    top: 69%;
+    width: 97%;
+}
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -131,10 +159,6 @@ div.row {
 }
 .find-your-shop:hover {
     text-decoration: underline !important;
-}
-.top-header {
-    padding-bottom: 44px;
-    background-color: #044651;
 }
 .content-logo {
   position: absolute;

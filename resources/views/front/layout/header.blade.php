@@ -12,11 +12,7 @@
     <!-- Fin action -->
 <!-- Debut code header Andry -->
 
-<div class="header-top-area">
-    <div class="container-fluid top-header">
-        <div class="row">
-        </div>
-    </div>    
+<div class="header-top-area">  
     <div class="container" id="header-height">
         <div class="row" style="line-height: 1.9;">
             <a href="#" class="find-your-shop">
