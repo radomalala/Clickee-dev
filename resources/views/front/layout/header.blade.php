@@ -24,8 +24,8 @@
 
 <div class="all-header">
 
-    <div class="mean-menu-area ptb-30">
-        <div class="container">
+    <div class="mean-menu-area" style="margin-bottom: -21px;">
+        <div class="container ptb-20">
             <div class="row mt-20">
 
                 <!-- header-search-end -->
@@ -75,70 +75,173 @@
 
         <!-- header-mid-area-end -->
         <!-- mean-menu-area-start -->
-        <div class="mean-menu-area hidden-sm hidden-xs">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="mean-menu text-center">
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="{!! url(LaravelLocalization::getCurrentLocale().'/') !!}">{!! trans('common/label.home') !!}</a>
-                                    </li>
-                                    <li>
-                                        <a href="{!! url(LaravelLocalization::getCurrentLocale()."/search")."?q=" !!}">{!! trans('common/label.catalogue') !!}</a>
-                                    </li>
-                                    <li>
-                                        <a href="{!! url(LaravelLocalization::getCurrentLocale().'/ask-product') !!}">{!! trans('common/label.ask_a_product') !!}</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{!! trans('common/label.your_merchants') !!}</a>
-                                        <ul class="dropdown-menu-menu">
-                                            <li class="dropdown-menu-border">
-                                                <a class="dropdown-menu-align" href="{!! url(LaravelLocalization::getCurrentLocale().'/blog-list') !!}"> {!! trans('common/label.blog') !!} </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-menu-align" href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation') !!}">{!! trans('common/label.foundation') !!}</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar navbar-default navbar-static-top ptb-10">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
         </div>
-        <!-- mobile-menu-area-start -->
-        <div class="mobile-menu-area hidden-md hidden-lg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="mobile-menu">
-                            <nav id="mobile-menu-active">
-                                <ul id="nav">
-                                    <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/') !!}">{!! trans('common/label.home') !!}</a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                </li>
+                <li class="dropdown menu-large"> 
+                    <a href="# " class="dropdown-toggle" data-toggle="dropdown"> FEMME </a>
 
-                                    </li>
-                                    <li><a href="{!! url(LaravelLocalization::getCurrentLocale()."/search")."?q=" !!}">{!! trans('common/label.catalogue') !!}</a>
-
-                                    </li>
-                                    <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/ask-product') !!}">{!! trans('common/label.ask_a_product') !!}</a>
-
-                                    </li>
-                                    <li class="static"><a href="{!! url(LaravelLocalization::getCurrentLocale().'/blog-list') !!}">{!! trans('common/label.blog') !!}</a>
-
-                                    </li>
-                                    <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation') !!}">{!! trans('common/label.foundation') !!}</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <ul class="dropdown-menu megamenu row">
+                        <li class="container ptb-10">
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Toute la collection
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Nouveautés
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Vêtements
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Sport
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Chaussures
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Accessoires
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> HOMME </a>   
+                    <ul class="dropdown-menu megamenu row">
+                        <li class="container ptb-10">
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Toute la collection
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Nouveautés
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Vêtements
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Sport
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Chaussures
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Accessoires
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> ENFANT </a>  
+                    <ul class="dropdown-menu megamenu row">
+                        <li class="container ptb-10">
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Toute la collection
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Nouveautés
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Vêtements
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Sport
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Chaussures
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Accessoires
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> BEAUTÉ/SANTÉ </a>    
+                    <ul class="dropdown-menu megamenu row ">
+                        <li class="container">
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> ÉPICERIE FINE </a>   
+                    <ul class="dropdown-menu megamenu row ">
+                        <li class="container">
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> INTÉRIEUR </a>   
+                    <ul class="dropdown-menu megamenu row ">
+                        <li class="container">
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> LOISIR </a>  
+                    <ul class="dropdown-menu megamenu row ">
+                        <li class="container">
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown menu-large">    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> IDÉES CADEAUX </a>   
+                    <ul class="dropdown-menu megamenu row ">
+                        <li class="container">
+                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <!-- mobile-menu-area-end -->
+    </div>
+    <!-- menu area end -->
+</div>
     </div>
 <!-- Fin code header -->
 </div>

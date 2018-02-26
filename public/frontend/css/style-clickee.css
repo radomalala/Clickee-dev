@@ -462,6 +462,9 @@ ul {
     font-weight: bold;
     border: 4px solid #044651;
 }
+.product-pic:hover {
+    border: 4px solid #65bb9f;
+}
 .product-img-connexe {
     position: relative;
     overflow: hidden;
@@ -688,7 +691,7 @@ ul {
 
 /*fleche owl carousel */
 .owl-theme .owl-controls .owl-buttons div {
-    color: #212b52;
+    color: #044651;
     font-size: 20px;
     height: 35px;
     line-height: 25px;
@@ -732,3 +735,37 @@ ul {
   z-index:1111;
 }
 /*----------------------------------------*/
+
+/*start menu*/
+.navbar-default {
+    color: #fff;
+    background-color: #044651;
+    border-color: #044651 !important;
+}
+.navbar-default .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+.navbar-default .navbar-brand {
+    color:#fff;
+}
+.navbar-nav {
+    width: 100%;
+}
+.menu-large {
+    position: static !important;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.megamenu{
+  width: 100%;
+  background: #EFEFED;
+}
+.navbar-nav>li>a:hover {
+    color: #65bb9f !important;
+    background-color: #044651 !important;
+}
+/*end menu*/
