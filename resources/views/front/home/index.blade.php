@@ -1,6 +1,6 @@
 @extends('front.layout.master')
     <!--  {!! Html::style('frontend/css/home.css') !!} -->
-   <!--  {!! Html::style('frontend/css/style.css') !!}  -->
+    <!-- {!! Html::style('frontend/css/style.css') !!}  -->
     {!! Html::style('frontend/css/responsive.css') !!}
     <!-- {!! Html::style('css/style_custom.css') !!} -->
 @section('content')
@@ -46,14 +46,26 @@
                     <a href="#">
                         <img class="section-three-bloc-align" src="{!! URL::to('/') !!}/images/VOYAGE.png" alt="Nouvelles destinations"/>
                     </a>
+                    <div class="banner-caption-left text-center">
+                            <h1>NOUVELLES DESTINATIONS</h1>
+                            <h1>besoin d’un bol d’air</h1>   
+                    </div>
                 </div>
                 <div class="col-lg-5 section-instagramm-feed-align">
                     <a href="#">
                         <img class="pb-14" src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Nouveautés cadeaux destinations"/>
                     </a>
+                    <div class="banner-caption-right-top text-center">
+                            <h1>NOUVEAUTÉS CADEAUX</h1>
+                            <h1>plaisir d’offrir</h1>   
+                    </div>
                     <a href="#"">
                         <img src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Tendances décos"/>
                     </a>
+                    <div class="banner-caption-right-bottom text-center">
+                            <h1>TENDANCES DÉCO</h1>
+                            <h1>qui a dit old school ?</h1>   
+                    </div>
                 </div>    
             </div>
         </div>    
@@ -152,6 +164,7 @@
                                         </div>
 
                                         <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
+
                                         
                                         <span class="new-price">{!! format_price($product->best_price) !!}</span>
 
