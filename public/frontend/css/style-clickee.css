@@ -13,12 +13,17 @@ html, body {height: 100%; color: #044651;}
 a:focus {outline:0px solid}
 img {max-width:100%;height:auto}
 .fix {overflow:hidden}
+a {
+    color: #044651;
+    text-decoration: none;
+}
 a {transition: all 0.3s ease 0s;text-decoration:none;}
 a:hover {
   text-decoration: none;
 }
 a:active, a:hover {
   outline: 0 none;
+  color: #65bb9f;
 }
 ul{
 list-style: outside none none;
@@ -48,23 +53,31 @@ body {
 }
 /******* Element style color **********/
 .icon {
-	background: url('../../images/icon/all_icons.svg') no-repeat;
-	width: 30px;
-    height: 30px;
+    background: url(../../images/icon/all_icons.svg) no-repeat;
+    width: 35px;
+    height: 35px;
     display: block;
     background-size: 400%;
 }
-.icon-loop {
-	background-position: 0;
+.icon-search {
+    background-position: 2px;
 }
 .icon-user {
-	background-position: -30px;
+    background-position: -35px;
 }
 .icon-heart {
-	background-position: -60px;
+    background-position: -73px;
 }
 .icon-panier {
-	background-position: -90px;
+    background-position: -108px;
+}
+.icon-shop {
+    background: url(../../images/icon/shop.svg) no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: 100%;
+    background-position-y: 4px;
 }
 .btn-default {
     color: rgb(0, 107, 121);
@@ -100,13 +113,37 @@ body {
 .text-center {
 	text-align: center;
 }
+/****** End element style color *********/
+/******* Mise en forme home page *******/
 .slider-title h1 {
     font-size: 90px;
     color: #fff;
     text-shadow: none;
     font-weight: 700;
 }
-/****** End element style color *********/
+.find-your-shop {
+    float: right;
+    text-decoration: underline;
+}
+.find-your-shop:hover {
+    text-decoration: underline !important;
+}
+.top-header {
+    padding-bottom: 44px;
+    background-color: #044651;
+}
+.content-logo {
+  position: absolute;
+  width: 87.5%;
+}
+.logo a img {
+    width: 15.5%;
+    margin-top: -2%;
+} 
+.menu-icon-right {
+  padding: 0 !important;
+}
+/******* End mise en forme home page******/
 .ptb-10{padding:10px 0;}
 .ptb-15{padding:15px 0;}
 .ptb-20{padding:20px 0;}

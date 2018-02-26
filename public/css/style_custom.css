@@ -1,19 +1,6 @@
 .mr-lft-5px{margin-left:5px;}
 .block2{margin-top: 65px;}
-/*
-.inner-page-logo{width: 234px !important;position: relative;top:-28px!important;}
-.logo{position: relative;top:-14px;}
-*/
 
-.logo{
-    height: auto;
-    width: auto;
-    max-height: 83px;
-    color: white;
-    margin-left: -50px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
 .contact-area form select {
     display: block;
     width: 100%;
@@ -40,9 +27,6 @@
     max-height: 125px;*/
 }
 
-/*.ptb-50{padding: 50px 0px 0px !important;}*/
-.logo-txt-g{color:#12a19a }
-.logo-txt-o{color:#f28d61 }
 .header-top-area{background: #efefef;border-bottom: 1px solid #EFEFEF;}
 .upper{text-transform:uppercase}
 .btn-facebook{background-color: #4267B2 !important;color: #fff;}
@@ -71,7 +55,7 @@
 .contact-area {margin-top:22px !important;}
 .contct-social-media{margin-left:66px !important;}
 .product-list .product-content .new-price{color: #212B52 !important;}
-.tab-menu ul li a:hover, .tab-menu ul li.active a{color: #12A19A !important;}
+.tab-menu ul li a:hover, .tab-menu ul li.active a{color: #65bb9f !important;}
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
     background: #212b52 url(images/ui-bg_glass_85_dfeffc_1x400.png) repeat-x scroll 50% 50% !important;
 }
@@ -357,7 +341,7 @@ ul[role="tablist"] li{
     font-size: 14px;
 }
 .popular-tags-area .tag li a:hover {
-    background: #0083c1;
+    background: #65bb9f;
     color: #fff;
 }
 .tag li a {
@@ -432,7 +416,7 @@ ul[role="tablist"] li{
     color: #444444;
 }
 .blog-info span a:hover, .blog-info span:hover {
-    color: #333;
+    color: #65bb9f;
 }
 .blog-info span i {
     margin-right: 7px;
@@ -589,7 +573,7 @@ ul[role="tablist"] li{
 
 a:hover {
     text-decoration: none;
-    color: #f4a137 !important;
+    color: #65bb9f !important;
 }
 .blog_post .sortPagiBar {
     margin-bottom: 10px;
@@ -1275,7 +1259,7 @@ table .notification-btn{padding: 4px;}
 }
 .top-link a:hover{
     text-decoration: none;
-    color: #f4a137 !important;
+    color: #f4a137 !important;  
 }
 .catagory-menu .list-group .category-drop::before {
     content: "";
@@ -1735,16 +1719,6 @@ span {
 }
 .language-code:hover {
     color: #f8ac31;
-}
-.logo a img {
-    width: 40%;
-}
-.logo span, .logo-footer span {
-    font-family: 'Roboto' !important;
-}
-.logo span {
-    margin-top: 2%;
-    font-size: 19px;
 }
 .btn-default-search i {
     font-size: 30px !important;
