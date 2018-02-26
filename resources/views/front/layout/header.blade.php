@@ -25,7 +25,7 @@
 <div class="all-header">
 
     <div class="mean-menu-area" style="margin-bottom: -21px;">
-        <div class="container">
+        <div class="container ptb-20">
             <div class="row mt-20">
 
                 <!-- header-search-end -->
