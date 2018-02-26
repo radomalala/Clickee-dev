@@ -101,7 +101,7 @@ body {
 	text-align: center;
 }
 .slider-title h1 {
-    font-size: 100px;
+    font-size: 90px;
     color: #fff;
     text-shadow: none;
     font-weight: 700;
@@ -204,7 +204,28 @@ body {
 .border-vert-clair{
     border: 4px solid #65bb9f;
 }
-
+.slider-title {
+    margin-bottom: 8%;
+}
+.btn-slider {
+  margin-bottom: 8%;
+}
+.carousel-indicators li {
+    width: 17px;
+    height: 17px;
+    margin: 0 5px;
+    background-color: #fff;
+}
+.carousel-indicators .active {
+    border: 6px solid #fff;
+    margin: 0 5px;
+    width: 17px;
+    height: 17px;
+    background-color: #65bb9f;
+}
+.carousel-indicators {
+    bottom: 0px;
+}
 /*start ection avantage*/
 .section-avantage{
   background-color: #EFEFED;
