@@ -51,6 +51,10 @@ body {
     color: #000;
     padding: 0.2em 0;
 }
+div.row {
+    padding: 7px 0px 7px 0px;
+    line-height: 2.5;
+}
 /******* Element style color **********/
 .icon {
     background: url(../../images/icon/all_icons.svg) no-repeat;
@@ -143,7 +147,34 @@ body {
 .menu-icon-right {
   padding: 0 !important;
 }
+.header-account {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+.header-top-area {
+    background: #efefef;
+    border-bottom: 1px solid #EFEFEF;
+}
+.all-header {
+    background-color: #fff;
+}
+.header-account ul li {
+    display: inline-block;
+    position: relative;
+    /* margin-left: 10px; */
+    /* padding-left: 10px; */
+}
+.espace-header {
+    margin-left: 20px;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    /* margin-left: -1.5rem; */
+}
 /******* End mise en forme home page******/
+
 .ptb-10{padding:10px 0;}
 .ptb-15{padding:15px 0;}
 .ptb-20{padding:20px 0;}
