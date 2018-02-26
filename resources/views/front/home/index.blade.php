@@ -16,7 +16,6 @@
     </ol>
     <div class="carousel-inner">
         @foreach($banners as $banner)
-        @if($loop->first)
             <div class="item {!! ($loop->first) ? 'active' : '' !!}">
                 <img src="{!! URL::to('/').\App\Models\Banner::Banner_IMAGE_PATH.'SLIDER.png' !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
                 
@@ -30,7 +29,6 @@
                     </div>
                 </div>
             </div>
-        @endif
        @endforeach
     </div>
     <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>

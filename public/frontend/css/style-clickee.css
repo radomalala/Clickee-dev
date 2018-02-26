@@ -1,4 +1,4 @@
-/* google-font */
+ google-font */
 @import url('https://fonts.googleapis.com/css?family=Roboto::300,400,500,600,700,900');
 @font-face {font-family:"Roboto Light";src:url("../fonts/Roboto-Light.eot?") format("eot"),url("../fonts/Roboto-Light.woff") format("woff"),url("../fonts/Roboto-Light.ttf") format("truetype"),url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");font-weight:normal;font-style:normal;}
 /* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"Roboto Regular";src:url("../fonts/Roboto-Regular.eot?") format("eot"),url("../fonts/Roboto-Regular.woff") format("woff"),url("../fonts/Roboto-Regular.ttf") format("truetype"),url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");font-weight:normal;font-style:normal;}
@@ -13,12 +13,17 @@ html, body {height: 100%; color: #044651;}
 a:focus {outline:0px solid}
 img {max-width:100%;height:auto}
 .fix {overflow:hidden}
+a {
+    color: #044651;
+    text-decoration: none;
+}
 a {transition: all 0.3s ease 0s;text-decoration:none;}
 a:hover {
   text-decoration: none;
 }
 a:active, a:hover {
   outline: 0 none;
+  color: #65bb9f;
 }
 ul{
 list-style: outside none none;
@@ -54,7 +59,7 @@ body {
     display: block;
     background-size: 400%;
 }
-.icon-loop {
+.icon-search {
 	background-position: 0;
 }
 .icon-user {
@@ -100,13 +105,32 @@ body {
 .text-center {
 	text-align: center;
 }
+/****** End element style color *********/
+/******* Mise en forme home page *******/
 .slider-title h1 {
     font-size: 90px;
     color: #fff;
     text-shadow: none;
     font-weight: 700;
 }
-/****** End element style color *********/
+.find-your-shop {
+    float: right;
+    text-decoration: underline;
+}
+.find-your-shop:hover {
+    text-decoration: underline !important;
+}
+.top-header {
+    padding-bottom: 44px;
+    background-color: #044651;
+}
+.content-logo {
+  position: absolute;
+}
+.logo a img {
+    width: 14%;
+}
+/******* End mise en forme home page******/
 .ptb-10{padding:10px 0;}
 .ptb-15{padding:15px 0;}
 .ptb-20{padding:20px 0;}
@@ -376,4 +400,4 @@ body {
 .footer-box form button:hover{
   color:#f8ac31;
 }
-/*end footer area*/
+/*end footer area
