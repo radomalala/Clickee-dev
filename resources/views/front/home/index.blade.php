@@ -38,17 +38,25 @@
 <!-- end section slider -->
 
 <!-- start section three blocs -->
-<section class="section-three-bloc">
+<section class="section-three-bloc pt-40">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <a href="#"><img src="{!! URL::to('/') !!}/images/VOYAGE.png" alt="Nouvelles destinations"/></a>
+        <div class="section-three-bloc-content">
+            <div class="row">
+                <div class="col-lg-7 section-instagramm-feed-align">
+                    <a href="#">
+                        <img class="section-three-bloc-align" src="{!! URL::to('/') !!}/images/VOYAGE.png" alt="Nouvelles destinations"/>
+                    </a>
+                </div>
+                <div class="col-lg-5 section-instagramm-feed-align">
+                    <a href="#">
+                        <img class="pb-14" src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Nouveautés cadeaux destinations"/>
+                    </a>
+                    <a href="#"">
+                        <img src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Tendances décos"/>
+                    </a>
+                </div>    
             </div>
-            <div class="col-lg-5">
-                <a href="#"><img src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Nouveautés cadeaux destinations"/></a>
-                <a href="#""><img src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Tendances décos"/></a>
-            </div>    
-        </div>
+        </div>    
     </div>
 </section>    
 <!-- end section three blocs -->
@@ -57,19 +65,63 @@
 <section class="section-top-product">
     <div class="container">
         <ul class="nav nav-tabs" id="productTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="coup_de_coeur-tab" data-toggle="tab" href="#coup_de_coeur" role="tab" aria-controls="coup_de_coeur" aria-selected="true">COUP DE COEUR</a>
+            <li class="active">
+                <a class="nav-title" id="coup_de_coeur-tab" data-toggle="tab" href="#coup_de_coeur" role="tab" aria-controls="coup_de_coeur" aria-selected="true">COUP DE COEUR</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="meilleur_vente-tab" data-toggle="tab" href="#meilleur_vente" role="tab" aria-controls="meilleur_vente" aria-selected="false">MEILLEURES VENTES</a>
+            <li class="">
+                <a class="nav-title" id="meilleur_vente-tab" data-toggle="tab" href="#meilleur_vente" role="tab" aria-controls="meilleur_vente" aria-selected="false">MEILLEURES VENTES</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="mieux_note-tab" data-toggle="tab" href="#mieux_note" role="tab" aria-controls="mieux_note" aria-selected="false">MIEUX NOTÉS</a>
+            <li class="">
+                <a class="nav-title" id="mieux_note-tab" data-toggle="tab" href="#mieux_note" role="tab" aria-controls="mieux_note" aria-selected="false">MIEUX NOTÉS</a>
             </li>
         </ul>
         <div class="tab-content" id="productTabContent">
             <div class="tab-pane fade in active" id="coup_de_coeur" role="tabpanel" aria-labelledby="coup_de_coeur-tab">
-                ...test
+                <div class="related-product-container">
+                    @if(!empty($special_products['best_sale']) && count($special_products['best_sale'])>0)
+                    <div class="related-products-area ptb-30">
+                        <div class="related-products-active">
+                
+                            @foreach($special_products['best_sale'] as $product)
+                            <?php $product_translation=$product->getByLanguageId(app('language')->language_id);?>
+                            
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="{!! $product->url->target_url !!}">
+                                            <img src="{!! url($product->getDefaultCdnImagesPath()) !!}" alt="{!! $product_translation->product_name !!}"
+                                                 class=""/>
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span>{!! 
+                                                (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></h4>
+                                        @if($product->original_price != $product->best_price)
+                                            <span class="old-price">({!! getPercentage($product->original_price,$product->best_price) !!})</span>
+                                            <span class="old-price"><del>{!! format_price($product->original_price) !!}</del></span>
+                                            <span class="new-price">{!! format_price($product->best_price) !!}</span>
+                                        @else
+                                            <span class="old-price">{!! format_price($product->original_price) !!}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    @endif
+                    
+                </div>
             </div>
             <div class="tab-pane fade" id="meilleur_vente" role="tabpanel" aria-labelledby="meilleur_vente-tab">
                 test...
