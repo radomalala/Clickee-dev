@@ -414,12 +414,10 @@ p:last-child {
     vertical-align: middle;
     background: url(../../images/fleche_gauche_bleu.svg) no-repeat;
     text-decoration: none;
-    /*filter: drop-shadow(2px 0px 0px #263458) drop-shadow(1px 0px 0px #263458);*/
     height: 120%;
 }
 .owl-prev > .prev:hover {
     background: url(../../images/fleche_orange_gauche.svg) no-repeat;
-    /*filter: drop-shadow(2px 0px 0px #f7ac33) drop-shadow(1px 0px 0px #f7ac33);*/
 }
 .owl-next > .next{
     cursor: pointer;
@@ -429,12 +427,10 @@ p:last-child {
     vertical-align: middle;
     background: url(../../images/fleche_droite_bleu.svg) no-repeat;
     text-decoration: none;
-    /*filter: drop-shadow(2px 0px 0px #263458) drop-shadow(1px 0px 0px #263458);*/
     height: 120%;
 }
 .owl-next > .next:hover {
     background: url(../../images/fleche_orange_droite.svg) no-repeat;
-    /*filter: drop-shadow(2px 0px 0px #f7ac33) drop-shadow(1px 0px 0px #f7ac33);*/
 }
 
 .old-price {

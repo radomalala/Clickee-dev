@@ -14,6 +14,17 @@ if ($(this).scrollTop() > 240){
 
 });
 
+/*new menu clickee start*/
+$(".dropdown").hover(
+    function () {
+        $('.dropdown-menu', this).stop().fadeIn("fast");
+    },
+    function () {
+        $('.dropdown-menu', this).stop().fadeOut("fast");
+    });
+/*-----------------*/
+
+
 /*header menu start*/
 $('.header-account li.dropdown').hover(function() {
 	$(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
