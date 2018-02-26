@@ -1,8 +1,8 @@
 @extends('front.layout.master')
-    {!! Html::style('frontend/css/home.css') !!}
-    {!! Html::style('frontend/css/style.css') !!}
+    <!--  {!! Html::style('frontend/css/home.css') !!} -->
+   <!--  {!! Html::style('frontend/css/style.css') !!}  -->
     {!! Html::style('frontend/css/responsive.css') !!}
-    {!! Html::style('css/style_custom.css') !!}
+    <!-- {!! Html::style('css/style_custom.css') !!} -->
 @section('content')
 
 
@@ -78,6 +78,7 @@
             </li>
         </ul>
         <div class="tab-content" id="productTabContent">
+            <!-- start coup de coeur -->
             <div class="tab-pane fade in active" id="coup_de_coeur" role="tabpanel" aria-labelledby="coup_de_coeur-tab">
                 <div class="related-product-container">
                     @if(!empty($special_products['best_sale']) && count($special_products['best_sale'])>0)
@@ -96,7 +97,7 @@
                                                  class=""/>
                                         </a>
                                     </div>
-                                    <div class="product-content">
+                                    <div class="product-content pt-10">
                                         
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -106,31 +107,210 @@
                                             </div>
                                         </div>
 
-                                        <h4><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></h4>
-                                        @if($product->original_price != $product->best_price)
-                                            <span class="old-price">({!! getPercentage($product->original_price,$product->best_price) !!})</span>
-                                            <span class="old-price"><del>{!! format_price($product->original_price) !!}</del></span>
-                                            <span class="new-price">{!! format_price($product->best_price) !!}</span>
-                                        @else
-                                            <span class="old-price">{!! format_price($product->original_price) !!}</span>
-                                        @endif
+                                        <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
+                                        
+                                        <span class="new-price">{!! format_price($product->best_price) !!}</span>
+
                                     </div>
                                 </div>
                                 <!-- single product end -->
                             </div>
                             @endforeach
+
+
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="nikon-1-j5">
+                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/27709_J5_front.png" alt="Nikon 1 J5" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <span style="font-family: Roboto, sans-serif;">Nikon
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <h4><a href="nikon-1-j5">Nikon 1 J5</a></h4>
+                                                                                    <span class="old-price" style="font-family: Roboto, sans-serif;">(-4%)</span>
+                                            <span class="old-price" style="font-family: Roboto, sans-serif;"><del>$549.00</del></span>
+                                            <span class="new-price" style="font-family: Roboto, sans-serif;">$524.31</span>
+                                                                            </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+
                         </div>
                     </div>
                     @endif
                     
                 </div>
             </div>
+            <!-- end coup de coeur -->
+            <!-- start meilleur vente -->
             <div class="tab-pane fade" id="meilleur_vente" role="tabpanel" aria-labelledby="meilleur_vente-tab">
                 test...
             </div>
+            <!-- end meilleur vente -->
+            <!-- start mieux noté -->
             <div class="tab-pane fade" id="mieux_note" role="tabpanel" aria-labelledby="mieux_note-tab">
                 ..test.
             </div>
+            <!-- end mieux noté -->
         </div>
     </div>  
 </section>

@@ -273,6 +273,32 @@ body {
 .owl-theme .owl-controls .owl-buttons div{
   background: #ffffff !important
 }
+.owl-prev > .prev{
+    cursor: pointer;
+    display: block;
+    width: 18px;
+    line-height: 34px;
+    vertical-align: middle;
+    background: url(../../images/fleche_gauche_bleu.svg) no-repeat;
+    text-decoration: none;
+    height: 120%;
+}
+.owl-prev > .prev:hover {
+    background: url(../../images/fleche_orange_gauche.svg) no-repeat;
+}
+.owl-next > .next{
+    cursor: pointer;
+    display: block;
+    width: 18px;
+    line-height: 34px;
+    vertical-align: middle;
+    background: url(../../images/fleche_droite_bleu.svg) no-repeat;
+    text-decoration: none;
+    height: 120%;
+}
+.owl-next > .next:hover {
+    background: url(../../images/fleche_orange_droite.svg) no-repeat;
+}
 /*0end section marque*/
 
 /*start section two block*/
@@ -324,6 +350,52 @@ body {
   color: #65bb9f !important; 
   background-color: #fff !important; 
 }
+.related-products-area {
+    clear: both;
+}
+.products-detalis-area, .related-products-active {
+    clear: both;
+}
+.product-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #ffffff;
+}
+.product-pic {
+    height: 250px;
+    width: 255px;
+    font-weight: bold;
+    border: 4px solid #044651;
+}
+.product-img-connexe {
+    position: relative;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+}
+.product-img-connexe a img {
+    max-width: 176;
+    max-height: 166px;
+    transition: width .3s;
+}
+.product-content span{
+  font-family: Roboto-Bold;
+  color: #044651;
+  text-transform: uppercase;
+}
+.product-content a{
+  color: #044651;
+}
+.product-content a:hover{
+  color: #65bb9f;
+}
+.new-price{
+  font-family: Roboto-Bold;
+}
+
 /*end section top product*/
 
 /*start footer area*/
@@ -373,7 +445,7 @@ body {
 .footer-title h3 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: -5px;
+  margin-bottom: 0px;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -390,7 +462,7 @@ body {
 }
 .footer-box form input {
   border: 0.5px solid #ffffff;
-  padding: 1px 8px;
+  padding: 8px 8px;
   border-radius: 8px;
   width: 100%;
   color: #000000;
@@ -416,6 +488,155 @@ body {
   transition:.3s;
 }
 .footer-box form button:hover{
-  color:#f8ac31;
+  color:#65bb9f;
 }
+.footer-icon {
+    margin-bottom: 21px;
+    width: 100%;
+    margin-left: 17px;
+}
+.footer-icon a.title{
+  background-color: red;
+  color: red;
+}
+.footer-icon a { 
+   background:url("../../images/icon/reseau_sociau_footer.svg") no-repeat;
+   background-size: 180px;
+   transition: background-position-y 0s;
+}
+.footer-icon .fb {
+  display:block;
+  width:45px;
+  line-height:44px;
+  vertical-align:middle;
+  text-decoration:none;
+}
+.footer-icon .fb:hover{
+  background-position-y: -52px;
+}
+
+.footer-icon .tt {
+  margin-left: 20px;
+  display:block;
+  width:45px;
+  line-height:44px;
+  vertical-align:middle;
+  text-decoration:none;
+  background-position-x: -45px;
+}
+.footer-icon .tt:hover{
+    background-position-y: -52px;
+}
+
+.footer-icon .pt {
+  margin-left: 20px;
+  display:block;
+  width:45px;
+  line-height:44px;
+  vertical-align:middle;
+  text-decoration:none;
+  background-position-x: -90px;
+}
+.footer-icon .pt:hover{
+    background-position-y: -52px;
+}
+
+.footer-icon .gg {
+  margin-left: 20px;
+  display:block;
+  width:45px;
+  line-height:44px;
+  vertical-align:middle;
+  text-decoration:none;
+  background-position-x: -135px;
+}
+.footer-icon .gg:hover{
+    background-position-y: -52px;
+}
+
+/*start footer bootom area*/
+.ptb-footer {
+    padding: 10px 0px;
+}
+.copy-right p {
+    margin: 0;
+}
+.footer-bottom-menu ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+.footer-bottom-menu ul li a {
+    color: #044651;
+    text-decoration: none;
+}
+.footer-bottom-menu ul li a:hover {
+    color: #65bb9f;
+}
+/*end footer bootom area*/
+
 /*end footer area
+
+/*all placeholder*/
+::-webkit-input-placeholder {
+   color: #D2D2CD !important;
+}
+
+:-moz-placeholder { 
+   color: #D2D2CD !important;  
+}
+
+::-moz-placeholder {  
+   color: #D2D2CD !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #D2D2CD !important;  
+}
+/*---------------*/
+
+/*fleche owl carousel */
+.owl-theme .owl-controls .owl-buttons div {
+    color: #212b52;
+    font-size: 20px;
+    height: 35px;
+    line-height: 25px;
+    text-align: center;
+    width: 35px;
+    transition: .3s;
+    display: block !important;
+    margin-top: -0.5%;
+    margin-left: -3%;
+    margin-right: -2.4%;
+    font-size: 55px;
+    display: block;
+    background: none;
+}
+.owl-theme .owl-controls .owl-buttons div:hover {
+    color : #f7ac33;
+    border-color : #12A19A;
+}
+.owl-buttons .owl-prev,.owl-buttons .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  display:inline-block;
+}
+.owl-buttons .owl-prev{
+  left: -40px;
+}
+.owl-buttons .owl-next{
+  right:-40px;
+}
+.owl-theme .owl-controls .owl-buttons div:hover{
+  color : #f7ac33;
+  border-color:#59b210;
+}
+.product-area:hover .tab-active.owl-carousel .owl-buttons .owl-prev,.product-area:hover .tab-active2.owl-carousel .owl-buttons .owl-prev,.special-product-area:hover .tab-active2.owl-carousel .owl-buttons .owl-prev,.product-area:hover .tab-active.owl-carousel .owl-buttons .owl-next,.product-area:hover .tab-active2.owl-carousel .owl-buttons .owl-next,.special-product-area:hover .tab-active2.owl-carousel .owl-buttons .owl-next,.blog-area:hover .blog-active.owl-carousel .owl-buttons .owl-prev,.blog-area:hover .blog-active.owl-carousel .owl-buttons .owl-next,.brand-area:hover .brand-active.owl-carousel .owl-buttons .owl-prev,.brand-area:hover .brand-active.owl-carousel .owl-buttons .owl-next,.recent-work-area:hover  .protofolio-active.owl-carousel .owl-buttons .owl-prev,.recent-work-area:hover .protofolio-active.owl-carousel .owl-buttons .owl-next,.related-products-area:hover .related-products-active.owl-carousel .owl-buttons .owl-prev,.related-products-area:hover .related-products-active.owl-carousel .owl-buttons .owl-next,.modal-img:hover .modal-active.owl-carousel .owl-buttons .owl-prev,.modal-img:hover .modal-active.owl-carousel .owl-buttons .owl-next{
+  opacity:1;
+  visibility:visible;
+  z-index:1111;
+}
+/*----------------------------------------*/

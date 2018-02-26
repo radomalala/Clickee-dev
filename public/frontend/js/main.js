@@ -129,12 +129,12 @@ related-products-active
   $(".related-products-active").owlCarousel({
       autoPlay: false, 
 	  slideSpeed:2000,
-	  pagination:true,
-	  navigation:false,	 
+	  pagination:false,
+	  navigation:true,	 
 	  autoHeight: false, 
-      items : 5,
+      items : 4,
 	  /* transitionStyle : "fade", */    /* [This code for animation ] */
-	  navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+	  navigationText:["<a class='prev' data-toggle='tooltip'>&nbsp;</a>","<a class='next' data-toggle='tooltip'>&nbsp;</a>"],
       itemsDesktop : [1199,3],
 	  itemsDesktopSmall : [980,3],
 	  itemsTablet: [768,2],

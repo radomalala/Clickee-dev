@@ -111,7 +111,7 @@
                 <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12">
                     <!-- single-footer-area-start -->
                     <div class="copy-right">
-                        <p>© 2018 <font color="#212B52">ALTERNATEEVE</font> {!! trans("common/label.all_right_reserved")!!}</p>
+                        <p>© 2018 <font color="#044651">ALTERNATEEVE</font> {!! trans("common/label.all_right_reserved")!!}</p>
                     </div>
                     <!-- single-footer-area-end -->
                 </div>
