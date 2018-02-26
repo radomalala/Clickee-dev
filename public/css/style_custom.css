@@ -268,7 +268,7 @@
     width: 100%;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-    color: #65bb9f;
+    /*color: #f8ac31;*/
 }
 /*.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active :nth-child(1)>a:focus {
     border-left: none;
@@ -1610,11 +1610,10 @@ table .notification-btn{padding: 4px;}
 }
 
 .nav-tabs>li>a {
-    color: rgb(44, 59, 100);
+    /*color: rgb(44, 59, 100);
     text-transform: uppercase;
-    /*font-size: 17px !important;*/
     font-weight: 100;
-    margin-right: 0px !important;
+    margin-right: 0px !important;*/
 }
 
 /*Animation pour les bouton*/
@@ -1649,9 +1648,7 @@ table .notification-btn{padding: 4px;}
 /*.tab-content {
     margin: 4% 10%;
 }*/
-ul[role="tablist"] {
-    text-align: center;
-}
+
 .login-signup-title {
     margin: 6% 0 0 0;
     text-align: center;

@@ -18,9 +18,9 @@
         </div>
     </div>    
     <div class="container" id="header-height">
-        <div class="row" style="line-height: 1.6;">
+        <div class="row" style="line-height: 1.9;">
             <a href="#" class="find-your-shop">
-                <i class="fa fa-square-o"></i> Retrouver nos boutiques
+                <span class="icon-shop"></span>&nbsp;Retrouver nos boutiques
             </a>   
         </div>
     </div>
@@ -29,8 +29,8 @@
 <div class="all-header">
 
     <div class="mean-menu-area ptb-30">
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container">
+            <div class="row mt-20">
 
                 <!-- header-search-end -->
                 <!-- logo-start -->
@@ -42,7 +42,7 @@
                 <!-- logo-end -->
                 
                 <!-- mini-cart-end -->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
+                <div class="col-xs-12 pull-right menu-icon-right">
 
                         <!-- debut wishlist article connexion -->
                             <!-- header-top-left-start -->
@@ -71,26 +71,6 @@
                                 </ul>
                             </div>
                             <!-- header-top-right-end -->
-                    <!-- fin wishlist article connexion -->
-
-
-                    <!-- Debut recherche -->
-                  <!--   {!! Form::open(array('url' => 'search','method' => 'GET','id' => 'form-search')) !!}
-                        <div class="input-group my-group pull-right"> 
-
-                            {!! Form::select('category-search', (app('language')->language_id == 1) ? $categories_search['en'] : $categories_search['fr'], null, ['class' => "selectpicker form-control select_width", 'id' => 'selected-category', 'data-live-search' => 'true' ]) !!}
-
-                            {!! Form::text('q', null, ['placeholder' => trans("common/label.your_search"), "class" => "form-control input_width", "id" => "search-input"]) !!}
-
-                            <span class="input-group-btn">
-                                <button class="btn btn-default-search" style="margin-left: -3px;z-index: 0;" type="submit">
-                                    <i class="pe-7s-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    {!! Form::close() !!}   -->
-                    <!-- Fin recherche -->
-                    
                 </div>
             
             </div>
@@ -100,7 +80,7 @@
         <!-- header-mid-area-end -->
         <!-- mean-menu-area-start -->
         <div class="mean-menu-area hidden-sm hidden-xs">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="mean-menu text-center">

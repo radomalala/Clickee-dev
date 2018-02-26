@@ -143,25 +143,25 @@ figure.effect-romeo:hover img.inactive{
   display: none;
 }
 .nav-tabs > li {
-  float:none !important;
+  /*float:none !important;
   display:inline-block !important;
-  zoom:1 !important;
+  zoom:1 !important;*/
 }
 
 .nav-tabs {
-  text-align:center !important;
-  border-bottom: 1px solid #ffffff !important;
+  /*text-align:center !important;
+  border-bottom: 1px solid #ffffff !important;*/
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-	border: 1px solid #ffffff !important;
-  border-bottom-color: #ffffff !important; 
+	/*border: 1px solid #ffffff !important;
+  border-bottom-color: #ffffff !important; */
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-  border-bottom: 3px solid #efa42c !important;
-  font-size: 24px !important;
+  /*border-bottom: 3px solid #efa42c !important;
+  font-size: 24px !important;*/
 }
 .nav-tabs>li>a {
-  font-size: 23px !important;
+  /*font-size: 23px !important;*/
 }
 .img_btn {
   position: relative;
