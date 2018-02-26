@@ -1,6 +1,6 @@
 @extends('front.layout.master')
     <!--  {!! Html::style('frontend/css/home.css') !!} -->
-    {!! Html::style('frontend/css/style.css') !!} 
+    <!-- {!! Html::style('frontend/css/style.css') !!}  -->
     {!! Html::style('frontend/css/responsive.css') !!}
     <!-- {!! Html::style('css/style_custom.css') !!} -->
 @section('content')
