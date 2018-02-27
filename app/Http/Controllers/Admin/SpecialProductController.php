@@ -32,7 +32,7 @@ class SpecialProductController extends Controller
 	{
         $special_products=$this->special_product_repository->getAll();
         $special_products = $special_products->groupBy('type');
-        $special_product_type=['1'=>'Tranding','2'=>'Best Sale','3'=>'Top Rate'];
+        $special_product_type=['1'=>'COUP DE COEUR','2'=>'MEILLEURES VENTES','3'=>'MIEUX NOTÉS'];
         return view('admin.special_product.list',compact('special_products','special_product_type'));
 	}
 

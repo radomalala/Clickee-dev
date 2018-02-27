@@ -1183,8 +1183,8 @@ body {
   vertical-align: middle;  /*Centrer les images*/
 }
 .product-img-connexe a img {
-    max-width: 160px;
-    max-height: 150px;
+    max-width: 176px;
+    max-height: 166px;
     transition: width .3s;
 }
 /*
