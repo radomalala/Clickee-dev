@@ -70,10 +70,10 @@ class SpecialProductRepository implements SpecialProductRepositoryInterface
     }
 
     public function getspecialProducts(){
-        $trending_products = $this->getSpecialProduct(1);
+        $heart_stroke_products = $this->getSpecialProduct(1);
         $best_sale_products = $this->getSpecialProduct(2);
-        $top_sale = $this->getSpecialProduct(3);
-        return ['trending'=>$trending_products,'best_sale'=>$best_sale_products,'top_sale'=>$top_sale];
+        $best_rated_sale = $this->getSpecialProduct(3);
+        return ['heart_stroke'=>$heart_stroke_products,'best_sale'=>$best_sale_products,'best_rated'=>$best_rated_sale];
     }
 
     public function getSpecialProduct($type)

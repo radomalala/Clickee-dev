@@ -339,7 +339,7 @@ ul {
   background-position: -132px;
 }
 .section-avantage-content{
-  height: 12rem;
+  height: 11.3rem;
 }
 /*end section avantage*/
 /*start section instagramm seed*/
@@ -354,6 +354,14 @@ ul {
 }
 /*end instagramm seed*/
 /*start section marque*/
+.section-marque-align{
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 .brand-area {
     overflow: hidden;
 }
@@ -763,6 +771,40 @@ ul {
 .megamenu{
   width: 100%;
   background: #EFEFED;
+}
+.megamenu:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: #EFEFED transparent;
+}
+.menu-femme:after{
+  left: 11.4%;
+}
+.menu-homme:after{
+  left: 20.4%;
+}
+.menu-enfant:after{
+  left: 29.2%;
+}
+.menu-beaute:after{
+  left: 40.2%;
+}
+.menu-epicerie:after{
+  right: 46%;
+}
+.menu-interieur:after{
+  right: 34.8%;
+}
+.menu-loisir:after{
+  right: 25.5%;
+}
+.menu-cadeaux:after{
+  right: 15%;
 }
 .navbar-nav>li>a:hover {
     color: #65bb9f !important;

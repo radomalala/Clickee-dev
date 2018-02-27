@@ -22,7 +22,7 @@
                             <ul>
                                 <span class="top-link-footer">{!! trans("common/label.customers")!!}</span>
                                 <li class="footer-menu"> <a href="#">{!! trans("common/label.how_it_work")!!}</a></li>
-                                <li> <a href="#">Catalogue</a></li>
+                                <li> <a href="{!! url(LaravelLocalization::getCurrentLocale()."/search")."?q=" !!}">Catalogue</a></li>
                                 <li> <a href="#">{!! trans("common/label.faq")!!}</a></li>
                             </ul>
                         </div>

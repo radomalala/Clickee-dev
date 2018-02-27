@@ -1,8 +1,5 @@
 @extends('front.layout.master')
-    <!--  {!! Html::style('frontend/css/home.css') !!} -->
-    <!-- {!! Html::style('frontend/css/style.css') !!}  -->
     {!! Html::style('frontend/css/responsive.css') !!}
-    <!-- {!! Html::style('css/style_custom.css') !!} -->
 @section('content')
 
 
@@ -87,15 +84,15 @@
                 <a class="nav-title" id="mieux_note-tab" data-toggle="tab" href="#mieux_note" role="tab" aria-controls="mieux_note" aria-selected="false">MIEUX NOTÉS</a>
             </li>
         </ul>
-        <div class="tab-content" id="productTabContent">
+        <div class="tab-content section-marque-align" id="productTabContent">
             <!-- start coup de coeur -->
             <div class="tab-pane fade in active" id="coup_de_coeur" role="tabpanel" aria-labelledby="coup_de_coeur-tab">
                 <div class="related-product-container">
-                    @if(!empty($special_products['trending']) && count($special_products['trending'])>0)
+                    @if(!empty($special_products['heart_stroke']) && count($special_products['heart_stroke'])>0)
                     <div class="related-products-area ptb-30">
                         <div class="related-products-active">
                 
-                            @foreach($special_products['trending'] as $product)
+                            @foreach($special_products['heart_stroke'] as $product)
                             <?php $product_translation=$product->getByLanguageId(app('language')->language_id);?>
                             
                             <div class="col-lg-12">
@@ -126,6 +123,7 @@
                                 <!-- single product end -->
                             </div>
                             @endforeach
+            
                         </div>
                         
                     </div>
@@ -184,11 +182,11 @@
             <!-- start mieux noté -->
             <div class="tab-pane fade" id="mieux_note" role="tabpanel" aria-labelledby="mieux_note-tab">
                 <div class="related-product-container">
-                    @if(!empty($special_products['top_sale']) && count($special_products['top_sale'])>0)
+                    @if(!empty($special_products['best_rated']) && count($special_products['best_rated'])>0)
                     <div class="related-products-area ptb-30">
                         <div class="related-products-active">
                 
-                            @foreach($special_products['top_sale'] as $product)
+                            @foreach($special_products['best_rated'] as $product)
                             <?php $product_translation=$product->getByLanguageId(app('language')->language_id);?>
                             
                             <div class="col-lg-12">
@@ -276,16 +274,18 @@
 <section class="section-marque ptb-40">
     <div class="brand-area">
         <div class="container">
-            <div class="brand-active owl-carousel owl-centered">
-                @foreach($brands as $brand)
-                    @if(!empty($brand->brand_image) && file_exists(public_path().\App\Models\Brand::BRAND_IMAGE_PATH . $brand->brand_image))
-                        <div class="col-lg-12">
-                            <div class="single-brand">
-                                <img class="lazyOwl" data-src="{!! $brand->getImagePath() !!}" alt="{!! $brand->brand_name !!}"/>
+            <div class="section-marque-align">
+                <div class="brand-active owl-carousel owl-centered">
+                    @foreach($brands as $brand)
+                        @if(!empty($brand->brand_image) && file_exists(public_path().\App\Models\Brand::BRAND_IMAGE_PATH . $brand->brand_image))
+                            <div class="col-lg-12">
+                                <div class="single-brand">
+                                    <img class="lazyOwl" data-src="{!! $brand->getImagePath() !!}" alt="{!! $brand->brand_name !!}"/>
+                                </div>
                             </div>
-                        </div>
-                    @endif
-                @endforeach
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
