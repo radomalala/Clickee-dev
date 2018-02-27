@@ -42,7 +42,7 @@
 
                         <!-- debut wishlist article connexion -->
                             <!-- header-top-left-start -->
-                            <div class="header-account text-right">
+                            <div class="header-account text-right col-lg-12">
                                 <ul>
                                     <li class="dropdown espace-header">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
