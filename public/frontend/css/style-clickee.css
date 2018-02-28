@@ -191,6 +191,9 @@ body {
     /* margin-left: 10px; */
     /* padding-left: 10px; */
 }
+.carousel-control.left,.carousel-control.right{
+  background-image: none !important;
+}
 .espace-header {
     margin-left: 20px;
 }
