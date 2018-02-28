@@ -350,7 +350,7 @@ ul {
   height: 11.3rem;
 }
 .section-avantage-content h4{
-  font-family: Roboto-Bold; 
+  font-family: Roboto Bold; 
 }
 /*end section avantage*/
 /*start section instagramm seed*/
@@ -497,7 +497,7 @@ ul {
     transition: width .3s;
 }
 .product-content span{
-  font-family: Roboto-Bold;
+  font-family: Roboto Bold !important;
   color: #044651;
   text-transform: uppercase;
 }
@@ -508,7 +508,7 @@ ul {
   color: #65bb9f;
 }
 .new-price{
-  font-family: Roboto-Bold;
+  font-family: Roboto Bold;
 }
 
 /*end section top product*/
