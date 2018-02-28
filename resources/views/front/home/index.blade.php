@@ -1,5 +1,7 @@
 @extends('front.layout.master')
-    {!! Html::style('frontend/css/responsive.css') !!}
+    @section('additional-css')
+        {!! Html::style('frontend/css/responsive.css') !!}
+    @stop 
 @section('content')
 
 
