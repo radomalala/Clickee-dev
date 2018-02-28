@@ -16,7 +16,7 @@
     <div class="carousel-inner">
         @foreach($banners as $banner)
             <div class="item {!! ($loop->first) ? 'active' : '' !!}">
-                <img src="{!! $banner->getCdnBannerImage(app('language')->language_code) !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
+                <img src="{!! $banner->getBannerImage(app('language')->language_code) !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
                 
                 <div class="container container-slider">
                     <div class="carousel-caption">
