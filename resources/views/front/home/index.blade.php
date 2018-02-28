@@ -9,9 +9,9 @@
 <section class="section-slider">
     <div id="home-top-slide" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
-        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+        @foreach($banners as $banner)
+            <li data-target="#home-top-slide" data-slide-to="{!! $loop->index !!}" class="{!! ($loop->first) ? 'active' : '' !!}"></li>  
+       @endforeach
     </ol>
     <div class="carousel-inner">
         @foreach($banners as $banner)
@@ -30,8 +30,8 @@
             </div>
        @endforeach
     </div>
-    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    <a class="left carousel-control" href="#home-top-slide" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#home-top-slide" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
 </section>
 <!-- end section slider -->
