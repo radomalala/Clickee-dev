@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-info alert-dismissible">
-                    Recommended Main Banner Size: 1200 x 450<!-- , Side Banner Size: 242 x 195 -->
+                    Recommended Main Banner Size: 1350 x 573<!-- , Side Banner Size: 242 x 195 -->
                 </div>
                 <div class="box box-primary">
                     {!! Form::open(array('url' => 'admin/banner','files' => true,'class'=>'validate_form')) !!}

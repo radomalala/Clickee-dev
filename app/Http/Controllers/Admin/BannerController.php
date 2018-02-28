@@ -106,7 +106,7 @@ class BannerController extends Controller
 				\File::makeDirectory($thumb_path);
 			}
 
-			$img->fit(1200,450)->save($thumb_path.'/'.$image_name);
+			$img->fit(1350,573)->save($thumb_path.'/'.$image_name);
 
 		}
 		return $image_name;
