@@ -57,7 +57,7 @@
                             <h1>plaisir d’offrir</h1>   
                     </div>
                     <a href="#"">
-                        <img src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Tendances décos"/>
+                        <img src="{!! URL::to('/') !!}/images/MAISON_DECO.jpeg" alt="Tendances décos"/>
                     </a>
                     <div class="banner-caption-right-bottom text-center">
                             <h1>TENDANCES DÉCO</h1>
