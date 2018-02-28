@@ -28,7 +28,34 @@
     background-position-y: -25px;
     transition: background-position-y 0.3s; 
 }
-
+.fullStar_product {
+    background: url(../../images/icon/etoile_vert_blanc.svg) no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 14px;
+    margin: 0px;
+    display: inline-block;
+    line-height: 16px;
+    float: left;
+    cursor: pointer;
+    zoom: 1;
+    background-position-y: 0px;
+    transition: background-position-y 0.3s;
+}
+.emptyStar_product {
+    background: url(../../images/icon/etoile_vert_blanc.svg) no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 14px;
+    margin: 0px;
+    display: inline-block;
+    line-height: 16px;
+    float: left;
+    cursor: pointer;
+    zoom: 1;
+    background-position-y: -19px;
+    transition: background-position-y 0.3s;
+}
 .stars{
     overflow: hidden;
     transition: background-position-y 0.3s;

@@ -705,3 +705,10 @@ function is_user_has_wishlist(){
         return false;
     }
 }
+
+function average_rating_product($product_id){
+    $reviews = App\Models\ProductRating::where('product_id',$product_id)->where('status', 1)->get();
+    $total_ratings =  App\Models\ProductRating::where('product_id',$product_id)->where('status', 1)->sum('rating');
+    $average_rating = count($reviews) > 0 ? round($total_ratings/count($reviews)): 0;
+    return $average_rating;
+}

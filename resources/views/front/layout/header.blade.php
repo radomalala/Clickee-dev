@@ -16,7 +16,7 @@
     <div class="container" id="header-height">
         <div class="row" style="line-height: 1.9;">
             <a href="#" class="find-your-shop">
-                <span class="icon-shop"></span>&nbsp;Retrouver nos boutiques
+                <span class="icon-shop"></span>Retrouver nos boutiques
             </a>   
         </div>
     </div>
@@ -42,7 +42,7 @@
 
                         <!-- debut wishlist article connexion -->
                             <!-- header-top-left-start -->
-                            <div class="header-account text-right">
+                            <div class="header-account text-right col-lg-12">
                                 <ul>
                                     <li class="dropdown espace-header">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -86,9 +86,9 @@
             <ul class="nav navbar-nav">
                 </li>
                 <li class="dropdown menu-large"> 
-                    <a href="# " class="dropdown-toggle" data-toggle="dropdown"> FEMME </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> FEMME </a>
 
-                    <ul class="dropdown-menu megamenu row">
+                    <ul class="menu-femme dropdown-menu megamenu row">
                         <li class="container ptb-10">
                             <div class="col-sm-6 col-md-2"> 
                                 <a href="#">
@@ -125,7 +125,7 @@
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> HOMME </a>   
-                    <ul class="dropdown-menu megamenu row">
+                    <ul class="menu-homme dropdown-menu megamenu row">
                         <li class="container ptb-10">
                             <div class="col-sm-6 col-md-2"> 
                                 <a href="#">
@@ -162,7 +162,7 @@
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> ENFANT </a>  
-                    <ul class="dropdown-menu megamenu row">
+                    <ul class="menu-enfant dropdown-menu megamenu row">
                         <li class="container ptb-10">
                             <div class="col-sm-6 col-md-2"> 
                                 <a href="#">
@@ -199,40 +199,69 @@
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> BEAUTÉ/SANTÉ </a>    
-                    <ul class="dropdown-menu megamenu row ">
-                        <li class="container">
+                    <ul class="menu-beaute dropdown-menu megamenu row ">
+                        <li class="container ptb-10">
                             
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> ÉPICERIE FINE </a>   
-                    <ul class="dropdown-menu megamenu row ">
-                        <li class="container">
-                            
+                    <ul class="menu-epicerie dropdown-menu megamenu row ">
+                        <li class="container ptb-10">
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Nouveautés
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Vins
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Produits du terroir
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Snacking
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Accessoires
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-2"> 
+                                <a href="#">
+                                    Cadeaux
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> INTÉRIEUR </a>   
-                    <ul class="dropdown-menu megamenu row ">
-                        <li class="container">
+                    <ul class="menu-interieur dropdown-menu megamenu row ">
+                        <li class="container ptb-10">
                             
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> LOISIR </a>  
-                    <ul class="dropdown-menu megamenu row ">
-                        <li class="container">
+                    <ul class="menu-loisir dropdown-menu megamenu row ">
+                        <li class="container ptb-10">
                             
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
                     <a href="# " class="dropdown-toggle " data-toggle="dropdown "> IDÉES CADEAUX </a>   
-                    <ul class="dropdown-menu megamenu row ">
-                        <li class="container">
+                    <ul class="menu-cadeaux dropdown-menu megamenu row ">
+                        <li class="container ptb-10">
                             
                         </li>
                     </ul>

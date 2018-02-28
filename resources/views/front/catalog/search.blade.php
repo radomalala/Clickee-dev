@@ -263,38 +263,20 @@
 
                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 {!! $class !!}">
                                            <div class="product-wrapper mb-30">
-                                                <div class="product-img product-pic img_btn">
-                                                    <img src="{!! url($product_image) !!}" alt="{!! $alt !!}" class="img_prd">
-                                                    <div class="middle">
-                                                        <a href="{!! url(LaravelLocalization::getCurrentLocale().'/'.$product->url->target_url) !!}" class="btn_view">{{trans("common/label.watch")}}</a>
-                                                    </div>
+                                                <div class="product-img product-pic img_btn" style="height: 199px !important;">
+                                                    <img src="{!! url($product->getDefaultCdnImagesPath()) !!}" alt="{!! $product_translation->product_name !!}"
+                                                         class=""/>
                                                 </div>
                                                 <div class="product-content mt-10 tac">
                                                     <span>{!! 
                                                     (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "" !!}</span>
-                                                    <div class="wishlist_prd_place">
-                                                        <?php 
-                                                            $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
-                                                            if ($is_user_login) {   
-                                                                $idU = \Auth::user()->user_id;
-                                                            }else{
-                                                                $idU = '';
-                                                            }                                            
-                                                        ?>       
-                                                        <a class="wishlist_prd w{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"> &nbsp; </a>
-                                                    </div>
+                                                    
                                                     @if(!empty($product->url))
                                                         <h4>
                                                             <a href="{!! url($product->url->target_url) !!}">{!! $product_translation->product_name !!}</a>
                                                         </h4>
                                                     @endif
-                                                    @if($product->original_price != $product->best_price)
-                                                        <span class="old-price fs-14">({!! getPercentage($product->original_price,$product->best_price) !!})</span>
-                                                        <span class="old-price fs-14"><del>{!! format_price($product->original_price) !!}</del></span>
-                                                        <span class="new-price fs-14">{!! format_price($product->best_price) !!}</span>
-                                                    @else
-                                                        <span class="old-price fs-14">{!! format_price($product->original_price) !!}</span>
-                                                    @endif
+                                                    <span class="new-price fs-14">{!! format_price($product->best_price) !!}</span>
                                                 </div>
                                             </div>
                                         </div>

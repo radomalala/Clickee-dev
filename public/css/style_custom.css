@@ -786,8 +786,8 @@ margin: 0px;
     height: 150px !important;
 }
 .product-pic{
-    height: 190px;
-    width: 196px;
+    height: 250x;
+    width: 263px;
 }
 .chosen-select{
     margin-left: 11px;
@@ -1375,7 +1375,7 @@ table .notification-btn{padding: 4px;}
 .mr-b-5{margin-bottom: 5px;}
 .mr-b-10{margin-bottom: 10px;}
 .mr-b-15{margin-bottom: 15px;}
-.dropdown-menu li {width: 100%}
+/*.dropdown-menu li {width: 100%}*/
 .invoice-title h2, .invoice-title h3 {
     display: inline-block;
 }

@@ -43,9 +43,10 @@ class ProductController extends Controller
         $attributes=$this->product_repository->getAttributesByProductId($product_id);
         $product_attributes['attribute_value'] = $product_attributes['attribute_option'] = [];
         $product_attributes = $this->getProductAttribute($attributes->attributeValues);
+        $all_reviews = $this->product_rating_repository->getApprovedAllReview($product_id);
         $reviews = $this->product_rating_repository->getApprovedReview($product_id);
         $total_ratings = $this->product_rating_repository->getApprovedRating($product_id);
-        $average_rating = count($reviews) > 0 ?round($total_ratings/count($reviews)): 0;
+        $average_rating = count($all_reviews) > 0 ?round($total_ratings/count($all_reviews)): 0;
         $affiliate_products = AffiliateProduct::whereProductId($product_id)->orderBy('price','ASC')->take(7)->get();
         if ($product == null) {
             return Redirect::to('/');

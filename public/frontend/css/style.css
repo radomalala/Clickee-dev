@@ -1187,8 +1187,8 @@ body {
   vertical-align: middle;  /*Centrer les images*/
 }
 .product-img-connexe a img {
-    max-width: 160px;
-    max-height: 150px;
+    max-width: 176px;
+    max-height: 166px;
     transition: width .3s;
 }
 /*
@@ -1654,7 +1654,7 @@ body {
   border-bottom: 1px solid #ECECEC;
   color: #ffffff;*/
 }
-.footer-address ul li {
+/*.footer-address ul li {
   padding: 10px 0;
 }
 .footer-address ul li i {
@@ -1668,7 +1668,7 @@ body {
   margin-bottom: 21px;
   width: 100%;
   margin-left: 17px;
-}
+}*/
 
 /*.footer-icon a.title{
   background-color: red;
@@ -1808,7 +1808,7 @@ body {
 /*----------------------------------------*/
 /*  13.2 footer-bottom-area
 /*----------------------------------------*/
-.copy-right p {
+/*.copy-right p {
   margin: 0;
 }
 .copy-right p a{
@@ -1828,7 +1828,7 @@ body {
 }
 .footer-bottom-menu ul li a:hover{
   color:#59b210;
-}
+}*/
 /*a#scrollUp {
   background: #aaa none repeat scroll 0 0;
   border-radius: 4px;
@@ -5540,9 +5540,9 @@ input[name="memoty"] {
 :-ms-input-placeholder {  
    color: #D2D2CD !important;  
 }
-.dropdown-menu{
+/*.dropdown-menu{
   top: 120% !important;
-  /*left: -67px !important;*/
+
   border: 1px solid #ffffff !important; 
   border-radius: 0px !important; 
   padding: 0px 7px !important;
@@ -5590,11 +5590,11 @@ input[name="memoty"] {
 }
 .m-pos-en:after{
   right: 112px !important;
-}
+}*/
 .header-account ul li a img {
   margin-top: -10px;
 }
-.dropdown-menu-menu{
+/*.dropdown-menu-menu{
   position: absolute;
   top: 81%;
   left: 23px;
@@ -5607,7 +5607,6 @@ input[name="memoty"] {
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
-  /*text-align: left;*/
   background-color: #fff;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
   box-shadow: 0 6px 12px rgba(0,0,0,0.175);
@@ -5634,10 +5633,9 @@ input[name="memoty"] {
 }
 
 .dropdown-menu-align {
-  /*width: 202px;*/
   text-align: center;
   margin-left:1rem;
-}
+}*/
 
 .sell_pannier {
   color: #212B52;

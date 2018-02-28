@@ -17,8 +17,7 @@
                         <div class="form-group">
                             {!! Form::label('type', 'Input Type', ['class' => 'col-sm-2 control-label']) !!}
                             <div class="col-sm-10">
-                                {!! Form::select('type', [''=>'Select Input Type','1' => 'Trending', '2' => 'Best
-                                Sale','3' => 'TOP RATE'],(isset($special_product[0])) ? $special_product[0]->type :
+                                {!! Form::select('type', [''=>'Select Input Type','1' => 'COUP DE COEUR', '2' => 'MEILLEURES VENTES','3' => 'MIEUX NOTÉS'],(isset($special_product[0])) ? $special_product[0]->type :
                                 null,['class'=>'form-control required','id'=>'input_type']) !!}
                             </div>
                         </div>

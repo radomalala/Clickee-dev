@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="{!! route('dashboard') !!}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>CLI</b>CKEE</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><img src="{!! url('backend/img/logo.png') !!}"> </span>
+        <span class="logo-lg"><img style="max-width: 110px !important;" src="{!! url('backend/img/logo.svg') !!}"> </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
