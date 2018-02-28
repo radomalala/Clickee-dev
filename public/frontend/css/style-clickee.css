@@ -200,6 +200,10 @@ ul {
     padding: 0;
     /* margin-left: -1.5rem; */
 }
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    margin-left: auto;
+    margin-right: auto;
+}
 /******* End mise en forme home page******/
 
 .ptb-10{padding:10px 0;}
