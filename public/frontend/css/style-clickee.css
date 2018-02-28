@@ -348,6 +348,9 @@ ul {
 .section-avantage-content{
   height: 11.3rem;
 }
+.section-avantage-content h4{
+  font-family: Roboto-Bold; 
+}
 /*end section avantage*/
 /*start section instagramm seed*/
 .section-instagramm-feed-content{
