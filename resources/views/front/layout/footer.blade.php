@@ -8,13 +8,13 @@
     </a> -->    
     <div class="footer-top-area ptb-10">
         <div class="container">
-            <div class="footer-img pt-30 footer-logo row">
+            <div class="footer-img pt-30 pb-15 footer-logo row">
                 <div class="col-lg-12">
                     <a href="{!! URL::to('/') !!}""><img class="footer-area-logo-width" src="{!! URL::to('/') !!}/images/logo_blanc.svg" alt="logo"/></a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-top:8px">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <!-- single-footer-area-start -->
                     <div class="single-footer">
                         
