@@ -35,7 +35,7 @@
 <!-- end section slider -->
 
 <!-- start section three blocs -->
-<section class="section-three-bloc pt-40 pb-30">
+<section class="section-three-bloc pt-40 pb-35">
     <div class="container">
         <div class="section-three-bloc-content">
             <div class="row">
@@ -116,8 +116,25 @@
 
                                         <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
                                         
-                                        <span class="new-price">{!! format_price($product->best_price) !!}</span>
-
+                                        <div class="row">
+                                            <div class="col-lg-5 text-right">
+                                                <span class="new-price">{!! format_price($product->best_price) !!}</span>         
+                                            </div>
+                                            <div class="col-lg-2 text-center">|</div>
+                                            <div class="col-lg-5 pt-2">
+                                                <?php 
+                                                    $average_full = average_rating_product($product->product_id); 
+                                                    $average_empty = 5-average_rating_product($product->product_id);
+                                                ?>
+                                                @for($i=1;$i<=$average_full;$i++)
+                                                    <a class="fullStar_product"></a>
+                                                @endfor
+                                                @for($i=1;$i<=$average_empty;$i++)
+                                                    <a class="emptyStar_product"></a>
+                                                @endfor         
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <!-- single product end -->
@@ -164,7 +181,24 @@
                                         <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
 
                                         
-                                        <span class="new-price">{!! format_price($product->best_price) !!}</span>
+                                        <div class="row">
+                                            <div class="col-lg-5 text-right">
+                                                <span class="new-price">{!! format_price($product->best_price) !!}</span>         
+                                            </div>
+                                            <div class="col-lg-2 text-center">|</div>
+                                            <div class="col-lg-5 pt-2">
+                                                <?php 
+                                                    $average_full = average_rating_product($product->product_id); 
+                                                    $average_empty = 5-average_rating_product($product->product_id);
+                                                ?>
+                                                @for($i=1;$i<=$average_full;$i++)
+                                                    <a class="fullStar_product"></a>
+                                                @endfor
+                                                @for($i=1;$i<=$average_empty;$i++)
+                                                    <a class="emptyStar_product"></a>
+                                                @endfor         
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -210,7 +244,24 @@
 
                                         <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
                                         
-                                        <span class="new-price">{!! format_price($product->best_price) !!}</span>
+                                        <div class="row">
+                                            <div class="col-lg-5 text-right">
+                                                <span class="new-price">{!! format_price($product->best_price) !!}</span>         
+                                            </div>
+                                            <div class="col-lg-2 text-center">|</div>
+                                            <div class="col-lg-5 pt-2">
+                                                <?php 
+                                                    $average_full = average_rating_product($product->product_id); 
+                                                    $average_empty = 5-average_rating_product($product->product_id);
+                                                ?>
+                                                @for($i=1;$i<=$average_full;$i++)
+                                                    <a class="fullStar_product"></a>
+                                                @endfor
+                                                @for($i=1;$i<=$average_empty;$i++)
+                                                    <a class="emptyStar_product"></a>
+                                                @endfor         
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -231,7 +282,7 @@
 <!-- end section top product -->
 
 <!-- start section two bloc -->
-<section class="section-two-bloc">
+<section class="section-two-bloc pt-33">
     <div class="container">
         <div class="section-two-bloc-content">
             <div class="row">
@@ -252,7 +303,7 @@
 <!-- end section two bloc -->
 
 <!-- start section instagramm feed -->
-<section class="section-instagramm-feed">
+<section class="section-instagramm-feed pt-16">
     <div class="container">
         <div class="section-instagramm-feed-title title title-active">
             <h2>INSTAGRAM FEED</h2>

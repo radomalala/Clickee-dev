@@ -65,6 +65,11 @@ class ProductRatingRepository implements ProductRatingRepositoryInterface
         return $this->model->where('product_id',$product_id)->where('status', 1)->sum('rating');
     }
 
+    public function getApprovedAllReview($product_id)
+    {
+        return $this->model->where('product_id',$product_id)->where('status', 1)->get();
+    }
+
     public function deleteById($id)
     {
         return $this->model->find($id)->delete();

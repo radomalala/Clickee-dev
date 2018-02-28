@@ -16,7 +16,7 @@
     <div class="container" id="header-height">
         <div class="row" style="line-height: 1.9;">
             <a href="#" class="find-your-shop">
-                <span class="icon-shop"></span>&nbsp;Retrouver nos boutiques
+                <span class="icon-shop"></span>Retrouver nos boutiques
             </a>   
         </div>
     </div>
