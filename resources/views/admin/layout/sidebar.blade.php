@@ -56,11 +56,11 @@
                         @endif
                         @if(check_user_access('attribute'))
                         <li class="{{ set_active(['admin/attribute','admin/attribute/*']) }}"><a
-                                    href="{!! route('attribute') !!}"><i class="fa fa-circle-o"></i> Attribute </a></li>
+                                    href="{!! route('attribute') !!}"><i class="fa fa-circle-o"></i> Attribut </a></li>
                         @endif
                         @if(check_user_access('attribute_set'))
                         <li class="{{ set_active(['admin/attribute-set','admin/attribute-set/*']) }}"><a
-                                    href="{!! route('attribute_set') !!}"><i class="fa fa-circle-o"></i> Attribute Set</a>
+                                    href="{!! route('attribute_set') !!}"><i class="fa fa-circle-o"></i> Attribut Set</a>
                         </li>
                         @endif
                     </ul>
@@ -103,7 +103,7 @@
                     @endif
                     @if(check_user_access('special-product.index'))
                     <li class="{{ set_active(['admin/special-product','admin/special-product/*']) }}">
-                        <a href="{!! URL::to('/admin/special-product') !!}"><i class="fa fa-circle-o"></i> Les top produits</a>
+                        <a href="{!! URL::to('/admin/special-product') !!}"><i class="fa fa-circle-o"></i> Les produits dans accueil</a>
                     </li>
                     @endif
                 </ul>
