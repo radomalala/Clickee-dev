@@ -22,7 +22,7 @@
             </div>
         </form>
         <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
+            <li class="header">NAVIGATION PRINCIPALE</li>
             @if(check_user_access(['dashboard']))
             <li class="active treeview">
                 <a href="{!! route('dashboard') !!}">
@@ -42,21 +42,21 @@
                     <ul class="treeview-menu">
                          @if(check_user_access('product'))
                         <li class="{{ set_active(['admin/product','admin/product/*']) }}"><a
-                                    href="{!! route('product') !!}"><i class="fa fa-circle-o"></i> Product List</a></li>
+                                    href="{!! route('product') !!}"><i class="fa fa-circle-o"></i> Liste des produits</a></li>
                         @endif
                         @if(check_user_access('category'))
                         <li class="{{ set_active(['admin/category','admin/category/*']) }}"><a
-                                    href="{!! route('category') !!}"><i class="fa fa-circle-o"></i> Category Manager</a>
+                                    href="{!! route('category') !!}"><i class="fa fa-circle-o"></i> Gestion des catégories </a>
                         </li>
                         @endif
                         @if(check_user_access('brand.index'))
                         <li class="{{ set_active(['admin/brand','admin/brand/*']) }}"><a
-                                    href="{!! URL::to('/') !!}/admin/brand"><i class="fa fa-circle-o"></i> Brand Manager</a>
+                                    href="{!! URL::to('/') !!}/admin/brand"><i class="fa fa-circle-o"></i> Gestion des marques </a>
                         </li>
                         @endif
                         @if(check_user_access('attribute'))
                         <li class="{{ set_active(['admin/attribute','admin/attribute/*']) }}"><a
-                                    href="{!! route('attribute') !!}"><i class="fa fa-circle-o"></i> Attribute</a></li>
+                                    href="{!! route('attribute') !!}"><i class="fa fa-circle-o"></i> Attribute </a></li>
                         @endif
                         @if(check_user_access('attribute_set'))
                         <li class="{{ set_active(['admin/attribute-set','admin/attribute-set/*']) }}"><a
