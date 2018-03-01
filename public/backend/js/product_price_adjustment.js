@@ -28,7 +28,7 @@ jQuery(document).ready(function () {
                         "info": "Afficher la page _PAGE_ de _PAGES_"
 
 
-            },
+             },
             columns: [
                 {searchable: true, sortable: true},
                 {searchable: true, sortable: true},
