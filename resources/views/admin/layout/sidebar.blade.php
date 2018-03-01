@@ -71,7 +71,7 @@
             <li class="treeview {{ set_active(['admin/page','admin/page/*','admin/banner','admin/banner/*','admin/coupon','admin/coupon/*','admin/special-product','admin/special-product/*','admin/faq','admin/faq/*'])}}">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
-                    <span>Content</span>
+                    <span>Contenu</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -79,7 +79,7 @@
                 <ul class="treeview-menu">
                     @if(check_user_access('page.index'))
                     <li class="{{ set_active(['admin/page','admin/page/*']) }}"><a
-                                href="{!! URL::to('/admin/page') !!}"><i class="fa fa-circle-o"></i> Page Manager</a>
+                                href="{!! URL::to('/admin/page') !!}"><i class="fa fa-circle-o"></i> Gestion de page</a>
                     </li>
                     @endif
                     @if(check_user_access(['faq.index', 'faq.create', 'faq.edit']))
@@ -93,19 +93,19 @@
                     @endif -->
                     @if(check_user_access('banner.index'))
                     <li class="{{ set_active(['admin/banner','admin/banner/*']) }}">
-                        <a href="{!! URL::to('/admin/banner') !!}"><i class="fa fa-circle-o"></i> Slider Manager</a>
+                        <a href="{!! URL::to('/admin/banner') !!}"><i class="fa fa-circle-o"></i> Gestion de slide</a>
                     </li>
                     @endif
                     @if(check_user_access('special-product.index'))
                     <li class="{{ set_active(['admin/special-product','admin/special-product/*']) }}"><a
-                                href="{!! URL::to('/admin/special-product') !!}"><i class="fa fa-circle-o"></i> Products On Home</a>
+                                href="{!! URL::to('/admin/special-product') !!}"><i class="fa fa-circle-o"></i> Les top produits</a>
                     </li>
                     @endif
                 </ul>
             </li>
             @endif
 
-            @if(check_user_access(['blog.index','blog-category.index']))
+            <!-- @if(check_user_access(['blog.index','blog-category.index']))
                 <li class="treeview {{ set_active(['admin/blog','admin/blog/*','admin/blog-category','admin/blog-category/*']) }}">
                     <a href="#">
                         <i class="fa fa-book"></i>
@@ -127,7 +127,7 @@
                         @endif
                     </ul>
                 </li>
-            @endif
+            @endif -->
 
             @if(check_user_access(['product-rating.index','price_adjustment','affiliate.index']))
             <li class="treeview {{ set_active(['admin/claim/price-adjustment','admin/claim/price-adjustment/*','admin/affiliate','admin/affiliate/*','admin/product-rating','admin/product-rating/*',]) }}">
@@ -141,18 +141,17 @@
                 <ul class="treeview-menu">
                     @if(check_user_access('product-rating.index'))
                     <li class="{{ set_active(['admin/product-rating','admin/product-rating/*']) }}"><a
-                                href="{!! URL::to('/admin/product-rating') !!}"><i class="fa fa-circle-o"></i> Product
-                            Rating</a></li>
+                                href="{!! URL::to('/admin/product-rating') !!}"><i class="fa fa-circle-o"></i> Évaluation du produit</a></li>
                     @endif
                     @if(check_user_access('price_adjustment'))
                     <li class="{{ set_active(['admin/claim/price-adjustment','admin/claim/price-adjustment/*']) }}"><a
-                                href="{!! route('price_adjustment') !!}"><i class="fa fa-circle-o"></i> Price Adjustment</a>
+                                href="{!! route('price_adjustment') !!}"><i class="fa fa-circle-o"></i> Ajustement de prix</a>
                     </li>
                     @endif
                     {{--<li><a href=""><i class="fa fa-circle-o"></i> Product Enhancement</a></li>--}}
                     @if(check_user_access('affiliate.index'))
                     <li class="{{ set_active(['admin/affiliate','admin/affiliate/*']) }}"><a
-                                href="{!! URL::to('admin/affiliate') !!}"><i class="fa fa-circle-o"></i> Link Adjustment</a>
+                                href="{!! URL::to('admin/affiliate') !!}"><i class="fa fa-circle-o"></i> Ajustement de lien</a>
                     </li>
                     @endif
                 </ul>
@@ -163,7 +162,7 @@
             <li class="treeview {{ set_active(['admin/role','admin/role/*','admin/customer','admin/customer/*','admin/store','admin/store/*','admin/administrator','admin/administrator/*']) }}">
                 <a href="#">
                     <i class="fa fa-user"></i>
-                    <span>Accounts</span>
+                    <span>Comptes</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -171,12 +170,12 @@
                 <ul class="treeview-menu">
                     @if(check_user_access('customer.index'))
                     <li class="{{ set_active(['admin/customer','admin/customer/*']) }}"><a
-                                href="{!! URL::to('admin/customer') !!}"><i class="fa fa-circle-o"></i> Customers</a>
+                                href="{!! URL::to('admin/customer') !!}"><i class="fa fa-circle-o"></i> Les clients</a>
                     </li>
                     @endif
                     @if(check_user_access('store.index'))
                     <li class="{{ set_active(['admin/store','admin/store/*']) }}"><a
-                                href="{!! URL::to('admin/store') !!}"><i class="fa fa-circle-o"></i> Merchants</a>
+                                href="{!! URL::to('admin/store') !!}"><i class="fa fa-circle-o"></i> Marchands</a>
                     </li>
                     @endif
                     @if(check_user_access('administrator'))
@@ -186,7 +185,7 @@
                     @endif
                     @if(check_user_access('role.index'))
                     <li class="{{ set_active(['admin/role','admin/role/*']) }}"><a href="{!! URL::to('admin/role') !!}"><i
-                                    class="fa fa-circle-o"></i> Role manager</a></li>
+                                    class="fa fa-circle-o"></i> Gestion de rôle</a></li>
                     @endif
                 </ul>
             </li>
@@ -196,7 +195,7 @@
             <li class="treeview {{ set_active(['admin/order-status','admin/order-status/*','admin/sales/*']) }}">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
-                    <span>Sales</span>
+                    <span>Ventes</span>
                     <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -205,7 +204,7 @@
                       <li class="treeview {{ set_active(['admin/sales/*']) }}">
                         <a href="#">
                             <i class="fa fa-sticky-note-o"></i>
-                            <span>All orders</span>
+                            <span>Tous les ordres</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -213,20 +212,20 @@
                         <ul class="treeview-menu">
                             @if(check_user_access('orders'))
                             <li class="{{ set_active(['admin/sales/1','admin/sales/view/1']) }}"><a
-                                        href="{!! Url('/admin/sales/1') !!}"><i class="fa fa-circle-o"></i> Ongoing</a></li>
+                                        href="{!! Url('/admin/sales/1') !!}"><i class="fa fa-circle-o"></i> En cours</a></li>
                             @endif
                             @if(check_user_access('orders'))
                             <li class="{{ set_active(['admin/sales/2','admin/sales/view/2']) }}"><a
-                                        href="{!! Url('/admin/sales/2') !!}"><i class="fa fa-circle-o"></i> Completed</a></li>
+                                        href="{!! Url('/admin/sales/2') !!}"><i class="fa fa-circle-o"></i> Terminé</a></li>
                             @endif
                             @if(check_user_access('orders'))
-                            <li><a href="{!! Url('/admin/sales/3') !!}"><i class="fa fa-circle-o"></i> Special Ask</a></li>
+                            <li><a href="{!! Url('/admin/sales/3') !!}"><i class="fa fa-circle-o"></i> Demande spéciale</a></li>
                             @endif
                         </ul>
                     </li>
                     @if(check_user_access('order-status.index'))
                     <li class="{{ set_active(['admin/order-status','admin/order-status/*']) }}">
-                        <a href="{!! Url('/admin/order-status') !!}"><i class="fa fa-circle-o"></i>Status Manager</a>
+                        <a href="{!! Url('/admin/order-status') !!}"><i class="fa fa-circle-o"></i>Gestion de statut</a>
                     </li>
                     @endif
                 </ul>
@@ -268,7 +267,7 @@
             <li class="treeview {{ set_active(['admin/statistics/sales','admin/statistics/sales/*','admin/finance','admin/finance/*']) }}">
                 <a href="#">
                     <i class="fa fa-bar-chart"></i>
-                    <span>Statistics</span>
+                    <span>Statistiques</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -276,7 +275,7 @@
                 <ul class="treeview-menu">
                     @if(check_user_access('orders'))
                         <li class="{{ set_active(['admin/statistics/sales','admin/statistics/sales/*']) }}"><a
-                                    href="#"><i class="fa fa-circle-o"></i> Sales</a>
+                                    href="#"><i class="fa fa-circle-o"></i> Ventes</a>
                         </li>
                     @endif
                     @if(check_user_access('orders'))
@@ -307,7 +306,7 @@
             <li class="treeview {{ set_active(['admin/system','admin/system/*','admin/meta_og','admin/meta_og/*', 'admin/epartner','admin/epartner/*','admin/email-template','admin/email-template/*']) }}">
                 <a href="#">
                     <i class="fa fa-wrench"></i>
-                    <span>System</span>
+                    <span>Système</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -325,8 +324,7 @@
                     @endif
                     @if(check_user_access('email-template.index'))
                         <li class="{{ set_active(['admin/email-template','admin/email-template/*']) }}"><a
-                                href="{!! URL::to('/admin/email-template') !!}"><i class="fa fa-circle-o"></i> Email/SMS
-                            Template</a></li>
+                                href="{!! URL::to('/admin/email-template') !!}"><i class="fa fa-circle-o"></i> Email / SMS Modèle</a></li>
                     @endif
                 </ul>
             </li>
