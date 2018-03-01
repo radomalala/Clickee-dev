@@ -29,7 +29,16 @@ class BannerController extends Controller
 
 	public function index()
 	{
-		$banners = Banner::all();
+		Session::put('sliderORbanner',1);
+		$banners = $this->banner_repository->getAllBanner();
+		return view('admin.banner.index')->with('banners', $banners);
+	}
+
+	public function sliderindex()
+	{
+		Session::put('sliderORbanner',2);
+
+		$banners = $this->banner_repository->getAllSlider();
 		return view('admin.banner.index')->with('banners', $banners);
 	}
 
@@ -49,12 +58,18 @@ class BannerController extends Controller
 		if ($validator->fails()) {
 			return Redirect::back()->withInput()->withErrors($validator);
 		} else {
-            $image_name['english_image_name']=$this->uploadImage('image');
-            $image_name['french_image_name']=$this->uploadImage('french_image');
+			/*$image_name['english_image_name']=$this->uploadImage('image');*/
+            $image_name['french_image_name']=$this->uploadImage('french_image',$request->is_subbanner);
 			$brand=$this->banner_repository->create($request->all(),$image_name);
-			if($brand){
-				flash()->success(config('message.banner.add-success'));
-				return Redirect('admin/banner');
+			if($brand){				
+				if (Session::get('sliderORbanner') == 1) {
+					flash()->success(config('message.banner.add-success'));
+					return Redirect('admin/banner');
+				}else{
+					flash()->success(config('message.banner.add-success-slider'));
+					return Redirect('admin/slider');
+				}
+				
 			}
 		}
 	}
@@ -76,18 +91,23 @@ class BannerController extends Controller
 		if ($validator->fails()) {
 			return Redirect::back()->withInput()->withErrors($validator);
 		} else {
-            $image_name['english_image_name']=$this->uploadImage('image');
-            $image_name['french_image_name']=$this->uploadImage('french_image');
+            /*$image_name['english_image_name']=$this->uploadImage('image');*/
+            $image_name['french_image_name']=$this->uploadImage('french_image',$request->is_subbanner);
 			$banner=$this->banner_repository->updateById($id,$request->all(),$image_name);
-			if($banner){
-				flash()->success(config('message.banner.update-success'));
-				return Redirect('admin/banner');
+			if($banner){				
+				if (Session::get('sliderORbanner') == 1) {
+					flash()->success(config('message.banner.update-success'));
+					return Redirect('admin/banner');
+				}else{
+					flash()->success(config('message.banner.update-success-slider'));
+					return Redirect('admin/slider');
+				}
 			}
-			return Redirect('admin/banner');
+			/*return Redirect('admin/banner');*/
 		}
 	}
 
-	public function uploadImage($name){
+	public function uploadImage($name,$type){
 		
 		$image_name = "";
 		if (Input::hasFile($name)) {
@@ -105,9 +125,22 @@ class BannerController extends Controller
 			if(!\File::isDirectory($thumb_path)){
 				\File::makeDirectory($thumb_path);
 			}
+			
+			switch ($type) {
+				case 1:
+					$img->fit(1000,1000)->save($thumb_path.'/'.$image_name);		
+					break;
+				case 2:
+					$img->fit(750,500)->save($thumb_path.'/'.$image_name);		
+					break;
+				case 4:
+					$img->fit(3000,1300)->save($thumb_path.'/'.$image_name);		
+					break;		
 
-			$img->fit(1350,573)->save($thumb_path.'/'.$image_name);
-
+				default:
+					# code...
+					break;
+			}
 		}
 		return $image_name;
 
@@ -116,8 +149,13 @@ class BannerController extends Controller
 	{
 		
 		if ($this->banner_repository->deleteById($id)) {
-            flash()->success(config('message.banner.delete-success'));
-			return Redirect('admin/banner');
+			if (Session::get('sliderORbanner') == 1) {
+				flash()->success(config('message.banner.delete-success'));
+				return Redirect('admin/banner');
+			}else{
+				flash()->success(config('message.banner.delete-success-slider'));
+				return Redirect('admin/slider');
+			}
 		}
 	}
 }

@@ -41,12 +41,12 @@ class HomeController extends Controller
     {
         $language_id=app('language')->language_id;
         $categories = $this->category_repository->getParentCategories($language_id);
-        $banners = $this->banner_repository->getActiveBanner($language_id);
-		$sub_banners = $this->banner_repository->getSubBanner($language_id);
+        $banner = $this->banner_repository->getActiveMainBanner($language_id);
+		$sub_banners = $this->banner_repository->getActiveSubBanner($language_id);
+        $sliders = $this->banner_repository->getActiveSlider($language_id);
         $brands=$this->brand_repository->getAll();
         $special_products=$this->special_product_repository->getspecialProducts();
 		$blog_posts = $this->blog_repository->getHomePagePost();
-        \Log::debug($banners);
-        return view('front.home.index', compact('categories','banners','brands','sub_banners','special_products','blog_posts'));
+        return view('front.home.index', compact('categories','banner','sliders','brands','sub_banners','special_products','blog_posts'));
     }
 }

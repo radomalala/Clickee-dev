@@ -67,6 +67,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => [], 'prefix' => 'admin/'],
         Route::get('role/destroy/{role_id}', 'AdminRoleController@destroy')->name('delete_role');
 
         Route::resource('banner', 'BannerController');
+        Route::get('slider', 'BannerController@sliderindex')->name('slider');
         Route::resource('product-rating', 'ProductRatingController');
 
         Route::get('product/get-data', 'ProductController@getData')->name('product-data');

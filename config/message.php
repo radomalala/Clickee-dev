@@ -162,6 +162,13 @@ return [
 		'update-error' => 'Banner not updated successfully.',
 		'delete-success' => 'Banner deleted successfully.',
 		'delete-error' => 'Banner not deleted successfully.',
+
+		'add-success-slider' => 'Slider added successfully.',
+		'add-error-slider' => 'Slider not added successfully.',
+		'update-success-slider' => 'Slider updated successfully.',
+		'update-error-slider' => 'Slider not updated successfully.',
+		'delete-success-slider' => 'Slider deleted successfully.',
+		'delete-error-slider' => 'Slider not deleted successfully.',
 	],
 	'rating' => [
 		'update-success' => 'Rating updated successfully.',
