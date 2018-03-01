@@ -93,12 +93,17 @@
                     @endif -->
                     @if(check_user_access('banner.index'))
                     <li class="{{ set_active(['admin/banner','admin/banner/*']) }}">
-                        <a href="{!! URL::to('/admin/banner') !!}"><i class="fa fa-circle-o"></i> Slider Manager</a>
+                        <a href="{!! URL::to('/admin/slider') !!}"><i class="fa fa-circle-o"></i> Slider Manager</a>
+                    </li>
+                    @endif
+                    @if(check_user_access('banner.index'))
+                    <li class="{{ set_active(['admin/banner','admin/banner/*']) }}">
+                        <a href="{!! URL::to('/admin/banner') !!}"><i class="fa fa-circle-o"></i> Banner Manager</a>
                     </li>
                     @endif
                     @if(check_user_access('special-product.index'))
                     <li class="{{ set_active(['admin/special-product','admin/special-product/*']) }}"><a
-                                href="{!! URL::to('/admin/special-product') !!}"><i class="fa fa-circle-o"></i> Products On Home</a>
+                        href="{!! URL::to('/admin/special-product') !!}"><i class="fa fa-circle-o"></i> Products On Home</a>
                     </li>
                     @endif
                 </ul>

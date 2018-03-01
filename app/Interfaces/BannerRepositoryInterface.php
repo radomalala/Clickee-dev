@@ -15,10 +15,13 @@ interface BannerRepositoryInterface
 
 	public function getActiveBanner();
 	
-	public function getSubBanner();
-	
-	
+	public function getActiveMainBanner();
 
-	
+	public function getActiveSubBanner();
 
+	public function getActiveSlider();
+
+	public function getAllBanner();
+
+	public function getAllSlider();
 }

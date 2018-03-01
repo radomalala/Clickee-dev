@@ -9,14 +9,14 @@
 <section class="section-slider">
     <div id="home-top-slide" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        @foreach($banners as $banner)
+        @foreach($sliders as $slider)
             <li data-target="#home-top-slide" data-slide-to="{!! $loop->index !!}" class="{!! ($loop->first) ? 'active' : '' !!}"></li>  
        @endforeach
     </ol>
     <div class="carousel-inner">
-        @foreach($banners as $banner)
+        @foreach($sliders as $slider)
             <div class="item {!! ($loop->first) ? 'active' : '' !!}">
-                <img src="{!! $banner->getBannerImage(app('language')->language_code) !!}" alt="{!! $banner->alt !!}" class="img-responsive" />
+                <img src="{!! $slider->getBannerImage(app('language')->language_code) !!}" alt="{!! $slider->alt !!}" class="img-responsive" />
                 
                 <div class="container container-slider">
                     <div class="carousel-caption">
@@ -42,19 +42,25 @@
         <div class="section-three-bloc-content">
             <div class="row">
                 <div class="col-lg-7 section-instagramm-feed-align">
-                    <a href="#">
-                        <img class="section-three-bloc-align" src="{!! URL::to('/') !!}/images/VOYAGE.png" alt="Nouvelles destinations"/>
+                    @if($banner)
+                    <a href="{!! $banner->url !!}">
+                        <img class="section-three-bloc-align" src="{!! $banner->getBannerImage(app('language')->language_code) !!}" alt="{!! $banner->alt !!}"/>
                     </a>
+                    @endif
                     <div class="banner-caption-left text-center">
                             <h1>NOUVELLES DESTINATIONS</h1>
                             <h1>besoin d’un bol d’air</h1>   
                     </div>
                 </div>
                 <div class="col-lg-5 section-instagramm-feed-align">
-                    <a href="#">
-                        <img class="pb-14" src="{!! URL::to('/') !!}/images/IDEES_CADEAUX.jpg" alt="Nouveautés cadeaux destinations"/>
+                    
+                    @foreach($sub_banners as $sub_banner)
+                    <a href="{!! $sub_banner->url !!}">
+                        <img class="pb-14" src="{!! $sub_banner->getBannerImage(app('language')->language_code) !!}" alt="{!! $sub_banner->alt !!}"/>
                     </a>
-                    <div class="banner-caption-right-top text-center">
+                    @endforeach
+
+                    <!-- <div class="banner-caption-right-top text-center">
                             <h1>NOUVEAUTÉS CADEAUX</h1>
                             <h1>plaisir d’offrir</h1>   
                     </div>
@@ -64,7 +70,7 @@
                     <div class="banner-caption-right-bottom text-center">
                             <h1>TENDANCES DÉCO</h1>
                             <h1>qui a dit old school ?</h1>   
-                    </div>
+                    </div> -->
                 </div>    
             </div>
         </div>    
