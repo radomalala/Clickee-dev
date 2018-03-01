@@ -35,6 +35,21 @@ jQuery(document).ready(function () {
             "order": [[1, "desc"]],
             "lengthMenu": [20, 40, 60, 80, 100],
             "pageLength": 20,
+            language: {
+                        paginate: {
+                            first:    'Premier',
+                            previous: 'Précédent',
+                            next:      'Suivant',
+                            last:     'Dernier'
+                        },
+                        "lengthMenu": "Afficher _MENU_ entrées",
+                        "search": "Chercher:",
+                        "processing": "En traitement ...",
+                        "infoEmpty": "Aucune entrée à afficher",
+                        "info": "Afficher la page _PAGE_ de _PAGES_"
+
+
+            },
             columns: [
                 {searchable: true, sortable: true},
                 {searchable: true, sortable: true},

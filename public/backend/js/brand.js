@@ -15,6 +15,21 @@ if (jQuery('table.table').length > 0) {
         "order"        : [[3, "desc"]],
         "lengthMenu"   : [20, 40, 60, 80, 100],
         "pageLength"   : 20,
+        language: {
+                        paginate: {
+                            first:    'Premier',
+                            previous: 'Précédent',
+                            next:      'Suivant',
+                            last:     'Dernier'
+                        },
+                        "lengthMenu": "Afficher _MENU_ entrées",
+                        "search": "Chercher:",
+                        "processing": "En traitement ...",
+                        "infoEmpty": "Aucune entrée à afficher",
+                        "info": "Afficher la page _PAGE_ de _PAGES_"
+
+
+        },
         columns        : [
             {data: 'brand_name', name:'brand_name', searchable: true, sortable: true},
             {data: 'website', name:'website', searchable: true, sortable: true},
