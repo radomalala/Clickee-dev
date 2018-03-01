@@ -14,7 +14,7 @@
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/banner/create') !!}" class="btn btn-block btn-primary"> Ajouter bannière </a>
+                        <a href="{!! URL::to('/admin/banner/create') !!}" class="btn btn-block btn-primary"> Nouvelle bannière </a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/banner/create') !!}" class="btn btn-block btn-primary">Ajouter slider</a>
+                        <a href="{!! URL::to('/admin/banner/create') !!}" class="btn btn-block btn-primary">Nouvelle slider</a>
                     </div>
                 </div>
             </div>
@@ -92,8 +92,8 @@
                             <thead>
                             <tr>
                                 <th>Nom</th>
-                                <th>Status</th>
-                                <th>Bannière</th>
+                                <th>Statut</th>
+                                <th>Slider</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -103,9 +103,9 @@
                                 <td>{!! $banner->banner_title !!}</td>
                                 <td>
                                     @if($banner->is_active=='1')
-                                        <span class="badge bg-green">Active</span>
+                                        <span class="badge bg-green">Actif</span>
                                     @else
-                                        <span class="badge bg-light-blue">Inactive</span>
+                                        <span class="badge bg-light-blue">Inactif</span>
                                     @endif
                                 </td>
                                 <td><img src="{!! url('upload/banner/'.$banner->french_banner_image) !!}" class="preview-image"></td>

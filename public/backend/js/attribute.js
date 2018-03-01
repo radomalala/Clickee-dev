@@ -41,6 +41,21 @@ jQuery(document).ready(function () {
                 {searchable: false, sortable: true},
                 {searchable: false, sortable: false}
             ],
+            language: {
+                        paginate: {
+                            first:    'Premier',
+                            previous: 'Précédent',
+                            next:      'Suivant',
+                            last:     'Dernier'
+                        },
+                        "lengthMenu": "Afficher _MENU_ entrées",
+                        "search": "Chercher:",
+                        "processing": "En traitement ...",
+                        "infoEmpty": "Aucune entrée à afficher",
+                        "info": "Afficher la page _PAGE_ de _PAGES_"
+
+
+            },
             fnDrawCallback : function () {
                 var $paginate = this.siblings('.dataTables_paginate');
                 if (this.api().data().length <= this.fnSettings()._iDisplayLength) {
