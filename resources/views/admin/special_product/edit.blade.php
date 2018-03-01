@@ -3,7 +3,7 @@
     <section class="content-header">
         @include('notification')
         <h1>
-            Special Product
+            Modification produit special
         </h1>
     </section>
 
@@ -57,8 +57,8 @@
 
                     </div>
                     <div class="box-footer">
-                        <a href="{!!  URL::to('/admin/special-product') !!}" class="btn btn-default">Cancel</a>
-                        <button type="submit" class="btn btn-primary pull-right save-form">Save</button>
+                        <a href="{!!  URL::to('/admin/special-product') !!}" class="btn btn-default">Annuler</a>
+                        <button type="submit" class="btn btn-primary pull-right save-form">Modifier</button>
                     </div>
                     </form>
                 </div>

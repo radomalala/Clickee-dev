@@ -6,14 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Products On Home
+            Produits dans la page d'accueil
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/special-product/create') !!}" class="btn btn-block btn-primary">Add New
-                            Product</a>
+                        <a href="{!! URL::to('/admin/special-product/create') !!}" class="btn btn-block btn-primary">Nouvelle produit</a>
                     </div>
                 </div>
             </div>

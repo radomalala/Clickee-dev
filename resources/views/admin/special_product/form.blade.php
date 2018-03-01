@@ -3,7 +3,7 @@
 
     <section class="content-header">
         <h1>
-            Add Speial Product
+            Ajouter produit special
         </h1>
     </section>
 
@@ -46,8 +46,8 @@
                             </section>
                         </div>
                         <div class="box-footer">
-                            <a href="{!! URL::to('admin/special-product') !!}" class="btn btn-default">Cancel</a>
-                            <button type="submit" class="btn btn-primary pull-right" id="add-attribute">Save
+                            <a href="{!! URL::to('admin/special-product') !!}" class="btn btn-default">Annuler</a>
+                            <button type="submit" class="btn btn-primary pull-right" id="add-attribute">Ajouter
                             </button>
                         </div>
                         {!! Form::close() !!}

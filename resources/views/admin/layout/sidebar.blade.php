@@ -68,7 +68,7 @@
             @endif
             
             @if(check_user_access(['page.index','email-template.index','coupon','banner.index']))
-            <li class="treeview {{ set_active(['admin/page','admin/page/*','admin/banner','admin/banner/*','admin/coupon','admin/coupon/*','admin/special-product','admin/special-product/*','admin/faq','admin/faq/*'])}}">
+            <li class="treeview {{ set_active(['admin/page','admin/page/*','admin/banner','admin/banner/*','admin/slider','admin/slider/*','admin/coupon','admin/coupon/*','admin/special-product','admin/special-product/*','admin/faq','admin/faq/*'])}}">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Contenu</span>
@@ -92,7 +92,7 @@
                                     class="fa fa-circle-o"></i> Coupon Manager</a></li>
                     @endif -->
                     @if(check_user_access('banner.index'))
-                    <li class="{{ set_active(['admin/banner','admin/banner/*']) }}">
+                    <li class="{{ set_active(['admin/slider','admin/slider/*']) }}">
                         <a href="{!! URL::to('/admin/slider') !!}"><i class="fa fa-circle-o"></i> Gestion du slider</a>
                     </li>
                     @endif
