@@ -11,18 +11,18 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-info alert-dismissible">
-                    Recommended Main Banner Size: 1350 x 573<!-- , Side Banner Size: 242 x 195 -->
+                    Taille de la slider principale recommandée: 1350 x 573<!-- , Side Banner Size: 242 x 195 -->
                 </div>
                 <div class="box box-primary">
                     {!! Form::open(array('url' => 'admin/banner','files' => true,'class'=>'validate_form')) !!}
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="page_title">Banner Name</label>
+                            <label for="page_title">Nom du slider</label>
                             <input type="text" name="banner_title" class="form-control required" id="page_title"
                                    placeholder="Banner Name">
                         </div>
                         <div class="form-group">
-                            <label for="page_title">Banner Alt</label>
+                            <label for="page_title">Slider Alt</label>
                             <input type="text" name="alt" class="form-control " id="page_title"
                                    placeholder="Banner Alt">
                         </div>

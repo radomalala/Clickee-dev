@@ -6,13 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            All Banner
+            Tous les sliders
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/banner/create') !!}" class="btn btn-block btn-primary">Add New Banner</a>
+                        <a href="{!! URL::to('/admin/banner/create') !!}" class="btn btn-block btn-primary">Ajouter de nouveau slider</a>
                     </div>
                 </div>
             </div>
@@ -28,9 +28,9 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Banner Name</th>
-                                <th>Status</th>
-                                <th>Banner</th>
+                                <th>Nom du Slider</th>
+                                <th>Statut</th>
+                                <th>Slider</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -40,9 +40,9 @@
                                 <td>{!! $banner->banner_title !!}</td>
                                 <td>
                                     @if($banner->is_active=='1')
-                                        <span class="badge bg-green">Active</span>
+                                        <span class="badge bg-green">Actif</span>
                                     @else
-                                        <span class="badge bg-light-blue">Inactive</span>
+                                        <span class="badge bg-light-blue">Inactif</span>
                                     @endif
                                 </td>
                                 <td><img src="{!! url('upload/banner/'.$banner->banner_image) !!}" class="preview-image"></td>
