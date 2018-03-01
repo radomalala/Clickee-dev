@@ -128,12 +128,12 @@ class CategoryRepository implements CategoryRepositoryInterface
 		$category->created_by = auth()->guard('admin')->user()->admin_id;
 		$category->save();
 
-		if(isset($input['en_category_name']) || !empty($input['en_description'])){
+		/*if(isset($input['en_category_name']) || !empty($input['en_description'])){
 			CategoryTranslation::updateOrCreate(['category_id'=>$category->category_id,'language_id'=>'1'],
 				['category_name'=>$input['en_category_name'],'description'=>$input['en_description'],'language_id'=>'1']
 			);
 		}
-
+*/
 		if(isset($input['fr_category_name']) || !empty($input['fr_description'])){
 			CategoryTranslation::updateOrCreate(['category_id'=>$category->category_id,'language_id'=>'2'],
 				['category_name'=>$input['fr_category_name'],'description'=>$input['fr_description'],'language_id'=>'2']

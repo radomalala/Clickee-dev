@@ -7,14 +7,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            All Attributes
+            Liste des attributs
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! route('create_attribute') !!}" class="btn btn-block btn-primary">Add New
-                            Attribute</a>
+                        <a href="{!! route('create_attribute') !!}" class="btn btn-block btn-primary">Nouveau attribut</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +30,7 @@
                             <thead>
                             <tr>
                                 <th>Attribute Name(English)</th>
-                                <th>Attribute Name(French)</th>
+                                <th>Nom de l'attribut</th>
                                 <th>Type</th>
                                 <th>Created By</th>
                                 <th class="no-sort">Action</th>

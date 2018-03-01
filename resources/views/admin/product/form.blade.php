@@ -142,27 +142,23 @@
                                                         <div class="col-sm-4">
                                                             {!! Form::label('original_price', "Prix d'origine", ['class' => 'col-sm-4 control-label']) !!}
                                                             <div class="input-group">
-                                                            <span class="input-group-addon">$</span>
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-eur" aria-hidden="true"></i>
+                                                            </span>
                                                                 {!! Form::text('original_price', ($product) ?$product->original_price : null, ['class' => 'form-control','required' => 'required','id'=>'original_price','placeholder'=>"0.00"]) !!}
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-4 ">
                                                             {!! Form::label('best_price', 'Meilleur prix', ['class' => 'col-sm-4 control-label']) !!}
                                                             <div class="input-group">
-                                                            <span class="input-group-addon">$</span>
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-eur" aria-hidden="true"></i>
+                                                            </span>
                                                                 {!! Form::text('best_price', ($product) ?$product->best_price : null, ['class' => 'form-control','id'=>'best_price','placeholder'=>"0.00"]) !!}
                                                         </div>
                                                     </div>
 
                                                 </div>
-
-                                                <!-- div class="form-group">
-                                                    {!! Form::label('is_active', 'Is Active', ['class' => 'col-sm-2 control-label']) !!}
-                                                    <div class="col-sm-10">
-                                                        {!! Form::checkbox('is_active', '1',($product && $product->is_active=='1') ? true: false) !!}
-                                                    </div>
-
-                                                </div -->
                                                 <div class="form-group tag-autocomplete">
                                                     {!! Form::label('product_tag', 'Marque du produit', ['class' => 'col-sm-2 control-label']) !!}
                                                     <div class="col-sm-10">
@@ -204,21 +200,6 @@
                                                         @endforeach
                                                     </div>
                                                 </div>
-
-
-
-                                                    <!-- <div class="form-group english_input">
-                                                        {!! Form::label('en_summary', 'Summary(English)', ['class' => 'col-sm-2 control-label']) !!}
-                                                        <div class="col-sm-10">
-                                                            <textarea class="textarea" placeholder="Summary(English)" name="en_summary" id="en_summary"
-                                                                      style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-                                                                @if($product)
-                                                                    {!! $product->english->summary !!}
-                                                                @endif
-                                                            </textarea>
-                                                        </div>
-                                                    </div> -->
-
                                                  <div class="form-group french_input">
                                                         {!! Form::label('fr_summary', 'Résumé', ['class' => 'col-sm-2 control-label']) !!}
                                                         <div class="col-sm-10">
@@ -230,18 +211,6 @@
                                                         </textarea>
                                                         </div>
                                                     </div>
-
-                                                <!--  <div class="form-group english_input">
-                                                    {!! Form::label('en_description', 'Description (English)', ['class' => 'col-sm-2 control-label']) !!}
-                                                    <div class="col-sm-10">
-                                                        <textarea class="textarea" placeholder="Description (English)" name="en_description" id="en_description"
-                                                                  style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-                                                            @if($product)
-                                                                {!! $product->english->description !!}
-                                                            @endif
-                                                        </textarea>
-                                                    </div>
-                                                </div> -->
 
                                                     <div class="form-group french_input">
                                                         {!! Form::label('fr_description', 'Description', ['class' => 'col-sm-2 control-label']) !!}
@@ -447,12 +416,6 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="box-body">
-                                           <!--  <div class="form-group">
-                                                {!! Form::label('en_title', "Title (English)", ['class' => 'col-sm-2 control-label']) !!}
-                                                <div class="col-sm-10">
-                                                    {!! Form::text("en_title", ($product) ?$product->english->meta_title : null , ['class' => 'form-control','id'=>'en_title','placeholder'=>"utiliser le modèle: « marque - Nom du modèle – Alternateeve »"]) !!}
-                                                </div>
-                                            </div> -->
 
                                             <div class="form-group">
                                                 {!! Form::label('fr_title', "Titre", ['class' => 'col-sm-2 control-label']) !!}
@@ -461,13 +424,6 @@
                                                 </div>
                                             </div>
 
-                                           <!--  <div class="form-group">
-                                                {!! Form::label('en_meta_description', "Meta Description (English)", ['class' => 'col-sm-2 control-label']) !!}
-                                                <div class="col-sm-10">
-                                                    {!! Form::text("en_meta_description", ($product) ?$product->english->meta_description : null , ['class' => 'form-control','id'=>'en_meta_description','placeholder'=>"idem Title (English) + type de produit (ex : pants, télévision, etc..)"]) !!}
-                                                </div>
-                                            </div> -->
-
                                             <div class="form-group">
                                                 {!! Form::label('fr_meta_description', "Meta Description", ['class' => 'col-sm-2 control-label']) !!}
                                                 <div class="col-sm-10">
@@ -475,12 +431,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- <div class="form-group">
-                                                {!! Form::label('en_meta_keywords', "Meta Keyword (English)", ['class' => 'col-sm-2 control-label']) !!}
-                                                <div class="col-sm-10">
-                                                    {!! Form::text("en_meta_keywords", ($product) ?$product->english->meta_keywords : null , ['class' => 'form-control','id'=>'en_meta_keywords','placeholder'=>"idem"]) !!}
-                                                </div>
-                                            </div> -->
                                             <div class="form-group">
                                                 {!! Form::label('fr_meta_keywords', "Meta Mot-clé", ['class' => 'col-sm-2 control-label']) !!}
                                                 <div class="col-sm-10">
@@ -488,25 +438,12 @@
                                                 </div>
                                             </div>
 
-                                           <!--  <div class="form-group">
-                                                {!! Form::label('en_og_title', "OG Title (English)", ['class' => 'col-sm-2 control-label']) !!}
-                                                <div class="col-sm-10">
-                                                    {!! Form::text("en_og_title", ($product) ?$product->english->og_title : null , ['class' => 'form-control','id'=>'en_og_title','placeholder'=>"utiliser le modèle: « marque - Nom du modèle on Alternateeve »"]) !!}
-                                                </div>
-                                            </div> -->
-
                                             <div class="form-group">
                                                 {!! Form::label('fr_og_title', "OG Titre", ['class' => 'col-sm-2 control-label']) !!}
                                                 <div class="col-sm-10">
                                                     {!! Form::text("fr_og_title", ($product) ?$product->french->og_title : null , ['class' => 'form-control','id'=>'fr_og_title','placeholder'=>"utiliser le modèle: « marque - Nom du modèle sur Alternateeve »"]) !!}
                                                 </div>
                                             </div>
-                                           <!--  <div class="form-group">
-                                                {!! Form::label('en_og_description', "OG Description (English)", ['class' => 'col-sm-2 control-label']) !!}
-                                                <div class="col-sm-10">
-                                                    {!! Form::text("en_og_description", ($product) ?$product->english->og_description : null , ['class' => 'form-control','id'=>'en_og_title','placeholder'=>"insérer les deux premières lignes de la description EN","maxlength"=>"200"]) !!}
-                                                </div>
-                                            </div> -->
                                             <div class="form-group">
                                                 {!! Form::label('fr_og_description', "OG Description", ['class' => 'col-sm-2 control-label']) !!}
                                                 <div class="col-sm-10">

@@ -3,7 +3,7 @@
     <section class="content-header">
         @include('notification')
         <h1>
-            Update Brand
+            Modifier une marque
         </h1>
     </section>
 
@@ -14,15 +14,15 @@
                        {{ Form::model($brand, array('method' => 'PATCH', 'url' => array('admin/brand', $brand->brand_id),'class'=>'validate_form','files' => true)) }}
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="page_title">Brand Name</label>
+                            <label for="page_title">Nom du marque</label>
                             {!! Form::text('name', $brand->brand_name,array('class'=>'form-control required', 'placeholder'=>'Brand Name')) !!}
                         </div>
                         <div class="form-group">
-                            <label for="page_title">WebSite</label>
+                            <label for="page_title">Site web</label>
                             {!! Form::text('website', $brand->website,array('class'=>'form-control required', 'placeholder'=>'Website Name')) !!}
                         </div>
                         <div class="form-group ">
-                            <label for="content-heading">Brand Image</label>
+                            <label for="content-heading">Image</label>
                             {!! Form::file('image',['class'=>"form-control"])!!}
                             @if(isset($brand->brand_image) && $brand->brand_image!='')
                                 {{ Form::image('upload/brand/'.$brand->brand_image, null, ['class' => 'brand-image'])}}
@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <div class="tag-autocomplete">
-                                {!! Form::label('brand_tag', 'Mother Brand Tag', ['class' => '']) !!}
+                                {!! Form::label('brand_tag', 'Tag de la marque mère', ['class' => '']) !!}
                                 <div class="">
                                             <span class="search-box-container">
                                                 <span class="search-box">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('is_active', 'Disable Mother Brand', ['class' => 'col-sm-2 control-label']) !!}
+                            {!! Form::label('is_active', 'Désactiver la marque mère', ['class' => 'col-sm-2 control-label']) !!}
                             <div class="col-sm-10 active-brand">
                                 {!! Form::checkbox('is_active', '0',($brand->is_active==0)?true:false) !!}
                             </div>
@@ -66,14 +66,14 @@
                                 <div class="col-md-12 sub-brand-container" id="{!! $index !!}">
                                     <div class="col-md-5">
                                         <div class="form-group">
-                                            {!! Form::label('sub_brand', 'Sub Brand', ['class' => 'col-sm-5 control-label ']) !!}
+                                            {!! Form::label('sub_brand', 'Sous-marque', ['class' => 'col-sm-5 control-label ']) !!}
                                             <input  type="text" value="{!! $sub_brand->brand_name !!}"  class="form-control sub_brand_name" name="sub_brand[{!! $index !!}]" placeholder="Sub Brand">
                                             <input type="hidden" class="sub_brand_id" name="sub_brand_id[{!! $index !!}]" value="{!! $sub_brand->brand_id !!}">
                                         </div>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="form-group col-xs-12 tag-autocomplete">
-                                            {!! Form::label('brand_tag', 'Sub Brand Tag', ['class' => 'col-sm-5 control-label']) !!}
+                                            {!! Form::label('brand_tag', 'Tag de sous-marque', ['class' => 'col-sm-5 control-label']) !!}
                                             <div class="col-sm-12">
                                         <span class="search-box-container">
                                             <span class="search-box">
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="col-md-1 add-more-btn">
                                         <label>&nbsp;</label>
-                                        <button type="button" class="btn {!! ($index==0) ? "btn-primary":"btn-danger" !!}  btn-sm form-control" id="{!! ($index==0) ? "add_more_sub_brand" : "remove_sub_brand"  !!}">{!! ($index==0)?"Add More" :"Remove"  !!}</button>
+                                        <button type="button" class="btn {!! ($index==0) ? "btn-primary":"btn-danger" !!}  btn-sm form-control" id="{!! ($index==0) ? "add_more_sub_brand" : "remove_sub_brand"  !!}">{!! ($index==0)?"Ajouter plus" :"Retirer"  !!}</button>
                                     </div>
                                 </div>
                             @endforeach
@@ -103,7 +103,7 @@
                         @endif
 
                         <div class="form-group">
-                            <label class="col-sm-5">Existing Brand Tags</label>
+                            <label class="col-sm-5">Tags de marque existants</label>
                             <div class="col-sm-12" id="tag-container">
                                 @foreach($all_tags as $tag)
                                     <button type="button" id="{!! $tag->brand_tag_id !!}" class="btn btn-primary btn-sm brand-category-btn">{!! $tag->tag_name !!}
@@ -117,8 +117,8 @@
 
                     </div>
                     <div class="box-footer">
-                       <a href="{!!  URL::to('/admin/brand') !!}" class="btn btn-default">Cancel</a>
-                        <button type="submit" class="btn btn-primary pull-right save-form">Save</button>
+                       <a href="{!!  URL::to('/admin/brand') !!}" class="btn btn-default">Annuler</a>
+                        <button type="submit" class="btn btn-primary pull-right save-form">Sauvegarder</button>
                     </div>
                     </form>
                 </div>

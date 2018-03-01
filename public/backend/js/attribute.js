@@ -37,7 +37,6 @@ jQuery(document).ready(function () {
             columns        : [
                 {searchable: true, sortable: true},
                 {searchable: true, sortable: true},
-                {searchable: true, sortable: true},
                 {searchable: false, sortable: true},
                 {searchable: false, sortable: false}
             ],

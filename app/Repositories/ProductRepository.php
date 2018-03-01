@@ -37,21 +37,6 @@ class ProductRepository implements ProductRepositoryInterface
             $this->model->created_by = auth()->guard('admin')->user()->admin_id;
             $this->model->save();
 
-            if (!empty($input['en_product_name']) || !empty($input['en_summary']) || !empty($input['en_description']) || !empty($input['en_title']) ||
-				!empty($input['en_meta_description']) || !empty($input['en_meta_keywords']) || !empty($input['en_og_title']) || !empty($input['en_og_description'])) {
-                $product_translation = new ProductTranslation();
-                $product_translation->product_name = $input['en_product_name'];
-                $product_translation->summary = $input['en_summary'];
-                $product_translation->description = $input['en_description'];
-                $product_translation->meta_title = $input['en_title'];
-                $product_translation->meta_description = $input['en_meta_description'];
-                $product_translation->meta_keywords = $input['en_meta_keywords'];
-                $product_translation->og_title = $input['en_og_title'];
-                $product_translation->og_description = $input['en_og_description'];
-                $product_translation->language_id = '1';
-                $this->model->translation()->save($product_translation);
-            }
-
             if (!empty($input['fr_product_name']) || !empty($input['fr_summary']) || !empty($input['fr_description']) || !empty($input['fr_title']) ||
 				!empty($input['fr_meta_description']) || !empty($input['fr_meta_keywords']) || !empty($input['fr_og_title']) || !empty($input['fr_og_description'])) {
                 $product_translation = new ProductTranslation();
@@ -179,22 +164,6 @@ class ProductRepository implements ProductRepositoryInterface
         $product->modified_by = auth()->guard('admin')->user()->admin_id;
         $product->save();
 
-
-        if (!empty($input['en_product_name']) || !empty($input['en_summary']) || !empty($input['en_description']) || !empty($input['en_title']) ||
-			!empty($input['en_meta_description']) || !empty($input['en_meta_keywords']) || !empty($input['en_og_title']) || !empty($input['en_og_description'])) {
-            ProductTranslation::updateOrCreate(['product_id' => $product_id, 'language_id' => '1'],
-                [
-                    'product_name' => $input['en_product_name'],
-                    'summary' => $input['en_summary'],
-                    'description' => $input['en_description'],
-					'meta_title'=>$input['en_title'],
-					'meta_description'=>$input['en_meta_description'],
-					'meta_keywords'=>$input['en_meta_keywords'],
-					'og_title'=>$input['en_og_title'],
-					'og_description'=>$input['en_og_description'],
-                ]
-            );
-        }
 
         if (!empty($input['fr_product_name']) || !empty($input['fr_summary']) || !empty($input['fr_description']) || !empty($input['fr_title']) ||
 			!empty($input['fr_meta_description']) || !empty($input['fr_meta_keywords']) || !empty($input['fr_og_title']) || !empty($input['fr_og_description'])) {
