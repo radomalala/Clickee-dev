@@ -6,12 +6,12 @@
         <div class="col-md-4">
             <div class="box-body">
                 <div class="form-group">
-                    {!! Form::label('last_name', 'Last Name', ['class' => '']) !!}
-                    {!! Form::text("manager[$index][last_name]", $user->last_name, ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Last Name"]) !!}
+                    {!! Form::label('last_name', 'Nom', ['class' => '']) !!}
+                    {!! Form::text("manager[$index][last_name]", $user->last_name, ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Nom"]) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('first_name', 'First Name', ['class' => '']) !!}
-                    {!! Form::text("manager[$index][first_name]",$user->first_name, ['class' => 'form-control required','id'=>'first_name','placeholder'=>"First Name"]) !!}
+                    {!! Form::label('first_name', 'Prénom', ['class' => '']) !!}
+                    {!! Form::text("manager[$index][first_name]",$user->first_name, ['class' => 'form-control required','id'=>'first_name','placeholder'=>"Prénom"]) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('position', 'Position', ['class' => '']) !!}
@@ -30,8 +30,8 @@
                     {!! Form::text("manager[$index][email]", $user->email , ['class' => 'form-control required','id'=>'email','placeholder'=>"Email"]) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('password', 'Password', ['class' => '']) !!}
-                    {!! Form::password("manager[$index][password]", ['class' => 'form-control','id'=>'password','placeholder'=>"Password"]) !!}
+                    {!! Form::label('password', 'Mot de passe', ['class' => '']) !!}
+                    {!! Form::password("manager[$index][password]", ['class' => 'form-control','id'=>'password','placeholder'=>"Mot de passe"]) !!}
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="manager[{!! $index !!}][global_manager]" id="global_manager" {!! ($user->pivot->is_global_manager == '1') ? "checked":'' !!} value="1">
-                            Main account/owner
+                            Compte principal / propriétaire
                         </label>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="manager[{!! $index !!}][receive_request]" id="receive_request" {!! ($user->pivot->receive_request == '1') ? "checked":'' !!} value="1">
-                            Receive Purchase Request
+                            Recevoir une demande d'achat
                         </label>
                     </div>
                 </div>
@@ -57,16 +57,16 @@
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="manager[{!! $index !!}][reply_request]" id="reply_request" {!! ($user->pivot->reply_request == '1') ? "checked":'' !!} value="1">
-                            Can Reply To Request
+                            Peut répondre à une demande
                         </label>
                     </div>
                 </div>
 
                 <div class="form-group add-user">
                     @if($index > 0)
-                        <button type="button" class="btn btn-danger remove_user">Remove User</button>
+                        <button type="button" class="btn btn-danger remove_user">Effacer l'utilisateur</button>
                     @else
-                        <button type="button" class="btn btn-primary add_user">Add User</button>
+                        <button type="button" class="btn btn-primary add_user">Ajouter un utilisateur</button>
                     @endif
                 </div>
                 <input type="hidden" name="manager[{!! $index !!}][manager_id]" id="manager_id" value="{!! $user->user_id !!}">
@@ -84,12 +84,12 @@
     <div class="col-md-4">
         <div class="box-body">
             <div class="form-group">
-                {!! Form::label('last_name', 'Last Name', ['class' => '']) !!}
-                {!! Form::text('manager[1][last_name]', null , ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Last Name"]) !!}
+                {!! Form::label('last_name', 'Nom', ['class' => '']) !!}
+                {!! Form::text('manager[1][last_name]', null , ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Nom"]) !!}
             </div>
             <div class="form-group">
-                {!! Form::label('first_name', 'First Name', ['class' => '']) !!}
-                {!! Form::text('manager[1][first_name]', null , ['class' => 'form-control required','id'=>'first_name','placeholder'=>"First Name"]) !!}
+                {!! Form::label('first_name', 'Prénom', ['class' => '']) !!}
+                {!! Form::text('manager[1][first_name]', null , ['class' => 'form-control required','id'=>'first_name','placeholder'=>"Prénom"]) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('position', 'Position', ['class' => '']) !!}
@@ -108,8 +108,8 @@
                 {!! Form::text('manager[1][email]', null , ['class' => 'form-control required','id'=>'email','placeholder'=>"Email"]) !!}
             </div>
             <div class="form-group">
-                {!! Form::label('password', 'Password', ['class' => '']) !!}
-                {!! Form::password('manager[1][password]', ['class' => 'form-control required','id'=>'password','placeholder'=>"Password"]) !!}
+                {!! Form::label('password', 'Mot de passe', ['class' => '']) !!}
+                {!! Form::password('manager[1][password]', ['class' => 'form-control required','id'=>'password','placeholder'=>"Mot de passe"]) !!}
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="manager[1][global_manager]" id="global_manager" value="1">
-                        Main account/owner
+                        Compte principal / propriétaire
                     </label>
                 </div>
             </div>
@@ -127,7 +127,7 @@
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="manager[1][receive_request]" id="receive_request" value="1">
-                        Receive Purchase Request
+                        Recevoir une demande d'achat
                     </label>
                 </div>
             </div>
@@ -135,13 +135,13 @@
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="manager[1][reply_request]" id="reply_request" value="1">
-                        Can Reply To Request
+                        Peut répondre à une demande
                     </label>
                 </div>
             </div>
 
             <div class="form-group add-user">
-                <button type="button" class="btn btn-primary add_user">Add User</button>
+                <button type="button" class="btn btn-primary add_user">Ajouter un utilisateur</button>
             </div>
 
 
