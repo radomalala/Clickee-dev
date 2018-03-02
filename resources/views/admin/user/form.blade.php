@@ -2,7 +2,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Add New Account
+            Ajouter un nouveau compte
         </h1>
     </section>
 
@@ -16,7 +16,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab">Information</a></li>
                         @if($type=='customer')
-                            <li><a href="#tab_2" data-toggle="tab">Address</a></li>
+                            <li><a href="#tab_2" data-toggle="tab">Adresse</a></li>
                         @endif
                     </ul>
                     <input type="hidden" name="type" value="{!! $type !!}">
@@ -27,21 +27,19 @@
                                     <div class="col-md-12">
                                         <div class="box-body">
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="page_title">First
-                                                    Name</label>
+                                                <label class="col-sm-2 control-label" for="page_title">Nom</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="first_name" class="form-control required"
                                                            id="page_title"
-                                                           placeholder="First Name">
+                                                           placeholder="Nom">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="content-heading">Last
-                                                    Name</label>
+                                                <label class="col-sm-2 control-label" for="content-heading">Prenom</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="last_name" class="form-control required"
                                                            id="content-heading"
-                                                           placeholder="Last Name">
+                                                           placeholder="Prenom">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -53,44 +51,43 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="url_key">Password</label>
+                                                <label class="col-sm-2 control-label" for="url_key">Mot de passe</label>
                                                 <div class="col-sm-10">
                                                     <input type="password" name="password" class="form-control"
                                                            id="password"
-                                                           placeholder="Password">
+                                                           placeholder="Mot de passe">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="confirm_password">Confirm
-                                                    Password</label>
+                                                <label class="col-sm-2 control-label" for="confirm_password">Confirmation</label>
                                                 <div class="col-sm-10">
                                                     <input type="password" name="confirm_password"
                                                            class="form-control required"
                                                            id="confirm_password"
-                                                           placeholder="Confirm Password">
+                                                           placeholder="Confirmation">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="is_active">Is Active</label>
+                                                <label class="col-sm-2 control-label" for="is_active">Actif</label>
                                                 <div class="col-sm-10 checkbox">
                                                     {!! Form::checkbox('is_active', '1',false) !!}
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                {!! Form::label('profile_image','Profile Image',array('class' => 'col-sm-2 control-label')) !!}
+                                                {!! Form::label('profile_image','Photo de profil',array('class' => 'col-sm-2 control-label')) !!}
                                                 <div class="col-sm-10">
-                                                    {!! Form::file('profile_image',array('class'=>'form-control', 'placeholder'=>'Confirm Password')) !!}
+                                                    {!! Form::file('profile_image',array('class'=>'form-control', 'placeholder'=>'Confirmation')) !!}
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="phone_number" class="col-sm-2 control-label">Phone Number</label>
+                                                <label for="phone_number" class="col-sm-2 control-label">Téléphone</label>
                                                 <div class="col-sm-10">
-                                                    {!! Form::text('phone_number',null,array('class'=>'form-control required', 'placeholder'=>'Phone Number')) !!}
+                                                    {!! Form::text('phone_number',null,array('class'=>'form-control required', 'placeholder'=>'Téléphone')) !!}
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="radius">Radius Of Research (KM)</label>
+                                                <label class="col-sm-2 control-label" for="radius">Rayon de la recherche (KM)</label>
                                                 <div class="col-sm-10">
                                                     {!! Form::select('radius', getRadiusData(), null,['class'=>'form-control']) !!}
                                                 </div>
@@ -107,65 +104,65 @@
                                     <div class="col-md-12">
                                         <div class="box-body">
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="address1">Address1</label>
+                                                <label class="col-sm-2 control-label" for="address1">Adresse 1</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="address1"
                                                            class="form-control required"
                                                            id="address1"
-                                                           placeholder="Address1">
+                                                           placeholder="Adresse 1">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="address2">Address2</label>
+                                                <label class="col-sm-2 control-label" for="address2">Adresse 2</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="address2"
                                                            class="form-control required"
                                                            id="address2"
-                                                           placeholder="Address2">
+                                                           placeholder="Adresse 2">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="company">Company Name</label>
+                                                <label class="col-sm-2 control-label" for="company">Nom de la compagnie</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="company" class="form-control required"
                                                            id="company"
-                                                           placeholder="Company">
+                                                           placeholder="Nom de la compagnie">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="city">City</label>
+                                                <label class="col-sm-2 control-label" for="city">Ville</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="city"
                                                            class="form-control required"
                                                            id="city"
-                                                           placeholder="City">
+                                                           placeholder="Ville">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="zip">Zip/Postal Code</label>
+                                                <label class="col-sm-2 control-label" for="zip">Code postal</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="zip"
                                                            class="form-control required"
                                                            id="zip"
-                                                           placeholder="Zip/Postal Code">
+                                                           placeholder="Code postal">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="country">State</label>
+                                                <label class="col-sm-2 control-label" for="country">Etat</label>
                                                 <div class="col-sm-10">
                                                     <select name="state_id" id="state" class="form-control required">
-                                                        <option value="">Select State</option>
+                                                        <option value="">Sélectionner un etat</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="country">Country</label>
+                                                <label class="col-sm-2 control-label" for="country">Pays</label>
                                                 <div class="col-sm-10">
                                                     <select name="country_id" id="country"
                                                             class="form-control required">
-                                                        <option value="">Select Country</option>
+                                                        <option value="">Sélectionner un pays</option>
                                                         @foreach($countries as $country)
                                                             <option value="{!! $country->id !!}">{!! $country->name !!}</option>
                                                         @endforeach
@@ -178,8 +175,8 @@
                             </section>
                         </div>
                         <div class="box-footer">
-                            <a href="{!! URL::to('admin/'.$type) !!}" class="btn btn-default">Cancel</a>
-                            <button type="submit" class="btn btn-primary pull-right" id="add-account">Save</button>
+                            <a href="{!! URL::to('admin/'.$type) !!}" class="btn btn-default">Annuler</a>
+                            <button type="submit" class="btn btn-primary pull-right" id="add-account">Sauvergarder</button>
                             </button>
                         </div>
                     </div>

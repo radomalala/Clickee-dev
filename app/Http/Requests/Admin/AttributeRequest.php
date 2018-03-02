@@ -24,7 +24,6 @@ class AttributeRequest extends FormRequest
     public function rules()
     {
         return [
-            'en_attribute_name'=>'required',
 			'input_type' =>'required'
         ];
     }

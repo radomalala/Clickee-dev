@@ -3,9 +3,9 @@
     <section class="content-header">
         <h1>
             @if($attribute_set)
-                Update Attribute Set
+                Modifier un Attribut Set
             @else
-                Add Attribute Set
+                Ajouter un nouveau Attribut Set
             @endif
         </h1>
     </section>
@@ -25,17 +25,17 @@
                     <form role="form" method="post" action="/">
                         <div class="box-body">
                             <div class="form-group">
-                                {!! Form::label('attribute_set_name', 'Attribute Set Name', ['class' => '']) !!}
-                                {!! Form::text('attribute_set_name', ($attribute_set)? $attribute_set->set_name:null, ['class' => 'form-control required','id'=>'attribute_set_name','placeholder'=>"Attribute Set Name"]) !!}
+                                {!! Form::label('attribute_set_name', "Nom de l'attribut set", ['class' => '']) !!}
+                                {!! Form::text('attribute_set_name', ($attribute_set)? $attribute_set->set_name:null, ['class' => 'form-control required','id'=>'attribute_set_name','placeholder'=>"Nom de l'attribut set"]) !!}
                             </div>
                             <div class="form-group">
-                                {!! Form::label('attribute', 'Attribute', ['class' => '']) !!}
+                                {!! Form::label('attribute', 'Attribut', ['class' => '']) !!}
                                 {!! Form::select('attributes[]', $attributes,$selected_attribute, ['class' => 'form-control required','id'=>'attribute','multiple'=>true]) !!}
                             </div>
                         </div>
                         <div class="box-footer">
-                            <a href="{!! route('attribute_set') !!}" class="btn btn-default">Cancel</a>
-                            <button type="submit" class="btn btn-primary pull-right" id="add-attribute-set">Save
+                            <a href="{!! route('attribute_set') !!}" class="btn btn-default">Annuler</a>
+                            <button type="submit" class="btn btn-primary pull-right" id="add-attribute-set">Sauvergarder
                             </button>
                         </div>
                     </form>

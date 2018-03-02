@@ -6,7 +6,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Product Adjustment
+            Ajustement du produit
         </h1>
     </section>
 
@@ -15,16 +15,16 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Product Adjustment</h3>
+                        <h3 class="box-title">Ajustement du produit</h3>
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Original Price</th>
-                                <th>Better Price</th>
-                                <th>Merchant Name</th>
+                                <th>Nom du produit</th>
+                                <th>Prix d'origine</th>
+                                <th>Meilleur prix</th>
+                                <th>Nom du commerçant</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -51,19 +51,19 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search Product</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Chercher un produit</h4>
                 </div>
                 <div class="modal-body">
                     <form method="post" action="/">
                         <div class="form-group">
-                            <label for="recipient-name" class="control-label">Product Name</label>
+                            <label for="recipient-name" class="control-label">Nom du produit</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Search</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Chercher</button>
                 </div>
             </div>
         </div>

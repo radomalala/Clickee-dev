@@ -6,14 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Account Management
+            Gestion de compte
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/'.$type.'/create') !!}" class="btn btn-block btn-primary">Add New
-                            Account</a>
+                        <a href="{!! URL::to('/admin/'.$type.'/create') !!}" class="btn btn-block btn-primary">Nouveau compte</a>
                     </div>
                 </div>
             </div>
@@ -28,11 +27,11 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
                                 <th>Email</th>
-                                <th>Status</th>
-                                <th>Role Name</th>
+                                <th>Statut</th>
+                                <th>Rôle</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -44,9 +43,9 @@
                                     <td>{!! $user->email !!}</td>
                                     <td>
                                         @if($user->status=='1')
-                                            <span class="badge bg-green">Active</span>
+                                            <span class="badge bg-green">Actif</span>
                                         @else
-                                            <span class="badge bg-light-blue">Inactive</span>
+                                            <span class="badge bg-light-blue">Inactif</span>
                                         @endif
                                     </td>
                                     <td><span class="label label-success">{!! $user->role->role_name !!}</span></td>
@@ -56,8 +55,8 @@
                                                class="btn btn-default btn-sm" title="Edit"><i
                                                         class="fa fa-fw fa-edit"></i></a>
                                             {!! Form::open(array('url' => 'admin/'.$type .'/'. $user->user_id, 'class' => 'pull-right')) !!}
-                                            {!! Form::hidden('_method', 'DELETE') !!}
-                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Delete'] ) !!}
+                                            {!! Form::hidden('_method', 'SUPPRIMER') !!}
+                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Supprimer'] ) !!}
                                             {{ Form::close() }}
                                         </div>
                                     </td>

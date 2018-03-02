@@ -1,4 +1,4 @@
-@extends($layout)
+    @extends($layout)
 
 @section('additional-styles')
     {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
@@ -29,17 +29,15 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Attribute Name(English)</th>
                                 <th>Nom de l'attribut</th>
                                 <th>Type</th>
-                                <th>Created By</th>
+                                <th>Créé par</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                                 @foreach($attributes->data as $attribute)
                                     <tr>
-                                        <td>{!! $attribute->english->attribute_name !!}</td>
                                         <td>{!! (!empty($attribute->french)) ? $attribute->french->attribute_name: null !!}</td>
                                         <td>{!! $attribute->type=='1'?'Color':'Select Box' !!}</td>
                                          
