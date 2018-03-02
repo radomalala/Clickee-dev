@@ -319,7 +319,7 @@
                 <ul class="treeview-menu">
                     @if(check_user_access(['update_setting', 'setting_update']))
                         <li class="{{ set_active(['admin/system','admin/system/*']) }}"><a
-                                    href="{!! URL::to('/admin/system') !!}"><i class="fa fa-circle-o"></i> Meta & OG</a>
+                                    href="{!! URL::to('/admin/system') !!}"> <i class="fa fa-circle-o"></i> Meta & OG</a>
                         </li>
                     @endif
                     @if(check_user_access('epartner.index'))
