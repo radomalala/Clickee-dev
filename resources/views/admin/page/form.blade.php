@@ -113,7 +113,7 @@
                         </div>
 
                         <div class="box-footer">
-                            <a href="{!! URL::to('admin/page/create') !!}" class="btn btn-default">Annuler</a>
+                            <a href="{!! URL::to('admin/page') !!}" class="btn btn-default">Annuler</a>
                             <button type="submit" id="add-page" class="btn btn-primary pull-right">Enregistrer</button>
                         </div>
                         </form>

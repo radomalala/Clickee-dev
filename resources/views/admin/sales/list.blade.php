@@ -7,7 +7,7 @@
     <section class="content-header">
 
         <h1>
-            Sales
+            Ventes
         </h1>
         <div class="header-btn">
             <div class="clearfix">
@@ -29,10 +29,10 @@
                         <table id="sales_order" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Order Id</th>
-                                <th>Order Date</th>
-                                <th>Customer</th>
-                                <th>Order Total</th>
+                                <th>Num commande</th>
+                                <th>Date de commande</th>
+                                <th>Client</th>
+                                <th>Total commande</th>
                                 <th>Product(s)</th>
                                 <th>Action</th>
                             </tr>
