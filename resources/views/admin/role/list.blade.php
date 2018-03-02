@@ -6,14 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Role Management
+            Gestion de rôle 
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/role/create') !!}" class="btn btn-block btn-primary">Add New
-                            Role</a>
+                        <a href="{!! URL::to('/admin/role/create') !!}" class="btn btn-block btn-primary">Nouveau rôle</a>
                     </div>
                 </div>
             </div>
@@ -26,13 +25,13 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Role</h3>
+                        <h3 class="box-title">Rôle</h3>
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Role Name</th>
+                                <th>Nom du rôle</th>
 
                                 <th class="no-sort">Action</th>
                             </tr>
@@ -50,7 +49,7 @@
 
                                             {!! Form::open(array('url' => 'admin/role/' . $role->admin_role_id, 'class' => 'pull-right')) !!}
                                             {!! Form::hidden('_method', 'DELETE') !!}
-                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Delete'] ) !!}
+                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Supprimer'] ) !!}
                                             {{ Form::close() }}
                                         </div>
                                     </td>
