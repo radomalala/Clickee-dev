@@ -19,7 +19,7 @@ class PageRepository implements PageRepositoryInterface
 
     public function getAll()
     {
-        return $this->model->with('english')->get();
+        return $this->model->with('french')->get();
     }
 
     public function getById($page_id)
