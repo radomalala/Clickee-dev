@@ -268,7 +268,7 @@
 
             <!-- Catalogue -->
 
-        @if(check_user_access(['product_billed','orders']))
+       <!--  @if(check_user_access(['product_billed','orders']))
             <li class="treeview {{ set_active(['admin/statistics/sales','admin/statistics/sales/*','admin/finance','admin/finance/*']) }}">
                 <a href="#">
                     <i class="fa fa-bar-chart"></i>
@@ -287,7 +287,7 @@
                         <li class="{{ set_active(['admin/finance','admin/finance/*']) }}"><a
                                     href="#"><i class="fa fa-circle-o"></i> Finance</a>
                         </li>
-                    @endif
+                    @endif -->
                     <!-- @if(check_user_access('product_billed'))
                     <li class="{{ set_active(['admin/product-billed','admin/product-billed-detail/*']) }}"><a
                                 href="{!! route('product_billed') !!}"><i class="fa fa-circle-o"></i> Product Billed</a>
@@ -303,9 +303,9 @@
                                 href="{!! route('company_account') !!}"><i class="fa fa-circle-o"></i> Company Accounts</a>
                     </li>
                     @endif -->
-                </ul>
+                <!-- </ul>
             </li>
-            @endif
+            @endif -->
             
             @if(check_user_access(['epartner.index','epartner.index','email-template.index','update_setting', 'setting_update']))
             <li class="treeview {{ set_active(['admin/system','admin/system/*','admin/meta_og','admin/meta_og/*', 'admin/epartner','admin/epartner/*','admin/email-template','admin/email-template/*']) }}">
