@@ -6,15 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Order Status
+            Statut de la commande
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/') !!}/admin/order-status/create" class="btn btn-block btn-primary">Add
-                            New
-                            Status</a>
+                        <a href="{!! URL::to('/') !!}/admin/order-status/create" class="btn btn-block btn-primary">Nouvelle statut</a>
                     </div>
                 </div>
             </div>
@@ -30,9 +28,9 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Status Name</th>
-                                <th>Customer Status Name</th>
-                                <th>Is Default</th>
+                                <th>Nom du statut</th>
+                                <th>Nom statut du client</th>
+                                <th>Par défaut</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -43,9 +41,9 @@
                                     <td>{!! $order_status->customer_status !!}</td>
                                     <td>
                                         @if($order_status->is_default==1)
-                                            <span class="badge bg-green">Yes</span>
+                                            <span class="badge bg-green">Oui</span>
                                         @else
-                                            <span class="badge bg-light-blue">No</span>
+                                            <span class="badge bg-light-blue">Non</span>
                                         @endif
                                     </td>
                                     <td>
@@ -90,6 +88,21 @@
                 "order": [[2, "desc"]],
                 "lengthMenu": [20, 40, 60, 80, 100],
                 "pageLength": 20,
+                language: {
+                        paginate: {
+                            first:    'Premier',
+                            previous: 'Précédent',
+                            next:      'Suivant',
+                            last:     'Dernier'
+                        },
+                        "lengthMenu": "Afficher _MENU_ entrées",
+                        "search": "Chercher:",
+                        "processing": "En traitement ...",
+                        "infoEmpty": "Aucune entrée à afficher",
+                        "info": "Afficher la page _PAGE_ de _PAGES_"
+
+
+                },
                 columns: [
                     {searchable: true, sortable: true},
                     {searchable: true, sortable: true},
