@@ -34,10 +34,10 @@
     ?>
      <div class="row form-group option_row video-container master-option-container hidden">
         <div class="col-xs-3 option_name">
-            <input type="text" class="form-control" placeholder="Video Title">
+            <input type="text" class="form-control" placeholder="Titre du vidéo">
         </div>
         <div class="col-xs-3 option_value">
-            <input type="text" class="form-control" placeholder="Video Url">
+            <input type="text" class="form-control" placeholder="URL de la vidéo">
         </div>
         <div class="col-xs-3 button">
             <button type="button" class="btn btn-primary">Ajouter une option</button>

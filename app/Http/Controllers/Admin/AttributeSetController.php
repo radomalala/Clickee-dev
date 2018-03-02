@@ -35,7 +35,7 @@ class AttributeSetController extends Controller
 		$all_attributes = $this->attribute_repository->getAll();
 		$attributes = [];
 		foreach ($all_attributes as $attribute) {
-			$attributes[$attribute->attribute_id] = $attribute->english->attribute_name;
+			$attributes[$attribute->attribute_id] = $attribute->french->attribute_name;
 		}
 		return view('admin.attribute_set.form', compact('attribute_set', 'attributes'));
 	}
@@ -53,7 +53,7 @@ class AttributeSetController extends Controller
 		$all_attributes = $this->attribute_repository->getAll();
 		$attributes = [];
 		foreach ($all_attributes as $attribute) {
-			$attributes[$attribute->attribute_id] = $attribute->english->attribute_name;
+			$attributes[$attribute->attribute_id] = $attribute->french->attribute_name;
 		}
 		return view('admin.attribute_set.form', compact('attribute_set', 'attributes'));
 	}

@@ -79,7 +79,7 @@ jQuery(document).ready(function () {
         var html_data = $document.find('.master-option-container').clone();
         html_data.removeClass('master-option-container hidden').prop('id',row_index);
         html_data.find('.order_data');
-        html_data.find('.option_name.english_input input').attr('name','options['+row_index+'][en_name]');
+        /*html_data.find('.option_name.english_input input').attr('name','options['+row_index+'][en_name]');*/
         html_data.find('.option_name.french_input input').attr('name','options['+row_index+'][fr_name]');
         if(input_type==1){
             html_data.find('.option_value').remove();

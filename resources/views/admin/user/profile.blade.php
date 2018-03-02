@@ -4,7 +4,7 @@
     @include('admin.layout.notification')
     <section class="content-header">
         <h1>
-            User Profile
+            Profile
         </h1>
     </section>
     <section class="content">
@@ -15,14 +15,14 @@
                         <img class="profile-user-img img-responsive img-circle"
                              src="{!! $user->getProfileImage() !!}" alt="User profile picture">
                         <h3 class="profile-username text-center">{!! $user->first_name !!} {!! $user->last_name !!}</h3>
-                        <p class="text-muted text-center">Administrator</p>
+                        <p class="text-muted text-center">Administrateur</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#settings" data-toggle="tab">Settings</a></li>
+                        <li class="active"><a href="#settings" data-toggle="tab">Paramètres</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="active tab-pane" id="settings">
@@ -30,15 +30,15 @@
                             {!! Form::model($user, ['method'=>'PATCH', 'route' => ['profile.update',$user->admin_id ], 'id' => 'profile_update', 'class' => 'form-horizontal validate_form','files' => true]) !!}
 
                             <div class="form-group">
-                                {!! Form::label('first_name','First Name',array('class' => 'col-sm-2 control-label')) !!}
+                                {!! Form::label('first_name','Nom',array('class' => 'col-sm-2 control-label')) !!}
                                 <div class="col-sm-10">
-                                    {!! Form::text('first_name', $user->first_name,array('class'=>'form-control required', 'placeholder'=>'First Name')) !!}
+                                    {!! Form::text('first_name', $user->first_name,array('class'=>'form-control required', 'placeholder'=>'Nom')) !!}
                                 </div>
                             </div>
                             <div class="form-group">
-                                {!! Form::label('last_name','Last Name',array('class' => 'col-sm-2 control-label')) !!}
+                                {!! Form::label('last_name','Prénom',array('class' => 'col-sm-2 control-label')) !!}
                                 <div class="col-sm-10">
-                                    {!! Form::text('last_name',null ,array('class'=>'form-control required', 'placeholder'=>'Last Name')) !!}
+                                    {!! Form::text('last_name',null ,array('class'=>'form-control required', 'placeholder'=>'Prénom')) !!}
                                 </div>
                             </div>
                             <div class="form-group">
@@ -48,19 +48,19 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                {!! Form::label('password','Password',array('class' => 'col-sm-2 control-label')) !!}
+                                {!! Form::label('password','Mot de passe',array('class' => 'col-sm-2 control-label')) !!}
                                 <div class="col-sm-10">
-                                    {!! Form::password('password',array('class'=>'form-control', 'placeholder'=>'Password')) !!}
+                                    {!! Form::password('password',array('class'=>'form-control', 'placeholder'=>'Mot de passe')) !!}
                                 </div>
                             </div>
                             <div class="form-group">
-                                {!! Form::label('profile_image','Profile Image',array('class' => 'col-sm-2 control-label')) !!}
+                                {!! Form::label('profile_image','Photo de profil',array('class' => 'col-sm-2 control-label')) !!}
                                 <div class="col-sm-10">
-                                    {!! Form::file('profile_image',array('class'=>'form-control ', 'placeholder'=>'Confirm Password')) !!}
+                                    {!! Form::file('profile_image',array('class'=>'form-control ', 'placeholder'=>'Confirmation')) !!}
                                 </div>
                             </div>
                             <div class="form-group">
-                                {!! Form::label('is_active', 'Is Active', ['class' => 'col-sm-2 control-label']) !!}
+                                {!! Form::label('is_active', 'Actif', ['class' => 'col-sm-2 control-label']) !!}
                                 <div class="col-sm-10">
                                     {!! Form::checkbox('is_active', '1') !!}
                                 </div>
@@ -69,7 +69,7 @@
 
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-danger save-form">Submit</button>
+                                    <button type="submit" class="btn btn-danger save-form">Enregistrer</button>
                                 </div>
                             </div>
                             {!! Form::close() !!}

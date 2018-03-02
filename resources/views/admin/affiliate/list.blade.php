@@ -6,14 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Affiliate
+            Filiale
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('admin/affiliate/create'); !!}" class="btn btn-block btn-primary">Add
-                            Link</a>
+                        <a href="{!! URL::to('admin/affiliate/create'); !!}" class="btn btn-block btn-primary">Nouveau lien</a>
                     </div>
                 </div>
             </div>
@@ -26,14 +25,14 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Link Adjustment</h3>
+                        <h3 class="box-title">Ajustement de lien</h3>
                     </div>
                     <div class="box-body">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Customer Name</th>
-                                <th>Link</th>
+                                <th>Nom du client</th>
+                                <th>Lien</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -49,7 +48,7 @@
                                                     class="fa fa-fw fa-edit"></i></a>
                                         {!! Form::open(array('url' => 'admin/affiliate/' . $link->link_adjustment_id,
                                         'class' => 'pull-right')) !!}
-                                        {!! Form::hidden('_method', 'DELETE') !!}
+                                        {!! Form::hidden('_method', 'SUPPRIMER') !!}
                                         {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit',
                                         'class' => 'btn delete-btn btn-default btn-sm'] ) !!}
                                         {{ Form::close() }}

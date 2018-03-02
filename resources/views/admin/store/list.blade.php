@@ -7,13 +7,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            All Stores
+            Tous les magasins
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! url('admin/store/create') !!}" class="btn btn-block btn-primary">Add New Store</a>
+                        <a href="{!! url('admin/store/create') !!}" class="btn btn-block btn-primary">Nouveau magasin</a>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Store Name</th>
-                                <th>Reg. Number</th>
-                                <th>Phone</th>
+                                <th>Nom du magasin</th>
+                                <th>Numero Reg.</th>
+                                <th>Téléphone</th>
                                 <th>Email</th>
-                                <th>City</th>
+                                <th>Ville</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>

@@ -2,7 +2,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Add New Link
+            Ajouter un nouveau lien
         </h1>
     </section>
 
@@ -15,7 +15,7 @@
                     =>'page_form','class'=>'validate_form','id'=>'link_adjustment_form')) !!}
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="page_title">Customer Name</label>
+                            <label for="page_title">Nom du client</label>
                             <select class="form-control" name="user_id">
                                 @foreach($users as $user)
                                     <option value="{!! $user->user_id !!}">{!! $user->first_name." ".$user->last_name
@@ -25,9 +25,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            {!! Form::label('link', 'Link', ['class' => 'col-sm-2 control-label']) !!}
+                            {!! Form::label('link', 'Lien', ['class' => 'col-sm-2 control-label']) !!}
                             {!! Form::text('link','' ,['class' => 'form-control
-                            required','id'=>'link','placeholder'=>"Link"]) !!}
+                            required','id'=>'link','placeholder'=>"Lien"]) !!}
                         </div>
                         <div class="form-group">
                             {!! Form::label('content-heading', 'Description', ['class' => 'col-sm-2 control-label']) !!}
@@ -37,8 +37,8 @@
 
                     </div>
                     <div class="box-footer">
-                        <a href="{!! URL::to('admin/affiliate') !!}" class="btn btn-default">Cancel</a>
-                        <button type="submit" id="save-link" class="btn btn-primary pull-right save-link">Save</button>
+                        <a href="{!! URL::to('admin/affiliate') !!}" class="btn btn-default">Annuler</a>
+                        <button type="submit" id="save-link" class="btn btn-primary pull-right save-link">Sauvegarder</button>
                     </div>
                     </form>
                 </div>

@@ -7,14 +7,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            All Attribute Sets
+            Liste des Attributs Sets
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! route('create_attribute_set') !!}" class="btn btn-block btn-primary">Add New
-                            Attribute Set</a>
+                        <a href="{!! route('create_attribute_set') !!}" class="btn btn-block btn-primary">Nouveau Attribute Set</a>
                     </div>
                 </div>
             </div>
@@ -30,9 +29,9 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Attribute Set Name</th>
-                                <th>Attribute</th>
-                                <th>Created By</th>
+                                <th>Nom de l'Attribute Set</th>
+                                <th>Attribut</th>
+                                <th>Créé par</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -52,7 +51,7 @@
                                                    class="btn btn-default btn-sm" title="Edit"><i
                                                             class="fa fa-fw fa-edit"></i></a>
                                                 {!! Form::open(array('url' => 'admin/attribute-set/' . $attribute_set->attribute_set_id, 'class' => 'pull-right')) !!}
-                                                {!! Form::hidden('_method', 'DELETE') !!}
+                                                {!! Form::hidden('_method', 'SUPPRIMER') !!}
                                                 {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Delete'] ) !!}
                                                 {{ Form::close() }}
                                             </div>
