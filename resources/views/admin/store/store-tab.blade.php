@@ -1,28 +1,28 @@
 <div class="tab-pane active" id="tab_{!! $index !!}">
     <section class="content branch-info">
         <div class="store-header">
-            <h2>BRANCH INFORMATION</h2>
+            <h2>INFORMATION DE SUCCURSALE</h2>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="box-body">
                     <div class="form-group">
-                        {!! Form::label('shop_name', 'Shop Name', ['class' => '']) !!}
-                        {!! Form::text("store[$index][shop_name]",($store) ? $store->store_name :  null , ['class' => 'form-control required','id'=>'shop_name','placeholder'=>"Shop Name"]) !!}
+                        {!! Form::label('shop_name', 'Nom du boutique', ['class' => '']) !!}
+                        {!! Form::text("store[$index][shop_name]",($store) ? $store->store_name :  null , ['class' => 'form-control required','id'=>'shop_name','placeholder'=>"Nom du boutique"]) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('address1', 'Address 1', ['class' => '']) !!}
-                        {!! Form::text("store[$index][address1]", ($store) ? $store->address1 :  null, ['class' => 'form-control required','id'=>'address1','placeholder'=>"Address 1"]) !!}
+                        {!! Form::label('address1', 'Adresse 1', ['class' => '']) !!}
+                        {!! Form::text("store[$index][address1]", ($store) ? $store->address1 :  null, ['class' => 'form-control required','id'=>'address1','placeholder'=>"Adresse 1"]) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('address2', 'Address 2', ['class' => '']) !!}
-                        {!! Form::text("store[$index][address2]", ($store) ? $store->address2 :  null, ['class' => 'form-control required','id'=>'address2','placeholder'=>"Address 2"]) !!}
+                        {!! Form::label('address2', 'Adresse 2', ['class' => '']) !!}
+                        {!! Form::text("store[$index][address2]", ($store) ? $store->address2 :  null, ['class' => 'form-control required','id'=>'address2','placeholder'=>"Adresse 2"]) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('country', 'Country', ['class' => '']) !!}
+                        {!! Form::label('country', 'Pays', ['class' => '']) !!}
                         <select name="store[{!! $index !!}][country_id]" id="country"
                                 class="form-control required">
-                            <option value="">Select Country</option>
+                            <option value="">Selectionner un Pays</option>
                             @foreach($countries as $country)
                                 <option value="{!! $country->id !!}" {!! ($store && $store->country_id == $country->id) ? "selected":"" !!}>{!! $country->name !!}</option>
                             @endforeach
@@ -34,22 +34,22 @@
             <div class="col-md-6">
                 <div class="box-body">
                     <div class="form-group">
-                        {!! Form::label('registration_number', 'Registration Number', ['class' => '']) !!}
-                        {!! Form::text("store[$index][registration_number]", ($store) ? $store->registration_number :  null , ['class' => 'form-control required','id'=>'registration_number','placeholder'=>"Registration Number"]) !!}
+                        {!! Form::label('registration_number', 'Numéro d'enregistrement', ['class' => '']) !!}
+                        {!! Form::text("store[$index][registration_number]", ($store) ? $store->registration_number :  null , ['class' => 'form-control required','id'=>'registration_number','placeholder'=>"Numéro d'enregistrement"]) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('city', 'City', ['class' => '']) !!}
-                        {!! Form::text("store[$index][city]", ($store) ? $store->city :  null , ['class' => 'form-control required','id'=>'city','placeholder'=>"City"]) !!}
+                        {!! Form::label('city', 'Etat', ['class' => '']) !!}
+                        {!! Form::text("store[$index][city]", ($store) ? $store->city :  null , ['class' => 'form-control required','id'=>'city','placeholder'=>"Etat"]) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('zip', 'Zip Code', ['class' => '']) !!}
-                        {!! Form::text("store[$index][zip]", ($store) ? $store->zip :  null , ['class' => 'form-control required','id'=>'zip','placeholder'=>"Zip Code"]) !!}
+                        {!! Form::label('zip', 'Code postal', ['class' => '']) !!}
+                        {!! Form::text("store[$index][zip]", ($store) ? $store->zip :  null , ['class' => 'form-control required','id'=>'zip','placeholder'=>"Code postal"]) !!}
                     </div>
 
                     <div class="form-group">
                         {!! Form::label('state', 'State', ['class' => '']) !!}
                         <select name="store[{!! $index !!}][state_id]" id="state" class="form-control required">
-                            <option value="">Select State</option>
+                            <option value="">Séléctionner un Etat</option>
                         </select>
                     </div>
 
@@ -58,7 +58,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary pull-right" id="confirm_position">Confirm Position</button>
+                <button type="button" class="btn btn-primary pull-right" id="confirm_position">Confirmer la position</button>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
@@ -87,8 +87,8 @@
             <div class="col-md-6">
                 <div class="box-body">
                     <div class="form-group">
-                        {!! Form::label('main_phone', 'Main Phone', ['class' => '']) !!}
-                        {!! Form::text("store[$index][main_phone]", ($store) ? $store->phone :  null , ['class' => 'form-control required','id'=>'main_phone','placeholder'=>"Main Phone"]) !!}
+                        {!! Form::label('main_phone', 'Téléphone principal', ['class' => '']) !!}
+                        {!! Form::text("store[$index][main_phone]", ($store) ? $store->phone :  null , ['class' => 'form-control required','id'=>'main_phone','placeholder'=>"Téléphone principal"]) !!}
                     </div>
                     <div class=" store-header">
                         <h2>CORPORATE IDENTITY</h2>
@@ -102,8 +102,8 @@
 
                     </div>
                     <div class="form-group">
-                        {!! Form::label('shop_image', 'Shop Picture', ['class' => '']) !!}
-                        {!! Form::file("store[$index][shop_image]",array('class'=>'form-control ','id'=>'shop_image', 'placeholder'=>'Shop Picture')) !!}
+                        {!! Form::label('shop_image', 'Boutique photo', ['class' => '']) !!}
+                        {!! Form::file("store[$index][shop_image]",array('class'=>'form-control ','id'=>'shop_image', 'placeholder'=>'Boutique photo')) !!}
                         @if($store && file_exists(url('upload/shop/'.$store->shop_image)))
                             {{ Form::image('upload/shop/'.$store->shop_image, null, ['class' => 'brand-image'])}}
                         @endif
@@ -115,11 +115,11 @@
             <div class="col-md-6">
                 <div class="box-body">
                     <div class="form-group">
-                        {!! Form::label('main_email', 'Main Email', ['class' => '']) !!}
-                        {!! Form::text("store[$index][main_email]", ($store) ? $store->email :  null , ['class' => 'form-control required','id'=>'main_email','placeholder'=>"Main Email"]) !!}
+                        {!! Form::label('main_email', 'Email principal', ['class' => '']) !!}
+                        {!! Form::text("store[$index][main_email]", ($store) ? $store->email :  null , ['class' => 'form-control required','id'=>'main_email','placeholder'=>"Email principal"]) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('short_description', 'Short Description', ['class' => '']) !!}
+                        {!! Form::label('short_description', 'Brève description', ['class' => '']) !!}
                         <textarea class="textarea" id="short_description" placeholder="Short Description" name="store[{!! $index !!}][short_description]"
                                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                             </textarea>
@@ -132,7 +132,7 @@
     </section>
     <section class="content brand_sales">
         <div class="store-header">
-            <h2>BRANDS SALES</h2>
+            <h2>MARQUE DE VENTE</h2>
         </div>
 
         <div>

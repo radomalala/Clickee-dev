@@ -105,7 +105,7 @@ jQuery(document).ready(function () {
         master_div.find('#receive_request').prop('checked',false).attr('name',"manager["+row_index+"][receive_request]");
         master_div.find('#reply_request').prop('checked',false).attr('name',"manager["+row_index+"][reply_request]");
         master_div.find('#manager_id').val('').attr('name',"manager["+row_index+"][manager_id]");
-        master_div.find('.add-user button').removeClass('add_user btn-primary').addClass('remove_user btn-danger').text('Remove User');
+        master_div.find('.add-user button').removeClass('add_user btn-primary').addClass('remove_user btn-danger').text("Effacer l'utilisateur");
         master_div.insertAfter($document.find('.master_manager:last'));
     });
 
@@ -149,8 +149,8 @@ jQuery(document).ready(function () {
     if($document.find('#all_brands').length > 0){
         // $document.find('#all_brands').DualListBox('',$.parseJSON(selected_brand_array));
         $document.find('#all_brands').bootstrapDualListbox({
-            nonSelectedListLabel: 'Available Brands',
-            selectedListLabel: 'Selected Brands',
+            nonSelectedListLabel: 'Marques disponibles',
+            selectedListLabel: 'Marques sélectionnées',
             preserveSelectionOnMove: 'moved',
             selectorMinimalHeight:300,
             moveOnSelect: false,
