@@ -3,9 +3,9 @@
     <section class="content-header">
         <h1>
             @if($admin)
-                Add New Admin
+                Ajouter un nouveau admin
             @else
-                Update Admin
+                Modifier un Admin
             @endif
         </h1>
     </section>
@@ -18,47 +18,47 @@
                     {!! Form::open(array('url' => ($admin) ? "admin/administrator/$admin->admin_id" :route('save_administrator'),'files' => true,'class'=>'','id'=>'admin_user_form')) !!}
                     <div class="box-body">
                         <div class="form-group">
-                            {!! Form::label('first_name', 'First Name') !!}
-                            {!! Form::text('first_name',($admin) ? $admin->first_name : null , ['class' => 'form-control required','id'=>'first_name','placeholder'=>"First Name"]) !!}
+                            {!! Form::label('first_name', 'Nom') !!}
+                            {!! Form::text('first_name',($admin) ? $admin->first_name : null , ['class' => 'form-control required','id'=>'first_name','placeholder'=>"Nom"]) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('last_name', 'Last Name') !!}
-                            {!! Form::text('last_name',($admin) ? $admin->last_name : null , ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Last Name"]) !!}
+                            {!! Form::label('last_name', 'Prénom') !!}
+                            {!! Form::text('last_name',($admin) ? $admin->last_name : null , ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Prénom"]) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('email_address', 'Email Address') !!}
-                            {!! Form::text('email',($admin) ? $admin->email : null , ['class' => 'form-control required','id'=>'email','placeholder'=>"Email Address"]) !!}
+                            {!! Form::label('email_address', 'Email') !!}
+                            {!! Form::text('email',($admin) ? $admin->email : null , ['class' => 'form-control required','id'=>'email','placeholder'=>"Email"]) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('password', 'Password') !!}
-                            {!! Form::password('password',['class' => 'form-control','id'=>'password','placeholder'=>"Password"]) !!}
+                            {!! Form::label('password', 'Mot de passe') !!}
+                            {!! Form::password('password',['class' => 'form-control','id'=>'password','placeholder'=>"Mot de passe"]) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('confirm_password', 'Confirm Password') !!}
-                            {!! Form::password('confirm_password',['class' => 'form-control','id'=>'confirm_password','placeholder'=>"Confirm Password"]) !!}
+                            {!! Form::label('confirm_password', 'Confirmation') !!}
+                            {!! Form::password('confirm_password',['class' => 'form-control','id'=>'confirm_password','placeholder'=>"Confirmation"]) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('role_id', 'Role') !!}
+                            {!! Form::label('role_id', 'Rôle') !!}
                             {!! Form::select('role_id', $roles,($admin) ? $admin->role_id : null,['class'=>'form-control ','id'=>'']) !!}
 
                         </div>
                         <div class="form-group">
-                            {!! Form::label('profile_image','Profile Image') !!}
-                            {!! Form::file('profile_image',array('class'=>'form-control', 'placeholder'=>'Profile Image')) !!}
+                            {!! Form::label('profile_image','Photo de profil') !!}
+                            {!! Form::file('profile_image',array('class'=>'form-control', 'placeholder'=>'Photo de profil')) !!}
                             @if($admin)
                                 <img src="{!! Url("upload/profile/$admin->profile_image") !!}" class="brand-image">
                             @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="is_active">Is Active</label>
+                            <label class="col-sm-2 control-label" for="is_active">Actif</label>
                             <div class="checkbox">
                                 {!! Form::checkbox('is_active', '1',($admin && $admin->is_active=='1') ? true: false) !!}
                             </div>
                         </div>
                     </div>
                     <div class="box-footer">
-                        <a href="{!! route('administrator') !!}" class="btn btn-default">Cancel</a>
-                        <button type="submit" class="btn btn-primary pull-right" id="add-admin">Save</button>
+                        <a href="{!! route('administrator') !!}" class="btn btn-default">Annuler</a>
+                        <button type="submit" class="btn btn-primary pull-right" id="add-admin">Sauvegarder</button>
                     </div>
                     </form>
                 </div>

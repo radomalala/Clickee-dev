@@ -6,14 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            All Admin
+            Liste des Admin
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! route('add_administrator') !!}" class="btn btn-block btn-primary">Add New
-                            Admin</a>
+                        <a href="{!! route('add_administrator') !!}" class="btn btn-block btn-primary">Nouveau  Admin</a>
                     </div>
                 </div>
             </div>
@@ -28,10 +27,10 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
                                 <th>Email</th>
-                                <th>Status</th>
+                                <th>Statut</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -44,9 +43,9 @@
                                         <td>{!! $admin->email !!}</td>
                                         <td>
                                             @if($admin->is_active==0)
-                                                <span class="badge bg-light-blue">Inactive</span>
+                                                <span class="badge bg-light-blue">Inactif</span>
                                             @else
-                                                <span class="badge bg-green">Active</span>
+                                                <span class="badge bg-green">Actif</span>
                                             @endif
                                         </td>
                                         <td>
@@ -55,8 +54,8 @@
                                                    class="btn btn-default btn-sm" title="Edit"><i
                                                             class="fa fa-fw fa-edit"></i></a>
                                                 {!! Form::open(array('url' => 'admin/administrator/'. $admin->admin_id, 'class' => 'pull-right')) !!}
-                                                {!! Form::hidden('_method', 'DELETE') !!}
-                                                {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Delete'] ) !!}
+                                                {!! Form::hidden('_method', 'SUPPRIMER') !!}
+                                                {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Effacer'] ) !!}
                                                 {{ Form::close() }}
                                             </div>
                                         </td>

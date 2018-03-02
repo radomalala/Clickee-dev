@@ -2,7 +2,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Add New Role
+            Ajouter un nouveau rôle
         </h1>
     </section>
 <?php
@@ -33,8 +33,8 @@ if ($permissions_by_role && count($permissions_by_role) > 0) {
                         </div>
                     </div>
                     <div class="box-footer">
-                        <a href="{!! Url('admin/role') !!}" class="btn btn-default">Cancel</a>
-                        <button type="submit save-form" class="btn btn-primary pull-right">Save</button>
+                        <a href="{!! Url('admin/role') !!}" class="btn btn-default">Annuler</a>
+                        <button type="submit save-form" class="btn btn-primary pull-right">Sauvegader</button>
                     </div>
                     {!! Form::close() !!}
                 </div>

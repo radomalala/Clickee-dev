@@ -14,7 +14,7 @@
                     {!! Form::open(array('url' => 'admin/role','files' => true,'id'=>'admin_role','class'=>'validate_form')) !!}
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="page_title">Role Name</label>
+                                <label for="page_title">Nom du rôle</label>
                                 <input type="text" name="role_name" class="form-control required" id="page_title" placeholder="Role Name">
                             </div>
                             <div class="tab-pane" id="tab_3">
@@ -25,8 +25,8 @@
                             </div>
                         </div>
                         <div class="box-footer">
-                            <a href="{!! Url('admin/role') !!}" class="btn btn-default">Cancel</a>
-                            <button type="submit" class="btn btn-primary pull-right save-form" id="add-role">Save</button>
+                            <a href="{!! Url('admin/role') !!}" class="btn btn-default">Annuler</a>
+                            <button type="submit" class="btn btn-primary pull-right save-form" id="add-role">Sauvegarder</button>
                         </div>
                    {!! Form::close() !!}
                 </div>

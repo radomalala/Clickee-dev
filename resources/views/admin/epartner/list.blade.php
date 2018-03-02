@@ -6,13 +6,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            All E-partner Images
+            Toutes les images d'Epartner
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/admin/epartner/create') !!}" class="btn btn-block btn-primary">Add New Image</a>
+                        <a href="{!! URL::to('/admin/epartner/create') !!}" class="btn btn-block btn-primary">Nouveau image</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Partner Name</th>
+                                <th>Nom du partenaire</th>
                                 <th>Image</th>
                                 <th class="no-sort">Action</th>
                             </tr>
