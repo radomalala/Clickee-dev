@@ -13,12 +13,12 @@
             <div class="col-md-12">
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1" data-toggle="tab">English</a></li>
-                        <li><a href="#tab_2" data-toggle="tab">French</a></li>
+                        <li class="hidden"><a href="#tab_1" data-toggle="tab">English</a></li>
+                        <li class="active"><a href="#tab_2" data-toggle="tab">Meta & OG</a></li>
                     </ul>
                     {!! Form::open(['url' => Url("admin/system"), 'class' => 'form-horizontal','id' =>'setting_form']) !!}
                     <div class="tab-content">
-                        <div class="tab-pane active" id="tab_1">
+                        <div class="tab-pane hidden" id="tab_1">
                             <section class="content">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -36,7 +36,7 @@
                                 </div>
                             </section>
                         </div>
-                        <div class="tab-pane" id="tab_2">
+                        <div class="tab-pane active" id="tab_2">
                             <section class="content">
                                 <div class="row">
                                     <div class="col-md-12">

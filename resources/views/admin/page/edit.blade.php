@@ -94,8 +94,8 @@
                                         {!! Form::text("en_meta_keywords", ($page)? $page->english->meta_keywords : null , ['class' => 'form-control','id'=>'en_meta_keywords','placeholder'=>"Meta Keyword (English)"]) !!}
                                     </div>
                                     <div class="form-group">
-                                        {!! Form::label('fr_meta_keywords', "Meta Mot-clé", ['class' => 'col-sm-2 control-label']) !!}
-                                        {!! Form::text("fr_meta_keywords",  ($page)? $page->french->meta_keywords : null , ['class' => 'form-control','id'=>'fr_meta_keywords','placeholder'=>"Meta Mot-clé"]) !!}
+                                        {!! Form::label('fr_meta_keywords', "Meta Keywords", ['class' => 'col-sm-2 control-label']) !!}
+                                        {!! Form::text("fr_meta_keywords",  ($page)? $page->french->meta_keywords : null , ['class' => 'form-control','id'=>'fr_meta_keywords','placeholder'=>"Meta Keywords"]) !!}
                                     </div>
 
                                     <div class="form-group hidden">
