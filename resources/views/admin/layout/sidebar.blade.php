@@ -327,10 +327,10 @@
                                     href="{!! URL::to('/admin/epartner') !!}"><i class="fa fa-circle-o"></i> Epartner Image</a>
                         </li>
                     @endif
-                    @if(check_user_access('email-template.index'))
+                    <!-- @if(check_user_access('email-template.index'))
                         <li class="{{ set_active(['admin/email-template','admin/email-template/*']) }}"><a
                                 href="{!! URL::to('/admin/email-template') !!}"><i class="fa fa-circle-o"></i> Email / SMS Modèle</a></li>
-                    @endif
+                    @endif -->
                 </ul>
             </li>
              @endif
