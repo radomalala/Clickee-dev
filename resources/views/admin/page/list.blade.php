@@ -6,15 +6,14 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Content Management
+            Gestion de contenu
             <small>Page</small>
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('/') !!}/admin/page/create" class="btn btn-block btn-primary">Add New
-                            Page</a>
+                        <a href="{!! URL::to('/') !!}/admin/page/create" class="btn btn-block btn-primary">Nouvelle page</a>
                     </div>
                 </div>
             </div>
@@ -30,8 +29,8 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Page Title</th>
-                                <th>Content Heading</th>
+                                <th>Titre de la page</th>
+                                <th>En-tête de contenu</th>
                                 <th>Status</th>
                                 <th class="no-sort">Action</th>
                             </tr>
@@ -39,8 +38,8 @@
                             <tbody>
                                 @foreach($pages->data as $page)
                                     <tr>
-                                        <td>{!! $page->english->page_title !!}</td>
-                                        <td>{!! $page->english->content_heading !!}</td>
+                                        <td>{!! $page->french->page_title !!}</td>
+                                        <td>{!! $page->french->content_heading !!}</td>
                                         <td>
                                             @if($page->status==1)
                                                 <span class="badge bg-green">Active</span>
@@ -76,23 +75,23 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search Page</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Rechercher Page</h4>
                 </div>
                 <div class="modal-body">
                     <form method="post" action="/">
                         <div class="form-group">
-                            <label for="recipient-name" class="control-label">Page Title</label>
+                            <label for="recipient-name" class="control-label">Titre de la page</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="form-group">
-                            <label for="message-text" class="control-label">Content Heading</label>
+                            <label for="message-text" class="control-label">En-tête de contenu</label>
                             <input type="text" class="form-control" id="content-heading">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Search</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Rechercher</button>
                 </div>
             </div>
         </div>

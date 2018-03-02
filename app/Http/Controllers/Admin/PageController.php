@@ -31,7 +31,7 @@ class PageController extends Controller
     {
         $pages = Datatables::collection($this->page_repository->getAll())->make(true);
         $pages = $pages->getData();
-
+        /*dd($pages);*/
         return view('admin.page.list', compact('pages'));
 
 
@@ -58,8 +58,8 @@ class PageController extends Controller
     {
         //
         $rules = array(
-            'en_page_title' => 'required',
-            'en_content_heading' => 'required',
+            'fr_page_title' => 'required',
+            'fr_content_heading' => 'required',
             'url_key' => 'required',
 
         );
