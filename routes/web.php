@@ -178,7 +178,7 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
     Route::post('login', 'Auth\AuthController@postLogin');
 
     Route::get('sign-up', ['uses' => 'Auth\AuthController@getRegister', "middleware" => 'guest', 'as' => 'customer-sign-up']);
-
+ 
     Route::get('merchant/login', ['uses' => 'Auth\AuthController@getMerchantLogin', "middleware" => 'guest', 'as' => 'merchant-login']);
     Route::post('merchant/login', ['uses' => 'Auth\AuthController@postMerchantLogin', "middleware" => 'guest']);
 
@@ -245,7 +245,21 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
                 Route::get('invoices', 'MerchantController@invoices');
                 Route::post('add-card', 'MerchantController@addCard');
                 Route::post('pay-invoice/{id}', 'MerchantController@payInvoice');
+
+                Route::group(['namespace' => 'Merchant'], function(){
+                    Route::get('product/get-data', 'ProductController@getData')->name('product-data');
+                    Route::get('product', 'ProductController@index')->name('product');
+                    Route::post('product/attributes', 'ProductController@attributes')->name('get_attribute');
+                    Route::post('product', 'ProductController@store')->name('save_product');
+                    Route::post('product/upload', 'ProductController@uploadImage')->name('upload_product_media');
+                    Route::get('product/edit/{product_id}', 'ProductController@edit')->name('edit_product');
+                    Route::delete('product/{product_id}', 'ProductController@destroy')->name('remove_product');
+                    Route::post('product/{product_id}', 'ProductController@update')->name('update_product');
+                    Route::post('remove-product-image', 'ProductController@removeImage')->name('remove_product_image');
+                    Route::get('product/add', 'ProductController@create')->name('create_product');
+                }); 
             });
+
             Route::get('invoice/{id}','MerchantController@viewInvoice');
             Route::resource('store', 'StoreController');
             Route::post('response-to-customer', 'OrderController@responseToCustomer');
@@ -316,4 +330,4 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
     });
 });
 Route::get('auth/{provider}/callback', 'Front\Auth\AuthController@handleProviderCallback');
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
