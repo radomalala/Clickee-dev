@@ -191,7 +191,7 @@ class ProductController extends Controller
 		$attribute_set = $this->product_repository->getAttributesBySetId($attribute_set_id);
 		if($product_id > 0){
 			$product_attributes = $this->product_repository->getAttributesByProductId($product_id);
-		}else{
+		}else{	
 			$product_attributes = [];
 		}
 		return view('front.merchant.product.attributes',compact('attribute_set','product_attributes'));

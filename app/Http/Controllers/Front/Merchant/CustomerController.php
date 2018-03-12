@@ -118,4 +118,9 @@ class CustomerController extends Controller
         flash()->success("Suppression du client avec succèss ! ");
         return \Redirect('merchant/customer');
     }
+
+    public function encasement()
+    {
+        return view('front.merchant.customer.encasement');
+    }
 }

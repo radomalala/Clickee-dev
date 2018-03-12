@@ -511,7 +511,7 @@ jQuery(document).ready(function () {
             }
         });
     })
-
+    
     //Hide and show the column into datatable on product
     var table = $('#product_list').DataTable();
  

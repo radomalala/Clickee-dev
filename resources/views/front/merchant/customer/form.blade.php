@@ -13,6 +13,10 @@
     {!! Html::style('frontend/css/style-clickee.css') !!}
 @stop
 @section('content')
+    <?php 
+        $category_arr = [];
+        $attributes = array();
+    ?>
     <section class="content-header" style="text-align: center;">
         <h1>
             @if($customer)
@@ -87,10 +91,20 @@
                                     </div>
                                 </section>
                             </div>
+                            <div class="tab-pane" id="tab_2">
+                                @include('front.merchant.customer.product_encasement')
+                            </div>
+                            <div class="tab-pane" id="tab_3">
+                                <h1>tab 3</h1>
+                            </div>
+                                
                             <div class="box-footer">
                                 <a href="{!! Url('merchant/customer') !!}" class="btn btn-default">Annuler</a>
-                                <button type="submit" class="btn btn-primary pull-right">Sauvegarder
+                                
+                                <button type="submit" class="btn btn-primary pull-right hidden"> {!! ($customer) ? "Confirmer client" : "Ajouter client"!!}
                                 </button>
+                                <a class="btn btn-primary pull-right" href="#tab_2" data-toggle="tab"> {!! ($customer) ? "Confirmer client" : "Ajouter client"!!}
+                                </a>
                             </div>
                         </div>
     				{!! Form::close() !!}
@@ -100,3 +114,6 @@
     </section>
 
 @endsection
+@section('additional-script')
+    {!! Html::script('frontend/js/product_merchant.js') !!}
+@stop

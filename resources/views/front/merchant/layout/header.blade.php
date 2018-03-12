@@ -17,12 +17,12 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{-- {!! $user->getProfileImage() !!} --}}" class="user-image" alt="User Image">
+                        <!-- <img src="{{-- {!! $user->getProfileImage() !!} --}}" class="user-image" alt="User Image"> -->
                         <span class="hidden-xs">{{--{!! $user->first_name !!} {!! $user->last_name !!}--}}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="user-header">
-                            <img src="{!! $user->getProfileImage() !!}" class="img-circle" alt="User Image">
+                           <!--  <img src="{!! $user->getProfileImage() !!}" class="img-circle" alt="User Image"> -->
                             <p>
                                 {{--{!! $user->first_name !!} {!! $user->last_name !!}--}}
                                 {{--<small>Member since Nov. 2010</small>--}}

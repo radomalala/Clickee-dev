@@ -1,3 +1,9 @@
 .treeview {
 	font-size: 16px;
+}	
+.main-sidebar {
+	margin-top: 20.5%;
+}
+.box {
+	min-height: 350px;
 }

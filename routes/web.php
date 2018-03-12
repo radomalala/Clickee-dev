@@ -258,6 +258,7 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
                     Route::post('remove-product-image', 'ProductController@removeImage')->name('remove_product_image');
                     Route::get('product/add', 'ProductController@create')->name('create_product');
                     Route::resource('customer', 'CustomerController');
+                    Route::get('encasement', 'CustomerController@encasement')->name('encasement');
                 }); 
             });
 
