@@ -31,6 +31,7 @@ use App\Interfaces\RegionRepositoryInterface;
 use App\Interfaces\SpecialProductRepositoryInterface;
 use App\Interfaces\StoreRepositoryInterface;
 use App\Interfaces\TagRepositoryInterface;
+use App\Interfaces\CustomerRepositoryInterface;
 use App\Repositories\AttributeRepository;
 use App\Repositories\AttributeSetRepository;
 use app\Repositories\admin\BrandRepository;
@@ -65,6 +66,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Interfaces\UserRepositoryInterface;
 use App\Interfaces\ProductStatusRepositoryInterface;
 use App\Repositories\ProductStatusRepository;
+use App\Repositories\CustomerRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -193,6 +195,10 @@ class RepositoryServiceProvider extends ServiceProvider
 
 		$this->app->bind(ProductStatusRepositoryInterface::class, function($app){
 			return $app->make(ProductStatusRepository::class);
+		});
+
+		$this->app->bind(CustomerRepositoryInterface::class, function($app){
+			return $app->make(CustomerRepository::class);
 		});
 	}
 }

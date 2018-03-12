@@ -442,16 +442,16 @@ jQuery(document).ready(function () {
                     }
                 },
                 FilesRemoved: function (up, files) {
+
                 },
                 UploadComplete: function () {
+
                 },
                 Error: function(up, error){
                     console.log("A error is passing");
                     console.log(error.message);
                 }
             },
-
-
         });
     }
 

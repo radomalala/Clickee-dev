@@ -17,7 +17,7 @@
 
     
     @yield('additional-styles')
-    
+    {!! Html::style('frontend/css/merchant.css') !!}
     <script type="text/javascript">
         var base_url = {!! "'".URL::to('/')."/'" !!};
     </script>
@@ -33,6 +33,8 @@
 
 <!-- Content Wrapper. Contains page content -->
     @include('front.layout.header')
+    @include('front.merchant.layout.header')
+    @include('front.merchant.layout.sidebar')
     <div class="content-wrapper">
         @yield('content')
     </div>
@@ -40,5 +42,6 @@
     
 </div>
 @yield('additional-script')
+@yield('footer-scripts')
 </body>
 </html>

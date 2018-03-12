@@ -1,16 +1,17 @@
 @extends('front.merchant.layout.master')
 @section('additional-styles')
     {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
-
+    {!! Html::style('frontend/css/font-awesome.min.css') !!}
     {!! Html::style('backend/bootstrap/css/bootstrap.min.css') !!}
     {!! Html::style('backend/plugins/select2/select2.css') !!}
     {!! Html::style('backend/dist/css/AdminLTE.min.css') !!}
     {!! Html::style('backend/dist/css/skins/skin-black-light.css') !!}
     {!! Html::style('backend/css/style.css') !!}
-    
+     {!! Html::style('backend/plugins/dynatree/src/skin/ui.dynatree.css') !!}
+    {!! Html::style('backend/plugins/dropzone/dropzone.css') !!}
+    {!! Html::style('backend/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css') !!}
     {!! Html::style('frontend/css/style-clickee.css') !!}
 @stop
-
 @section('content')
 
     <?php
@@ -71,7 +72,7 @@
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab">Generale</a></li>
-                        <li><a href="{!! Url('admin/product/attributes') !!}" data-toggle="tabajax"
+                        <li><a href="{!! Url('merchant/product/attributes') !!}" data-toggle="tabajax"
                                data-target="#attributes">Attributes</a></li>
                         <li><a href="#tab_2" data-toggle="tab">Images</a></li>
                         <li><a href="#tab_3" data-toggle="tab">Catégorie</a></li>
@@ -79,7 +80,7 @@
                         <li><a href="#tab_5" data-toggle="tab">Filiale</a></li>
                         <li><a href="#tab_6" data-toggle="tab">Meta Info</a></li>
                     </ul>
-                    {!! Form::open(['url' => ($product) ? Url("admin/product/$product->product_id") : route('save_product'), 'class' => 'form-horizontal','id' =>'product_form', 'enctype' => 'multipart/form-data']) !!}
+                    {!! Form::open(['url' => ($product) ? Url("fr/merchant/product/$product->product_id") : route('save_product_merchant'), 'class' => 'form-horizontal','id' =>'product_form', 'enctype' => 'multipart/form-data']) !!}
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
                             <section class="content">
@@ -204,9 +205,7 @@
                                                     <div class="col-sm-10" id="tag-container">
                                                         @foreach($tags as $tag)
                                                             <button type="button" id="{!! $tag->tag_id !!}" class="btn btn-primary btn-sm brand-category-btn">{!! $tag->tag !!}
-                                                                @if(auth()->guard('admin')->user()->role_id=='1')
-                                                                    <span class="product-tag-close">&times;</span>
-                                                                @endif
+                                                                
                                                             </button>
                                                         @endforeach
                                                     </div>
@@ -491,8 +490,8 @@
     {{--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--}}
 @stop
 
-@section('additional-scripts')
- {!! Html::script('backend/js/product.js') !!}
+@section('additional-script')
+ {!! Html::script('frontend/js/product_merchant.js') !!}
     {!! Html::script('backend/plugins/dynatree/jquery/jquery-ui.custom.js') !!}
     {!! Html::script('backend/plugins/dynatree/src/jquery.dynatree.js') !!}
     {!! Html::script('backend/plugins/dropzone/dropzone.js') !!}
@@ -507,7 +506,6 @@
     <script type="application/javascript" language="JavaScript">
         var category_tree_data = '{!! json_encode($categories['tree_data'],JSON_HEX_APOS) !!}';
         var selected_category = '{!! json_encode($selected_category,JSON_HEX_APOS) !!}'
-        var admin_role_id = "{!! auth()->guard('admin')->user()->role_id !!}";
     </script>
 
 @stop

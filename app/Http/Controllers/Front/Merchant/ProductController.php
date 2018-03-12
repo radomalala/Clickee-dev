@@ -74,13 +74,13 @@ class ProductController extends Controller
 	public function getData()
 	{	
 		//filter data in list product by user
-		$user_id = auth()->guard('admin')->user()->admin_id;
+		/*$user_id = auth()->guard('admin')->user()->admin_id;
 		if(auth()->guard('admin')->user()->role_id == 2){
 		   $data_tables = Datatables::collection($this->product_repository->getByProductManager($user_id));
 		}else{
 			$data_tables = Datatables::collection($this->product_repository->getAll());
-		}
-
+		}*/
+		$data_tables = Datatables::collection($this->product_repository->getAll());
 		$data_tables->EditColumn('product_name', function ($product) {
 			if(isset($product->english->product_name))	
 				return $product->english->product_name;

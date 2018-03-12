@@ -68,5 +68,5 @@
     {!! Html::script('backend/plugins/datatables/dataTables.bootstrap.min.js') !!}
     {!! Html::script('backend/plugins/dropzone/dropzone.js') !!}
     {!! Html::script('backend/js/tableExport.js') !!}
-    {!! Html::script('backend/js/product.js') !!}
+    {!! Html::script('frontend/js/product_merchant.js') !!}
 @stop

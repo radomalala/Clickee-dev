@@ -25,7 +25,6 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'en_product_name'=>'Required',
             'serial_number'=>'Required',
             'product_url'=>'Required',
             'original_price'=>'Required'

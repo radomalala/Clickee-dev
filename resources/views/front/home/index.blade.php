@@ -24,7 +24,7 @@
                             <h1>ON A</h1>
                             <h1>DU NEUF</h1>
                         </div>
-                        <button type="button" class="btn btn-default btn-slider">SHOPPER</button>
+                        <button type="button" class="btn btn-clickee-default btn-slider">SHOPPER</button>
                     </div>
                 </div>
             </div>

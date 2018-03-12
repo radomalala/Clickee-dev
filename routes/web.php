@@ -248,15 +248,16 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
 
                 Route::group(['namespace' => 'Merchant'], function(){
                     Route::get('product/get-data', 'ProductController@getData')->name('product-data');
-                    Route::get('product', 'ProductController@index')->name('product');
-                    Route::post('product/attributes', 'ProductController@attributes')->name('get_attribute');
-                    Route::post('product', 'ProductController@store')->name('save_product');
+                    Route::get('product', 'ProductController@index')->name('product_merchant');
+                    Route::get('product/attributes', 'ProductController@attributes')->name('get_attribute');
+                    Route::post('product', 'ProductController@store')->name('save_product_merchant');
                     Route::post('product/upload', 'ProductController@uploadImage')->name('upload_product_media');
                     Route::get('product/edit/{product_id}', 'ProductController@edit')->name('edit_product');
                     Route::delete('product/{product_id}', 'ProductController@destroy')->name('remove_product');
                     Route::post('product/{product_id}', 'ProductController@update')->name('update_product');
                     Route::post('remove-product-image', 'ProductController@removeImage')->name('remove_product_image');
                     Route::get('product/add', 'ProductController@create')->name('create_product');
+                    Route::resource('customer', 'CustomerController');
                 }); 
             });
 
