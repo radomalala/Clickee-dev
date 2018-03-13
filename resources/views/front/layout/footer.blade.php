@@ -42,9 +42,9 @@
                                         </li>
                                         @if(!$is_user_login || Auth::user()->role_id==2)                               
                                             @if($is_user_login)
-                                                <li><a href="#">{!! trans('common/label.sign_out')!!}</a></li>
+                                                <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/logout') !!}">{!! trans('common/label.sign_out')!!}</a></li>
                                             @else
-                                                <li><a href="#">Inscription / Connexion</a></li>
+                                                <li><a href="{!! url(LaravelLocalization::getCurrentLocale().'/merchant/login') !!}">Inscription / Connexion</a></li>
                                             @endif
                                         @endif
                                         <li>
@@ -172,6 +172,9 @@
 @endif
 {!! Html::script('frontend/js/search-local-product.js') !!}
 {!! Html::script('frontend/js/jquery.flexslider.js') !!}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/locales/bootstrap-datepicker.fr.min.js"></script>
 
 <!-- jquery.elevateZoom-3.0.8.min.js -->
 <script src="{!! URL::to('/') !!}/frontend/js/jquery.elevatezoom.js"></script>

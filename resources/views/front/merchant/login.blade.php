@@ -5,9 +5,13 @@
 <?php Session::put('role_user',2); ?>
 
 <div class="container mtb-80" style="width: 60%">
-    <ul class="nav nav-tabs nav-justified">
-        <li role="presentation" class="active"><a class="size-17" href="#cnxTab" aria-controls="cnxTab" role="tab" data-toggle="tab">{!! trans("common/label.login_title")!!}</a></li>
-        <li role="presentation"><a class="size-17" href="#enregTab" aria-controls="enregTab" role="tab" data-toggle="tab">{!! trans("common/label.register_title")!!}</a></li>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+            <a class="nav-title" href="#cnxTab" aria-controls="cnxTab" role="tab" data-toggle="tab">CONNEXION</a>
+        </li>
+        <li role="presentation">
+            <a class="nav-title" href="#enregTab" aria-controls="enregTab" role="tab" data-toggle="tab">S'ENREGISTRER</a>
+        </li>
     </ul>
     <div class="tab-content tab-login">
         <div role="tabpanel" class="tab-pane active" id="cnxTab">
@@ -46,8 +50,8 @@
                         </div>
 
                         <a href="{{ url(LaravelLocalization::getCurrentLocale().'/forgot-password') }}">{!! trans("form.forgot_password")!!}</a>
-                        <div class="login-footer-area text-center">
-                                <button type="submit" id="login-btn">{!! trans("form.login")!!}</button>
+                        <div class="text-center">
+                                <button class="btn btn-default" type="submit" id="login-btn">{!! trans("form.login")!!}</button>
                         </div>
                         {{Form::close()}}
                     </div>
@@ -62,9 +66,7 @@
 </div>
 
 @stop
-@section('footer-script')
-    {!! Html::style('backend/plugins/bootstrap-duallistbox-master/src/bootstrap-duallistbox.css') !!}
-    {!! Html::style('backend/bootstrap/css/bootstrap.css') !!}
+@section('footer-script')    
     {!! Html::script('backend/plugins/dynatree/jquery/jquery-ui.custom.js') !!}
     {!! Html::script('backend/plugins/select2/select2.js') !!}
     {!! Html::script('backend/plugins/dual-list-box/dual-list-box.js') !!}

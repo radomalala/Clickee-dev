@@ -251,172 +251,83 @@ class StoreRepository implements StoreRepositoryInterface
 
 	public function add($input, $user_id=null)
 	{
-		$managers = [];
-		$all_users = [];
-		if($user_id==null && isset($input['manager']) && !empty($input['manager'])){
-			foreach ($input['manager'] as $manager){
-				$user =new User();
-				$user->role_id = '2';
-				$user->first_name = $manager['first_name'];
-				$user->last_name = $manager['last_name'];
-				$user->email = $manager['email'];
-				$user->password = Hash::make($manager['password']);
-				$user->phone_number = $manager['sms'];
-				$user->status = '1';
-				$user->profile_image = '';
-				/*$user->position = $manager['position'];*/
-				$user->save();
-				$all_users[]=$user;
-				//save in store_user
-				$store_user = [
-					'is_global_manager'=> isset($manager['global_manager'])? $manager['global_manager'] : 0,
-					'compte_principal'=> isset($manager['compte_principle'])? $manager['compte_principle'] : 0,
-					'receive_request'=> isset($manager['receive_request'])? $manager['receive_request'] : 0,
-					'reply_request'=> isset($manager['reply_request'])? $manager['reply_request'] : 0,
-				];
-				$managers[$user->user_id] = $store_user;
-			}
-		}
 
-		if($user_id!=null){
-			$store_user = [
-				'is_global_manager'=> 0,
-				'compte_principal'=>  0,
-				'receive_request'=>  0,
-				'reply_request'=> 0,
-			];
-			$managers[$user_id] = $store_user;
-		}
-
-
+		/*save user*/
+		$user = new User();
+		$user->role_id = '2';
+		$user->first_name = $input['shop_name'];
+		$user->last_name = 'Admin';
+		$user->email = $input['email'];
+		$user->password = Hash::make($input['password']);
+		$user->phone_number = $input['phone'];
+		$user->status = '1';
+		$user->save();
+		
+		
 		/*save store*/
 		$store_model = new Store();
 		$store_model->store_name = $input['shop_name'];
-		$store_model->registration_number = $input['registration_number'];
-		$store_model->phone = $input['main_phone'];
-		$store_model->email = $input['main_email'];
+		$store_model->phone = $input['phone'];
+		$store_model->email = $input['email'];
 		$store_model->logo = (!empty($input['logo_image']))?$input['logo_image']:'';
-		$store_model->shop_image = (!empty($input['shop_image'])) ? $input['shop_image'] :'';
-		$store_model->short_description = $input['short_description'];
 		$store_model->address1 = $input['address1'];
-		$store_model->address2 = $input['address2'];
-		$store_model->city = $input['city'];
-		$store_model->zip = $input['zip_code'];
-		$store_model->country_id = $input['country_id'];
-		$store_model->state_id = $input['state_id'];
-		$store_model->latitude = $input['latitude'];
-		$store_model->longitude = $input['longitude'];
 		$store_model->created_by = null;
+		$store_model->created_date = $input['created_date'];
+		$store_model->tva_number = $input['tva_number'];
+		$store_model->siret_number = $input['siret_number'];
+		$store_model->banque_number = $input['banque_number'];
+		$store_model->eban = $input['eban'];
+		$store_model->bic = $input['bic'];
+		$store_model->banque_domicile = $input['banque_domicile'];
+		$store_model->banque_address = $input['banque_address'];
 		$store_model->save();
 
-		if(!empty($managers)){
-			foreach ($managers as $manager_id=>$manager){
-				$store_model->users()->attach($manager_id,$manager);
-			}
-		}
 
-		/*save store brand*/
-		if(isset($input['brand_list']) && !empty($input['brand_list'])){
-			foreach ($input['brand_list'] as $brand_id)
-			{
-				$store_model->brands()->attach($brand_id);
-			}
-		}
-
-		if(!empty($input['brand_name'])){
-			$this->saveBrand($input,$store_model->store_id);
-		}
-		return isset($all_users) ? $all_users : $store_model;
+		$store_model->users()->attach($user);
+		return $user;
 	}
 
 	public function update($id, $input)
 	{
 		/*update user*/
+		$user = User::findOrNew($input['user_id']);
+		$user->role_id = '2';
+		$user->first_name = $input['shop_name'];
+		$user->last_name = 'Admin';
+		$user->email = $input['email'];
+		if (!empty($input['password'])) {
+            $user->password = Hash::make($input['password']);
+        }
+		$user->phone_number = $input['phone'];
+		$user->status = '1';
+		$user->save();
 
-		$new_manager_id = [];
-		$all_users = [];
-		$old_manager_id = isset($input['old_manager_id']) ? explode(',',$input['old_manager_id']) : [];
-		$managers = [];
-		if(isset($input['manager']) && !empty($input['manager'])){
-			foreach ($input['manager'] as $manager){
-
-				if(isset($manager['manager_id']))
-				{
-					$new_manager_id[] = $manager['manager_id'];
-				}
-				$user = User::findOrNew(isset($manager['manager_id']) ? $manager['manager_id'] : 0);
-				$user->role_id = '2';
-				$user->first_name = $manager['first_name'];
-				$user->last_name = $manager['last_name'];
-				$user->email = $manager['email'];
-				$user->password = (!empty($manager['password']) && $manager['password'] != null) ?  Hash::make($manager['password']) : $user->password;;
-				$user->phone_number = $manager['sms'];
-				$user->status = '1';
-				$user->profile_image = '';
-				/*$user->position = $manager['position'];*/
-				$user->save();
-				$all_users[]=$user;
-				//save in store_user
-				$store_user = [
-					'is_global_manager'=> isset($manager['global_manager'])? $manager['global_manager'] : 0,
-					'compte_principal'=> isset($manager['compte_principle'])? $manager['compte_principle'] : 0,
-					'receive_request'=> isset($manager['receive_request'])? $manager['receive_request'] : 0,
-					'reply_request'=> isset($manager['reply_request'])? $manager['reply_request'] : 0,
-				];
-				$managers[$user->user_id] = $store_user;
-			}
-		}
-
-		$removable_manager = array_diff($old_manager_id,$new_manager_id);
-		if(count($removable_manager)>0){
-			User::whereIn('user_id',$removable_manager)
-				->delete();
-		}
 
 		/*update store*/
 		$store_model = $this->model->findOrNew($id);
 		$store_model->store_name = $input['shop_name'];
-		$store_model->registration_number = $input['registration_number'];
-		$store_model->phone = $input['main_phone'];
-		$store_model->email = $input['main_email'];
+		$store_model->phone = $input['phone'];
+		$store_model->email = $input['email'];
 		if(!empty($input['logo_image'])){
 			$store_model->logo = $input['logo_image'];
 		}
-		if(!empty($input['shop_image'])){
-			$store_model->shop_image = $input['shop_image'];
-		}
-		$store_model->short_description = $input['short_description'];
 		$store_model->address1 = $input['address1'];
-		$store_model->address2 = $input['address2'];
-		$store_model->city = $input['city'];
-		$store_model->zip = $input['zip_code'];
-		$store_model->country_id = $input['country_id'];
-		$store_model->state_id = $input['state_id'];
-		$store_model->latitude = $input['latitude'];
-		$store_model->longitude = $input['longitude'];
+		$store_model->created_by = null;
+		$store_model->created_date = $input['created_date'];
+		$store_model->tva_number = $input['tva_number'];
+		$store_model->siret_number = $input['siret_number'];
+		$store_model->banque_number = $input['banque_number'];
+		$store_model->eban = $input['eban'];
+		$store_model->bic = $input['bic'];
+		$store_model->banque_domicile = $input['banque_domicile'];
+		$store_model->banque_address = $input['banque_address'];
 		$store_model->save();
 
 		$store_model->users()->detach();
+
 		/*save store user*/
-		if(!empty($managers)){
-			foreach ($managers as $manager_id=>$manager){
-				$store_model->users()->attach($manager_id,$manager);
-			}
-		}
-		$store_model->brands()->detach();
-		if(isset($input['brand_list']) && !empty($input['brand_list'])){
-			foreach ($input['brand_list'] as $brand_id)
-			{
-				$store_model->brands()->attach($brand_id);
-			}
-		}
-		if(!empty($input['brand_name'])){
-			$request_brand = RequestBrand::findOrNew($input['request_brand_id']);
-			$request_brand->brand_name = $input['brand_name'];
-			$request_brand->website = $input['website'];
-			$request_brand->store_id =$store_model->store_id;
-			$request_brand->save();
-		}
+		$store_model->users()->attach($user);
+
 		return $store_model;
 
 	}
