@@ -460,6 +460,18 @@ if (!function_exists('check_route_exists')) {
         }
         return false;
     }
+
+    function check_merchant_access($route)
+    {
+        /*if(!is_array($route))
+            $route = array($route);
+        foreach($route as $path){
+            if (in_array($path, app('user_permission'))) {
+                return true;
+            }
+        }*/
+        return true;
+    }
 }
 
 function getRebate($best_price, $original_price)

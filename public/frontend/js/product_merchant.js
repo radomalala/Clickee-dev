@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
             e.preventDefault();
             $('#product_form').ajaxSubmit(function (data) {
                 window.open(base_url+data.url.target_url,'_blank');
-                location.href=base_url+"admin/product";
+                location.href=base_url+"merchant/product";
             });
 
             // $('#product_form').submit();
@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
                 .DataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax": base_url+"admin/product/get-data",
+                "ajax": base_url+"merchant/product/get-data",
                 "responsive"   : true,
                 "bPaginate"    : true,
                 "bLengthChange": true,
@@ -114,7 +114,7 @@ jQuery(document).ready(function () {
                 $.ajax({
                     method : 'post',
                     data   : {image_id: image_id},
-                    url    : base_url + 'admin/product/delete-image',
+                    url    : base_url + 'merchant/product/delete-image',
                     success: function (data) {
                         if (data.success) {
                             img_div.remove();
@@ -141,7 +141,7 @@ jQuery(document).ready(function () {
         var myDropzone = new Dropzone("#product_media", {
             autoProcessQueue: true,
             parallelUploads:1,
-            url: base_url + "admin/product/upload",
+            url: base_url + "merchant/product/upload",
             addRemoveLinks: true,
             acceptedFiles: 'image/!*',
             init: function () {
@@ -195,7 +195,7 @@ jQuery(document).ready(function () {
             targ = $this.attr('data-target');
         if (selected_attribute_set_id != old_attribute_set_id || old_attribute_set_id == '') {
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: loadurl,
                 data: "attribute_set_id=" + selected_attribute_set_id + "&product_id=" + product_id,
                 complete: function (data) {
@@ -270,7 +270,7 @@ jQuery(document).ready(function () {
                         data: ({
                             datastring: $.trim(req.term),
                         }),
-                        url: base_url + 'admin/get-tag',
+                        url: base_url + 'merchant/product/get-tag',
                         success: function (response) {
                             json_response_array = response['json_array'];
                             var suggestions = [];
@@ -320,7 +320,7 @@ jQuery(document).ready(function () {
                         $.ajax({
                             type: "POST",
                             data: "tag=" + selected_item_add,
-                            url: base_url + 'admin/save-tag',
+                            url: base_url + 'merchant/product/save-tag',
                             success: function (data) {
                                 var product_tag = $document.find('#product_tag').val();
                                 var tag_arr = (product_tag!="") ? product_tag.split(',') : [];
@@ -393,7 +393,7 @@ jQuery(document).ready(function () {
         $("#uploader").pluploadQueue({
             // General settings
             runtimes : 'html5,flash,silverlight,html4',
-            url : base_url + "admin/product/upload",
+            url : base_url + "fr/merchant/product/upload",
             rename : true,
             dragdrop: true,
 
@@ -442,14 +442,12 @@ jQuery(document).ready(function () {
                     }
                 },
                 FilesRemoved: function (up, files) {
-
                 },
                 UploadComplete: function () {
-
                 },
                 Error: function(up, error){
                     console.log("A error is passing");
-                    console.log(error.message);
+                    console.log(error.response);
                 }
             },
         });
@@ -460,7 +458,7 @@ jQuery(document).ready(function () {
         var data = $(this).data();
         $.ajax({
             type: "POST",
-            url: base_url + 'admin/remove-product-image',
+            url: base_url + 'merchant/product/remove-product-image',
             data: "image_name=" + data.image_name+"&product_image_id="+data.product_image_id,
             beforeSend: function () {
             }, 
@@ -476,7 +474,7 @@ jQuery(document).ready(function () {
         var type = $(this).data('type');
         $.ajax({
             type: "POST",
-            url: base_url + 'admin/search-product',
+            url: base_url + 'merchant/product/search-product',
             data:{'keyword':keyword},
             beforeSend: function () {
                 $.show_notification();
@@ -502,7 +500,7 @@ jQuery(document).ready(function () {
         $.ajax({
             type: "POST",
             data: "tag=" + removable_tag,
-            url: base_url + 'admin/remove-product-tag',
+            url: base_url + 'merchant/product/remove-product-tag',
             success: function (data) {
                 $document.find(".tag-autocomplete ul li").each(function () {
                     if($(this).attr('id')==removable_tag){
@@ -513,7 +511,7 @@ jQuery(document).ready(function () {
             }
         });
     })
-
+    
     //Hide and show the column into datatable on product
     var table = $('#product_list').DataTable();
  

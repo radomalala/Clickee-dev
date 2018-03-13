@@ -171,7 +171,6 @@
 
 @endif
 {!! Html::script('frontend/js/search-local-product.js') !!}
-{!! Html::script('frontend/js/product_detail.js') !!}   
 {!! Html::script('frontend/js/jquery.flexslider.js') !!}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
@@ -199,8 +198,6 @@
 <script src="{!! URL::to('/') !!}/frontend/js/plugins.js"></script>
 <!-- main js -->
 <script src="{!! URL::to('/') !!}/frontend/js/main.js"></script>
-<!-- jquery cookie -->
-<script src="{!! URL::to('/') !!}/frontend/js/jquery.cookie.js"></script>
 
 {!! Html::script('frontend/js/validation.js') !!}
 @if(isset($language) && app('language')->language_code==\App\Models\Language::FRENCH_CODE)
