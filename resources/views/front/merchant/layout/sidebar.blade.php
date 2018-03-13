@@ -11,11 +11,13 @@
             </li>
             @endif
             @if(check_merchant_access(['']))
-            <li class="treeview {{ set_active(['']) }}">
-                <a href="#">
+            @foreach(Auth::user()->store as $index=>$stor)
+            <li class="treeview {{ set_active(['fr/store','fr/store/*']) }}">
+                <a href="{!! URL::to('/fr/store/'.$stor->store_id.'/edit') !!}">
                     <i class="fa fa-user"></i> <span>Mon compte</span>
                 </a>
             </li>
+            @endforeach
             @endif
             @if(check_merchant_access(['']))
             <li class="treeview {{ set_active(['fr/merchant/product', 'fr/merchant/product/*']) }}">
