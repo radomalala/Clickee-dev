@@ -15,6 +15,7 @@ use App\User;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -119,7 +120,7 @@ class StoreController extends Controller
 			}
 		}
 
-		return \Redirect::to('/');
+		return \Redirect::to('fr/merchant/dashboard');
 	}
 
 
@@ -135,7 +136,7 @@ class StoreController extends Controller
         $countries = $this->region_repository->getCountries();
 		$brands = $this->brand_repository->lists();
         $brand_tags = BrandTag::get();
-        return view('front.merchant.register', compact('countries','store','brands','brand_tags'));
+        return view('front.merchant.register_edit', compact('countries','store','brands','brand_tags'));
     }
 
     /**
@@ -179,7 +180,10 @@ class StoreController extends Controller
 			$store = $this->store_repository->update($id, $all_input);
 			flash()->success(config('message.store.update-success'));
 		}
-		return redirect()->to('merchant');
+		foreach(Auth::user()->store as $index=>$stor){
+			$id_store = $stor->store_id;
+		}
+		return Redirect('fr/store/'.$id_store.'/edit');
 	}
 
    public function getCoordinates(Request $request)

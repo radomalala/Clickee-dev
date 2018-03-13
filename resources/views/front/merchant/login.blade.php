@@ -51,7 +51,7 @@
 
                         <a href="{{ url(LaravelLocalization::getCurrentLocale().'/forgot-password') }}">{!! trans("form.forgot_password")!!}</a>
                         <div class="text-center">
-                                <button class="btn btn-default" type="submit" id="login-btn">{!! trans("form.login")!!}</button>
+                                <button class="btn btn-clickee-default" type="submit" id="login-btn">{!! trans("form.login")!!}</button>
                         </div>
                         {{Form::close()}}
                     </div>

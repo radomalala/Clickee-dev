@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Interfaces\CodePromoRepositoryInterface;
 use App\Models\CodePromo;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class CodePromoRepository implements CodePromoRepositoryInterface
 {
@@ -15,7 +16,7 @@ class CodePromoRepository implements CodePromoRepositoryInterface
         $this->model = $code_promo;
     }
     public function save($input){
-        $this->model->user_id = 37;
+        $this->model->user_id = \Auth::user()->user_id;
         $this->model->code_promo_name = $input['code_promo_name'];
         $this->model->date_debut = Carbon::parse($input['date_debut']);
         $this->model->date_fin = Carbon::parse($input['date_fin']);

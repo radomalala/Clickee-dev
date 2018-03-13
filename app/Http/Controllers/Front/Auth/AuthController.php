@@ -59,7 +59,7 @@ class AuthController extends Controller
 			if (Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password'), 'status' => '1','role_id'=>'2'])) {
 				$user = Auth::getLastAttempted();
 				Auth::login($user, $request->has('memory'));
-				return Redirect::to('/');
+				return Redirect::to('fr/merchant/dashboard');
 			}
 		}
 		return Redirect::back()

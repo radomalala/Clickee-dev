@@ -216,10 +216,7 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
     Route::get('zoom-image-test', 'TestController@imageZoom');
     Route::get('page-test', 'TestController@styleElement');
 
-    /*code promo route*/
-    Route::resource('code_promo','CodePromoController');
-
-    Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['auth']], function () {        
         Route::post('checkout', 'CheckoutController@storeOrderInfo');
         Route::get('checkout/order-confirmed', 'CheckoutController@confirmOrder');
         Route::group(['middleware' => ['customer']], function () {
@@ -250,6 +247,8 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
                 Route::post('pay-invoice/{id}', 'MerchantController@payInvoice');
 
                 Route::group(['namespace' => 'Merchant'], function(){
+                    Route::get('dashboard','DashboardController@index');
+                    Route::resource('code_promo','CodePromoController');
                     Route::get('product/get-data', 'ProductController@getData')->name('product-data');
                     Route::get('product', 'ProductController@index')->name('product_merchant');
                     Route::get('product/attributes', 'ProductController@attributes')->name('get_attribute');

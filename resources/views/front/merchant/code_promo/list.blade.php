@@ -1,8 +1,19 @@
-@extends('front.layout.master')
+@extends('front.merchant.layout.master')
 
+@section('additional-styles')
+    {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
+    {!! Html::style('frontend/css/font-awesome.min.css') !!}
+    {!! Html::style('backend/bootstrap/css/bootstrap.min.css') !!}
+    {!! Html::style('backend/plugins/select2/select2.css') !!}
+    {!! Html::style('backend/dist/css/AdminLTE.min.css') !!}
+    {!! Html::style('backend/dist/css/skins/skin-black-light.css') !!}
+    {!! Html::style('backend/css/style.css') !!}
+
+    {!! Html::style('frontend/css/style-clickee.css') !!}
+@stop
 @section('content')
 
-    <section class="content-header text-center">
+    <section class="content-header">
         <h1>
             Mes codes promo
         </h1>
@@ -10,7 +21,7 @@
             <div class="clearfix">
                 <div class="btn-group inline pull-right">
                     <div class="btn btn-small">
-                        <a href="{!! Url('code_promo/create') !!}" class="btn btn-block btn-primary">Créer un code</a>
+                        <a href="{!! Url('fr/merchant/code_promo/create') !!}" class="btn btn-block btn-primary">Créer un code</a>
                     </div>
                 </div>
             </div>
@@ -26,11 +37,11 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th width="10%">Code</th>
-                                <th width="15%">Début</th>
-                                <th width="15%">Fin</th>
-                                <th width="40%">Catégorie</th>
-                                <th width="20%" class="no-sort">Prolonger/Supprimer</th>
+                                <th width="16%">Code</th>
+                                <th width="12%">Début</th>
+                                <th width="12%">Fin</th>
+                                <th width="50%">Catégorie</th>
+                                <th width="10%" class="no-sort">Prolonger/Supprimer</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -50,13 +61,13 @@
 	                                    </td>
 	                                    <td>
 	                                        <div class="btn-group">
-	                                            <a href="{{ URL::to('fr/code_promo/' . $code_promo->code_promo_id . '/edit') }}"
-	                                               class="btn btn-default btn-sm" style="padding: 5px 9px !important; border: 2px solid #044651 !important; margin-right: 3px !important;" title="Edit"><i
+	                                            <a href="{{ URL::to('fr/merchant/code_promo/' . $code_promo->code_promo_id . '/edit') }}"
+	                                               class="btn btn-default btn-sm" style="" title="Edit"><i
 	                                                        class="fa fa-fw fa-edit"></i></a>
-	                                            {!! Form::open(array('url' => 'fr/code_promo/' . $code_promo->code_promo_id
+	                                            {!! Form::open(array('url' => 'fr/merchant/code_promo/' . $code_promo->code_promo_id
 	                                            , 'class' => 'pull-right')) !!}
 	                                            {!! Form::hidden('_method', 'DELETE') !!}
-	                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm', 'style'=> 'padding: 5px 9px !important; border: 2px solid #044651 !important; margin-right: 3px !important;'] ) !!}
+	                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm', 'style'=> ''] ) !!}
 	                                            {{ Form::close() }}
 	                                        </div>
 	                                    </td>
