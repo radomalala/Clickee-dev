@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front\Merchant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Interfaces\CustomerRepositoryInterface;
+use App\Interfaces\ProductRepositoryInterface;
 
 class CustomerController extends Controller
 {
@@ -15,9 +16,11 @@ class CustomerController extends Controller
      */
     
     protected $customer_repository;
+    protected $product_repository;
 
-    public function __construct(CustomerRepositoryInterface $customer_rep_interface){
+    public function __construct(CustomerRepositoryInterface $customer_rep_interface, ProductRepositoryInterface $product_repos){
         $this->customer_repository = $customer_rep_interface;
+        $this->product_repository = $product_repos;
     }
 
     public function index()
@@ -33,7 +36,9 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('front.merchant.customer.form')->with('customer', false);
+        $customer = [];
+        $product_is_active = $this->product_repository->getAll();
+        return view('front.merchant.customer.form', compact('customer','product_is_active'));
     }
 
     /**
@@ -79,7 +84,8 @@ class CustomerController extends Controller
     public function edit($id)
     {
         $customer = $this->customer_repository->getById($id);
-        return view('front.merchant.customer.form')->with('customer', $customer);
+        $products = $this->product_repository->getAll();
+        return view('front.merchant.customer.form')->with('customer', $customer)->with('products', $products);
     }
 
     /**
