@@ -2,14 +2,14 @@
                                         <div class="col-md-12">
                                             <div class="box-body">
                                                 <div class="row">
-                                                    <label for="product_name" class="col-sm-3 control-label">Nom produit</label>
-                                                        <div class="col-sm-9">
-                                                            <select class="form-control required">
-                                                                @foreach($product_is_active as $product)
-                                                                        <option name="{!! $product->product_id !!}">{!! $product->french->product_name !!}</option>
-                                                                @endforeach
+                                                    <div class="form-group col-sm-6">
+                                                        <label for="product_name" class="col-sm-3 control-label">Nom produit</label>
+                                                        <div class="col-sm-9 product_name">
+                                                            <select class="select-product-name form-control required">
+                                                            
                                                             </select>
                                                         </div>
+                                                    </div>
                                                     <div class="form-group col-sm-6 product_reference">
                                                         <label for="product_reference" class="col-sm-3 control-label">Référence</label>
                                                         <div class="col-sm-9">
@@ -78,15 +78,12 @@
                             <section class="content" id="size_list_input">
                                     <div class="row product-content row product_input_row " id="1">
                                         <div class="col-md-12">
-                                            <div class="box-body  mt-30">
+                                            <div class="box-body mt-30">
                                                 <div class="row">
                                                     <div class="form-group col-sm-6">
                                                         <label for="product_name" class="col-sm-3 control-label">Nom produit</label>
                                                         <div class="col-sm-9">
-                                                            <select class="select-product-name form-control required">
-                                                                @foreach($product_is_active as $product)
-                                                                        <option name="{!! $product->product_id !!}">{!! $product->french->product_name !!}</option>
-                                                                @endforeach
+                                                            <select id="product_name1" class="select-product-name form-control required">
                                                             </select>
                                                         </div>
                                                     </div>

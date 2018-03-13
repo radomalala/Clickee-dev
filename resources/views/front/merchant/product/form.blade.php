@@ -12,7 +12,7 @@
     {!! Html::style('backend/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css') !!}
     {!! Html::style('frontend/css/style-clickee.css') !!}
 @stop
-@section('content')
+@section('content')      
 
     <?php
     $selected_category = [];

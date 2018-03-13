@@ -1,8 +1,12 @@
 jQuery(document).ready(function () {
 
     var $document = jQuery(document);
-    
-    $('.select-product-name').select2();
+
+    $('#product_name1').select2({
+        data : product_is_active
+    });
+
+    $('.select2-container').css('width', '100%');
 
      $document.on('click','.add_size_input',function (){
         var row_count = parseInt($('.product_input_row:last').attr('id'));
@@ -12,7 +16,7 @@ jQuery(document).ready(function () {
         var html_data = $document.find('.master-input-size-container').clone();
         html_data.removeClass('master-input-size-container hidden').prop('id',row_index);
         
-        html_data.find('.product_name input').attr('name','product_name['+row_index+']');
+        html_data.find('.product_name select').attr('name','product_name['+row_index+']').attr('id', 'product_name'+row_index);
         html_data.find('.product_reference input').attr('name','product_reference['+row_index+']');
         html_data.find('.product_category select').attr('name','product_category['+row_index+']');
         html_data.find('.sub_category select').attr('name','sub_category['+row_index+']');
@@ -27,15 +31,34 @@ jQuery(document).ready(function () {
         
         html_data.find('.button :button').removeClass('btn-primary add_size_input').addClass('btn-danger remove_size_input').text('Annuler ce produit');
         
-        $(html_data).hide().appendTo("#size_list_input").animate({
-            height: 'toggle'
-        }, 500);
+        html_data.find('.product_name select').select2({
+            data : product_is_active
+        });
+        
+        $(html_data).hide().appendTo("#size_list_input").animate({height: 'toggle'}, 500);
+        $('.select2-container').css('width', '100%');
     });
 
-    $document.on('click','.remove_size_input',function () {
-       $(this).parents('.product-content').remove();
+    $document.on('change.select2','.product_name select',function (e){
+        var product_id = $(this).val();
+        $.ajax({
+            url: base_url + 'fr/merchant/product/get-product-for-encasement',
+            type: 'GET',
+            dataType: 'json',
+            data: {product_id: product_id},
+        })
+        .done(function(data) {
+            console.log(data);
+        })
+        .fail(function(xhr, options) {
+            console.log(xhr.responseText);
+        });
+        
     });
 
+    $('.select-product-name').change(function(event) {
+        var product_id = $(this).val();
+    });
 
     if (jQuery('table.table').length > 0) {
         jQuery('table.table').DataTable({
@@ -86,3 +109,9 @@ jQuery(document).ready(function () {
 
 
 });
+
+function change_product(e){
+    var data = e.params.data;
+    console.log("Valeur");
+    console.log(data);
+}
