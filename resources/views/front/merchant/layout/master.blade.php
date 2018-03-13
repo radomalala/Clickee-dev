@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="_token" content="{{ csrf_token() }}"/>
 
-    <title>CLICKEE | Admin Panel</title>
+    <title>CLICKEE | Marchant</title>
     <!-- Tell the browser to be responsive to screen width -->
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,6 +17,7 @@
 
     
     @yield('additional-styles')
+    {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css') !!}
     {!! Html::style('frontend/css/merchant.css') !!}
     <script type="text/javascript">
         var base_url = {!! "'".URL::to('/')."/'" !!};

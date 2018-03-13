@@ -1,4 +1,16 @@
-@extends('front.layout.master')
+@extends('front.merchant.layout.master')
+
+@section('additional-styles')
+    {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
+    {!! Html::style('frontend/css/font-awesome.min.css') !!}
+    {!! Html::style('backend/bootstrap/css/bootstrap.min.css') !!}
+    {!! Html::style('backend/plugins/select2/select2.css') !!}
+    {!! Html::style('backend/dist/css/AdminLTE.min.css') !!}
+    {!! Html::style('backend/dist/css/skins/skin-black-light.css') !!}
+    {!! Html::style('backend/css/style.css') !!}
+
+    {!! Html::style('frontend/css/style-clickee.css') !!}
+@stop
 @section('content')
 
 <?php
@@ -17,7 +29,7 @@ $selected_category = [];
     }
 ?>
 
-<section class="content-header text-center">
+<section class="content-header">
     <h1>
         Mise à jours code promo
     </h1>
@@ -28,7 +40,7 @@ $selected_category = [];
     <div class="row">
         <div class="col-md-12">
             <div class="box box-primary">
-                {!! Form::open(array('url' =>($code_promo) ? Url("fr/code_promo/$code_promo->code_promo_id") : Url("fr/code_promo"),'id'=>'code_promo','class'=>'code_promo','method' => ($code_promo)? 'PATCH':'POST')) !!}
+                {!! Form::open(array('url' =>($code_promo) ? Url("fr/merchant/code_promo/$code_promo->code_promo_id") : Url("fr/merchant/code_promo"),'id'=>'code_promo','class'=>'code_promo','method' => ($code_promo)? 'PATCH':'POST')) !!}
                 <div class="box-body">                    
                     <div class="row">
                     	<div class="col-lg-6">
@@ -66,7 +78,7 @@ $selected_category = [];
                     </div>
                 </div>
                 <div class="box-footer">
-                    <a href="{!! Url('code_promo') !!}" class="btn btn-default">Annuler</a>
+                    <a href="{!! Url('fr/merchant/code_promo') !!}" class="btn btn-default">Annuler</a>
                     <button type="submit" class="btn btn-primary pull-right" id="add-role">Enregistrer</button>
                 </div>
                 {!! Form::close() !!}

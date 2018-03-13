@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\Front\Merchant;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -9,6 +9,7 @@ use App\Interfaces\CategoryRepositoryInterface;
 use Yajra\Datatables\Facades\Datatables;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 
 class CodePromoController extends Controller
 {
@@ -28,9 +29,9 @@ class CodePromoController extends Controller
      */
     public function index()
     {
-        $code_promos = Datatables::collection($this->code_promo_repository->getAll(37))->make(true);
+        $code_promos = Datatables::collection($this->code_promo_repository->getAll(\Auth::user()->user_id))->make(true);
         $code_promos = $code_promos->getData();
-        return view('front.code_promo.list', compact('code_promos'));
+        return view('front.merchant.code_promo.list', compact('code_promos'));
     }
 
     /**
@@ -43,7 +44,7 @@ class CodePromoController extends Controller
         $language_id=app('language')->language_id;
         $categories = $this->category_repository->getParentCategories($language_id);
         $code_promo = false;
-        return view('front.code_promo.form', compact('code_promo','categories'));
+        return view('front.merchant.code_promo.form', compact('code_promo','categories'));
     }
 
     /**
@@ -62,12 +63,12 @@ class CodePromoController extends Controller
         );
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
-            return Redirect::to('fr/code_promo/create')->withInput()->withErrors($validator);
+            return Redirect::to('fr/merchant/code_promo/create')->withInput()->withErrors($validator);
         } else {
             $code_promo=$this->code_promo_repository->save($request->all());
             if($code_promo){
                 flash()->success(config('message.brand.add-success'));
-                return Redirect('fr/code_promo');
+                return Redirect('fr/merchant/code_promo');
             }
         }
     }
@@ -94,7 +95,7 @@ class CodePromoController extends Controller
         $language_id=app('language')->language_id;
         $code_promo = $this->code_promo_repository->getById($id);
         $categories = $this->category_repository->getParentCategories($language_id);
-        return view('front.code_promo.form', compact('code_promo','categories'));
+        return view('front.merchant.code_promo.form', compact('code_promo','categories'));
     }
 
     /**
@@ -119,7 +120,7 @@ class CodePromoController extends Controller
             $code_promo=$this->code_promo_repository->updateById($id,$request->all());
             if($code_promo){
                 flash()->success(config('message.brand.update-success'));
-                return Redirect('fr/code_promo');
+                return Redirect('fr/merchant/code_promo');
             }
         }
     }
@@ -137,6 +138,6 @@ class CodePromoController extends Controller
         }else {
             flash()->error(config('message.order-status.delete-error'));
         }
-        return redirect('fr/code_promo');
+        return redirect('fr/merchant/code_promo');
     }
 }

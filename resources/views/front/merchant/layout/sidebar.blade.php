@@ -6,6 +6,13 @@
             @if(check_merchant_access(['']))
             <li class="treeview {{ set_active(['']) }}">
                 <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
+                </a>
+            </li>
+            @endif
+            @if(check_merchant_access(['']))
+            <li class="treeview {{ set_active(['']) }}">
+                <a href="#">
                     <i class="fa fa-user"></i> <span>Mon compte</span>
                 </a>
             </li>
@@ -18,8 +25,8 @@
             </li>
             @endif
             @if(check_merchant_access(['']))
-            <li class="treeview">
-                <a href="#">
+            <li class="treeview {{ set_active(['fr/merchant/code_promo', 'fr/merchant/code_promo/*']) }}">
+                <a href="{!! URL::to('/fr/merchant/code_promo') !!}">
                     <i class="fa fa-qrcode"></i> <span>Codes promo</span>
                 </a>
             </li>
@@ -47,7 +54,7 @@
             @endif
             @if(check_merchant_access(['']))
             <li class="treeview">
-                <a href="#">
+                <a href="{!! url(LaravelLocalization::getCurrentLocale().'/logout') !!}">
                     <i class="fa fa-power-off"></i> <span>Déconnexion</span>
                 </a>
             </li>

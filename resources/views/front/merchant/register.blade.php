@@ -1,9 +1,4 @@
-@if($store)
-    @extends('front.layout.master')
-    @section('content')
-    <div class="container mtb-80" style="width: 60%">
-@endif
-    
+ 
     <?php
     $global_manager = ($store && $store->users->first() !=null && $store->users->first()->pivot->is_global_manager == '1') ? true : false;
     $receive_request = ($store && $store->users->first() !=null && $store->users->first()->pivot->receive_request == '1') ? true : false;
@@ -146,13 +141,9 @@
                     
                     
                     <div class="text-center mr-t-btn">
-                        <button class="btn btn-default" type="submit" id="add-store">{!! trans("merchant.complete_registration")!!}</button>
+                        <button class="btn btn-clickee-default" type="submit" id="add-store">{!! trans("merchant.complete_registration")!!}</button>
                     </div>
                     {!! Form::close() !!}
                 </div>
             </div>
     </div>
-@if($store)
-    </div>
-    @stop
-@endif

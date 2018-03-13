@@ -119,7 +119,7 @@ class StoreController extends Controller
 			}
 		}
 
-		return \Redirect::to('/');
+		return \Redirect::to('fr/merchant/dashboard');
 	}
 
 
