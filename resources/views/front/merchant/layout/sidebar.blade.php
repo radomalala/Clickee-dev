@@ -39,8 +39,8 @@
             </li>
             @endif
             @if(check_merchant_access(['']))
-            <li class="treeview">
-                <a href="#">
+            <li class="treeview {{ set_active(['fr/merchant/encasement', 'fr/merchant/customer/*', 'fr/merchant/customer']) }}">
+                <a href="{!! route('encasement') !!}">
                     <i class="fa fa-money"></i> <span>Encaissement</span>
                 </a>
             </li>

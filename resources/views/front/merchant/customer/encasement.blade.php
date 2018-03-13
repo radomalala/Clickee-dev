@@ -46,5 +46,6 @@
     {!! Html::script('backend/plugins/datatables/dataTables.bootstrap.min.js') !!}
 @stop
 @section('footer-scripts')
+    
     {!! Html::script('frontend/js/customer.js') !!}
 @stop

@@ -52,6 +52,22 @@
 
 @endsection
 @section('additional-script')
-    {!! Html::style('backend/plugins/select2/select2.js') !!}
+    <script>
+        var product_is_active = [
+                <?php 
+                    $index = 0;
+                    foreach ($product_is_active as $product): ?>
+                       {
+                            id : {!! $product->product_id !!},
+                            text : "{!! $product->french->product_name !!}"
+                        } {!! ((sizeof($product_is_active) - 1) != $index) ? "," : "" !!}
+                                            
+                <?php
+                    $index++;
+                    endforeach ?>
+        ];
+    </script>
+    {!! Html::script('backend/plugins/select2/select2.js') !!}
     {!! Html::script('frontend/js/customer.js') !!}
+
 @stop

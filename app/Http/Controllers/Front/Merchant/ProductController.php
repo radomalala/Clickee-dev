@@ -365,6 +365,8 @@ class ProductController extends Controller
 		return redirect()->route('product');
 	}
 
+
+
 	public function searchProduct(Request $request)
 	{     
 		$keyword = $request->get('keyword');
@@ -458,5 +460,15 @@ class ProductController extends Controller
 		//dd($data_id);
 
 		dd("ok");
+	}
+
+	public function getProductForEncasement(Request $request){
+		$product_id = $request->get('product_id');
+		$product = $this->product_repository->getById($product_id);
+		$product_attributes = [];
+		if($product_id > 0){
+			$product_attributes = $this->product_repository->getAttributesByProductId($product_id);
+		}
+		return response()->json(['product' => $product, 'attribute' => $product_attributes]);
 	}
 }
