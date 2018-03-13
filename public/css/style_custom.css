@@ -43,7 +43,7 @@
 /*.register-area{margin-left: 21px;}*/
 .register-btn{color:#000 !important;border-radius:0px !important;margin-left: 0px !important}
 .register-btn:hover{ background: #59b210 !important;color: #fff !important;border-color: #59b210; }
-.checkbox label input{width:19px !important }
+.checkbox label input{/*width:19px !important */}
 .btn-facebook:hover{background-color: #3b5ca0 !important;color: #fff !important;}
 .btn-twitter:hover{background-color: #57adc7 !important; color: #fff !important;}
 .btn-google:hover{background-color: #cc4837 !important;color: #fff !important;}
@@ -1090,8 +1090,8 @@ button.close{
 }
 div.row{
     /* ajout espace entre div class row*/
-    padding: 7px 0px 7px 0px;
-    line-height: 2.5;
+    /*padding: 7px 0px 7px 0px;
+    line-height: 2.5;*/
 }
 .account-btn {
     border: none;
@@ -1749,15 +1749,15 @@ span {
     background-position-y: -64px !important;
 }
 .mtb-80{
-    margin-top: 80px;
-    margin-bottom: 12px;
+    /*margin-top: 80px;
+    margin-bottom: 12px;*/
 }
 .size-17{
     font-size: 17px;
 }
 .merchant-top-bottom{
-    margin-top: 22px;
-    margin-bottom: 16px;
+    /*margin-top: 22px;
+    margin-bottom: 16px;*/
 }
 .check-merchant{
     margin-top: -7px !important;
@@ -1779,11 +1779,11 @@ span {
     margin-bottom: 26px !important;
 }
 .mr-t-btn{
-    margin-bottom: 31px;
-    margin-top: 32px;
+    /*margin-bottom: 31px;
+    margin-top: 32px;*/
 }
 .align-title{
-    height: 42px;
+    /*height: 42px;*/
 }
 .add-user-alignement{
     margin-top: 48px;

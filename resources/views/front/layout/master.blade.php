@@ -27,6 +27,7 @@
     {!! Html::style('frontend/css/chosen.min.css') !!}
 @endif
 
+{!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css') !!}
 {!! Html::style('frontend/css/animate.css') !!}
 
 {!! Html::style('frontend/css/meanmenu.min.css') !!}
@@ -69,6 +70,9 @@
 @yield('additional-script')
 
 @yield('footer-script')
+
+<!-- Confirmation suppression -->
+@include('front.layout.model')
 
 </body>
 <!-- END BODY -->

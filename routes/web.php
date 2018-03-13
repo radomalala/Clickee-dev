@@ -216,6 +216,9 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
     Route::get('zoom-image-test', 'TestController@imageZoom');
     Route::get('page-test', 'TestController@styleElement');
 
+    /*code promo route*/
+    Route::resource('code_promo','CodePromoController');
+
     Route::group(['middleware' => ['auth']], function () {
         Route::post('checkout', 'CheckoutController@storeOrderInfo');
         Route::get('checkout/order-confirmed', 'CheckoutController@confirmOrder');

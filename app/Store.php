@@ -17,12 +17,11 @@ class Store extends Model
 	protected $primaryKey = 'store_id';
 
 	const LOGO_IMG_PATH = 'upload/logo';
-	const SHOP_IMG_PATH = 'upload/shop';
 
 
 	public function users()
 	{
-		return $this->belongsToMany(User::class, 'store_users', 'store_id', 'user_id')->withPivot(['is_global_manager','compte_principal','receive_request','reply_request']);
+		return $this->belongsToMany(User::class, 'store_users', 'store_id', 'user_id');
 	}
 
 	public function brands()

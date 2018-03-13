@@ -1,6 +1,25 @@
 (function ($) {
  "use strict";
+
+ /*datepicker*/
+ $('.datepicker').datepicker({
+        format: "dd-mm-yyyy",
+        autoclose: true,
+        todayHighlight: true,
+        language: 'fr'
+    });
  
+ if (jQuery('.delete-btn').length > 0) {
+        jQuery('.delete-btn').off('click');
+        jQuery('.delete-btn').on('click', function (e) {
+            var $form = jQuery(this).closest('form');
+            e.preventDefault();
+            $('#confirm').modal({backdrop: 'static', keyboard: false})
+                .one('click', '#delete', function () {
+                    $form.trigger('submit'); // submit the form
+                });
+        });
+    }
 /*----------------------------
  TOP Menu Stick
 ------------------------------ */
