@@ -157,6 +157,7 @@ body {
     border-radius: 0px;
     font-size: 16px;
     font-weight: 600;
+    background-color: white;
 }
 .btn-clickee-default:hover {
     color: #65bb9f;
