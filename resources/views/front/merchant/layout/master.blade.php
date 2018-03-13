@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="_token" content="{{ csrf_token() }}"/>
 
-    <title>CLICKEE | Marchant</title>
+    <title>CLICKEE | Marchand</title>
     <!-- Tell the browser to be responsive to screen width -->
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
