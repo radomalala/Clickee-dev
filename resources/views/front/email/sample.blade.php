@@ -1,1 +1,1 @@
-{!! $email_content !!}
+<h1>{!! $email_content !!}</h1> 
