@@ -59,7 +59,7 @@ class CustomerController extends Controller
             return Redirect::back()->withInput()->withErrors($validator);   
         }else{
             $customer = $this->customer_repository->save($request->all());
-            flash()->success("Enregistrement du client avec succèss !");
+            flash()->success("Enregistrement avec succèss !");
         }
         return \Redirect('merchant/customer');
     }
@@ -85,7 +85,7 @@ class CustomerController extends Controller
     {
         $customer = $this->customer_repository->getById($id);
         $products = $this->product_repository->getAll();
-        return view('front.merchant.customer.form')->with('customer', $customer)->with('products', $products);
+        return view('front.merchant.customer.form')->with('customer', $customer)->with('product_is_active', $products);
     }
 
     /**

@@ -3,7 +3,7 @@ namespace App\Repositories;
 
 use App\Interfaces\CustomerRepositoryInterface;
 use App\Customer;
-
+use App\Encasement;
 /**
  * Class CustomerRepository
  *
@@ -38,6 +38,20 @@ class CustomerRepository implements CustomerRepositoryInterface
 		$this->model->email = $input['email'];
 		$this->model->birthday = $input['birthday'];
 		$this->model->save();
+
+		for ($i=1; $i <= sizeof($input['product_name']); $i++) { 
+			$encasement = new Encasement();
+			$encasement->customer_id = $this->model->customer_id;
+			$encasement->product_id = $input['product_name'][$i];
+			$encasement->attribute_size_id = $input['product_size'][$i];
+			$encasement->attribute_color_id = $input['product_color'][$i];
+			$encasement->discount = $input['discount'][$i];
+			$encasement->promo_code_id = $input['promo_code'][$i];
+			$encasement->parent_category = $input['parent_category'][$i];
+			$encasement->sub_category = $input['sub_category'][$i];
+			$encasement->save();
+		}
+
 		return $this->model;
 	}
 
@@ -56,6 +70,18 @@ class CustomerRepository implements CustomerRepositoryInterface
 		$this->model->email = $input['email'];
 		$this->model->birthday = $input['birthday'];
 		$this->model->save();
+		for ($i=1; $i <= sizeof($input['product_name']); $i++) { 
+			$encasement = new Encasement();
+			$encasement->customer_id = $this->model->customer_id;
+			$encasement->product_id = $input['product_name'][$i];
+			$encasement->attribute_size_id = $input['product_size'][$i];
+			$encasement->attribute_color_id = $input['product_color'][$i];
+			$encasement->discount = $input['discount'][$i];
+			$encasement->promo_code_id = $input['promo_code'][$i];
+			$encasement->parent_category = $input['parent_category'][$i];
+			$encasement->sub_category = $input['sub_category'][$i];
+			$encasement->save();
+		}
 		return $this->model;
 	}
 

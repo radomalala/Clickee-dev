@@ -16,7 +16,7 @@ class ProductRepository implements ProductRepositoryInterface
 {
     protected $model;
     protected $modelAffiliate;
-
+ 
     public function __construct(Product $product, AffiliateProduct $affiliate)
     {
         $this->model = $product;
@@ -26,7 +26,7 @@ class ProductRepository implements ProductRepositoryInterface
     public function save($input)
     {
         try {
-           $this->model->sku = $input['serial_number'];
+            $this->model->sku = $input['serial_number'];
             $this->model->brand_id = $input['brand_id'];
             $this->model->is_active = $input['is_active'];
             $this->model->original_price = $input['original_price'];

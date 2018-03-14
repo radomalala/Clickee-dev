@@ -54,6 +54,10 @@
 @section('additional-script')
     <script>
         var product_is_active = [
+                        {
+                            id : 0,
+                            text : "Séléctionner un produit"
+                        },
                 <?php 
                     $index = 0;
                     foreach ($product_is_active as $product): ?>

@@ -3,7 +3,6 @@ jQuery(document).ready(function () {
     var $document = $(document);
 
     $('#add-role').click(function () {
-
         $('#admin_role').validate({
             errorPlacement: function (error, element) {
                 return error.insertAfter(element);
