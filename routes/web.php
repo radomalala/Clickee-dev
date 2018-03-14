@@ -249,6 +249,7 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
                 Route::group(['namespace' => 'Merchant'], function(){
                     Route::get('dashboard','DashboardController@index');
                     Route::resource('code_promo','CodePromoController');
+                    Route::resource('promotion','PromotionController');
                     Route::get('product/get-data', 'ProductController@getData')->name('product-data');
                     Route::get('product', 'ProductController@index')->name('product_merchant');
                     Route::get('product/attributes', 'ProductController@attributes')->name('get_attribute');

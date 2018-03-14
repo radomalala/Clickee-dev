@@ -34,8 +34,8 @@
             </li>
             @endif
             @if(check_merchant_access(['']))
-            <li class="treeview">
-                <a href="#">
+            <li class="treeview {{ set_active(['fr/merchant/promotion', 'fr/merchant/promotion/*']) }}">
+                <a href="{!! URL::to('/fr/merchant/promotion') !!}">
                     <i class="fa fa-star-o"></i> <span>Promotion</span>
                 </a>
             </li>
