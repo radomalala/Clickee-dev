@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Service\EmailService;
 use Mail;
+use App\Encasement;
+use App\EncasementProduct;
 
 class PromotionController extends Controller
 {
@@ -92,8 +94,10 @@ class PromotionController extends Controller
      */
     public function show($id)
     {
-        
-        return view('front.merchant.promotion.results');
+        $promotion = $this->promotion_repository->getById($id);
+        $code_promo = $this->code_promo_repository->getById($promotion->code_promo_id);
+        $encasementproducts = EncasementProduct::where('promo_code_id',$code_promo->code_promo_id)->orderBy('encasement_product_id', 'desc')->get();
+        return view('front.merchant.promotion.results',compact('encasementproducts','code_promo','promotion'));
     }
 
     /**
