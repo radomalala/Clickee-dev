@@ -68,7 +68,7 @@ jQuery(document).ready(function () {
         })
         .done(function(data) {
             if(data.code_promos.length > 0){
-                $('#promo_code'+index).append('<option value="0">Séléctionner une code</option>')
+                $('#promo_code'+index).html('<option value="0">Séléctionner une code</option>')
                 for (var i = data.code_promos.length - 1; i >= 0; i--) {
                     var code_promo = data.code_promos[i];
                     console.log("index : "+index);
