@@ -26,16 +26,9 @@ class CreateTableEncasementProduct extends Migration
             $table->integer('attribute_size_id')->unsigned()->nullable();
             $table->integer('attribute_color_id')->unsigned()->nullable();
             $table->integer('parent_category')->index('idx_parent_category')->unsigned()->nullable();
-            $table->foreign('parent_category')
-                ->references('category_id')->on('category');
             $table->integer('sub_category')->index('idx_sub_category')->unsigned()->nullable();
-            $table->foreign('sub_category')
-                ->references('category_id')->on('category');
             $table->integer('promo_code_id')->unsigned()->nullable();
-            $table->foreign('promo_code_id')
-                ->references('code_promo_id')->on('code_promo')
-                ->onDelete('cascade');
-            $table->integer('discount');
+            $table->integer('discount')->nullable();
             $table->timestamps();
         });
     }
@@ -47,6 +40,6 @@ class CreateTableEncasementProduct extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('encasement_product');
+                
     }
 }

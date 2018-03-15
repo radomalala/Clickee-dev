@@ -65,8 +65,10 @@ use App\Repositories\UserRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Interfaces\UserRepositoryInterface;
 use App\Interfaces\ProductStatusRepositoryInterface;
+use App\Interfaces\CodePromoRepositoryInterface;
 use App\Repositories\ProductStatusRepository;
 use App\Repositories\CustomerRepository;
+use App\Repositories\CodePromoRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -199,6 +201,10 @@ class RepositoryServiceProvider extends ServiceProvider
 
 		$this->app->bind(CustomerRepositoryInterface::class, function($app){
 			return $app->make(CustomerRepository::class);
+		});
+
+		$this->app->bind(CodePromoRepositoryInterface::class, function($app){
+			return $app->make(CodePromoRepository::class);
 		});
 	}
 }

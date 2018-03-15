@@ -16,5 +16,5 @@ interface CategoryRepositoryInterface
 	public function deleteById($category_id);
 
 	public function getParentCategories($language_id);
-
+	
 }
