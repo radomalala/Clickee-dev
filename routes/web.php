@@ -259,6 +259,7 @@ Route::group(['namespace' => 'Front', 'middleware' => ['localeSessionRedirect', 
                     Route::delete('product/{product_id}', 'ProductController@destroy')->name('remove_product');
                     Route::post('product/{product_id}', 'ProductController@update')->name('update_product');
                     Route::get('product/get-product-for-encasement', 'ProductController@getProductForEncasement');
+                    Route::get('product/get-code-promo-by-category', 'ProductController@getCodePromoByCategory');
                     Route::post('remove-product-image', 'ProductController@removeImage')->name('remove_product_image');
                     Route::get('product/add', 'ProductController@create')->name('create_product');
                     Route::resource('customer', 'CustomerController');

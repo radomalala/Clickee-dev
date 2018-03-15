@@ -26,4 +26,5 @@ class CodePromo extends Model
     	return $this->belongsToMany(Category::class,'code_promo_category','code_promo_id','category_id');
     }
 
+
 }

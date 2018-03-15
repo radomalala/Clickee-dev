@@ -32,6 +32,9 @@ class CreateTableEncasementProduct extends Migration
             $table->foreign('sub_category')
                 ->references('category_id')->on('category');
             $table->integer('promo_code_id')->unsigned()->nullable();
+            $table->foreign('promo_code_id')
+                ->references('code_promo_id')->on('code_promo')
+                ->onDelete('cascade');
             $table->integer('discount');
             $table->timestamps();
         });

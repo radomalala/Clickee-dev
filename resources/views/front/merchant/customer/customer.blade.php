@@ -48,7 +48,7 @@
                                                     <div class="form-group col-sm-6">
                                                         {!! Form::label('birthday', 'Date de naissance', ['class' => 'col-sm-3 control-label']) !!}
                                                         <div class="col-sm-9">
-                                                            {!! Form::date('birthday', ($customer) ? $customer->birthday : null , ['class' => 'form-control datepicker','id'=>'birthday','placeholder'=>"Date de naissance"]) !!}
+                                                            {!! Form::text('birthday', ($customer) ? $customer->birthday : null , ['class' => 'form-control datepicker','id'=>'birthday','placeholder'=>"Date de naissance"]) !!}
                                                         </div>
                                                     </div>
                                                 </div>
