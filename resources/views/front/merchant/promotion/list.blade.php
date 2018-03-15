@@ -23,6 +23,9 @@
                     <div class="btn btn-small">
                         <a href="{!! Url('fr/merchant/promotion/create') !!}" class="btn btn-block btn-primary">Créer une Newsletter</a>
                     </div>
+                    <div class="btn btn-small">
+                        <a href="{!! Url('fr/merchant/contact') !!}" class="btn btn-block btn-success">Ajouter des contacts</a>
+                    </div>
                 </div>
             </div>
         </div>
