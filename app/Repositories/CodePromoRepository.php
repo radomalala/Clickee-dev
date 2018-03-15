@@ -41,6 +41,7 @@ class CodePromoRepository implements CodePromoRepositoryInterface
         $code_promo->date_fin = Carbon::parse($input['date_fin']);
         $code_promo->quantity_max = $input['quantity_max'];
         $code_promo->save();
+        $code_promo->categories()->detach();
         if (isset($input['categories'])) {
             foreach ($input['categories'] as $category) {
                 $code_promo->categories()->attach($category);

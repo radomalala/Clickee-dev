@@ -92,7 +92,8 @@ class PromotionController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        return view('front.merchant.promotion.results');
     }
 
     /**

@@ -70,9 +70,6 @@
 
 @yield('footer-script')
 
-<!-- Confirmation suppression -->
-@include('front.layout.model')
-
 </body>
 <!-- END BODY -->
 </html>

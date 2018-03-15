@@ -67,7 +67,7 @@
 	                                            {!! Form::open(array('url' => 'fr/merchant/code_promo/' . $code_promo->code_promo_id
 	                                            , 'class' => 'pull-right')) !!}
 	                                            {!! Form::hidden('_method', 'DELETE') !!}
-	                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm', 'style'=> ''] ) !!}
+	                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm'] ) !!}
 	                                            {{ Form::close() }}
 	                                        </div>
 	                                    </td>
