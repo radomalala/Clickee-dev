@@ -172,6 +172,7 @@
                                     </div>
                                 </section>
                                 <input type="text" class="hidden" id="total_ht" name="total_ht"/>
+                                 <input type="text" class="hidden" id="total_ttc" name="total_ttc"/>
                                 <section>
                                     <div class="row">
                                         <div class="col-md-12 mt-10">

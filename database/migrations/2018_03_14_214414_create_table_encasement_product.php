@@ -16,9 +16,6 @@ class CreateTableEncasementProduct extends Migration
         Schema::create('encasement_product', function (Blueprint $table) {
             $table->increments('encasement_product_id');
             $table->integer('encasement_id')->index('idx_encasement_id')->unsigned()->nullable();
-            $table->foreign('encasement_id')
-                ->references('encasement_id')->on('encasement')
-                ->onDelete('cascade');
             $table->integer('product_id')->index('idx_product_id')->unsigned()->nullable();
             $table->foreign('product_id')
                 ->references('product_id')->on('product')
@@ -40,6 +37,6 @@ class CreateTableEncasementProduct extends Migration
      */
     public function down()
     {
-                
+        Schema::dropIfExists('encasement_product');
     }
 }
