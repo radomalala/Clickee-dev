@@ -62,8 +62,8 @@
                     $index = 0;
                     foreach ($product_is_active as $product): ?>
                        {
-                            id : {!! $product->product_id !!},
-                            text : "{!! $product->french->product_name !!}"
+                            id : {!! addslashes($product->product_id) !!},
+                            text : '{!! addslashes($product->french->product_name) !!}'
                         } {!! ((sizeof($product_is_active) - 1) != $index) ? "," : "" !!}
                                             
                 <?php

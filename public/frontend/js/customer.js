@@ -18,12 +18,12 @@ jQuery(document).ready(function () {
         
         html_data.find('.product_name select').attr('name','product_name['+row_index+']').attr('id', 'product_name'+row_index).attr('data-content-range', row_index).addClass('select-product-name');
         html_data.find('.product_reference input').attr('name','product_reference['+row_index+']').addClass('input-product-reference');
-        html_data.find('.parent_category select').attr('name','parent_category['+row_index+']').attr('id', 'parent_category'+row_index).addClass('select-parent-category');
+        html_data.find('.parent_category select').attr('name','parent_category['+row_index+']').attr('id', 'parent_category'+row_index).addClass('select-parent-category').attr('data-content-range', row_index);
         html_data.find('.sub_category select').attr('name','sub_category['+row_index+']').attr('id', 'sub_category'+row_index).addClass('select-sub-category');
         html_data.find('.product_size select').attr('name','product_size['+row_index+']').attr('id', 'product_size'+row_index).addClass('select-product-size');
         html_data.find('.product_color select').attr('name','product_color['+row_index+']').attr('id', 'product_color'+row_index).addClass('select-product-color');
         html_data.find('.discount input').attr('name','discount['+row_index+']').attr('id', 'discount'+row_index).addClass('input-discount');
-        html_data.find('.promo_code input').attr('name','promo_code['+row_index+']').attr('id', 'promo_code'+row_index).addClass('input-promo-code');
+        html_data.find('.promo_code select').attr('name','promo_code['+row_index+']').attr('id', 'promo_code'+row_index).addClass('select-promo-code');
         html_data.find('.product_price input').attr('name', 'product_price['+row_index+']').attr('id','product_price'+row_index).addClass('input-product-price');
         html_data.find('.product_quantity input').attr('name', 'product_quantity['+row_index+']').attr('id','product_quantity'+row_index).addClass('input-product-quantity');
         //h
@@ -58,7 +58,28 @@ jQuery(document).ready(function () {
     });
 
     $('.select-parent-category').change(function(e){
-        console.log('Bonjour tous le monde');
+        $('#promo_code'+index).html('');
+        var index = $(this).data('content-range');
+        $.ajax({
+            url: base_url + 'fr/merchant/product/get-code-promo-by-category',
+            type: 'GET',
+            dataType: 'json',
+            data: {category_id: $(this).val()},
+        })
+        .done(function(data) {
+            if(data.code_promos.length > 0){
+                $('#promo_code'+index).append('<option value="0">Séléctionner une code</option>')
+                for (var i = data.code_promos.length - 1; i >= 0; i--) {
+                    var code_promo = data.code_promos[i];
+                    console.log("index : "+index);
+                    $('#promo_code'+index).append('<option value="'+code_promo.code_promo_id+'">'+code_promo.code_promo_name+'</option>')
+                }
+            }
+        })
+        .fail(function() {
+            console.log("error du recuperation du code promo");
+        });
+        
     });
 
     $('#paiement').click(function(event) {   
@@ -97,7 +118,7 @@ jQuery(document).ready(function () {
             console.log($(this).val());
         });
          console.log("promo-code");
-        $('.input-promo-code').each(function(index, el) {
+        $('.select-promo-code').each(function(index, el) {
             console.log($(this).val());
         });
 
