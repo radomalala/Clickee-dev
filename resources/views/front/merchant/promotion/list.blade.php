@@ -55,7 +55,7 @@
                                         </td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="{{ URL::to('fr/merchant/promotion/' . $promotion->promotion_id . '/edit') }}" class="btn btn-default btn-sm" style="" title="Résultats"> Résultats </a>
+                                                <a href="{{ URL::to('fr/merchant/promotion/' . $promotion->code_promo_id . '') }}" class="btn btn-default btn-sm" style="" title="Résultats"> Résultats </a>
                                             </div>
                                         </td>
                                     </tr>
