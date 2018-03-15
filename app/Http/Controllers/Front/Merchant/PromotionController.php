@@ -70,13 +70,13 @@ class PromotionController extends Controller
         } else {
             $promotion = $this->promotion_repository->save($request->all());
             if($promotion){
-                try {
+                /*try {
                     Mail::send('front.email.sample', ['email_content' => 'test'], function ($message){
                         $message->to('aa@alternateeve.com')->subject('ptit');
                     });
                 } catch (\Exception $e) {
                     return $e->getMessage();
-                }
+                }*/
 
                 flash()->success(config('message.brand.add-success'));
                 return Redirect('fr/merchant/promotion');
