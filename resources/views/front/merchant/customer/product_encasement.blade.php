@@ -67,7 +67,8 @@
                                                      <div class="form-group col-sm-6 promo_code">
                                                         <label for="promo_code" class="col-sm-3 control-label">Code promo</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" placeholder="Code promo" class="form-control required"/>
+                                                            <select class="form-control required">
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div class="product_price hidden">  
@@ -108,7 +109,7 @@
                                                     <div class="form-group col-sm-6">
                                                         <label for="parent_category" class="col-sm-3 control-label">Catégorie</label>
                                                         <div class="col-sm-9">
-                                                            <select id="parent_category1" name="parent_category[1]" class="select-parent-category form-control required">
+                                                            <select id="parent_category1" name="parent_category[1]" data-content-range="1" class="select-parent-category form-control required">
                                                                 <option></option>
                                                             </select>
                                                         </div>
@@ -154,7 +155,8 @@
                                                      <div class="form-group col-sm-6">
                                                         <label for="promo_code" class="col-sm-3 control-label">Code promo</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="promo_code[1]" placeholder="Code promo" id="promo_code1" class="input-promo-code form-control required"/>
+                                                            <select name="promo_code[1]"  id="promo_code1" class="select-promo-code form-control required">
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div class="product_price hidden">  
