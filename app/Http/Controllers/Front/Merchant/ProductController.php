@@ -66,6 +66,7 @@ class ProductController extends Controller
 		$this->amazon_search = $amazon_search;
 		$this->tag_repository = $tag_repo;
 		$this->code_promo_repository = $code_promo_repo;
+		$this->product_status_repository = $prod_status_repo;
 	}
 
 	public function index()
