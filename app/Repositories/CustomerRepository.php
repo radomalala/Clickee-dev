@@ -38,7 +38,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 		$this->model->country = $input['country'];
 		$this->model->phone_number = $input['phone_number'];
 		$this->model->email = $input['email'];
-		$this->model->birthday = \Carbon::parse($input['birthday']);
+		$this->model->birthday = Carbon::parse($input['birthday']);
 		$this->model->save();
 		
 		$encasement = new Encasement();
