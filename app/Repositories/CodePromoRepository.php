@@ -56,4 +56,8 @@ class CodePromoRepository implements CodePromoRepositoryInterface
     public function getById($code_promo_id){
         return $this->model->where('code_promo_id', $code_promo_id)->first();
     }
+
+    public function getCodePromoByCategoryAndUserId(){
+        
+    }
 }
