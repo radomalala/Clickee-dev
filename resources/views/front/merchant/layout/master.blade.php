@@ -42,6 +42,9 @@
     </div>
     @include('front.layout.footer')
     
+    <!-- Confirmation suppression -->
+    @include('front.layout.model')
+
 </div>
 @yield('additional-script')
 @yield('footer-scripts')

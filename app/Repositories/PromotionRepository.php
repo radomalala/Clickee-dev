@@ -39,6 +39,6 @@ class PromotionRepository implements PromotionRepositoryInterface
     }
 
     public function getById($promotion_id){
-        
+        return $this->model->where('promotion_id', $promotion_id)->first();
     }
 }

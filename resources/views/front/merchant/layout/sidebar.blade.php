@@ -4,8 +4,8 @@
         <!-- Sidebar user panel -->
         <ul class="sidebar-menu">
             @if(check_merchant_access(['']))
-            <li class="treeview {{ set_active(['']) }}">
-                <a href="#">
+            <li class="treeview {{ set_active(['fr/merchant/dashboard','fr/merchant/dashboard/*']) }}">
+                <a href="{!! URL::to('/fr/merchant/dashboard') !!}">
                     <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
                 </a>
             </li>

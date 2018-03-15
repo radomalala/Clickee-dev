@@ -1,3 +1,7 @@
+Number.prototype.round = function(p) {
+  p = p || 10;
+  return parseFloat( this.toFixed(p) );
+};
 jQuery(document).ready(function () {
 
     var $document = jQuery(document);
@@ -84,6 +88,8 @@ jQuery(document).ready(function () {
     $('#paiement').click(function(event) {   
         var info_product_customer = $('#customer_form').serializeArray();
         var total_price_product = 0;
+        var total_price_product_ttc = 0;
+        var total_discount_price = 0;
         var tab_tr = {};
         $('.table-content-paiement').html('');
         $('.select-product-name').each(function(index, el) {
@@ -107,22 +113,35 @@ jQuery(document).ready(function () {
         $('.select-sub-category').each(function(index, el) {
             console.log($(this).find('option:selected').text());
         });
-        
          console.log("product-color");
         $('.select-product-color').each(function(index, el) {
             console.log($(this).find('option:selected').text());
         });
          console.log("discount");
         $('.input-discount').each(function(index, el) {
-            console.log($(this).val());
+            var parent = $(this).parents('.product-content');
+            var percent = $(this).val();
+            var price = parent.find('.input-product-price').val();
+            console.log('price : ');
+            console.log(price);
+            var discount_price = parseFloat(price)*(parseInt(percent)/100);
+            total_discount_price += discount_price; 
         });
          console.log("promo-code");
         $('.select-promo-code').each(function(index, el) {
             console.log($(this).val());
         });
-
+        
+        total_price_product_ttc = total_price_product - total_discount_price;
+        var discount_total = (total_discount_price*100)/total_price_product;
+        discount_total = discount_total.round(2);
+        total_price_product_ttc = total_price_product_ttc.round(2);
         $('.table-content-paiement').append('<tr class="total"><th></th><th></th><th>Montant total HT</th><th>'+total_price_product+'</th></tr>');
+        $('.table-content-paiement').append('<tr class="total"><th></th><th></th><th>Remise</th><th>'+discount_total+'%</th></tr>');
+        $('.table-content-paiement').append('<tr class="total"><th></th><th></th><th>TVA</th><th>0%</th></tr>');
+        $('.table-content-paiement').append('<tr class="total"><th></th><th></th><th>Montant total TTC</th><th>'+total_price_product_ttc+'</th></tr>');
         $('#total_ht').val(total_price_product);
+        $('#total_ttc').val(total_price_product_ttc);
     });
 
      $("#encasement").click(function(event) {

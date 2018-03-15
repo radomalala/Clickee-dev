@@ -41,6 +41,7 @@ class CodePromoRepository implements CodePromoRepositoryInterface
         $code_promo->date_fin = Carbon::parse($input['date_fin']);
         $code_promo->quantity_max = $input['quantity_max'];
         $code_promo->save();
+        $code_promo->categories()->detach();
         if (isset($input['categories'])) {
             foreach ($input['categories'] as $category) {
                 $code_promo->categories()->attach($category);
@@ -57,7 +58,8 @@ class CodePromoRepository implements CodePromoRepositoryInterface
         return $this->model->where('code_promo_id', $code_promo_id)->first();
     }
 
-    public function getCodePromoByCategoryAndUserId(){
-        
+    public function getByUserCategory($category_id, $user_id){
+        /*$result = CodePromo::where('category_id', $category_id)->get();
+        \Log::debug($result);*/
     }
 }

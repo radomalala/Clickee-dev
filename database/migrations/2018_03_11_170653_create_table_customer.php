@@ -17,10 +17,10 @@ class CreateTableCustomer extends Migration
             $table->increments('customer_id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('address');
-            $table->string('postal_code');
-            $table->string('country');
-            $table->string('phone_number');
+            $table->string('address')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->string('country')->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('email');
             $table->date('birthday');
             $table->timestamps();

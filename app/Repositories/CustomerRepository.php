@@ -31,19 +31,20 @@ class CustomerRepository implements CustomerRepositoryInterface
 
 	public function update($id,$input){
 		$customer = $this->model->findOrNew($id);
-		$this->model->first_name = $input['first_name'];
-		$this->model->last_name = $input['last_name'];
-		$this->model->address = $input['address'];
-		$this->model->postal_code = $input['postal_code'];
-		$this->model->country = $input['country'];
-		$this->model->phone_number = $input['phone_number'];
-		$this->model->email = $input['email'];
-		$this->model->birthday = Carbon::parse($input['birthday']);
-		$this->model->save();
+		$customer->first_name = $input['first_name'];
+		$customer->last_name = $input['last_name'];
+		$customer->address = $input['address'];
+		$customer->postal_code = $input['postal_code'];
+		$customer->country = $input['country'];
+		$customer->phone_number = $input['phone_number'];
+		$customer->email = $input['email'];
+		$customer->birthday = Carbon::parse($input['birthday']);
+		$customer->save();
 		
 		$encasement = new Encasement();
 		$encasement->customer_id = $this->model->customer_id;
 		$encasement->total_ht = $input['total_ht'];
+		$encasement->total_ttc = $input['total_ttc'];
 		$encasement->save();
 
 		for ($i=1; $i <= sizeof($input['product_name']); $i++) {
@@ -56,6 +57,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 			$encasement_product->promo_code_id = $input['promo_code'][$i];
 			$encasement_product->parent_category = $input['parent_category'][$i];
 			$encasement_product->sub_category = $input['sub_category'][$i];
+			$encasement_product->quantity = 1;
 			$encasement_product->save();
 		}
 		return $this->model;
@@ -64,6 +66,20 @@ class CustomerRepository implements CustomerRepositoryInterface
 	public function deleteById($id){
 		return $this->model->where('customer_id', $id)
 			->delete();
+	}
+
+	public function saveContactCustomer($input){
+		$customer = new Customer();
+		$this->model->first_name = $input['first_name'];
+		$this->model->last_name = $input['last_name'];
+		$this->model->address = $input['address'];
+		$this->model->postal_code = $input['postal_code'];
+		$this->model->country = $input['country'];
+		$this->model->phone_number = $input['phone_number'];
+		$this->model->email = $input['email'];
+		$this->model->birthday = $input['birthday'];
+		$this->model->save();
+		return $this->model;
 	}
 
 	public function save($input){
@@ -85,7 +101,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 
 		for ($i=1; $i <= sizeof($input['product_name']); $i++) {
 			$encasement_product = new EncasementProduct();
-			$encasement_product->encasement_id = $this->model->encasement_id;
+			$encasement_product->encasement_id = $encasement->encasement_id;
 			$encasement_product->product_id = $input['product_name'][$i];
 			$encasement_product->attribute_size_id = $input['product_size'][$i];
 			$encasement_product->attribute_color_id = $input['product_color'][$i];

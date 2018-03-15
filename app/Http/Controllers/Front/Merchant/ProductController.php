@@ -10,6 +10,7 @@ use App\Interfaces\ProductRepositoryInterface;
 use App\Interfaces\UserRepositoryInterface;     
 use App\Interfaces\TagRepositoryInterface;
 use App\Interfaces\ProductStatusRepositoryInterface;
+use App\Interfaces\CodePromoRepositoryInterface;
 use App\Libraries\AmazonSearch;
 use App\Libraries\CommissionJunction;
 use App\Models\AffiliateProduct;
@@ -41,6 +42,7 @@ class ProductController extends Controller
 	protected $amazon_search;
 	protected $tag_repository;
 	protected $product_status_repository;
+	protected $code_promo_repository;
 	const CACHE_TIME_FOR_PRODUCT = 1440;
 
 	public function __construct(ProductRepositoryInterface $product_repo,AdminUserRepository $admin_rep,ProductStatusRepositoryInterface $prod_status_repo, UserRepositoryInterface $user_rep, CategoryRepositoryInterface $category_repo,
@@ -49,7 +51,7 @@ class ProductController extends Controller
 								BrandRepositoryInterface $brand_repo,
 								CommissionJunction $commission_junction,
 	AmazonSearch $amazon_search,
-	TagRepositoryInterface $tag_repo
+	TagRepositoryInterface $tag_repo, CodePromoRepositoryInterface $code_promo_repo
 )
 	{
 		$this->product_repository = $product_repo;
@@ -63,6 +65,7 @@ class ProductController extends Controller
 		$this->commission_junction = $commission_junction;
 		$this->amazon_search = $amazon_search;
 		$this->tag_repository = $tag_repo;
+		$this->code_promo_repository = $code_promo_repo;
 	}
 
 	public function index()
@@ -483,7 +486,7 @@ class ProductController extends Controller
 	{
 		$category_id = $request->get('category_id');
 		$category = $this->category_repository->getById($category_id);
-		$code_promos = $category->code_promos;
+		$code_promos = $category->code_promos->where('user_id', auth()->user()->user_id)->where('date_debut', '<', \Carbon\Carbon::now())->where('date_fin', '>', \Carbon\Carbon::now());
 		return response()->json(['code_promos' => $code_promos]);
 	}
 }
