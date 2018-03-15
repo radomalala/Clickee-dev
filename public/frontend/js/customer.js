@@ -57,6 +57,10 @@ jQuery(document).ready(function () {
         get_product_data(product_id, content_range);
     });
 
+    $('.select-parent-category').change(function(e){
+        console.log('Bonjour tous le monde');
+    });
+
     $('#paiement').click(function(event) {   
         var info_product_customer = $('#customer_form').serializeArray();
         var total_price_product = 0;
@@ -175,6 +179,8 @@ function get_product_data(product_id, content_range){
         .done(function(data) {
             var attribute_values = data.attribute.attribute_values;
             var product = data.product;
+            var code_promo_arr = data.code_promo_arr;
+
             for (var i = attribute_values.length - 1; i >= 0; i--) {
                 var attribute = attribute_values[i].attribute;
                 if(attribute.type == "2"){
@@ -215,6 +221,7 @@ function get_product_data(product_id, content_range){
             console.log(product.original_price);
             $('#product_price'+content_range).val(product.original_price);
             $('#product_quantity'+content_range).val("1");
+            console.log(code_promo_arr);
         })
         .fail(function(xhr, options) {
             console.log(xhr.responseText);

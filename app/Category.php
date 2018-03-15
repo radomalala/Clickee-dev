@@ -3,8 +3,10 @@
 namespace App;
 
 use App\Models\Brand;
+use App\Models\CodePromo;
 use App\Models\CategoryTranslation;
 use Illuminate\Database\Eloquent\Model;
+
 
 class Category extends Model
 {
@@ -105,5 +107,9 @@ class Category extends Model
     public function getCdnImagePath($image)
     {
     	return self::CDN_CATEGORY_IMAGE_PATH . $image;
+    }
+
+    public function code_promos(){
+    	return $this->belongsToMany(CodePromo::class,'code_promo_category','category_id','code_promo_id');
     }
 }
