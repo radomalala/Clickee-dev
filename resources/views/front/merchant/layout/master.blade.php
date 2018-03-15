@@ -19,6 +19,7 @@
     @yield('additional-styles')
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css') !!}
     {!! Html::style('frontend/css/merchant.css') !!}
+    {{ Html::style('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css') }}
     <script type="text/javascript">
         var base_url = {!! "'".URL::to('/')."/'" !!};
     </script>

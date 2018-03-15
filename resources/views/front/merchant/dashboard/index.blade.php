@@ -8,9 +8,7 @@
     {!! Html::style('backend/dist/css/AdminLTE.min.css') !!}
     {!! Html::style('backend/dist/css/skins/skin-black-light.css') !!}
     {!! Html::style('backend/css/style.css') !!}
-
     {!! Html::style('frontend/css/style-clickee.css') !!}
-<<<<<<< HEAD
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css') !!}
 @stop
 @section('content')
@@ -28,21 +26,21 @@
     	<div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-2">
                 <div class="info-box">
-                    <span class="info-box-icon bg-aqua"><i class="ion ion-bag"></i></span>
+                    <span class="info-box-icon bg-aqua"><i class="ion-android-cloud-done"></i></span>
 
-                    <div class="info-box-content">
+                    <div class="info-box-content ">
                         <span class="info-box-text">En ligne</span>
-                        <span class="info-box-number">100</span>
+                        <span class="info-box-number">{{ $product_count }}</span>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-icon bg-red"><i class="fa ion-briefcase"></i></span>
+                    <span class="info-box-icon bg-red"><i class="ion ion-ios-cart-outline"></i></span>
 
                     <div class="info-box-content">
                         <span class="info-box-text">Vendus</span>
-                        <span class="info-box-number">100</span>
+                        <span class="info-box-number">{{ $sales_count }}</span>
                     </div>
                 </div>
             </div>
@@ -51,7 +49,7 @@
 
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+                    <span class="info-box-icon bg-green"><i class="ion-card"></i></span>
 
                     <div class="info-box-content">
                         <span class="info-box-text">CA total</span>
