@@ -4,6 +4,8 @@ namespace App\Repositories;
 use App\Interfaces\CustomerRepositoryInterface;
 use App\Customer;
 use App\Encasement;
+use App\EncasementProduct;
+use Carbon\Carbon;
 /**
  * Class CustomerRepository
  *
@@ -36,22 +38,26 @@ class CustomerRepository implements CustomerRepositoryInterface
 		$this->model->country = $input['country'];
 		$this->model->phone_number = $input['phone_number'];
 		$this->model->email = $input['email'];
-		$this->model->birthday = $input['birthday'];
+		$this->model->birthday = \Carbon::parse($input['birthday']);
 		$this->model->save();
+		
+		$encasement = new Encasement();
+		$encasement->customer_id = $this->model->customer_id;
+		$encasement->total_ht = $input['total_ht'];
+		$encasement->save();
 
-		for ($i=1; $i <= sizeof($input['product_name']); $i++) { 
-			$encasement = new Encasement();
-			$encasement->customer_id = $this->model->customer_id;
-			$encasement->product_id = $input['product_name'][$i];
-			$encasement->attribute_size_id = $input['product_size'][$i];
-			$encasement->attribute_color_id = $input['product_color'][$i];
-			$encasement->discount = $input['discount'][$i];
-			$encasement->promo_code_id = $input['promo_code'][$i];
-			$encasement->parent_category = $input['parent_category'][$i];
-			$encasement->sub_category = $input['sub_category'][$i];
-			$encasement->save();
+		for ($i=1; $i <= sizeof($input['product_name']); $i++) {
+			$encasement_product = new EncasementProduct();
+			$encasement_product->encasement_id = $encasement->encasement_id;
+			$encasement_product->product_id = $input['product_name'][$i];
+			$encasement_product->attribute_size_id = $input['product_size'][$i];
+			$encasement_product->attribute_color_id = $input['product_color'][$i];
+			$encasement_product->discount = $input['discount'][$i];
+			$encasement_product->promo_code_id = $input['promo_code'][$i];
+			$encasement_product->parent_category = $input['parent_category'][$i];
+			$encasement_product->sub_category = $input['sub_category'][$i];
+			$encasement_product->save();
 		}
-
 		return $this->model;
 	}
 
@@ -61,6 +67,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 	}
 
 	public function save($input){
+		$customer = $this->model->findOrNew($id);
 		$this->model->first_name = $input['first_name'];
 		$this->model->last_name = $input['last_name'];
 		$this->model->address = $input['address'];
@@ -70,22 +77,29 @@ class CustomerRepository implements CustomerRepositoryInterface
 		$this->model->email = $input['email'];
 		$this->model->birthday = $input['birthday'];
 		$this->model->save();
-		for ($i=1; $i <= sizeof($input['product_name']); $i++) { 
-			$encasement = new Encasement();
-			$encasement->customer_id = $this->model->customer_id;
-			$encasement->product_id = $input['product_name'][$i];
-			$encasement->attribute_size_id = $input['product_size'][$i];
-			$encasement->attribute_color_id = $input['product_color'][$i];
-			$encasement->discount = $input['discount'][$i];
-			$encasement->promo_code_id = $input['promo_code'][$i];
-			$encasement->parent_category = $input['parent_category'][$i];
-			$encasement->sub_category = $input['sub_category'][$i];
-			$encasement->save();
+		
+		$encasement = new Encasement();
+		$encasement->customer_id = $this->model->customer_id;
+		$encasement->total_ht = $input['total_ht'];
+		$encasement->save();
+
+		for ($i=1; $i <= sizeof($input['product_name']); $i++) {
+			$encasement_product = new EncasementProduct();
+			$encasement_product->encasement_id = $this->model->encasement_id;
+			$encasement_product->product_id = $input['product_name'][$i];
+			$encasement_product->attribute_size_id = $input['product_size'][$i];
+			$encasement_product->attribute_color_id = $input['product_color'][$i];
+			$encasement_product->discount = $input['discount'][$i];
+			$encasement_product->promo_code_id = $input['promo_code'][$i];
+			$encasement_product->parent_category = $input['parent_category'][$i];
+			$encasement_product->sub_category = $input['sub_category'][$i];
+			$encasement_product->save();
 		}
+
 		return $this->model;
 	}
 
 	public function getAll(){
 		return $this->model->get();
 	}
-}
+}			

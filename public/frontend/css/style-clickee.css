@@ -801,6 +801,9 @@ ul {
   visibility:visible;
   z-index:1111;
 }
+.product-content {
+  border-bottom: 1px solid #f3f3f3;
+}
 /*----------------------------------------*/
 
 /*start menu*/

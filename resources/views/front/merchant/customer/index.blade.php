@@ -13,7 +13,7 @@
     {!! Html::style('frontend/css/style-clickee.css') !!}
 @stop
 @section('content')
-	<section class="content-header">
+	<section class="content-header" style="text-align: center;">
         <h1>
             Mon fichier client
         </h1>
@@ -21,7 +21,7 @@
             <div class="clearfix">
                 <div class="btn-group inline pull-left">
                     <div class="btn btn-small">
-                        <a href="{!! URL::to('merchant/customer/create') !!}" class="btn btn-block btn-primary">Créer un nouveau client</a>
+                        <!-- <a href="{!! URL::to('merchant/customer/create') !!}" class="btn btn-block btn-primary">Créer un nouveau client</a> -->
                     </div>
                 </div>
             </div>
@@ -60,12 +60,10 @@
 	                                    <td>
 	                                        <div class="btn-group">
 	                                            <a href="{{ URL::to('merchant/customer/' . $customer->customer_id . '/edit') }}"
-	                                               class="btn btn-default btn-sm" title="Edit"><i
-	                                                        class="fa fa-fw fa-edit"></i></a>
-	                                            {!! Form::open(array('url' => route('customer.destroy', ['id' => $customer->customer_id]), 'class' => 'pull-right')) !!}
-	                                            {!! Form::hidden('_method', 'DELETE') !!}
-	                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Supprimer'] ) !!}
-	                                            {{ Form::close() }}
+	                                               class="btn btn-primary btn-sm" title="Edit">Encaissement</a>&nbsp;
+	                                            {!! Form::open(array('url' => route('customer.destroy',['id' => $customer->customer_id]), 'class' => 'pull-right')) !!}
+                                                {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Delete'] ) !!}
+                                                {{ Form::close() }}
 	                                        </div>
 	                                    </td>
 	                                </tr>

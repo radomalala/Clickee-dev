@@ -58,7 +58,10 @@
                                                     <div class="form-group col-sm-6 discount">
                                                         <label for="discount" class="col-sm-3 control-label">Rémise</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" placeholder="Rémise" class="form-control required"/>
+                                                            <div class="input-group">
+                                                                <input type="number" placeholder="Rémise" class="form-control required"/>
+                                                                 <span class="input-group-addon"> % </span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                      <div class="form-group col-sm-6 promo_code">
@@ -141,7 +144,10 @@
                                                      <div class="form-group col-sm-6">
                                                         <label for="discount" class="col-sm-3 control-label">Rémise</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="discount[1]" placeholder="Rémise" id="discount1" class="input-discount form-control required"/>
+                                                            <div class="input-group">
+                                                                <input type="number" name="discount[1]" placeholder="Rémise" id="discount1" class="input-discount form-control required"/>
+                                                                <span class="input-group-addon"> % </span>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -163,6 +169,7 @@
                                         </div>
                                     </div>
                                 </section>
+                                <input type="text" class="hidden" id="total_ht" name="total_ht"/>
                                 <section>
                                     <div class="row">
                                         <div class="col-md-12 mt-10">

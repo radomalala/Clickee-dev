@@ -48,7 +48,7 @@
                                                     <div class="form-group col-sm-6">
                                                         {!! Form::label('birthday', 'Date de naissance', ['class' => 'col-sm-3 control-label']) !!}
                                                         <div class="col-sm-9">
-                                                            {!! Form::text('birthday', ($customer) ? $customer->birthday : null , ['class' => 'form-control','id'=>'birthday','placeholder'=>"Date de naissance"]) !!}
+                                                            {!! Form::date('birthday', ($customer) ? $customer->birthday : null , ['class' => 'form-control datepicker','id'=>'birthday','placeholder'=>"Date de naissance"]) !!}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,7 +56,7 @@
                                                     <div class="form-group col-sm-12">
                                                         {!! Form::label('email', 'Adresse email', ['class' => 'col-sm-3 control-label']) !!}
                                                         <div class="col-sm-9">
-                                                            {!! Form::text('email', ($customer) ? $customer->email : null , ['class' => 'form-control required','id'=>'email','placeholder'=>"Adresse email"]) !!}
+                                                            {!! Form::text('email', ($customer) ? $customer->email : null , ['type' => 'email', 'class' => 'form-control required','id'=>'email','placeholder'=>"Adresse email"]) !!}
                                                         </div>
                                                     </div>
                                                 </div>

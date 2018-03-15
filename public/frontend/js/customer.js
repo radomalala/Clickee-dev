@@ -2,7 +2,10 @@ jQuery(document).ready(function () {
 
     var $document = jQuery(document);
 
-    var info_product = {};
+    $('#product_name1').select2({
+        data : product_is_active
+    });
+
     $('.select2-container').css('width', '100%');
 
     $document.on('click','.add_size_input',function (){
@@ -95,6 +98,7 @@ jQuery(document).ready(function () {
         });
 
         $('.table-content-paiement').append('<tr class="total"><th></th><th></th><th>Montant total HT</th><th>'+total_price_product+'</th></tr>');
+        $('#total_ht').val(total_price_product);
     });
 
      $("#encasement").click(function(event) {
@@ -214,10 +218,6 @@ function get_product_data(product_id, content_range){
         })
         .fail(function(xhr, options) {
             console.log(xhr.responseText);
-        });
-
-        $('#product_name1').select2({
-            data : product_is_active
         });
 
 }

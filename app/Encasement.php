@@ -17,10 +17,15 @@ class Encasement extends Model
 	/**
 	 * @var array
 	 */
-	protected $fillable = ['customer_id', 'product_id', 'attribute_size_id', 'attribute_color_id', 'parent_category', 'sub_category', 'promo_code_id', 'discount'];
+	protected $fillable = ['customer_id', 'discount', 'total_ht', 'total_ttc', 'discount', 'tva'];
 
-	public function product()
+	public function products()
 	{
-		return $this->hasOne(Product::class, 'product_id', 'product_id');
+		return $this->hasMany(Product::class, 'product_id', 'product_id');
+	}
+
+	public function customer()
+	{
+		return $this->hasOne(Customer::class,'customer_id','customer_id');
 	}
 }
