@@ -44,6 +44,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 		$encasement = new Encasement();
 		$encasement->customer_id = $this->model->customer_id;
 		$encasement->total_ht = $input['total_ht'];
+		$encasement->total_ttc = $input['total_ttc'];
 		$encasement->save();
 
 		for ($i=1; $i <= sizeof($input['product_name']); $i++) {
@@ -56,6 +57,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 			$encasement_product->promo_code_id = $input['promo_code'][$i];
 			$encasement_product->parent_category = $input['parent_category'][$i];
 			$encasement_product->sub_category = $input['sub_category'][$i];
+			$encasement_product->quantity = 1;
 			$encasement_product->save();
 		}
 		return $this->model;

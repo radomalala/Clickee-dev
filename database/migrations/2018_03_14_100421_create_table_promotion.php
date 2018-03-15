@@ -38,6 +38,6 @@ class CreateTablePromotion extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('encasement_product');
+        Schema::dropIfExists('promotion');
     }
 }

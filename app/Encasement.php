@@ -17,7 +17,7 @@ class Encasement extends Model
 	/**
 	 * @var array
 	 */
-	protected $fillable = ['customer_id', 'discount', 'total_ht', 'total_ttc', 'discount', 'tva'];
+	protected $fillable = ['customer_id', 'discount', 'total_ht', 'total_ttc', 'discount', 'tva', 'quantity'];
 
 	public function products()
 	{
