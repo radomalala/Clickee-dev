@@ -56,9 +56,8 @@ jQuery(document).ready(function () {
         var content_range = $(this).data('content-range');
         get_product_data(product_id, content_range);
     });
-
-    $('.select-parent-category').change(function(e){
-        $('#promo_code'+index).html('');
+    $document.on('change', '.select-parent-category', function(event) {
+        console.log("Bonjour tous le monde");
         var index = $(this).data('content-range');
         $.ajax({
             url: base_url + 'fr/merchant/product/get-code-promo-by-category',
