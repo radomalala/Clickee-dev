@@ -43,7 +43,7 @@
                         <div class="col-lg-2">
                             <b> Catégories: </b>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-10 mb-10">
                             @foreach($code_promo->categories as $category)
                                 <span class="badge bg-green mr-5" style="background: #044651 !important;">{!! $category->french->category_name !!}</span>
                             @endforeach
@@ -61,17 +61,25 @@
                         </tr>
                         </thead>
                         <tbody>
+                            <?php $total = 0; ?>
                             @foreach($encasementproducts as $encasementproduct)
+                                <?php 
+                                    $sub_total = $encasementproduct->product->original_price * $encasementproduct->quantity; 
+                                    $total += $sub_total;
+                                ?>
                                 <tr>
                                     <td>{!!Jenssegers\Date\Date::parse($encasementproduct->created_at)->format('j F Y')!!}</td>
                                     <td>{!!$encasementproduct->product->french->product_name!!}</td>
                                     <td>{!!$encasementproduct->product->original_price!!}</td>        
-                                    <td>{!!$encasementproduct->product->original_price!!}</td>
-                                    <td>{!!$encasementproduct->product->original_price!!}</td>                                
+                                    <td>{!!$encasementproduct->quantity!!}</td>
+                                    <td>{!!$sub_total!!}</td>                                
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    <div class="pull-right mt-20">
+                        <p> <b> Total: </b> {!! $total !!} </p>
+                    </div>
                 </div>
                 <div class="box-footer">
                     <a href="{!! Url('fr/merchant/promotion') !!}" class="btn btn-primary pull-right">Retour</a>
