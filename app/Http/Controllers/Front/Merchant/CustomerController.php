@@ -129,4 +129,27 @@ class CustomerController extends Controller
     {
         return view('front.merchant.customer.encasement');
     }
+
+    public function addContact()
+    {
+        $customer = [];
+        return view('front.merchant.customer.contact_customer',compact('customer'));
+    }
+
+    public function saveContactCustomer(Request $request)
+    {
+        $rules = array(
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required'
+        );
+        $validator = \Validator::make($request->all(), $rules);   
+        if($validator->fails()){   
+            return Redirect::back()->withInput()->withErrors($validator);   
+        }else{
+            $customer = $this->customer_repository->saveContactCustomer($request->all());
+            flash()->success("Enregistrement avec succèss !");
+        }
+        return \Redirect('merchant/promotion');
+    }
 }
