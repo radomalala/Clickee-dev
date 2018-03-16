@@ -14,7 +14,6 @@
     				</tr>
     			</thead>
     			<tbody class="table-content-paiement">
-    				
     			</tbody>
     		</table>
     	</div>
@@ -22,6 +21,6 @@
 </div>
 <div class="box-footer">
     <a href="#tab_2" data-toggle="tab" class="btn btn-default">Precedent</a>
-    <a id="add-encasement" class="btn btn-primary pull-right">Encaissement</a>
+    <button type="submit" id="encasement" class="btn btn-primary pull-right">Encaissement</button>
 </div>
             

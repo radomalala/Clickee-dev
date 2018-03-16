@@ -10,6 +10,8 @@ jQuery(document).ready(function () {
         data : product_is_active
     });
 
+    $("#customer_form").validate();
+
     $('.select2-container').css('width', '100%');
 
     $document.on('click','.add_size_input',function (){
@@ -144,16 +146,10 @@ jQuery(document).ready(function () {
         $('#total_ttc').val(total_price_product_ttc);
     });
 
-    $("#add-customer").click(function(event) {
-        event.preventDefault();
-        console.log("Hello world ! ");
-    });
+     $("#encasement").click(function(event) {
 
-     $("#add-encasement").click(function(event) {
-          $('form').submit();
+        //('#customer_form').submit();
      });
-
-
 
     if (jQuery('table.table').length > 0) {
         jQuery('table.table').DataTable({
@@ -274,6 +270,8 @@ function get_product_data(product_id, content_range){
 
 }
 
-function valide_customer_info(){
-
+function validate_customer_info(){
+    var form = $("#customer_form");
+    form.validate();
+    console.log("We need to validate else");
 }

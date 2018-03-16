@@ -6,13 +6,13 @@
                                                     <div class="form-group col-sm-6">
                                                         {!! Form::label('firt_name', 'Nom', ['class' => 'col-sm-3 control-label']) !!}
                                                         <div class="col-sm-9">
-                                                            {!! Form::text('first_name', ($customer) ? $customer->first_name : null , ['class' => 'form-control required','id'=>'first_name','placeholder'=>"Nom"]) !!}
+                                                            {!! Form::text('first_name', ($customer) ? $customer->first_name : null , ['class' => 'form-control required','id'=>'first_name','placeholder'=>"Nom", 'required']) !!}
                                                         </div>
                                                     </div>
                                                     <div class="form-group col-sm-6">
                                                         {!! Form::label('last_name', 'Prénom', ['class' => 'col-sm-3 control-label']) !!}
                                                         <div class="col-sm-9">
-                                                            {!! Form::text('last_name', ($customer) ? $customer->last_name : null , ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Prénom"]) !!}
+                                                            {!! Form::text('last_name', ($customer) ? $customer->last_name : null , ['class' => 'form-control required','id'=>'last_name','placeholder'=>"Prénom", 'required']) !!}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -66,6 +66,6 @@
                                 </section>
                                 <div class="box-footer">
                                     <a href="{!! Url('merchant/customer') !!}" class="btn btn-default">Annuler</a>
-                                    <a class="btn btn-primary pull-right" onclick="valide_customer_info();" id="#add-customer" href="#tab_2" data-toggle="tab"> {!! ($customer) ? "Confirmer client" : "Ajouter client"!!}
-                                    </a>
+                                        <button type="button" class="btn btn-primary pull-right" onclick="validate_customer_info();" id="#add-customer" href="#tab_2" data-toggle="tab"> {!! ($customer) ? "Confirmer client" : "Ajouter client"!!}
+                                    </button>
                                 </div>
