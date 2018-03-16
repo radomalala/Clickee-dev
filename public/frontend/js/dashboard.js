@@ -27,10 +27,8 @@ new Morris.Bar({
   barColors: function (row, series, type) {
     var percentage = (100 * row.y) / this.ymax;
     if(percentage <= 100 && percentage >= 75) return 'rgb(0,163,89)';
-    else if(percentage < 75 && percentage >= 50) return 'rgb(0,192,239)';
-    else if(percentage < 50 && percentage >= 25) return 'rgb(200,132,210)';
-    else if(percentage < 25 && percentage >= 10) return 'rgb(255,128,50)';
-    else if(percentage < 10) return 'rgb(255,0,0)';
+    else if(percentage < 75 && percentage >= 25) return 'rgb(0,192,239)';
+    else if(percentage < 25) return 'rgb(255,0,0)';
   }
 
 });
