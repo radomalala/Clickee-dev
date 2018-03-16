@@ -67,7 +67,7 @@ class CodePromoController extends Controller
         } else {
             $code_promo=$this->code_promo_repository->save($request->all());
             if($code_promo){
-                flash()->success(config('message.brand.add-success'));
+                flash()->success(config('message.code_promo.add-success'));
                 return Redirect('fr/merchant/code_promo');
             }
         }
@@ -119,7 +119,7 @@ class CodePromoController extends Controller
         } else {
             $code_promo=$this->code_promo_repository->updateById($id,$request->all());
             if($code_promo){
-                flash()->success(config('message.brand.update-success'));
+                flash()->success(config('message.code_promo.update-success'));
                 return Redirect('fr/merchant/code_promo');
             }
         }
@@ -134,9 +134,9 @@ class CodePromoController extends Controller
     public function destroy($id)
     {
         if ($this->code_promo_repository->deleteById($id)) {
-            flash()->success(config('message.order-status.delete-success'));
+            flash()->success(config('message.code_promo.delete-success'));
         }else {
-            flash()->error(config('message.order-status.delete-error'));
+            flash()->error(config('message.code_promo.delete-error'));
         }
         return redirect('fr/merchant/code_promo');
     }

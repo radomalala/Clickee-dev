@@ -83,6 +83,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 	}
 
 	public function save($input){
+		//dd($input);
 		$customer = new Customer();
 		$this->model->first_name = $input['first_name'];
 		$this->model->last_name = $input['last_name'];

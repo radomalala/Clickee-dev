@@ -59,7 +59,7 @@ class CustomerController extends Controller
             return Redirect::back()->withInput()->withErrors($validator);   
         }else{
             $customer = $this->customer_repository->save($request->all());
-            flash()->success("Enregistrement avec succèss !");
+            flash()->success(config('message.customer.add-success'));
         }
         return \Redirect('merchant/customer');
     }
@@ -107,7 +107,7 @@ class CustomerController extends Controller
             return Redirect::back()->withInput()->withErrors($validator);   
         }else{
             $customer = $this->customer_repository->update($id, $request->all());
-            flash()->success("Modification du client avec succèss !");
+            flash()->success(config('message.customer.update-success'));
         }
         return \Redirect('merchant/customer');
     }
@@ -121,7 +121,7 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         $customer = $this->customer_repository->deleteById($id);
-        flash()->success("Suppression du client avec succèss ! ");
+        flash()->success(config('message.customer.delete-success'));
         return \Redirect('merchant/customer');
     }
 
