@@ -144,10 +144,16 @@ jQuery(document).ready(function () {
         $('#total_ttc').val(total_price_product_ttc);
     });
 
-     $("#encasement").click(function(event) {
-        console.log('On submit');
-        $('form').submit();
+    $("#add-customer").click(function(event) {
+        event.preventDefault();
+        console.log("Hello world ! ");
+    });
+
+     $("#add-encasement").click(function(event) {
+          $('form').submit();
      });
+
+
 
     if (jQuery('table.table').length > 0) {
         jQuery('table.table').DataTable({
@@ -241,9 +247,9 @@ function get_product_data(product_id, content_range){
                             if(options_color.length > 0)
                                 $('#product_color'+content_range).html("<option>Séléctionner une couleur</option>");
                            for (var k = options_color.length - 1; k >= 0; k--) {
-                                var option_value = options_color[k].option_value;
+                                var option_name = options_color[k].translation[1].option_name;
                                 var option_id = options_color[k].attribute_option_id;
-                                $('#product_color'+content_range).append('<option name="'+option_id+'"">'+option_value+'</option>');
+                                $('#product_color'+content_range).append('<option name="'+option_id+'"">'+option_name+'</option>');
                             }
                         }
                 }
@@ -265,5 +271,9 @@ function get_product_data(product_id, content_range){
         .fail(function(xhr, options) {
             console.log(xhr.responseText);
         });
+
+}
+
+function valide_customer_info(){
 
 }

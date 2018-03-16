@@ -34,12 +34,13 @@ class ProductRepository implements ProductRepositoryInterface
             $this->model->attribute_set_id = $input['attribute_set'];
             $this->model->responsible = $input['responsible'];
             $this->model->question_note = $input['question_note'];
-            $this->model->created_by = auth()->guard('admin')->user()->admin_id;
+            $this->model->created_by = auth()->user()->user_id;
             $this->model->save();
 
             if (!empty($input['fr_product_name']) || !empty($input['fr_summary']) || !empty($input['fr_description']) || !empty($input['fr_title']) ||
 				!empty($input['fr_meta_description']) || !empty($input['fr_meta_keywords']) || !empty($input['fr_og_title']) || !empty($input['fr_og_description'])) {
                 $product_translation = new ProductTranslation();
+                $product_translation->product_id = $this->model->product_id;
                 $product_translation->product_name = $input['fr_product_name'];
                 $product_translation->summary = $input['fr_summary'];
                 $product_translation->description = $input['fr_description'];
@@ -49,7 +50,7 @@ class ProductRepository implements ProductRepositoryInterface
 				$product_translation->og_title = $input['fr_og_title'];
 				$product_translation->og_description = $input['fr_og_description'];
                 $product_translation->language_id = '2';
-                $this->model->translation()->save($product_translation);
+                $product_translation->save();        
             }
             //insert attributes
             if (isset($input['attributes']) && count($input['attributes']) > 0) {
@@ -124,22 +125,8 @@ class ProductRepository implements ProductRepositoryInterface
             $url->target_id = $this->model->product_id;
             $url->save();
 
-            //save affiliate product
-            /*$affiliate_product=$input['searchproduct'];
-            foreach($affiliate_product as $index=>$product){
-                if(isset($product['select']) && $product['select']=='1'){
-                    $image_name='';
-                    //$image_name=$this->ImageUpload('file');
-                    $affiliate=New AffiliateProduct();
-                    $affiliate->product_id=$this->model->product_id;
-                    $affiliate->product_name=(isset($product['name']))?$product['name']:'';
-                    $affiliate->price=str_replace('$',"",$product['price']);
-                    $affiliate->product_url=$product['url'];
-                    $affiliate->product_image=$image_name;
-                    $affiliate->save();
-                }
-            }*/
             return $this->model;
+            
         } catch (\Exception $e) {
             dd($e->getMessage());
             return false;
@@ -161,7 +148,7 @@ class ProductRepository implements ProductRepositoryInterface
         $product->best_price = $input['best_price'];
         $product->responsible = $input['responsible'];
         $product->question_note = $input['question_note'];
-        $product->modified_by = auth()->guard('admin')->user()->admin_id;
+        $product->modified_by = auth()->user()->user_id;
         $product->save();
 
 

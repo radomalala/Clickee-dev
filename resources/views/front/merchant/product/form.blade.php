@@ -99,7 +99,7 @@
 
                                                          </div>
                                                          <div class="col-sm-6">
-                                                            {!! Form::label('question_note', 'Question/note', ['class' => 'col-sm-2 control-label']) !!}
+                                                            {!! Form::label('question_note', 'Question/note', ['class' => 'col-sm-2 control-label required']) !!}
                                                             {!! Form::text('question_note', ($product) ?$product->question_note : null, ['class' => 'form-control','id'=>'question_note','placeholder'=>"Question/note"]) !!}
                                                          </div>
 
@@ -484,6 +484,14 @@
 @stop
 
 @section('additional-styles')
+    {!! Html::style('backend/dist/css/skins/skin-black-light.css') !!}
+    {!! Html::style('backend/plugins/iCheck/flat/blue.css') !!}
+    {!! Html::style('backend/css/style.css') !!}
+    {!! Html::style('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') !!}
+    {!! Html::style('backend/plugins/redactor/redactor.css') !!}
+    {!! Html::style('backend/plugins/redactor/plugins/alignment/alignment.css') !!}
+    {!! Html::style('backend/plugins/redactor/plugins/clips/clips.css') !!}
+
     {!! Html::style('backend/plugins/dynatree/src/skin/ui.dynatree.css') !!}
     {!! Html::style('backend/plugins/dropzone/dropzone.css') !!}
     {!! Html::style('backend/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css') !!}
@@ -491,7 +499,9 @@
 @stop
 
 @section('additional-script')
- {!! Html::script('frontend/js/product_merchant.js') !!}
+    
+
+    {!! Html::script('frontend/js/product_merchant.js') !!}
     {!! Html::script('backend/plugins/dynatree/jquery/jquery-ui.custom.js') !!}
     {!! Html::script('backend/plugins/dynatree/src/jquery.dynatree.js') !!}
     {!! Html::script('backend/plugins/dropzone/dropzone.js') !!}
@@ -499,6 +509,7 @@
     {!! Html::script('backend/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js') !!}
     {!! Html::script('backend/plugins/select2/select2.js') !!} 
    
+  
 
 @stop
 

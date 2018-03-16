@@ -45,6 +45,13 @@
     @include('front.layout.model')
 
 </div>
+{!! Html::script('js/jquery.validate.min.js') !!}
+{!! Html::script('backend/plugins/ckeditor/ckeditor.js') !!}
+{!! Html::script('backend/js/validation.js') !!}
+{!! Html::script('backend/js/jquery.form.js') !!}
+{!! Html::script('backend/js/functions.js') !!}
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
 @yield('additional-script')
 @yield('footer-scripts')
 </body>
