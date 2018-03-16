@@ -367,7 +367,7 @@ class ProductController extends Controller
 				}
 			}
             \Cache::put('product_search_'.$keyword, $sort_products, self::CACHE_TIME_FOR_PRODUCT);
-   	}
+   	    }
 	}
 
     public function getLatitudeAndLongitudeByZipCode($zip_code)

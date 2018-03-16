@@ -36,10 +36,10 @@ if ($(this).scrollTop() > 240){
 /*new menu clickee start*/
 $(".dropdown").hover(
     function () {
-        $('.dropdown-menu', this).stop().fadeIn("fast");
+        $('.dropdown-menu', this).fadeIn("fast");
     },
     function () {
-        $('.dropdown-menu', this).stop().fadeOut("fast");
+        $('.dropdown-menu', this).fadeOut("fast");
     });
 /*-----------------*/
 

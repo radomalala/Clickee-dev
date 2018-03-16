@@ -49,6 +49,8 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
+        dd("Store");
+        
         $rules = array(
             'first_name' => 'required',
             'last_name' => 'required',

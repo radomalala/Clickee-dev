@@ -10,7 +10,7 @@
     {{-- {!! Form::select('language', ['en' => 'English', 'fr' => 'French'],(app('language')) ? app('language')->language_code : null,['class'=>'form-control required','id'=>'language']) !!} --}}
     {!! Form::close() !!}
     <!-- Fin action -->
-<!-- Debut code header Andry -->
+<!-- Debut code header -->
 
 <div class="header-top-area">  
     <div class="container" id="header-height">
@@ -32,41 +32,41 @@
                 <!-- logo-start -->
                 <div class="col-md-12 content-logo">
                     <div class="logo text-center">
-                            <a href="{!! URL::to('/') !!}" class="col-xs-12"><img src="{!! URL::to('/') !!}/images/logo.svg" alt="logo"/></a>
+                        <a href="{!! URL::to('/') !!}" class="col-xs-12">
+                            <img src="{!! URL::to('/') !!}/images/logo.svg" alt="logo clickee"/>
+                        </a>
                     </div>
                 </div>
                 <!-- logo-end -->
                 
                 <!-- mini-cart-end -->
                 <div class="col-xs-12 pull-right menu-icon-right">
-
-                        <!-- debut wishlist article connexion -->
-                            <!-- header-top-left-start -->
-                            <div class="header-account text-right col-lg-12">
-                                <ul>
-                                    <li class="dropdown espace-header">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <span class="icon icon-search"></span>   
-                                        </a>
-                                    </li>
-                                    <li class="dropdown espace-header">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <span class="icon icon-user"></span>   
-                                        </a>
-                                    </li>
-                                    <li class="dropdown espace-header">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <span class="icon icon-heart"></span>   
-                                        </a>
-                                    </li>
-                                    <li class="dropdown espace-header">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <span class="icon icon-panier"></span>   
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- header-top-right-end -->
+                    <!-- header-top-right-start -->
+                    <div class="header-account text-right col-lg-12">
+                        <ul>
+                            <li class="dropdown espace-header">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="icon icon-search"></span>   
+                                </a>
+                            </li>
+                            <li class="dropdown espace-header">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="icon icon-user"></span>   
+                                </a>
+                            </li>
+                            <li class="dropdown espace-header">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="icon icon-heart"></span>   
+                                </a>
+                            </li>
+                            <li class="dropdown espace-header">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="icon icon-panier"></span>   
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- header-top-right-end -->
                 </div>
             
             </div>
@@ -84,7 +84,6 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                </li>
                 <li class="dropdown menu-large"> 
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"> FEMME </a>
 
@@ -123,8 +122,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> HOMME </a>   
+                <li class="dropdown menu-large"> 
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> HOMME </a>
+
                     <ul class="menu-homme dropdown-menu megamenu row">
                         <li class="container ptb-10">
                             <div class="col-sm-6 col-md-2"> 
@@ -160,8 +160,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> ENFANT </a>  
+                <li class="dropdown menu-large"> 
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> ENFANT </a>
+
                     <ul class="menu-enfant dropdown-menu megamenu row">
                         <li class="container ptb-10">
                             <div class="col-sm-6 col-md-2"> 
@@ -205,9 +206,10 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> ÉPICERIE FINE </a>   
-                    <ul class="menu-epicerie dropdown-menu megamenu row ">
+                <li class="dropdown menu-large"> 
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> ÉPICERIE FINE </a>
+
+                    <ul class="menu-epicerie dropdown-menu megamenu row">
                         <li class="container ptb-10">
                             <div class="col-sm-6 col-md-2"> 
                                 <a href="#">

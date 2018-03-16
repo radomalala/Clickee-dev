@@ -362,7 +362,7 @@ class ProductController extends Controller
 		} else {
 			flash()->error(config('message.product.delete-error'));
 		}
-		return redirect()->route('product');
+		return redirect()->route('product_merchant');
 	}
 
 	public function searchProduct(Request $request)
