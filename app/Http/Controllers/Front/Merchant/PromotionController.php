@@ -80,7 +80,7 @@ class PromotionController extends Controller
                     return $e->getMessage();
                 }*/
 
-                flash()->success(config('message.brand.add-success'));
+                flash()->success(config('message.promotion.add-success'));
                 return Redirect('fr/merchant/promotion');
             }
         }

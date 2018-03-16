@@ -204,7 +204,7 @@ body {
 .content-logo {
   position: absolute;
   width: 87.5%;
-  z-index: 9999;
+  z-index: 999;
 }
 .logo a img {
     width: 15.5%;
@@ -817,7 +817,7 @@ ul {
     color: #fff;
     background-color: #044651;
     border-color: #044651 !important;
-    z-index: 2000;
+    z-index: 1032;
 }
 .navbar-default .navbar-nav > li > a {
     color:#fff;
