@@ -54,7 +54,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 			$encasement_product->attribute_size_id = $input['product_size'][$i];
 			$encasement_product->attribute_color_id = $input['product_color'][$i];
 			$encasement_product->discount = $input['discount'][$i];
-			$encasement_product->promo_code_id = $input['promo_code'][$i];
+			//$encasement_product->promo_code_id = $input['promo_code'][$i];
 			$encasement_product->parent_category = $input['parent_category'][$i];
 			$encasement_product->sub_category = $input['sub_category'][$i];
 			$encasement_product->quantity = 1;
@@ -106,7 +106,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 			$encasement_product->attribute_size_id = $input['product_size'][$i];
 			$encasement_product->attribute_color_id = $input['product_color'][$i];
 			$encasement_product->discount = $input['discount'][$i];
-			$encasement_product->promo_code_id = $input['promo_code'][$i];
+			//$encasement_product->promo_code_id = $input['promo_code'][$i];
 			$encasement_product->parent_category = $input['parent_category'][$i];
 			$encasement_product->sub_category = $input['sub_category'][$i];
 			$encasement_product->save();
