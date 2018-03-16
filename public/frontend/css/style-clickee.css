@@ -817,6 +817,7 @@ ul {
     color: #fff;
     background-color: #044651;
     border-color: #044651 !important;
+    z-index: 2000;
 }
 .navbar-default .navbar-nav > li > a {
     color:#fff;
