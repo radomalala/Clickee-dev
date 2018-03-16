@@ -167,7 +167,7 @@
                             @foreach($special_products['best_sale'] as $product)
                             <?php $product_translation=$product->getByLanguageId(app('language')->language_id);?>
                             
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <!-- single-product-start -->
                                 <div class="product-wrapper">
                                     <div class="product-img-connexe product-pic">
@@ -231,7 +231,7 @@
                             @foreach($special_products['best_rated'] as $product)
                             <?php $product_translation=$product->getByLanguageId(app('language')->language_id);?>
                             
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <!-- single-product-start -->
                                 <div class="product-wrapper">
                                     <div class="product-img-connexe product-pic">
@@ -294,12 +294,12 @@
     <div class="container">
         <div class="section-two-bloc-content">
             <div class="row">
-                <div class="col-lg-6 section-instagramm-feed-align">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-instagramm-feed-align">
                     <div class="section-two-bloc-left">
                         
                     </div>    
                 </div>
-                <div class="col-lg-6 section-instagramm-feed-align">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-instagramm-feed-align">
                     <div class="section-two-bloc-right">
                         
                     </div>
@@ -319,7 +319,7 @@
         <div class="section-instagramm-feed-content">
             <div class="row">
             <?php for ($i = 1; $i <= 8; $i++) { ?>
-                <div class="col-lg-3 section-instagramm-feed-align">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 section-instagramm-feed-align">
                     <img src="{!! URL::to('/') !!}/images/instagram{!! $i !!}.svg" alt="instagramm feed clickee"/>
                 </div>    
             <?php } ?>
@@ -355,34 +355,34 @@
 <section class="section-avantage ptb-15"> 
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="section-avantage-content border-vert-clair">
-                    <div class="col-lg-3 mt-15">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-15">
                         <span class="avantage avantage-paiement"></span>
                     </div>
-                    <div class="col-lg-9 mt-10">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mt-10">
                         <h4 class="fs-15">PAIEMENT 100% SÉCURISÉ</h4>
                         <span class="fs-13">Passez l’ensemble de vos commandes en toute sécurité.</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="section-avantage-content border-vert-clair">
-                    <div class="col-lg-3 mt-15">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-15">
                         <span class="avantage avantage-economie"></span>
                     </div>
-                    <div class="col-lg-9 mt-10">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mt-10">
                         <h4 class="fs-15">SOUTENEZ L’ÉCONOMIE LOCALE</h4>
                         <span class="fs-13">Encouragez votre communauté en achetant dans votre quartier</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="section-avantage-content border-vert-clair">
-                    <div class="col-lg-3 mt-15">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-15">
                         <span class="avantage avantage-temps"></span>
                     </div>
-                    <div class="col-lg-9 mt-10">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mt-10">
                         <h4 class="fs-15">GAGNEZ DU TEMPS</h4>
                         <span class="fs-13">En un click allez réserver vos articles préférés et récupérez-les en boutique.</span>
                     </div>

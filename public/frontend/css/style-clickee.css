@@ -351,6 +351,12 @@ ul {
 .border-vert-clair{
     border: 4px solid #65bb9f;
 }
+.color-text{
+  color: #044651;
+}
+.bg-b{
+  background: #efefef !important;
+}
 .slider-title {
     margin-bottom: 8%;
 }
@@ -802,7 +808,7 @@ ul {
   z-index:1111;
 }
 .product-content {
-  border-bottom: 1px solid #f3f3f3;
+  /*border-bottom: 1px solid #f3f3f3;*/
 }
 /*----------------------------------------*/
 
