@@ -15,8 +15,23 @@
         <div class="select-tri">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        {!! Form::select('vp', ["TRIER" => "TRIER"], null, ['class' => 'form-select', 'id' => 'vp']); !!}
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        {!! Form::select('vp', ["TRIER" => "TRIER","TEST" => "TEST"], null, ['class' => 'catalog-input-select form-select', 'id' => 'vp']); !!}
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        {!! Form::select('vp', ["TYPE DE PRODUIT" => "TYPE DE PRODUIT"], null, ['class' => 'catalog-input-select form-select', 'id' => 'vp']); !!}
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        {!! Form::select('vp', ["MARQUE" => "MARQUE"], null, ['class' => 'catalog-input-select form-select', 'id' => 'vp']); !!}
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        {!! Form::select('vp', ["COULEUR" => "COULEUR"], null, ['class' => 'catalog-input-select form-select', 'id' => 'vp']); !!}
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        {!! Form::select('vp', ["TAILLE" => "TAILLE"], null, ['class' => 'catalog-input-select form-select', 'id' => 'vp']); !!}
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        {!! Form::select('vp', ["GAMME DE PRIX" => "GAMME DE PRIX"], null, ['class' => 'catalog-input-select form-select', 'id' => 'vp']); !!}
                     </div>
                 </div>
             </div>

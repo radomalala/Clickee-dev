@@ -176,15 +176,14 @@ input.start-price:focus {
     width: 40%;
 }
 #vp {
-    background-size: 20px !important;
-    font-size: 17px;
+    font-size: 16px;
     color: #212B52;
     text-transform: uppercase;
 }
 .width-50 {width: 50% !important;}
 .width-100 {width: 100% !important;}
 .form-select {
-    width: 37% !important; 
+    width: 100% !important; 
 }
 .form-inline > span {
     font-size: 16px;

@@ -1196,5 +1196,21 @@ div.row {
 }
 .select-tri{
   background: #efefef;
+  margin-bottom: 25px;
+
 }
+.catalog-input-select{
+    border-bottom: 2px solid #044651;
+    border-top: 2px solid #044651;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 10px 40px 10px 5px;
+    color: rgb(0, 107, 121);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(../../images/arrow_select.svg) white no-repeat calc(100% - 10px) !important;
+}    
 /*category end*/
