@@ -10,6 +10,11 @@ html, body {height: 100%; color: #044651;}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
 .alignright {float:right;margin-left:15px;margin-bottom: 15px}
 .aligncenter {display:block;margin:0 auto 15px}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
 a:focus {outline:0px solid}
 img {max-width:100%;height:auto}
 .fix {overflow:hidden}
@@ -926,3 +931,127 @@ div.row {
     margin-left: 26.2%;
 }
 /*register merchant end*/
+
+/*faq start*/
+.actives > .panel-heading{
+  background:#044651 !important;
+}
+.actives > .panel-heading > .panel-title a{
+  color: #ffffff !important;
+}
+.actives > .left-arrow a::before{
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 28px;
+  left: -19px;  
+  border-top: 13px solid transparent;
+  border-right: 10px solid #044651;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid transparent;
+}
+.actives > .right-arrow a::before{
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 28px;
+  right: -19px;  
+  border-top: 13px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #044651;
+}
+.panel-heading {
+    padding: 0px 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+}
+.panel-group {
+    width: 65%;
+    margin: auto;
+}
+.panel-group .panel {
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+.panel-title a {
+  color: #044651;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 35px 20px;
+  text-decoration: none;
+  font-weight:400;
+}
+.panel-title a:hover {
+  color: #ffffff !important;
+}
+.panel-title a.collapsed{
+  color:#000;
+}
+.panel-group .panel-heading+.panel-collapse>.panel-body, .panel-group .panel-heading+.panel-collapse>.list-group {
+    color: #044651 !important;
+}
+.panel-default > .panel-heading {
+  background:none;
+  transition:.3s;
+  position:relative;
+  padding:15px;
+  text-align: center;
+  color: #044651 !important;
+}
+.panel-default > .panel-heading:hover{
+  background:#044651;
+  color: #ffffff !important;
+}
+.left-arrow a::before{
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 28px;
+  left: -19px;  
+  border-top: 13px solid transparent;
+  border-right: 10px solid #ffffff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid transparent;
+}
+.left-arrow a:hover::before{
+  border-top: 13px solid transparent;
+  border-right: 10px solid #044651;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.right-arrow a::before{
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 28px;
+  right: -19px;  
+  border-top: 13px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #ffffff;
+}
+.right-arrow a:hover::before{
+  border-top: 13px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #044651;
+}
+.faq-content {
+    background: #EFEFEF;
+    padding-bottom: 15px;
+}
+.faq-title h2, .question-area h2 {
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: bold;
+    padding: 30px;
+}
+/*faq end*/
