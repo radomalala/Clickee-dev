@@ -56,6 +56,7 @@ $('.mean-menu li.dropdown').hover(function() {
 }, function() {
 	$(this).find('.dropdown-menu-menu').stop(true, true).delay(100).fadeOut(200);
 });
+console.log("We need to dropdown");
 /*header menu end*/  
 
 	/*----------------------------
@@ -493,91 +494,6 @@ $( ".slider-text" ).removeClass( "hidden" );
 	$(".product-container").on('mouseleave', '.product-img a img',  function() {
 	      $(this).parent().parent().next().find('a').css('color',"#333");
 	      $(this).parent().parent().next().find('span').first().css('color', '#333333');
-	});
-
-	/*------------------------------------------------
-	Init autocomple header search
-	------------------------------------------------*/
-	$.ajax({
-		url: 'autocomplete-product',
-		type: 'GET',
-		dataType: 'json',
-		data: {category: 0},
-	})
-	.done(function(data) {
-			var options = {
-				data: data,
-				getValue: 'product_name',
-				template: {
-					type: "description",
-					fields: {
-						description: "brand_name"
-					}
-				},
-				list: {
-					maxNumberOfElements: 6,	
-					match: {
-						enabled: true
-					},
-					onChooseEvent: function(){
-						$('#form-search').submit();
-					}
-				}
-			};
-		$("#search-input").easyAutocomplete(options);
-		$(".easy-autocomplete").css('width', 'auto');
-		console.log(data);
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
-	
-	/*------------------------------------------------
-	Change autocomple header search
-	------------------------------------------------*/
-	$("#selected-category").on('change', function(){
-		$('#search-input').val("");
-		$.ajax({
-			url: 'autocomplete-product',
-			type: 'GET',
-			dataType: 'json',
-			data: {category: $('#selected-category').val()},
-		})
-		.done(function(data) {
-			var options = {
-				data: data,
-				getValue: 'product_name',
-				template: {
-					type: "description",
-					fields: {
-						description: "brand_name"
-					}
-				},
-				list: {
-					maxNumberOfElements: 6,	
-					match: {
-						enabled: true
-					},
-					onChooseEvent: function(){
-						$('#form-search').submit();
-					}
-				}
-			};
-			$("#search-input").easyAutocomplete(options);
-			$(".easy-autocomplete").css('width', 'auto');
-			console.log(data);
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-
-		
 	});
 
 	$("#show_popup_login_auth").trigger('click');
