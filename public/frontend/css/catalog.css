@@ -1,20 +1,24 @@
 .wishlist_prd_place{
   position: absolute;
-  margin-left: 87%;
-  margin-top: -14%;
+  margin-left: 73%;
+  margin-top: -29%;
+  background: #ffffff;
+  width: 20%;
+  height: 11%;
+  border-radius: 25px;
 }
 .wishlist_prd {
-  display:block;
-  width:21px;
-  line-height:19px;
-   background:url("../../images/coeur_bleuOrange.svg") no-repeat;
-  text-decoration:none;
-  margin-top: -6px;
-  transition: background-position-y 0.3s;
-  cursor: pointer;
+  background: url(../../images/icon/all_icons.svg) no-repeat;
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-size: 400%;
+  background-position: -73px;
+  margin-top: 15%;
+  margin-left: 15%;
   }
 .wishlist_prd:hover{
-  background-position-y: -27px;
+  /*background-position-y: -27px;*/
 }
 /*.img_btn {
     position: relative;
@@ -191,10 +195,14 @@ input.start-price:focus {
 }
 .product_all{
   text-align: center;
-  font-size: 27px;
-  color: #212B51;
-  border-bottom: 0.5px solid #212B51;
+  font-size: 15px;
 }
+
+.product_all span{
+    padding: 6px 12px;
+    border-bottom: 4px solid #044651;
+}
+
 .sort_result{
   font-size: 15px;
   color: #212B51;
