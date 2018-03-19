@@ -37,7 +37,7 @@ if (jQuery('table.table').length > 0) {
             {data: 'created_by', name:'created_by',searchable: true, sortable: true},
             {data: 'website', name:'website', searchable: true, sortable: true},
             {data: 'created_at', name:'created_at',searchable: true, sortable: true},
-            {data: 'created_by', name:'created_by',searchable: true, sortable: true},
+            {data: 'created_by', xname:'created_by',searchable: true, sortable: true},
             {data: 'action', name:'action',searchable: false, sortable: false}
         ],
         fnDrawCallback : function () {
