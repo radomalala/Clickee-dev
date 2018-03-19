@@ -1,7 +1,7 @@
 @if(count($results) > 0)
     <div class="content col-md-12" id="merchant-orders-content">
         <!-- Start :: Pagination -->
-        @include('front.customer.profilepagination', array('items' => $results))
+        @include('customer.profilepagination', array('items' => $results))
                 <!-- End :: Pagination -->
         <div class="row margin-top-xxl">
             @foreach($results as $item)

@@ -1,52 +1,37 @@
-     <div class="service-area-3 pb-40">
-                            <div class="container" id="for-product">
-                                <div>
-                                    <a class="buy-actuality col-lg-4 col-md-4 hidden-sm col-xs-12" href="#">
-                                        <!-- single-area-start -->
-                                        <div class="single-service-3 row">
-                                            <div class="service-icon text-center col-xs-4">
-                                                <!-- <a href="#"><i class="pe-7s-plane"></i></a> -->
-                                                <img src="{!! url('/') !!}/images/maison.svg" alt="maison" style="margin-top:1.7rem;"/>
-                                            </div>
-                                            <div class="service-text-3 col-xs-8" style="line-height: 1.4;font-weight: 100;">
-                                                <h4>{!! trans("common/label.immediately_available")!!}</h4>
-
-                                                <span>{!! trans("common/label.your_purchases")!!}</span>
-                                            </div>
-                                        </div>
-                                        <!-- single-area-end -->
-                                    </a>
-                                    <a class="buy-actuality col-lg-4 col-md-4 col-sm-6 col-xs-12" href="#">
-                                        <!-- single-area-start -->
-                                        <div class="single-service-3 row">
-                                            <div class="service-icon text-center col-xs-4">
-                                                <!-- <a href="#"><i class="pe-7s-refresh-2"></i></a> -->
-                                                <img src="{!! url('/') !!}/images/pannier.svg" alt="pannier" style="margin-top:1rem;"/>
-                                            </div>
-                                            <div class="service-text-3 col-xs-8" style="line-height: 1.4;font-weight: 100;">
-                                                <h4>{!! trans("common/label.buy_local")!!}</h4> 
-
-                                                <span>{!! trans("common/label.local_economy")!!}</span>
-                                            </div>
-                                        </div>
-                                        <!-- single-area-end -->
-                                    </a>
-                                    <a class="buy-actuality col-lg-4 col-md-4 col-sm-6 col-xs-12" href="#">
-                                        <!-- single-area-start -->
-                                        <div class="single-service-3 row">
-                                            <div class="service-icon text-center col-xs-4">
-                                                <!-- <a href="#"><i class="pe-7s-headphones"></i></a> -->
-                                                <img src="{!! url('/') !!}/images/cle.svg" alt="cle" style="margin-top:1.5rem;"/>
-                                            </div>
-                                            <div class="service-text-3 col-xs-8" style="line-height: 1.4; font-weight: 100;">
-                                                <h4>{!! trans("common/label.best_price")!!}</h4> 
-
-                                                <span>{!! trans("common/label.guarantee")!!}</span>
-                                            </div>
-                                        </div>
-                                        <!-- single-area-end -->
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </div>
+<div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="section-avantage-content border-vert-clair">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-15">
+                        <span class="avantage avantage-paiement"></span>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mt-10">
+                        <h4 class="fs-15">PAIEMENT 100% SÉCURISÉ</h4>
+                        <span class="fs-13">Passez l’ensemble de vos commandes en toute sécurité.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="section-avantage-content border-vert-clair">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-15">
+                        <span class="avantage avantage-economie"></span>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mt-10">
+                        <h4 class="fs-15">SOUTENEZ L’ÉCONOMIE LOCALE</h4>
+                        <span class="fs-13">Encouragez votre communauté en achetant dans votre quartier</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="section-avantage-content border-vert-clair">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-15">
+                        <span class="avantage avantage-temps"></span>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mt-10">
+                        <h4 class="fs-15">GAGNEZ DU TEMPS</h4>
+                        <span class="fs-13">En un click allez réserver vos articles préférés et récupérez-les en boutique.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -30,7 +30,7 @@
 
                 <!-- header-search-end -->
                 <!-- logo-start -->
-                <div class="col-md-12 content-logo">
+                <div class="container content-logo">
                     <div class="logo text-center">
                         <a href="{!! URL::to('/') !!}" class="col-xs-12">
                             <img src="{!! URL::to('/') !!}/images/logo.svg" alt="logo clickee"/>

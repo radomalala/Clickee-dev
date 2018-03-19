@@ -121,7 +121,7 @@ return [
     'actuality_local_achat' => 'Pour des offres exclusives, des vidéos, des nouvelles et bien plus encore.',
     'receive_email_actuality' => 'Oui, je souhaite recevoir par courriel l’actualité',
     'condition_create_account' => 'En créant votre compte, vous acceptez nos ',
-    'general_condition' => 'Conditions Générales.',
+    'general_condition' => 'Conditions Générales',
     'immediately_dispo' => 'Disponible immédiatement',
     'the_best_price' => 'Meilleur prix',
     'buy_in_local' => 'Achetez local',

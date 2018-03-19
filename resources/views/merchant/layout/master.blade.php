@@ -35,8 +35,8 @@
 
 <!-- Content Wrapper. Contains page content -->
     @include('front.layout.header')
-    @include('front.merchant.layout.header')
-    @include('front.merchant.layout.sidebar')
+    @include('merchant.layout.header')
+    @include('merchant.layout.sidebar')
     <div class="content-wrapper">
         @yield('content')
     </div>

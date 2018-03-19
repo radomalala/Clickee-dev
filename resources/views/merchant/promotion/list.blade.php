@@ -1,4 +1,4 @@
-@extends('front.merchant.layout.master')
+@extends('merchant.layout.master')
 
 @section('additional-styles')
     {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
@@ -15,13 +15,16 @@
 
     <section class="content-header">
         <h1>
-            Mes codes promo
+            Promotion
         </h1>
         <div class="header-btn">
             <div class="clearfix">
                 <div class="btn-group inline pull-right">
                     <div class="btn btn-small">
-                        <a href="{!! Url('fr/merchant/code_promo/create') !!}" class="btn btn-block btn-primary">Créer un code</a>
+                        <a href="{!! Url('fr/merchant/promotion/create') !!}" class="btn btn-block btn-primary">Créer une Newsletter</a>
+                    </div>
+                    <div class="btn btn-small">
+                        <a href="{!! Url('fr/merchant/contact') !!}" class="btn btn-block btn-success">Ajouter des contacts</a>
                     </div>
                 </div>
             </div>
@@ -37,42 +40,29 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th width="16%">Code</th>
-                                <th width="12%">Début</th>
-                                <th width="12%">Fin</th>
-                                <th width="50%">Catégorie</th>
-                                <th width="10%" class="no-sort">Prolonger/Supprimer</th>
+                                <th width="">Campagne</th>
+                                <th width="">Date envoie</th>
+                                <th width="">Nombre envoie</th>
+                                <th width="" class="no-sort">Statistiques</th>
                             </tr>
                             </thead>
                             <tbody>
-                            	@foreach($code_promos->data as $code_promo)
-	                                <tr>
-	                                    <td>{!! $code_promo->code_promo_name !!}</td>
-	                                    <td>
-                                            {!! Jenssegers\Date\Date::parse($code_promo->date_debut)->format('j F Y')!!}
+                            	@foreach($promotions->data as $promotion)
+                                    <tr>
+                                        <td>{!! $promotion->campagne_name !!}</td>
+                                        <td>
+                                            {!! Jenssegers\Date\Date::parse($promotion->created_at)->format('j F Y') !!}
                                         </td>
-	                                    <td>
-                                            {!! Jenssegers\Date\Date::parse($code_promo->date_fin)->format('j F Y')!!}
+                                        <td>
+                                            {!! $promotion->send_number !!}
                                         </td>
-	                                    <td>
-	                                    	@foreach($code_promo->categories as $category)
-                                                <span class="badge bg-green mr-5" style="background: #044651 !important;">{!! $category->french->category_name !!}</span>
-                                            @endforeach
-	                                    </td>
-	                                    <td>
-	                                        <div class="btn-group">
-	                                            <a href="{{ URL::to('fr/merchant/code_promo/' . $code_promo->code_promo_id . '/edit') }}"
-	                                               class="btn btn-default btn-sm" style="" title="Edit"><i
-	                                                        class="fa fa-fw fa-edit"></i></a>
-	                                            {!! Form::open(array('url' => 'fr/merchant/code_promo/' . $code_promo->code_promo_id
-	                                            , 'class' => 'pull-right')) !!}
-	                                            {!! Form::hidden('_method', 'DELETE') !!}
-	                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm'] ) !!}
-	                                            {{ Form::close() }}
-	                                        </div>
-	                                    </td>
-	                                </tr>
-	                            @endforeach
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="{{ URL::to('fr/merchant/promotion/' . $promotion->promotion_id . '') }}" class="btn btn-default btn-sm" style="" title="Résultats"> Résultats </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -91,6 +81,8 @@
     <script>
         if (jQuery('table.table').length > 0) {
             jQuery('table.table').DataTable({
+                "processing": true,
+                "serverSide": true,
                 "responsive": true,
                 "bPaginate": true,
                 "bLengthChange": true,
@@ -114,7 +106,6 @@
                         "info": "Afficher la page _PAGE_ de _PAGES_"
                 },
                 columns: [
-                    {searchable: true, sortable: true},
                     {searchable: true, sortable: true},
                     {searchable: true, sortable: true},
                     {searchable: true, sortable: true},

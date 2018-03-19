@@ -37,7 +37,7 @@ class PromotionController extends Controller
     {
         $promotions = Datatables::collection($this->promotion_repository->getAll(\Auth::user()->user_id))->make(true);
         $promotions = $promotions->getData();
-        return view('front.merchant.promotion.list', compact('promotions'));
+        return view('merchant.promotion.list', compact('promotions'));
     }
 
     /**
@@ -49,7 +49,7 @@ class PromotionController extends Controller
     {
         $promotion = false;
         $code_promos = $this->code_promo_repository->getAll(\Auth::user()->user_id);
-        return view('front.merchant.promotion.form', compact('promotion','code_promos'));
+        return view('merchant.promotion.form', compact('promotion','code_promos'));
     }
 
     /**
@@ -97,7 +97,7 @@ class PromotionController extends Controller
         $promotion = $this->promotion_repository->getById($id);
         $code_promo = $this->code_promo_repository->getById($promotion->code_promo_id);
         $encasementproducts = EncasementProduct::where('promo_code_id',$code_promo->code_promo_id)->orderBy('encasement_product_id', 'desc')->get();
-        return view('front.merchant.promotion.results',compact('encasementproducts','code_promo','promotion'));
+        return view('merchant.promotion.results',compact('encasementproducts','code_promo','promotion'));
     }
 
     /**

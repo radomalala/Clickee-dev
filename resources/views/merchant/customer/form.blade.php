@@ -1,4 +1,4 @@
-@extends('front.merchant.layout.master')
+@extends('merchant.layout.master')
 @section('additional-styles')
     {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
     {!! Html::style('frontend/css/font-awesome.min.css') !!}
@@ -34,13 +34,13 @@
     				{!! Form::open(['url' => ($customer) ? route('customer.update', ['id' => $customer->customer_id]) : route('customer.store'), 'id' =>'customer_form', 'enctype' => 'multipart/form-data', 'method' => ($customer) ? 'PATCH' : 'POST']) !!}
     					<div class="tab-content">
                             <div class="tab-pane active" id="tab_1">
-                                @include('front.merchant.customer.customer')
+                                @include('merchant.customer.customer')
                             </div>
                             <div class="tab-pane" id="tab_2">
-                                @include('front.merchant.customer.product_encasement')
+                                @include('merchant.customer.product_encasement')
                             </div>
                             <div class="tab-pane" id="tab_3">
-                                @include('front.merchant.customer.payement')
+                                @include('merchant.customer.payement')
                             </div>
                             
                         </div>

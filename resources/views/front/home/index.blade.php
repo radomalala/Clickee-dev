@@ -77,7 +77,7 @@
 
 <!-- start section top product  -->
 <section class="section-top-product">
-    <div class="container">
+    <div class="container content-product-on-home">
         <ul class="nav nav-tabs" id="productTab" role="tablist">
             <li class="active">
                 <a class="nav-title" id="coup_de_coeur-tab" data-toggle="tab" href="#coup_de_coeur" role="tab" aria-controls="coup_de_coeur" aria-selected="true">COUP DE COEUR</a>
@@ -349,6 +349,7 @@
 <!-- end section marque -->
 
 <!-- start section avantage -->
+
 @include('front.layout.section-avantage')
 <!-- end section avantage -->
 @stop

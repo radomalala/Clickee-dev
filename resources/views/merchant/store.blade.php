@@ -1,7 +1,7 @@
 @if(count($stores) > 0)
     <div class="content col-md-12" id="order_history">
         <!-- Start :: Pagination -->
-        @include('front.customer.profilepagination', array('items' => $stores))
+        @include('customer.profilepagination', array('items' => $stores))
                 <!-- End :: Pagination -->
             @foreach($stores as $store_data)
                 <div class="col-md-6">

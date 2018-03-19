@@ -2,9 +2,8 @@
              <!-- register-area-start -->
                     <div class="register-area text-center">
                         <div class="section-title mb-20">
-
                             <div class="row">
-                                    <div class="login-signup-title text-blue">
+                                    <div class="login-signup-title text-blue title text-uppercase mt-40">
                                         <h2>{!! trans("common/label.sign_in_with")!!} ...</h2>
                                     </div> 
                                     <div class="connect-social-media mt-10">   
@@ -28,7 +27,7 @@
                             </div>
                         </div>
                         <!-- register-area-end -->
-            <div class="or-with-title text-blue text-center">
+            <div class="or-with-title text-blue text-center pt-5 pb-10">
                     <h2>
                         <span>{!! trans("common/label.or_with")!!}</span>
                     </h2>
@@ -47,19 +46,17 @@
                         <p></p>
                         {!! Form::open(['url' => url(LaravelLocalization::getCurrentLocale().'/login'), 'id'=>'login_form', 'method' => 'post', 'role' => 'form' ,'class'=>'form-horizontal','autocomplete'=>'off']) !!}
                         <div class="form-group row mb-0">
-                             <label for="username" class="col-sm-3 col-form-label">{!! trans("form.email_address")!!} *</label>
-                             <div class="col-sm-9">
-                                {{ Form::text('email', '',['class'=>"required form-control"]) }}
+                             <div class="col-sm-12">
+                                {{ Form::text('email', '',['class'=>"required form-control", 'placeholder' =>  trans("form.email_address")." *"]) }}
                             </div>
                         </div>
                         <div class="form-group row mb-0">
-                             <label for="password" class="col-sm-3 col-form-label">{!! trans("form.password")!!} *</label>
-                            <div class="col-sm-9">
-                                {{ Form::password('password',['class'=>"required form-control"]) }}
+                            <div class="col-sm-12   ">
+                                {{ Form::password('password',['class'=>"required form-control", 'placeholder' => trans("form.password")." *"]) }}
                             </div>
                         </div>
 
-                        <div class="checkbox mg-18 check-merchant-left">
+                        <div class="checkbox mg-18 check-left-for-login">
                             <label for="rememberme">
                                 <input type="checkbox" name='memoty'>
                                 {!! trans("form.remember")!!}
@@ -68,7 +65,7 @@
 
                         <a href="{{ url(LaravelLocalization::getCurrentLocale().'/forgot-password') }}">{!! trans("form.forgot_password")!!} ? </a>
                         <div class="text-center">
-                                <button type="submit" id="login-btn">{!! trans("form.login")!!}</button>
+                                <button type="submit" id="login-btn" class="btn btn-clickee-default">SHOPPER</button>
                         </div>
                         {{Form::close()}}
                     </div>
@@ -78,5 +75,4 @@
                     
             
     </div>
-
 
