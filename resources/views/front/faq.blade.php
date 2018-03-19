@@ -42,11 +42,14 @@
             <div class="{!! ((app('language')->language_id==2)? "col-lg-6 col-md-offset-3 ": "col-lg-4 col-md-offset-4") !!}">
                 <div class="question-area text-center">
                     <h3>{!! trans('faq.have_question') !!}</h3>
-                    <a href="{!! url('contact-us') !!}">{!! trans('faq.contact_us') !!}</a>
+                    <a class="btn btn-clickee-default" href="{!! url('contact-us') !!}">{!! trans('faq.contact_us') !!}</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- start section avantage -->
+@include('front.layout.section-avantage')
+<!-- end section avantage -->
 @stop
 

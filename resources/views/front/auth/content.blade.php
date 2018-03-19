@@ -4,9 +4,9 @@
 
 	<?php Session::put('role_user',1); ?>
 	      <div class="container">
-	      			<!-- <div class="login-signup-title text-blue">
-	      				<h2>{!! trans("common/label.login_signup_title")!!}</h2>
-	      			</div> -->
+	      			<div class="member-title text-blue title text-uppercase text-center mb-60 mt-60">
+                            <h2>Connectez-vous ou créez un compte</h2>
+                    </div>
 	                <div role="tabpanel" class="tab-panel tab-panel-customer col-lg-8 col-xs-12 col-md-10 col-sm-10">
 	                	<div class="section-title">
 	                	</div>

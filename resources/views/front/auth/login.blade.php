@@ -3,7 +3,7 @@
                     <div class="register-area text-center">
                         <div class="section-title mb-20">
                             <div class="row">
-                                    <div class="login-signup-title text-blue title text-uppercase">
+                                    <div class="login-signup-title text-blue title text-uppercase mt-40">
                                         <h2>{!! trans("common/label.sign_in_with")!!} ...</h2>
                                     </div> 
                                     <div class="connect-social-media mt-10">   

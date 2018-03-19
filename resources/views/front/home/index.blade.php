@@ -1,7 +1,4 @@
 @extends('front.layout.master')
-    @section('additional-css')
-        {!! Html::style('frontend/css/responsive.css') !!}
-    @stop 
 @section('content')
 
 
@@ -352,8 +349,12 @@
 <!-- end section marque -->
 
 <!-- start section avantage -->
+<<<<<<< HEAD
 <section class="section-avantage ptb-15"> 
     @include('front.layout.service-area')
 </section>
+=======
+@include('front.layout.section-avantage')
+>>>>>>> eee28bec1142e8e6ddd89dc5a76a6b7bd980492f
 <!-- end section avantage -->
 @stop

@@ -5,7 +5,7 @@
                     <div class="register-area text-center">
                         <div class="section-title mb-20">
                             <div class="row">
-                                    <div class="login-signup-title text-blue title text-uppercase">
+                                    <div class="login-signup-title text-blue title text-uppercase mt-40">
                                         <h2>{!! trans("common/label.sign_up_with")!!} ...</h2>
                                     </div>    
                                      <div class="connect-social-media mt-10">   
@@ -42,8 +42,8 @@
                     {!! Form::open(['url' => url(LaravelLocalization::getCurrentLocale().'/register'), 'id'=>'account_form', 'method' => 'post', 'role' => 'form','class'=>'form-horizontal','autocomplete'=>'off']) !!}
 
                     <input type="hidden" name="role_id" value="{!! $role_id !!}">
-                    <div class="member-title text-blue text-center mb-40">
-                            <h2>{!! trans("common/label.information_member")!!}</h2>
+                    <div class="member-title text-blue title text-uppercase text-center mb-40">
+                            <h2>informations membre</h2>
                     </div>
                     <div class="col-md-12">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-20">
@@ -87,7 +87,7 @@
                     <div class="other-info col-md-12 mt-10">   
                             <ul class="content-actuality mt-25 mb-30 pb-20">
                                 <li>    
-                                    <a href="#" class="receive-notification"><i class="fa fa-square-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oui, je souhaite recevoir les notifications d’achats par message texte.</a>             
+                                    <a href="#" class="receive-notification"><i class="fa fa-circle-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oui, je souhaite recevoir les notifications d’achats par message texte.</a>             
                                 </li>
                                 <li>
                                     <div class="text-center pt-20 pb-20"> 
@@ -99,13 +99,13 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#" class="receive-email mt-30"><i class="fa fa-square-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oui, je souhaite recevoir par courriel l’actualité Alternateeve.</a>
+                                    <a href="#" class="receive-email mt-30"><i class="fa fa-circle-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oui, je souhaite recevoir par courriel l’actualité Alternateeve.</a>
                                 </li>
                                 
                                 
                             </ul>
                               <div class="recaptcha">  
-                                <div class="g-recaptcha col-lg-6 col-lg-offset-4 col-sm-7 col-sm-offset-2 mt-20" data-sitekey="6LcZPD8UAAAAAJ4j09YFkZROb1s34VgnXX6AvbRU"></div>
+                                <div class="g-recaptcha col-lg-6 col-sm-7 mt-30 mb-50" data-sitekey="6LcZPD8UAAAAAJ4j09YFkZROb1s34VgnXX6AvbRU"></div>
                               </div>
                                 <div class="register-footer-area text-center">
                                     <button class="btn btn-submit btn-clickee-default" type="submit" id="register-btn">SHOPPER</button>
