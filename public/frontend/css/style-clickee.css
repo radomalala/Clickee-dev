@@ -143,9 +143,12 @@ body {
     /* border-bottom: 1px solid #212b52; */
 }
 .souligne{
-  border-bottom: 1px solid #044651;
+  border-bottom: 4px solid #044651;
 }
-
+#login-merchant-tab {
+  width: 60%;
+  margin: 0 auto;
+}
 /*div.row {
     padding: 7px 0px 7px 0px;
     line-height: 2.5;
@@ -170,7 +173,7 @@ body {
 .icon-panier {
     background-position: -108px;
 }
-.icon-shop {
+.icon-shop {  
     background: url(../../images/icon/shop.svg) no-repeat;
     width: 21px;
     height: 21px;
@@ -179,6 +182,16 @@ body {
     display: inline-block;
     background-size: 100%;
     background-position-y: 4px;
+}
+.btn-clickee-primary {
+    padding: 10px 15px;
+    border: 4px solid #044651;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #044651;
+    color: #fff;
+    text-transform: uppercase;
 }
 .btn-clickee-default {
     color: rgb(0, 107, 121);
@@ -189,7 +202,7 @@ body {
     font-weight: 600;
     background-color: white;
 }
-.btn-clickee-default:hover {
+.btn-clickee-default:hover, .btn-clickee-primary:hover {
     color: #65bb9f;
     border-color: #65bb9f;
     background-color: #fff !important;
@@ -215,6 +228,10 @@ body {
 }
 .text-center {
 	text-align: center;
+}
+.register-area-merchant {
+   width: 90%;
+   margin: 0 auto;
 }
 /****** End element style color *********/
 /******* Mise en forme home page *******/
@@ -357,7 +374,8 @@ ul {
 .pd5 {padding: 5px;}
 .pd10 {padding: 10px;}
 .pd20 {padding: 20px;}
-
+.pd5-l-input { padding-left: 5%; }
+.pd5-r-input { padding-right: 5%; }
 .text-center { text-align: center; }
 .fs-12{ font-size: 12px !important; }
 .fs-13{ font-size: 13px !important; }
@@ -527,7 +545,7 @@ ul {
   display:inline-block !important;
   zoom:1 !important;
 }
-.nav-title{
+.content-product-on-home>ul>li>.nav-title{
   color: #044651;
   display: inline-block;
   padding: 0px 0px !important;
@@ -536,14 +554,14 @@ ul {
   font-weight: 600;
   font-size: 30px;
 }
-/*.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+.content-product-on-home>.nav-tabs>li.active>a, .content-product-on-home>.nav-tabs>li.active>a:hover, .content-product-on-home>.nav-tabs>li.active>a:focus {
     color: #65bb9f !important;
     border: 0px solid #fff !important;
     border-bottom: 5px solid #65bb9f !important;
-}*/
-/*.nav-tabs>li>a:hover {
+}
+.content-product-on-home>.nav-tabs>li>a:hover {
     border-color: #fff #fff #fff !important; 
-}*/
+}
 .nav>li>a:hover, .nav>li>a:focus {
   color: #65bb9f !important; 
   background-color: #fff !important; 
@@ -949,7 +967,7 @@ div.row {
 .tab-login {
   margin: 4% 10%;
 }
-.tab-panel-customer {
+.tab-panel-customer, .tab-panel-merchant {
   margin-right: auto;
   margin-left: auto;
   float: none;
@@ -961,33 +979,33 @@ div.row {
     width: 80%;
     margin: 0 auto;
 }
-.tab-panel-customer>.nav-tabs>li:first-child.active>a, .tab-panel-customer>.nav-tabs>li:first-child.active>a:hover, .tab-panel-customer>.nav-tabs>li:first-child.active>a:focus {
+.tab-panel-customer>.nav-tabs>li:first-child.active>a, .tab-panel-customer>.nav-tabs>li:first-child.active>a:hover, .tab-panel-customer>.nav-tabs>li:first-child.active>a:focus, .tab-panel-merchant>.nav-tabs>li:first-child.active>a, .tab-panel-merchant>.nav-tabs>li:first-child.active>a:hover, .tab-panel-merchant>.nav-tabs>li:first-child.active>a:focus {
     border-top: 5px solid #044651 !important;
     border-right: 5px solid #044651 !important;
     border-bottom: 0px solid white;
     border-left: 0px solid white;
     border-bottom: none;
 }
-.tab-panel-customer>.nav-tabs>li:nth-child(2)>a:hover {
+.tab-panel-customer>.nav-tabs>li:nth-child(2)>a:hover, .tab-panel-merchant>.nav-tabs>li:nth-child(2)>a:hover {
     border-bottom: 5px solid #044651;
     border-left: 5px solid #044651;
     border-right: 0px solid white;
     border-top: 0px solid white;
 }
-.tab-panel-customer>.nav-tabs>li:nth-child(2).active>a, .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a:hover, .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a:focus {
+.tab-panel-customer>.nav-tabs>li:nth-child(2).active>a, .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a:hover, .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a:focus, .tab-panel-merchant>.nav-tabs>li:nth-child(2).active>a, .tab-panel-merchant>.nav-tabs>li:nth-child(2).active>a:hover, .tab-panel-merchant>.nav-tabs>li:nth-child(2).active>a:focus {
     border-top: 5px solid #044651;
     border-left: 5px solid #044651;
     border-right: 0px solid white;
     border-bottom: 0px solid white;
 }
 
-.tab-panel-customer>.nav-tabs>li>a, .tab-panel-customer>.nav-tabs>li>a:hover, .tab-panel-customer>.nav-tabs>li>a:focus {
+.tab-panel-customer>.nav-tabs>li>a, .tab-panel-customer>.nav-tabs>li>a:hover, .tab-panel-customer>.nav-tabs>li>a:focus, .tab-panel-merchant>.nav-tabs>li>a, .tab-panel-merchant>.nav-tabs>li>a:hover, .tab-panel-merchant>.nav-tabs>li>a:focus {
     border-top: 0px solid white;
     border-left: 0px solid white;
     border-right: 0px solid white;
     border-bottom: 5px solid #044651;
 }
-.tab-panel-customer>.nav-tabs > li {
+.tab-panel-customer>.nav-tabs > li, .tab-panel-customer>.nav-tabs > li {
     margin: 0px -5.5px;
     width: 50%;
 }
@@ -1026,7 +1044,7 @@ div.row {
     margin-left: 2%;
 }
 .check-merchant-left {
-    margin-left: 26.2%;
+    margin-left: 2%;
 }
 /*register merchant end*/
 

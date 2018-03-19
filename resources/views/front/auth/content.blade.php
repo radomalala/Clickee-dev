@@ -11,7 +11,7 @@
 	                	<div class="section-title">
 	                	</div>
 	                    <ul class="nav nav-tabs" style="font-size: 17px !important;" role="tablist">
-	                        <li role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab" id="head-tab-signing">{!! trans("common/label.login_title")!!}</a>
+	                        <li></li>i role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab" id="head-tab-signing">{!! trans("common/label.login_title")!!}</a>
 
 	                        </li>
 	                        <li role="presentation"><a href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab" id="head-tab-register">{!! trans("common/label.register_title")!!}</a>
@@ -20,10 +20,8 @@
 	                        <button type="button" class="close" href="javascript:history.back()" aria-label="Close">
 	                    </ul>
 	                    <div class="tab-content tab-login">
-	                    
-
 	                        <div role="tabpanel" class="tab-pane active" id="uploadTab">
-	              
+	   
 	                        	@include('front.auth.login', ['role_id' => 1])
 	                        </div>
 	                        <div role="tabpanel" class="tab-pane" id="browseTab">

@@ -1,25 +1,6 @@
-@extends('front.layout.master')
-
-@section('content')
-
-<?php Session::put('role_user',2); ?>
-
-<div class="container mtb-80" style="width: 60%">
-    <ul class="nav nav-tabs">
-        <li role="presentation" class="active">
-            <a class="nav-title" href="#cnxTab" aria-controls="cnxTab" role="tab" data-toggle="tab">CONNEXION</a>
-        </li>
-        <li role="presentation">
-            <a class="nav-title" href="#enregTab" aria-controls="enregTab" role="tab" data-toggle="tab">S'ENREGISTRER</a>
-        </li>
-    </ul>
-    <div class="tab-content tab-login">
-        <div role="tabpanel" class="tab-pane active" id="cnxTab">
 
             <div class="row">
-                <div class="col-lg-12">
-                    @include('notification')
-                </div>
+             
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 merchant-top-bottom">
                     <div class="login-area">
@@ -30,19 +11,17 @@
                         <p></p>
                         {!! Form::open(['url' => url(LaravelLocalization::getCurrentLocale().'/merchant/login'), 'id'=>'login_form', 'method' => 'post', 'role' => 'form' ,'class'=>'form-horizontal','autocomplete'=>'off']) !!}
                         <div class="form-group row mb-0">
-                            <label for="username" class="col-sm-3 col-form-label">{!! trans("form.email_address")!!} *</label>
-                            <div class="col-sm-9">
-                                {{ Form::text('email', '',['class'=>"required"]) }}
+                            <div class="col-sm-12">
+                                {{ Form::text('email', '',['class'=>"required", 'placeholder' => trans("form.email_address") ." *"]) }}
                             </div>
                         </div>
                         <div class="form-group row mb-0">
-                            <label for="password" class="col-sm-3 col-form-label">{!! trans("form.password")!!} *</label>
-                            <div class="col-sm-9">
-                                {{ Form::password('password',['class'=>"required"]) }}
+                            <div class="col-sm-12">
+                                {{ Form::password('password',['class'=>"required", 'placeholder' => trans("form.password") . " *"]) }}
                             </div>    
                         </div>
 
-                        <div class="checkbox mg-18 text-center check-merchant-left">
+                        <div class="checkbox mg-18 check-merchant-left">
                             <label for="rememberme">
                                 <input class="check-merchant" type="checkbox" name='memoty'>
                                 {!! trans("form.remember")!!}
@@ -57,25 +36,3 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-        <div role="tabpanel" class="tab-pane" id="enregTab">
-            @include('merchant.register')
-        </div>
-    </div>
-</div>
-
-@stop
-@section('footer-script')    
-    {!! Html::script('backend/plugins/dynatree/jquery/jquery-ui.custom.js') !!}
-    {!! Html::script('backend/plugins/select2/select2.js') !!}
-    {!! Html::script('backend/plugins/dual-list-box/dual-list-box.js') !!}
-    {!! Html::script('backend/plugins/bootstrap-duallistbox-master/src/jquery.bootstrap-duallistbox.js') !!}
-    {!! Html::script('frontend/js/store.js') !!}
-@stop
-@section('additional-script')
-    <script type="application/javascript">
-        var selected_state_id = '{!! ($store && $store->state_id!='') ? $store->state_id :'' !!}';
-        var selected_country_id = '{!! ($store && $store->country_id!='') ? $store->country_id :'' !!}';
-    </script>
-@stop
