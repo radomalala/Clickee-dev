@@ -151,7 +151,7 @@
                                     <?php
                                         $class = (isset($attr_options[$attribute['id']]) && count($attr_options[$attribute['id']])>1) ? "" : "attribute-select-box" ?>
                                     <select name="attrs[]" data-placeholder="Choose an option…"
-                                            class="col-md-9  {!! $class !!} product-input-select" tabindex="1" style="color: #42838C!important">
+                                            class="col-md-11  {!! $class !!} product-input-select" tabindex="1" style="color: #42838C!important">
                                         @foreach($attribute['options'] as $options)
                                             @if(in_array($options->attribute_option_id,$attribute_option_id))
                                                 <?php
