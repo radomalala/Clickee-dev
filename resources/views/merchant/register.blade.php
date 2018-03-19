@@ -2,8 +2,8 @@
             <div class="row account">
                 @include('notification')
                 <div class="col-lg-12">
-                    <div class="account-title mb-26 text-center">
-                        <h1>
+                    <div class="account-title title text-uppercase mb-26 text-center mt-40">
+                        <h2>
                             @if($store)
                                 {!! trans('merchant.update_info') !!}
                             @elseif(Auth::check())
@@ -11,10 +11,10 @@
                             @else
                                 {!! trans('merchant.title') !!}
                             @endif
-                        </h1>
+                        </h2>
                     </div>
                 </div>
-                <div class="register-area">
+                <div class="register-area register-area-merchant">
                     <?php
                         if($store){
                             $url = url(LaravelLocalization::getCurrentLocale()."/store/$store->store_id");
@@ -36,7 +36,7 @@
                     </div>
                     <div class="row">
                         <div class="row"> 
-                            <div class="col-lg-12">
+                            <div class="col-lg-6 pd5-r-input">
                                 {!! Form::label('logo', trans('merchant.logo'), ['class' => '']) !!}
                                 {!! Form::file('logo',array('class'=>' ','id'=>'logo')) !!}
                                 @if($store && file_exists(public_path('upload/logo/'.$store->logo)))
@@ -51,7 +51,7 @@
                         @endif
                         <div class="row">
                             <div class="register-area">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18 pd5-r-input">
                                     <div class="ptb-7">
                                         <label for="shop_name">{!! trans("merchant.shop_name")!!} *</label>
                                         {{Form::text('shop_name', ($store && $store->store_name !='') ? $store->store_name : null ,['class'=>'required'])}}
@@ -70,7 +70,7 @@
                                         {!! Form::text('email',($store) ? $store->email :  null , ['class' => 'required','id'=>'email']) !!}
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18 pd5-l-input">
                                     <div class="ptb-7">
                                         <label for="created_date"> Date de création </label>
                                         {{Form::date('created_date', ($store) ? $store->created_date :  null,['class'=>''])}}
@@ -109,7 +109,7 @@
                                 </div>    
                             </div>
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18 pd5-r-input">
                                     <div class="ptb-7">
                                         <label for="eban">EBAN *</label>
                                         {{Form::text('eban', ($store) ? $store->eban :  null ,['class'=>'required','id'=>"eban"])}}
@@ -119,7 +119,7 @@
                                         {{Form::text('bic', ($store) ? $store->bic :  null ,['class'=>'required','id'=>"bic"])}}
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-18 pd5-l-input">
                                     <div class="ptb-7">
                                         <label for="banque_domicile">Domicialisation banque *</label>
                                         {{Form::text('banque_domicile', ($store) ? $store->banque_domicile :  null ,['class'=>'required','id'=>"banque_domicile"])}}
@@ -132,10 +132,12 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <div class="recaptcha">  
+                                <div class="g-recaptcha col-lg-6 col-sm-7 mt-30 mb-50" data-sitekey="6LcZPD8UAAAAAJ4j09YFkZROb1s34VgnXX6AvbRU"></div>
+                    </div>
                     
                     <div class="text-center mr-t-btn">
-                        <button class="btn btn-clickee-default" type="submit" id="add-store">{!! trans("merchant.complete_registration")!!}</button>
+                        <button class="btn btn-clickee-primary" type="submit" id="add-store">{!! trans("merchant.complete_registration")!!}</button>
                     </div>
                     {!! Form::close() !!}
                 </div>

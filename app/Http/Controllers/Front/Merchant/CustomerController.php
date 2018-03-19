@@ -26,7 +26,7 @@ class CustomerController extends Controller
     public function index()
     {
         $customers = $this->customer_repository->getAll();
-        return view('front.merchant.customer.index')->with('customers', $customers);
+        return view('merchant.customer.index')->with('customers', $customers);
     }
 
     /**
@@ -38,7 +38,7 @@ class CustomerController extends Controller
     {
         $customer = [];
         $product_is_active = $this->product_repository->getAll();
-        return view('front.merchant.customer.form', compact('customer','product_is_active'));
+        return view('merchant.customer.form', compact('customer','product_is_active'));
     }
 
     /**
@@ -86,7 +86,7 @@ class CustomerController extends Controller
     {
         $customer = $this->customer_repository->getById($id);
         $products = $this->product_repository->getAll();
-        return view('front.merchant.customer.form')->with('customer', $customer)->with('product_is_active', $products);
+        return view('merchant.customer.form')->with('customer', $customer)->with('product_is_active', $products);
     }
 
     /**
@@ -128,13 +128,13 @@ class CustomerController extends Controller
 
     public function encasement()
     {
-        return view('front.merchant.customer.encasement');
+        return view('merchant.customer.encasement');
     }
 
     public function addContact()
     {
         $customer = [];
-        return view('front.merchant.customer.contact_customer',compact('customer'));
+        return view('merchant.customer.contact_customer',compact('customer'));
     }
 
     public function saveContactCustomer(Request $request)

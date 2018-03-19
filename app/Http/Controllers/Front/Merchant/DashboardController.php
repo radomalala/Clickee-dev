@@ -22,6 +22,6 @@ class DashboardController extends Controller
     {
     	$product_count = $this->product_repository->getCount();
     	$sales_count = $this->order_repository->getCount();
-        return view('front.merchant.dashboard.index', compact('product_count', 'sales_count'));
+        return view('merchant.dashboard.index', compact('product_count', 'sales_count'));
     }
 }

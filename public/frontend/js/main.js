@@ -584,22 +584,22 @@ $( ".slider-text" ).removeClass( "hidden" );
 	
 	$('.receive-notification').click(function(e){
 		e.preventDefault();
-		if($('.receive-notification i').hasClass('fa-square-o')){
-			$('.receive-notification i').removeClass('fa-square-o');
-			$('.receive-notification i').addClass('fa-check-square');
+		if($('.receive-notification i').hasClass('fa-circle-o')){
+			$('.receive-notification i').removeClass('fa-circle-o');
+			$('.receive-notification i').addClass('fa-dot-circle-o');
 		}else{
-			$('.receive-notification i').removeClass('fa-check-square');
-			$('.receive-notification i').addClass('fa-square-o');
+			$('.receive-notification i').removeClass('fa-dot-circle-o');
+			$('.receive-notification i').addClass('fa-circle-o');
 		}
 	});
 	$('.receive-email').click(function(e){
 		e.preventDefault();
-		if($('.receive-email i').hasClass('fa-square-o')){
-			$('.receive-email i').removeClass('fa-square-o');
-			$('.receive-email i').addClass('fa-check-square');
+		if($('.receive-email i').hasClass('fa-circle-o')){
+			$('.receive-email i').removeClass('fa-circle-o');
+			$('.receive-email i').addClass('fa-dot-circle-o');
 		}else{
-			$('.receive-email i').removeClass('fa-check-square');
-			$('.receive-email i').addClass('fa-square-o');
+			$('.receive-email i').removeClass('fa-dot-circle-o');
+			$('.receive-email i').addClass('fa-circle-o');
 		}
 	});
 		

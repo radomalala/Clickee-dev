@@ -1,4 +1,4 @@
-@extends('front.merchant.layout.master')
+@extends('merchant.layout.master')
 
 @section('additional-styles')
     {!! Html::style('backend/plugins/datatables/dataTables.bootstrap.css') !!}
