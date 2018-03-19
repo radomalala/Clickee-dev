@@ -31,7 +31,7 @@ class CodePromoController extends Controller
     {
         $code_promos = Datatables::collection($this->code_promo_repository->getAll(\Auth::user()->user_id))->make(true);
         $code_promos = $code_promos->getData();
-        return view('front.merchant.code_promo.list', compact('code_promos'));
+        return view('merchant.code_promo.list', compact('code_promos'));
     }
 
     /**
@@ -44,7 +44,7 @@ class CodePromoController extends Controller
         $language_id=app('language')->language_id;
         $categories = $this->category_repository->getParentCategories($language_id);
         $code_promo = false;
-        return view('front.merchant.code_promo.form', compact('code_promo','categories'));
+        return view('merchant.code_promo.form', compact('code_promo','categories'));
     }
 
     /**
@@ -95,7 +95,7 @@ class CodePromoController extends Controller
         $language_id=app('language')->language_id;
         $code_promo = $this->code_promo_repository->getById($id);
         $categories = $this->category_repository->getParentCategories($language_id);
-        return view('front.merchant.code_promo.form', compact('code_promo','categories'));
+        return view('merchant.code_promo.form', compact('code_promo','categories'));
     }
 
     /**

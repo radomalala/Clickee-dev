@@ -71,7 +71,7 @@ class ProductController extends Controller
 
 	public function index()
 	{
-		return view('front.merchant.product.list');
+		return view('merchant.product.list');
 	}
 
 	public function getData()
@@ -157,7 +157,7 @@ class ProductController extends Controller
 					break;
 			}
 		})->EditColumn('action', function ($product) {
-			return view("front.merchant.product.action", ['product' => $product]);
+			return view("merchant.product.action", ['product' => $product]);
 		});
 		return $data_tables->rawColumns(['status','action'])
 		->setRowClass(function($product) {
@@ -197,7 +197,7 @@ class ProductController extends Controller
 		}else{	
 			$product_attributes = [];
 		}
-		return view('front.merchant.product.attributes',compact('attribute_set','product_attributes'));
+		return view('merchant.product.attributes',compact('attribute_set','product_attributes'));
 	}
 
 	public function create()
@@ -211,7 +211,7 @@ class ProductController extends Controller
 		$images = [];
 		$brands = $this->brand_repository->lists();
 		$tags = $this->tag_repository->getAll();
-		return view('front.merchant.product.form', compact('categories', 'product','images','attribute_sets','role_admins', 'product_is_active','brands','tags'));
+		return view('merchant.product.form', compact('categories', 'product','images','attribute_sets','role_admins', 'product_is_active','brands','tags'));
 	}
 
 	public function store(ProductRequest $product_request)
@@ -272,7 +272,7 @@ class ProductController extends Controller
 		$affiliate_product=AffiliateProduct::where('product_id',$product_id)->get();
 		$tags = $this->tag_repository->getAll();
 		Session::put('product_images', $product_images);								//Creation de la session product image
-		return view('front.merchant.product.form', compact('product', 'categories', 'images','attribute_sets','role_admins','product_videos', 'product_is_active','languages','brands','affiliate_product','tags'));
+		return view('merchant.product.form', compact('product', 'categories', 'images','attribute_sets','role_admins','product_videos', 'product_is_active','languages','brands','affiliate_product','tags'));
 	}
 
 	public function update($product_id, ProductRequest $product_request)
@@ -424,7 +424,7 @@ class ProductController extends Controller
 			\Cache::put('product_search_' . $keyword, $products, self::CACHE_TIME_FOR_PRODUCT);
 		}
 
-		return view('front.merchant.product.search')->with('products', $products);
+		return view('merchant.product.search')->with('products', $products);
 	}
 
 	public function removeTag(Request $request)

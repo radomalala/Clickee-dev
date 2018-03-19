@@ -60,7 +60,7 @@
 
         </div>
         <div role="tabpanel" class="tab-pane" id="enregTab">
-            @include('front.merchant.register')
+            @include('merchant.register')
         </div>
     </div>
 </div>

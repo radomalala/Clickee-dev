@@ -42,7 +42,7 @@ class AuthController extends Controller
         $store = false;
         $brands = $this->brand_repository->lists();
         $brand_tags = BrandTag::get();
-		return view('front.merchant.login', compact('countries', 'store', 'brands', 'brand_tags'));
+		return view('merchant.login', compact('countries', 'store', 'brands', 'brand_tags'));
 	}
 
 	public function postMerchantLogin(Request $request)

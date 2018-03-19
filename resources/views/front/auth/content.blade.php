@@ -7,7 +7,9 @@
 	      			<!-- <div class="login-signup-title text-blue">
 	      				<h2>{!! trans("common/label.login_signup_title")!!}</h2>
 	      			</div> -->
-	                <div role="tabpanel" class="tab-panel col-lg-8 col-xs-12 col-md-10 col-sm-10">
+	                <div role="tabpanel" class="tab-panel tab-panel-customer col-lg-8 col-xs-12 col-md-10 col-sm-10">
+	                	<div class="section-title">
+	                	</div>
 	                    <ul class="nav nav-tabs" style="font-size: 17px !important;" role="tablist">
 	                        <li role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab" id="head-tab-signing">{!! trans("common/label.login_title")!!}</a>
 
@@ -30,4 +32,7 @@
 	                    </div>
 	                </div>
 	        </div>
+	        <section class="section-avantage ptb-15"> 
+			    @include('front.layout.service-area')
+			</section>
 @stop
