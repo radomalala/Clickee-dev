@@ -1861,13 +1861,15 @@ span {
 }
 .share-social-network{
     padding: 20px 0px 0px 0px;
+    width: 115%;
     text-align: center;
     border-top: 4px solid #044651;
 }
 .share{
     padding: 23px 20px;
     display: inline-block;
-    width: 50px;
+    width: 60px;
+    height: 60px;
     margin: 0% 0 0 5%;
     background-size: 100%;
     transition: background-position-y 0.3s;
