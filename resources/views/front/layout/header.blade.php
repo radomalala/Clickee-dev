@@ -42,7 +42,7 @@
                 <!-- mini-cart-end -->
                 <div class="col-xs-12 pull-right menu-icon-right">
                     <!-- header-top-right-start -->
-                    <div class="header-account text-right col-lg-12">
+                    <div class="header-account text-right col-lg-12 mean-menu">
                         <ul>
                             <li class="dropdown espace-header">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -63,6 +63,14 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <span class="icon icon-panier"></span>   
                                 </a>
+                                <ul class="dropdown-menu-menu">
+                                    <li class="dropdown-menu-border">
+                                        <a class="dropdown-menu-align" href="{!! url(LaravelLocalization::getCurrentLocale().'/blog-list') !!}"> {!! trans('common/label.blog') !!} </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-menu-align" href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation') !!}">{!! trans('common/label.foundation') !!}</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
