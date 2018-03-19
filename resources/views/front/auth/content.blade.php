@@ -32,7 +32,5 @@
 	                    </div>
 	                </div>
 	        </div>
-	        <section class="section-avantage ptb-15"> 
-			    @include('front.layout.service-area')
-			</section>
+	        @include('front.layout.section-avantage')
 @stop
