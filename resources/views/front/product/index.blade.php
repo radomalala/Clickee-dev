@@ -150,17 +150,19 @@
                                 @if($attribute['type']==2)
                                     <?php
                                         $class = (isset($attr_options[$attribute['id']]) && count($attr_options[$attribute['id']])>1) ? "" : "attribute-select-box" ?>
-                                    <select name="attrs[]" data-placeholder="Choose an option…"
-                                            class="col-md-11  {!! $class !!} product-input-select" tabindex="1" style="color: #42838C!important">
-                                        @foreach($attribute['options'] as $options)
-                                            @if(in_array($options->attribute_option_id,$attribute_option_id))
-                                                <?php
-                                                $product_attribute_option = $product->getProductAttributeOption($options->attribute_option_id);
-                                                ?>
-                                                <option value="{!! $product_attribute_option->product_attribute_option_id !!}">{!! $options->getByLanguageid(app('language')->language_id)->option_name !!}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
+                                    
+                                            <select name="attrs[]" data-placeholder="Choose an option…"
+                                                    class="col-md-11  {!! $class !!} product-input-select" tabindex="1" style="color: #42838C!important">
+                                                @foreach($attribute['options'] as $options)
+                                                    @if(in_array($options->attribute_option_id,$attribute_option_id))
+                                                        <?php
+                                                        $product_attribute_option = $product->getProductAttributeOption($options->attribute_option_id);
+                                                        ?>
+                                                        <option value="{!! $product_attribute_option->product_attribute_option_id !!}">{!! $options->getByLanguageid(app('language')->language_id)->option_name !!}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        
                                 @endif
                             </div>
                         @endforeach
@@ -182,7 +184,7 @@
                     </div> -->
                     <!-- start other information -->
                     <div class="other-information">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
                             <!-- a href="javascript://" class="btn btn-block btn-primary btn-lg" id="buy_locally">{!! trans('product.buy_it_locally_txt')." (".getPrice($product->best_price).")" !!}</a -->
 
@@ -209,7 +211,7 @@
 
                             <div class="row add-cart mb-40" id="add-cart">
                                 <!-- <p> {!! trans('product.product_available_with_selected_area') !!}</p> -->
-                                <button type="submit" class="btn btn-clickee-info" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
+                                <button type="submit" class="btn btn-clickee-info col-md-8 col-xs-8 col-sm-8 col-lg-8" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
 
                                 <?php 
                                         $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_gm' : '';
@@ -220,7 +222,7 @@
                                         }                                            
                                     ?>    
 
-                                <a id="add-to-wishlist" class="wishlist_prd_index wG{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"></a>
+                                <a id="add-to-wishlist" class="wishlist_prd_index col-md-3 col-xs-3 col-sm-3 col-lg-3 wG{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"></a>
                             </div>
                             <div class="share-social-network">
                                 <a class="share share-to-facebook"></a>

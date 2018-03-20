@@ -28,7 +28,8 @@
 @endif
 
 {!! Html::style('frontend/css/animate.css') !!}
-
+{!! Html::style('frontend/css/animate.min.css') !!}
+{!! Html::style('frontend/css/bootstrap-dropdownhover.css') !!}
 {!! Html::style('frontend/css/meanmenu.min.css') !!}
 {!! Html::style('frontend/css/nivo-slider.css') !!}
 
