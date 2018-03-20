@@ -1,5 +1,19 @@
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
+
+.wishlist_prd_place_home {
+    margin-left: 70%;
+    margin-top: -26%;
+    width: 18%;
+    height: 11%;
+    border-radius: 25px;
+}
+.wishlist_prd_home {
+    width: 35px;
+    height: 35px;
+    margin-top: 14%;
+    margin-left: 18%;
+}
 .simple-btn-brand{
   width: 48%;
 }
