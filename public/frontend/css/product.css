@@ -97,7 +97,7 @@
   display:block;
   width:21px;
   line-height:19px;
-  background:url("../../images/coeur_bleuOrange.svg") no-repeat;
+  background:url("../../images/icon/all_icons.svg") no-repeat;
   text-decoration:none;
   margin-left: -2.8rem;
   margin-top: 0px;
@@ -110,13 +110,12 @@
 #add-to-wishlist {
     padding: 23px 0px;
     display: inline-block;
-    background:url("../../images/icon/all_icons.svg") no-repeat;
+    background:url("../../images/icon/all_icons.svg") -110px 0px no-repeat;
     width: 60px;
     height: 60px;
     margin: 0% 0 0 5%;
     background-size: 370%;
     transition: background-position-y 0.3s;
-    background-position-x: right -45px;
 }
 /*#add-to-wishlist:hover{
   background-position-y: -64px;
