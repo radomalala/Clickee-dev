@@ -1285,7 +1285,7 @@ div.row {
     border-radius: 0px;
     left: -33.3rem !important;
 }
-.cart-total:after{
+.cart-total:after, .cart-none:after {
   content: "";
   width: 0;
   height: 0;
@@ -1296,7 +1296,7 @@ div.row {
   border-style: solid;
   border-color: #fff transparent;
 }
-.cart-total:before {
+.cart-total:before, .cart-none:before {
     content: "";
     width: 0;
     height: 0;
@@ -1306,6 +1306,10 @@ div.row {
     border-width: 0 7px 7px 5px;
     border-style: solid;
     border-color: #000 transparent;
+}
+.dropdown-menu.cart-none {
+    border-radius: 0px;
+    left: -21.6rem !important;
 }
 .catalog-input-select{
     border-bottom: 2px solid #044651;
