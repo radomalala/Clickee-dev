@@ -1873,6 +1873,7 @@ span {
     margin: 0% 0 0 5%;
     background-size: 100%;
     transition: background-position-y 0.3s;
+    cursor: pointer;
 }
 .share-to-facebook {
     background:url("../images/rs-fb.svg") no-repeat;
@@ -1883,3 +1884,4 @@ span {
 .share-to-google {
     background:url("../images/rs-google.svg") no-repeat;
 }
+

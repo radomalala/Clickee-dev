@@ -110,16 +110,18 @@
 #add-to-wishlist {
     padding: 23px 0px;
     display: inline-block;
-    background:url("../../images/coeur_bleuOrange.svg") no-repeat;
-    width: 50px;
+    background:url("../../images/icon/all_icons.svg") no-repeat;
+    width: 60px;
+    height: 60px;
     margin: 0% 0 0 5%;
-    background-size: 100%;
+    background-size: 370%;
     transition: background-position-y 0.3s;
+    background-position-x: right -45px;
 }
-#add-to-wishlist:hover{
+/*#add-to-wishlist:hover{
   background-position-y: -64px;
   background-size: 100%;
-}
+}*/
 .category-parent-product a, .category-parent-product span{ 
 	font-size: 15px;
 	color: #212B51;
