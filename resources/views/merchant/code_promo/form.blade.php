@@ -88,3 +88,25 @@ $selected_category = [];
 </section>
 
 @stop
+@section('additional-script')
+    <script type="text/javascript">
+        $(function () {
+            $('#date_debut').change(function(){
+                var date_debut = $('#date_debut').val();
+                console.log(date_debut);
+                $('#date_fin').datepicker('update', date_debut);  
+            }); 
+
+            $('#date_fin').change(function(){
+                var date_debut = $('#date_debut').val();
+                var date_fin = $('#date_fin').val();
+                console.log('*****************')
+                console.log(date_debut, date_fin);
+                if(date_fin && date_fin < date_debut){
+                    alert('Choisissez une date antérieure à la date début');
+                    $('#date_fin').datepicker('update', ''); 
+                }
+            });                     
+        });
+    </script>
+@stop
