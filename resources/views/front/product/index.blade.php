@@ -209,7 +209,7 @@
 
                             <div class="row add-cart mb-40" id="add-cart">
                                 <!-- <p> {!! trans('product.product_available_with_selected_area') !!}</p> -->
-                                <button type="submit" class="btn btn-clickee-info col-md-9 col-xs-9 col-sm-9 col-sm-9" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
+                                <button type="submit" class="btn btn-clickee-info col-md-8 col-xs-8 col-sm-8 col-sm-8" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
 
                                 <?php 
                                         $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_gm' : '';
