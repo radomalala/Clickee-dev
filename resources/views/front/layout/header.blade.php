@@ -23,7 +23,7 @@
 </div>
 
 <div class="all-header">
-
+    
     <div class="mean-menu-area" style="margin-bottom: -21px;">
         <div class="container ptb-20">
             <div class="row mt-20" style="line-height: 3.5;">
@@ -32,15 +32,15 @@
                 <!-- logo-start -->
                 <div class="container content-logo">
                     <div class="logo text-center">
-                        <a href="{!! URL::to('/') !!}" class="col-xs-12">
+                        <a href="{!! URL::to('/') !!}">
                             <img src="{!! URL::to('/') !!}/images/logo.svg" alt="logo clickee"/>
                         </a>
                     </div>
                 </div>
                 <!-- logo-end -->
-                
+               
                 <!-- mini-cart-end -->
-                <div class="col-xs-12 pull-right menu-icon-right">
+                <div class="col-xs-4 pull-right menu-icon-right">
                     <!-- header-top-right-start -->
                     <div class="header-account text-right col-lg-12 mean-menu">
                         <ul>
@@ -60,17 +60,10 @@
                                 </a>
                             </li>
                             <li class="dropdown espace-header">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
                                     <span class="icon icon-panier"></span>   
                                 </a>
-                                <ul class="dropdown-menu-menu">
-                                    <li class="dropdown-menu-border">
-                                        <a class="dropdown-menu-align" href="{!! url(LaravelLocalization::getCurrentLocale().'/blog-list') !!}"> {!! trans('common/label.blog') !!} </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-menu-align" href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation') !!}">{!! trans('common/label.foundation') !!}</a>
-                                    </li>
-                                </ul>
+                                @include('front.layout.cart-recent')
                             </li>
                         </ul>
                     </div>

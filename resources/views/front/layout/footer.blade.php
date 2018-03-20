@@ -196,6 +196,8 @@
 <script src="{!! URL::to('/') !!}/frontend/js/jquery.easy-autocomplete.min.js"></script>
 <!-- plugins js -->
 <script src="{!! URL::to('/') !!}/frontend/js/plugins.js"></script>
+<!-- Bootstrap dropdown hover -->
+<script src="{!! URL::to('/') !!}/frontend/js/bootstrap-dropdownhover.js"></script>
 <!-- main js -->
 <script src="{!! URL::to('/') !!}/frontend/js/main.js"></script>
 
@@ -217,7 +219,6 @@
 
 {!! Html::script('frontend/js/search-local-product.js') !!}
 {!! Html::script('frontend/js/wishlist.js') !!}
-{!! Html::script('frontend/js/style.js') !!}
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js?hl={!! app('language')->language_code !!}'></script>
