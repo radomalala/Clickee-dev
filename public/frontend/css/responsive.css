@@ -439,6 +439,13 @@ a#scrollUp {
 .wishlist_prd_index {
     margin-left: -7rem;
 }
+.wishlist_prd_place {
+    margin-top: -31%;
+}
+.wishlist_prd{
+    margin-top: 11%;
+    margin-left: 10%;
+}
 .service-area-register {
     margin-left: -28%;
 }
@@ -977,7 +984,8 @@ a#scrollUp {
   background-size: 170% !important;
 }
 .wishlist_prd {
-    margin-left: 25rem;
+    margin-top: 10%;
+    margin-left: 11%;
 }
 .owl-theme .owl-controls .owl-buttons div {
     margin-left: -8%;
@@ -1022,7 +1030,10 @@ a#scrollUp {
     clear: none !important;
 }
 .wishlist_prd_place {
-    margin-left: -55%;
+    margin-left: 67%;
+    margin-top: -45%;
+    width: 28%;
+    height: 13%;
 }
 .bootstrap-duallistbox-container .buttons {
   width: 95% !important;
@@ -1728,9 +1739,7 @@ a#scrollUp {
     max-height: 70%;
     margin-left: 15%;
 }
-.wishlist_prd {
-    margin-left: 3rem;
-}
+
 .pager-right {
     right: calc(0% + -40px);
 }
@@ -1824,7 +1833,14 @@ a#scrollUp {
 text-align: center !important;
 }
 .wishlist_prd {
-    margin-left: 3rem;
+    margin-top: 18%;
+    margin-left: 16%;
+}
+.wishlist_prd_place {
+    margin-left: 74%;
+    margin-top: -18%;
+    width: 12%;
+    height: 11%;
 }
 .single-service-3 {
   margin-top: 10px;
@@ -1938,9 +1954,7 @@ text-align: center !important;
 .blog-full-width .bloag-entry-area .post-date {
   margin-left: 160px;
 }
-.wishlist_prd {
-    margin-left: -5rem;
-}
+
 .service-area {
     margin-left: 12vw;
 }
@@ -1965,7 +1979,10 @@ text-align: center !important;
   font-size: 13px;
  }
 .wishlist_prd {
-    margin-left: 0rem;
+    margin-left: 17%;
+}
+.wishlist_prd_place {
+    width: 19%;
 }
 .category-grid {
   width: 100% !important;
