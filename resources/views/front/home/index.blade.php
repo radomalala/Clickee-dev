@@ -102,7 +102,7 @@
                             
                             <div class="col-lg-12">
                                 <!-- single-product-start -->
-                                <div class="product-wrapper">
+                                <div class="product-wrapper-home pb-5">
                                     <div class="product-img-connexe product-pic">
                                         <a href="{!! $product->url->target_url !!}">
                                             <img src="{!! url($product->getDefaultCdnImagesPath()) !!}" alt="{!! $product_translation->product_name !!}"
@@ -110,34 +110,22 @@
                                         </a>
                                     </div>
                                     <div class="product-content pt-10">
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <span>{!! 
-                                                (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
-                                                </span>
-                                            </div>
+                                        <!-- whishlist add/remove -->
+                                        <div class="wishlist_prd_place_home">
+                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span>{!! 
+                                            (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
+                                            </span>
                                         </div>
 
-                                        <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a>
+                                        </div>
                                         
-                                        <div class="row">
-                                            <div class="col-lg-5 text-right">
-                                                <span class="new-price">{!! format_price($product->best_price) !!}</span>         
-                                            </div>
-                                            <div class="col-lg-2 text-center">|</div>
-                                            <div class="col-lg-5 pt-2">
-                                                <?php 
-                                                    $average_full = average_rating_product($product->product_id); 
-                                                    $average_empty = 5-average_rating_product($product->product_id);
-                                                ?>
-                                                @for($i=1;$i<=$average_full;$i++)
-                                                    <a class="fullStar_product"></a>
-                                                @endfor
-                                                @for($i=1;$i<=$average_empty;$i++)
-                                                    <a class="emptyStar_product"></a>
-                                                @endfor         
-                                            </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span class="new-price">{!! format_price($product->best_price) !!}</span>      
                                         </div>
                                         
                                     </div>
@@ -145,7 +133,36 @@
                                 <!-- single product end -->
                             </div>
                             @endforeach
-            
+                            <?php for ($i = 1; $i <= 5; $i++) { ?>
+                            <div class="col-lg-12">
+                                <!-- single-product-start -->
+                                <div class="product-wrapper-home pb-5">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="houdini-jacket">
+                                            <img src="{!! URL::to('/') !!}/upload/product/h{!! $i !!}.png" alt="" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content pt-10">
+                                        <!-- whishlist add/remove -->
+                                        <div class="wishlist_prd_place_home">
+                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span>NOM MARQUE</span>
+                                        </div>
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="houdini-jacket">Nom produit</a>
+                                        </div>
+                                        
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span class="new-price">00,00 €</span>         
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single product end -->
+                            </div>
+                            <?php } ?>
                         </div>
                         
                     </div>
@@ -166,7 +183,7 @@
                             
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <!-- single-product-start -->
-                                <div class="product-wrapper">
+                                <div class="product-wrapper-home pb-5">
                                     <div class="product-img-connexe product-pic">
                                         <a href="{!! $product->url->target_url !!}">
                                             <img src="{!! url($product->getDefaultCdnImagesPath()) !!}" alt="{!! $product_translation->product_name !!}"
@@ -174,37 +191,24 @@
                                         </a>
                                     </div>
                                     <div class="product-content pt-10">
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <span>{!! 
-                                                (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
-                                                </span>
-                                            </div>
+                                        <!-- whishlist add/remove -->
+                                        <div class="wishlist_prd_place_home">
+                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span>{!! 
+                                            (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
+                                            </span>
                                         </div>
 
-                                        <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
-
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-5 text-right">
-                                                <span class="new-price">{!! format_price($product->best_price) !!}</span>         
-                                            </div>
-                                            <div class="col-lg-2 text-center">|</div>
-                                            <div class="col-lg-5 pt-2">
-                                                <?php 
-                                                    $average_full = average_rating_product($product->product_id); 
-                                                    $average_empty = 5-average_rating_product($product->product_id);
-                                                ?>
-                                                @for($i=1;$i<=$average_full;$i++)
-                                                    <a class="fullStar_product"></a>
-                                                @endfor
-                                                @for($i=1;$i<=$average_empty;$i++)
-                                                    <a class="emptyStar_product"></a>
-                                                @endfor         
-                                            </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a>
                                         </div>
-
+                                        
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span class="new-price">{!! format_price($product->best_price) !!}</span>      
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <!-- single product end -->
@@ -230,7 +234,7 @@
                             
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <!-- single-product-start -->
-                                <div class="product-wrapper">
+                                <div class="product-wrapper-home pb-5">
                                     <div class="product-img-connexe product-pic">
                                         <a href="{!! $product->url->target_url !!}">
                                             <img src="{!! url($product->getDefaultCdnImagesPath()) !!}" alt="{!! $product_translation->product_name !!}"
@@ -238,36 +242,24 @@
                                         </a>
                                     </div>
                                     <div class="product-content pt-10">
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <span>{!! 
-                                                (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
-                                                </span>
-                                            </div>
+                                        <!-- whishlist add/remove -->
+                                        <div class="wishlist_prd_place_home">
+                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span>{!! 
+                                            (isset($product->brand)) ? ($product->brand->parent_id==null) ? $product->brand->brand_name : $product->brand->parent->brand_name : "&nbsp;" !!}
+                                            </span>
                                         </div>
 
-                                        <p><a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a></p>
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-5 text-right">
-                                                <span class="new-price">{!! format_price($product->best_price) !!}</span>         
-                                            </div>
-                                            <div class="col-lg-2 text-center">|</div>
-                                            <div class="col-lg-5 pt-2">
-                                                <?php 
-                                                    $average_full = average_rating_product($product->product_id); 
-                                                    $average_empty = 5-average_rating_product($product->product_id);
-                                                ?>
-                                                @for($i=1;$i<=$average_full;$i++)
-                                                    <a class="fullStar_product"></a>
-                                                @endfor
-                                                @for($i=1;$i<=$average_empty;$i++)
-                                                    <a class="emptyStar_product"></a>
-                                                @endfor         
-                                            </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="{!! $product->url->target_url !!}">{!! $product_translation->product_name !!}</a>
                                         </div>
-
+                                        
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span class="new-price">{!! format_price($product->best_price) !!}</span>      
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <!-- single product end -->

@@ -1,10 +1,5 @@
 @extends('front.layout.master')
-@section('additional-css')
-    {!! Html::style('frontend/css/catalog.css') !!}
-    {!! Html::style('frontend/css/style.css') !!}
-    {!! Html::style('frontend/css/responsive.css') !!}
-    {!! Html::style('css/style_custom.css') !!}
-@stop  
+ 
 @section('content')
     <div class="product-area ptb-10 product-list"> <!-- ptb-20 inter-ligne entre categorie des produits et recherche -->
         <div class="category-url" data-url="{!! url(LaravelLocalization::getCurrentLocale().'/search?q=') !!}"></div>
@@ -145,7 +140,7 @@
                         <!-- Afindra anatin if ao ambony ref manao fonctionnalité-->
                         <div class="product_all">
                             <span> Vous avez vu {!! $products->total() !!} articles sur {!! $products->lastItem() !!} </span>
-                            <p class="pt-30 pb-50">
+                            <p class="pt-30 pb-20">
                                 <button type="button" class="btn btn-clickee-default">CHARGEZ PLUS</button>
                             </p>
                         </div>

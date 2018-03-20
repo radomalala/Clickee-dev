@@ -160,10 +160,10 @@ related-products-active
   $(".related-products-active").owlCarousel({
       autoPlay: false, 
 	  slideSpeed:2000,
-	  pagination:false,
-	  navigation:true,	 
+	  pagination:true,
+	  navigation:false,	 
 	  autoHeight: false, 
-      items : 4,
+      items : 5,
 	  /* transitionStyle : "fade", */    /* [This code for animation ] */
 	  navigationText:["<a class='prev' data-toggle='tooltip'>&nbsp;</a>","<a class='next' data-toggle='tooltip'>&nbsp;</a>"],
       itemsDesktop : [1199,3],
