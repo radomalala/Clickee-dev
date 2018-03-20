@@ -46,9 +46,9 @@ if (!function_exists('formatDate')) {
     function format_price($amount)
     {
         if ($amount == 0) {
-            return '$0.00';
+            return '0.00 <i class="fa fa-eur" aria-hidden="true"></i>';
         } else {
-            return '$' . number_format((float)$amount, 2);
+            return number_format((float)$amount, 2). ' <i class="fa fa-eur" aria-hidden="true"></i>';
         }
     }
 
