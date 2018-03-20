@@ -566,42 +566,31 @@
 
                         <div class="col-lg-12">
                         <!-- single-product-start -->
-                        <div class="product-wrapper">
+                        <div class="product-wrapper-home">
                             <div class="product-img-connexe product-pic">
                                 <a href="{!! $related_product->url->target_url !!}">
                                     <img src="{!! url($related_product->getDefaultCdnImagesPath()) !!}" alt="{!! $related_product_translation->product_name !!}"
                                          class=""/>
                                 </a>
                             </div>
-                            <div class="product-content">
-                                
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <span>{!! 
-                                        (isset($related_product->brand)) ? ($related_product->brand->parent_id==null) ? $related_product->brand->brand_name : $related_product->brand->parent->brand_name : "&nbsp;" !!}
-                                        </span>
-                                    </div>
-                                    <div class="wishlist_btn">
-                                        <?php 
-                                         $wishlist_del = (in_array($related_product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
-                                            if ($is_user_login) {
-                                                $idU = \Auth::user()->user_id;
-                                            }else{
-                                                $idU = '';
-                                            }                                            
-                                        ?>
-                                        <a class="wishlist_prd_index w{!! $related_product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $related_product->product_id !!}','{!! $idU !!}');"> &nbsp; </a>
-                                    </div>
+                            <div class="product-content pt-10">                                
+                                <!-- whishlist add/remove -->
+                                <div class="wishlist_prd_place_home">
+                                    <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span>{!! 
+                                    (isset($related_product->brand)) ? ($related_product->brand->parent_id==null) ? $related_product->brand->brand_name : $related_product->brand->parent->brand_name : "&nbsp;" !!}
+                                    </span>
                                 </div>
 
-                                <h4><a href="{!! $related_product->url->target_url !!}">{!! $related_product_translation->product_name !!}</a></h4>
-                                @if($related_product->original_price != $related_product->best_price)
-                                    <span class="old-price">({!! getPercentage($related_product->original_price,$related_product->best_price) !!})</span>
-                                    <span class="old-price"><del>{!! format_price($related_product->original_price) !!}</del></span>
-                                    <span class="new-price">{!! format_price($related_product->best_price) !!}</span>
-                                @else
-                                    <span class="old-price">{!! format_price($related_product->original_price) !!}</span>
-                                @endif
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <a href="{!! $related_product->url->target_url !!}">{!! $product_translation->product_name !!}</a>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span class="new-price">{!! format_price($related_product->original_price) !!}</span>      
+                                </div>
                             </div>
                         </div>
                         <!-- single-product-end -->

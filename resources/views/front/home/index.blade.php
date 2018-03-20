@@ -133,9 +133,9 @@
                                 <!-- single product end -->
                             </div>
                             @endforeach
-                            <?php for ($i = 1; $i <= 5; $i++) { ?>
+                            <!-- <?php for ($i = 1; $i <= 5; $i++) { ?>
                             <div class="col-lg-12">
-                                <!-- single-product-start -->
+                                
                                 <div class="product-wrapper-home pb-5">
                                     <div class="product-img-connexe product-pic">
                                         <a href="houdini-jacket">
@@ -143,7 +143,7 @@
                                         </a>
                                     </div>
                                     <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
+                                        
                                         <div class="wishlist_prd_place_home">
                                             <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
                                         </div>
@@ -160,9 +160,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- single product end -->
+                                
                             </div>
-                            <?php } ?>
+                            <?php } ?> -->
                         </div>
                         
                     </div>
