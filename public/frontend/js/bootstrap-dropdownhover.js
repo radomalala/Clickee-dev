@@ -34,7 +34,7 @@
   Dropdownhover.TIMEOUT
 
   Dropdownhover.DEFAULTS = {
-    animations : ['fadeInDown', 'fadeInRight', 'fadeInUp', 'fadeInLeft'],
+    animations : ['pulse', 'fadeInRight', 'fadeInUp', 'fadeInLeft'],
   }
 
   // Opens dropdown menu when mouse is over the trigger element
