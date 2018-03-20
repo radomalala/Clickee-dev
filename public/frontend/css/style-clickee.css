@@ -1419,6 +1419,11 @@ div.row {
     padding: 6px 12px;
     border-bottom: 4px solid #044651;
 }
+.product-pic-catalog {
+    /*height: 205px;
+    width: 205px;*/
+    font-weight: bold;
+}
 /*category end*/
 
 /*page produit start*/
