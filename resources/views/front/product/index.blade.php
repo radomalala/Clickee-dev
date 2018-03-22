@@ -336,14 +336,8 @@
                         <div class="product-tab-inner">
                             <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                                 <li class="active"><a href="#description"
-                                                      data-toggle="tab" class="description-toggle">{!!
-                                        trans("product.description")!!} </a></li>
-                                <li><a href="#reviews" data-toggle="tab" class="review-toggle">{!!
-                                        trans("product.reviews")!!}</a></li>
-                                @if(count($product->video)>1)        
-                                <li><a href="#video-press" data-toggle="tab" class="video-toggle">{!!
-                                        trans("product.video-press")!!}</a></li>
-                                @endif        
+                                                      data-toggle="tab" class="description-toggle">Description </a></li>
+                                <li><a href="#reviews" data-toggle="tab" class="review-toggle">Avis clients</a></li>      
                             </ul>
                             
                             <div id="productTabContent" class="tab-content height-content">
@@ -374,38 +368,6 @@
                                             @endif
 
                                         @endforeach
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="video-press">
-                                    <div class="std">
-                                        <div class="product-tabs-content-inner clearfix">
-                                            
-                                            <div class="content-video">
-                                            @foreach($product->video as $video)
-                                                @if(videoType($video->video_url)=='youtube')
-                                                <div class="col-md-12 mr-b-17 youtube-video">
-                                                    <p><strong>{!! $video->video_title !!}</strong></p>
-                                                    <?php $video_key = parse_youtube($video->video_url);?>
-                                                    <div class="embed-responsive embed-responsive-16by9">
-                                                      <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/{!! $video_key !!}"></iframe>
-                                                    </div>
-                                                </div>
-                                                @endif
-                                            @endforeach                               
-                                            @foreach($product->video as $video)
-                                                @if(videoType($video->video_url)!='youtube')      
-                                                <div class="col-md-12 center">
-                                                    <div class="press-title">
-                                                        <a class="video-link" href="{!! $video->video_url !!}" target="_blank"> {!! $video->video_title !!}
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                @endif
-                                            @endforeach
-                                            </div>
-                                            
-                                        </div>
                                     </div>
                                 </div>
 

@@ -1032,9 +1032,13 @@ div.row {
     border-bottom: none;
     z-index: 1;
 }
+.product-tab-inner>.nav-tabs>li:nth-child(2)>a, .product-tab-inner>.nav-tabs>li:nth-child(2)>a:hover, .product-tab-inner>.nav-tabs>li:nth-child(2)>a:focus {
+    text-align: left;
+    padding-left: 15% !important;
+}
 .product-tab-inner>.nav-tabs>li:nth-child(2).active>a, .product-tab-inner>.nav-tabs>li:nth-child(2).active>a:hover, .product-tab-inner>.nav-tabs>li:nth-child(2).active>a:focus {
     border-top: 5px solid #044651 !important;
-    border-right: 5px solid #044651 !important;
+    border-right: 0px solid white;
     border-bottom: 0px solid white;
     border-left: 5px solid #044651 !important;
     border-bottom: none;
@@ -1054,11 +1058,25 @@ div.row {
     border-right: 0px solid white;
     border-top: 0px solid white;
 }
+
+element.style {
+}
+.nav-tabs.product-tabs>li>a {
+    line-height: 1.42857143;
+    padding: 8px 0px;
+    background: #fff;
+    font-size: 17px;
+}
 .product-tab-inner>.nav-tabs>li>a, .product-tab-inner>.nav-tabs>li>a:hover {
     border-bottom: 5px solid #044651;
     border-left: 0px solid white;
     border-right: 0px solid white;
+    text-align: right;
     border-top: 0px solid white;
+    padding-right: 15%;
+    color: #044651;
+    font-weight: 400;
+    padding-right: 15% !important;
 }
 .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a, .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a:hover, .tab-panel-customer>.nav-tabs>li:nth-child(2).active>a:focus, .tab-panel-merchant>.nav-tabs>li:nth-child(2).active>a, .tab-panel-merchant>.nav-tabs>li:nth-child(2).active>a:hover, .tab-panel-merchant>.nav-tabs>li:nth-child(2).active>a:focus {
     border-top: 5px solid #044651;
