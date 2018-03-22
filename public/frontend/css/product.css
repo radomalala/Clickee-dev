@@ -239,7 +239,8 @@
     box-shadow:  0 0 0 0.8px #212b52;
 }
 #product-detail-tab.nav-tabs>li {
-    width: 33.1%;
+    width: 32.1%;
+    margin: 0 -6px;
 }
 
 #btn_details{
