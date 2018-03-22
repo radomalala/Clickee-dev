@@ -119,7 +119,7 @@
                 </div>
                 <!-- start attribute -->
                 <div class="row">
-                    <div class="col-lg-12 pb-10 pt-0 p-lr-0 vcenter mt-0 mb-10 mr-l-20">
+                    <div class="col-lg-12 pb-10 pt-0 p-lr-0 vcenter mt-0 mr-l-20">
                         @foreach($attribute_value as $attribute)
                             <div class="color-box">
                                 <label class="color-label" style="color: #42838C; ">{!! $attribute['name'] !!} : </label> 
@@ -212,7 +212,7 @@
                                 <span>{!! trans('product.on_internet') !!}</span>
                             </div -->
 
-                            <div class="row add-cart mb-40" id="add-cart">
+                            <div class="row add-cart mb-20" id="add-cart">
                                 <!-- <p> {!! trans('product.product_available_with_selected_area') !!}</p> -->
                                 <button type="submit" class="btn btn-clickee-info col-md-8 col-xs-8 col-sm-8 col-lg-8" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
 
