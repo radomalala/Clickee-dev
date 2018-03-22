@@ -585,6 +585,7 @@ ul {
     position: relative;
     overflow: hidden;
     margin-left: auto;
+    border: 4px solid #ffffff;
     margin-right: auto;
     background: #ffffff;
     border-radius: 0px;
@@ -593,8 +594,8 @@ ul {
   border: 4px solid #65bb9f;
 }
 .product-pic {
-    height: 205px;
-    width: 205px;
+    height: 191px;
+    width: 195px;
     font-weight: bold;
     /*border: 4px solid #044651;*/
 }
@@ -644,7 +645,7 @@ ul {
     display: block;
     background-size: 379%;
     background-position: -70px;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-left: 9%;
 }
 .owl-theme .owl-controls .owl-page span {
@@ -1428,8 +1429,8 @@ div.row {
 
 /*page produit start*/
 .product-img-connexe a img {
-    max-width: 204px !important;
-    max-height: 204px !important;
+    max-width: 190px !important;
+    max-height: 200px !important;
     transition: width .3s;
 }
 .product-img-connexe {
