@@ -1,6 +1,8 @@
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
-
+.share-social-network {
+    width: 76% !important;
+}
 .wishlist_prd_place_home {
     margin-left: 68%;
     margin-top: -33%;
@@ -479,6 +481,12 @@ a#scrollUp {
  
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+#add-cart {
+    width: 100% !important;
+}
+.share-social-network {
+    width: 76% !important;
+}
 .section-avantage-content {
     margin-bottom: 10px;
 }
@@ -1762,13 +1770,13 @@ a#scrollUp {
   height: 160px;
 }
 .product-big-image .flexslider-thumb {
-  transform: rotate(0deg);
+  transform: rotate(0deg) !important;
 }
 .contain-product-info {
   margin-top: 40%;
 }
 .product-big-image .flexslider-thumb li img {
-  transform: rotate(0deg);
+  transform: rotate(0deg) !important;
 }
 .image-thumb {
     /* margin-left: -30%; */
@@ -1864,6 +1872,9 @@ a#scrollUp {
 /* end max-width 767px */ 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .share-social-network {
+    width: 94% !important;
+}
 .wishlist_prd_place_home {
     margin-left: 78%;
     margin-top: -38%;
