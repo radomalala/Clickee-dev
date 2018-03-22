@@ -547,7 +547,7 @@
             <p style="line-height: 0;">{!! trans('product.find_better_deal') !!} <a href="{!! url('contact-us') !!}">{!! trans('product.share_with_us') !!}</a></p>
         </div> -->
         <div class="tabs-more-details">
-            <input type="button" name="btn_details" class="btn-clickee-info" value="{!! trans('product.more_details') !!}">
+            <input type="button" id="btn_details" class="btn-clickee-info" value="{!! trans('product.more_details') !!}">
         </div>
 
         <!-- related products -->

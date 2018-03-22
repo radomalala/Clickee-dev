@@ -611,210 +611,7 @@ body {
   background:#fff;
   color:#333;
 }
-/*----------------------------------------*/
-/*  2.5  mean-menu-area
-/*----------------------------------------*/
-.mean-menu {
-    background: #044651 none repeat scroll 0 0;
-    border-top: 1px groove #fff;
-    margin-bottom: -27px;
-    margin-top: 20px;
-}
-.mean-menu ul li {
-  display: inline-block;
-  position:relative;
-}
-.mean-menu ul li > a {
-  color: #eeeeee;
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  padding: 10px 36px 7px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.3s ease 0s;
-}
-.mean-menu ul li:hover > a,.fixed-header-area .mean-menu-area .mean-menu ul li:hover a,.fixed-header-area .mean-menu-area .mean-menu ul li  ul.mega-menu li a:hover,.fixed-header-area .mean-menu-area .mean-menu ul li  ul.sub-menu li:hover a,.fixed-header-area .mean-menu-area .mean-menu ul li  ul.sub-menu li ul.sub-menu2 li a:hover {
-  color:#f6ac33;
-}
-.mean-menu ul li a i {
-  margin-left: 5px;
-}
-/*----------------------------------------*/
-/*  2.6.1  sub-menu
-/*----------------------------------------*/
-.mean-menu ul li ul.sub-menu {
-  background: #fff none repeat scroll 0 0;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  left: 0;
-  opacity: 0;
-  padding: 15px 0;
-  position: absolute;
-  top: 135%;
-  transition: all 0.3s ease 0s;
-  visibility: hidden;
-  width: 190px;
-  z-index: -999;
-}
-.mean-menu ul li:hover ul.sub-menu{
-  opacity:1;
-  visibility:visible;
-  top:100%;
-  z-index:999;
-}
-.mean-menu ul li ul.sub-menu li{
-  position:relative;
-  display:block;
-}
-.mean-menu ul li ul.sub-menu li a {
-  color: #333;
-  font-family: "Roboto",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  padding: 10px 22px;
-  text-transform: none;
-  transition: all 0.3s ease 0s;
-  text-transform: capitalize;
-}
-.mean-menu ul li ul.sub-menu li:hover a,.mean-menu ul li ul.sub-menu li > ul.sub-menu2 li a:hover{
-  color:#59b210;
-}
-.mean-menu ul li ul.sub-menu li a i {
-  font-size: 15px;
-  padding-left: 80px;
-}
-.mean-menu ul li ul.sub-menu li > ul.sub-menu2 {
-  left: 90%;
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition:.3s;
-}
-.mean-menu ul li ul.sub-menu li:hover > ul.sub-menu2{
-  opacity:1;
-  visibility:visible;
-  left:100%;
-}
-.mean-menu ul li ul.sub-menu li > ul.sub-menu2 li a{
-  color: #333;
-}
-/*----------------------------------------*/
-/*  2.7.2  mega-menu
-/*----------------------------------------*/
-.mean-menu ul li.static {
-  position: static;
-}
-.mean-menu ul li > ul.mega-menu {
-  background: #fff none repeat scroll 0 0;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  left: 0;
-  padding: 20px 0;
-  position: absolute;
-  top: 114%;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 99999;
-  transition:.3s;
-}
-.mean-menu ul li > ul.mega-menu2 {
-  left: 22px;
-  width: 280px;
-}
-.mean-menu ul li:hover > ul.mega-menu {
-  opacity:1;
-  visibility:visible;
-  top:100%;
-}
-.mean-menu ul li > ul.mega-menu li {
-  float: left;
-  width: 25%;
-  padding: 0 40px;
-}
-.mean-menu ul li > ul.mega-menu2 li {
-  width: 50%;
-  padding: 0 20px;
-}
-.mean-menu ul li > ul.mega-menu li a {
-  color: #333;
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 13px;
-  padding: 5px 0;
-  position: relative;
-  text-align: left;
-  text-transform: none;
-  transition: all 0.3s ease 0s;
-}
-.mean-menu ul li > ul.mega-menu li a span {
-  border: 1px solid #aaa;
-  border-radius: 18px;
-  color: #59b210;
-  font-size: 12px;
-  left:50%;
-  padding: 0 10px;
-  position: absolute;
-  top: -7px;
-  text-transform:uppercase;
-}
-.mean-menu ul li > ul.mega-menu li a span.color {
-  color: #f5ae58;
-  left: 65%;
-}
-.mean-menu ul li > ul.mega-menu li a span.color2 {
-  color: #ff3d49;
-  left: 60%;
-  top: -2px;
-}
-.mean-menu ul li > ul.mega-menu li a span.color3 {
-  color: #ff3d49;
-  left: 40%;
-  top: -1px;
-}
-.mean-menu ul li > ul.mega-menu li a:hover  span.color {
-  border-color:#f5ae58;
-}
-.mean-menu ul li > ul.mega-menu li a:hover span.color2{
-  border-color:#FF3D49;
-}
-.mean-menu ul li > ul.mega-menu li a:hover span.color3{
-  border-color:#ff3d49;
-}
-.mean-menu ul li > ul.mega-menu li a.title {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 12px 0;
-  padding: 10px 0;
-  position: relative;
-  text-transform: uppercase;
-}
-.mean-menu ul li > ul.mega-menu li a.title::before {
-  background: #aaa none repeat scroll 0 0;
-  bottom: 0;
-  content: "";
-  height: 1px;
-  left: 0;
-  position: absolute;
-  width: 40%;
-}
-.mean-menu ul li > ul.mega-menu li a:hover{
-  color:#59b210;
-  padding-left:5px;
-}
-.mean-menu ul li > ul.mega-menu li a:hover span{
-  border-color:#59b210;
-}
-.mean-menu ul li > ul.mega-menu li a.title:hover{
-  padding-left:0;
-}
-.mean-menu ul li > ul.mega-menu li a:first-child:hover{
-  padding-left:0;
-}
-.mean-menu ul li > ul.mega-menu2 li a:first-child:hover{
-  padding-left:5px;
-}
-.mean-menu ul li > ul.mega-menu li a img{}
+
 /*----------------------------------------*/
 /*  3.  section-element-area
 /*----------------------------------------*/
@@ -1638,7 +1435,7 @@ margin: 0 0 0 0 !important;
 /*----------------------------------------*/
 /*  13.1 footer-top-area
 /*----------------------------------------*/
-.retour-en-haut{
+/*.retour-en-haut{
   position: relative;
   font-size: 15px;
   height: 46px;
@@ -1649,7 +1446,7 @@ margin: 0 0 0 0 !important;
 }
 .retour-en-haut:hover{
   color: #f7ac33;
-}
+}*/
 .footer-top-area {
   /*background: #044651 none repeat scroll 0 0;
   border-top: 1px solid #D2D2CD;
@@ -5390,6 +5187,9 @@ input[name="memoty"] {
   font-weight: 500;
   border-radius: 10px;
   font-size: 18px;
+}
+.footer-box form {
+  margin-top: 10%;
 }
 .connect-social-media div button i {
   font-size: 25px;
