@@ -871,7 +871,7 @@ margin: 0px;
 .product-big-image .flexslider-thumb li img {
     cursor: pointer;
     -moz-user-select: none;
-    border: 1px #212b52 solid;
+    /*border: 3px #65BB9F solid;*/
     padding: 0px;
     /* height: 213px; */
     transform: rotate(-90deg);
@@ -879,7 +879,7 @@ margin: 0px;
     margin: 0px 0 0 8px;
 }
 .product-big-image .flexslider-thumb li img.active {
-    border: 1px #f7ac33 solid;
+    border: 4px #65BB9F solid;
 }
 .google-plus{
     margin-top: -5px;
