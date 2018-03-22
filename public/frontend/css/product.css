@@ -28,7 +28,7 @@
 	font-weight: 600;
 }
 #auto-contain > div.parent {
-	border: 1px solid #a9b0ca;
+	/*border: 1px solid #a9b0ca;*/
 }
 .main-image:hover {
   cursor: url("https://www.alternateeve.com/images/icon/LOUPE.svg"), auto;

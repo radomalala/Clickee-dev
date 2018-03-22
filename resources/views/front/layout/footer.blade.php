@@ -171,6 +171,7 @@
 
 @endif
 {!! Html::script('frontend/js/search-local-product.js') !!}
+{!! Html::script('frontend/js/product_detail.js') !!}
 {!! Html::script('frontend/js/jquery.flexslider.js') !!}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>

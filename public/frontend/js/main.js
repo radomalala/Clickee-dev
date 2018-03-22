@@ -166,7 +166,7 @@ related-products-active
       items : 5,
 	  /* transitionStyle : "fade", */    /* [This code for animation ] */
 	  navigationText:["<a class='prev' data-toggle='tooltip'>&nbsp;</a>","<a class='next' data-toggle='tooltip'>&nbsp;</a>"],
-      itemsDesktop : [1199,3],
+      itemsDesktop : [1199,4],
 	  itemsDesktopSmall : [980,3],
 	  itemsTablet: [768,2],
 	  itemsMobile : [479,1],

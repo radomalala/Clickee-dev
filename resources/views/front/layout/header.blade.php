@@ -40,9 +40,9 @@
                 <!-- logo-end -->
                
                 <!-- mini-cart-end -->
-                <div class="col-xs-4 pull-right menu-icon-right">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-right menu-icon-right">
                     <!-- header-top-right-start -->
-                    <div class="header-account text-right col-lg-12 mean-menu">
+                    <div class="header-account text-right col-lg-12 col-md-12 col-sm-12 col-xs-12 mean-menu">
                         <ul>
                             <li class="dropdown espace-header">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">

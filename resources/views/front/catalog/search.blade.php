@@ -66,7 +66,7 @@
                                     <?php for ($i = 1; $i <= 8; $i++) { ?>
                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                            <div class="product-wrapper mb-30">
-                                                <div class="product-img product-pic img_btn">
+                                                <div class="product-img product-pic-catalog img_btn">
                                                     <img src="{!! URL::to('/') !!}/upload/product/p{!! $i !!}.png" alt="" class="" />
                                                 </div>
                                                 <div class="product-content mt-10">

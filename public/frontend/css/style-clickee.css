@@ -585,6 +585,7 @@ ul {
     position: relative;
     overflow: hidden;
     margin-left: auto;
+    border: 4px solid #ffffff;
     margin-right: auto;
     background: #ffffff;
     border-radius: 0px;
@@ -593,8 +594,8 @@ ul {
   border: 4px solid #65bb9f;
 }
 .product-pic {
-    height: 250px;
-    width: 263px;
+    height: 191px;
+    width: 195px;
     font-weight: bold;
     /*border: 4px solid #044651;*/
 }
@@ -630,11 +631,11 @@ ul {
 }
 .wishlist_prd_place_home {
     position: absolute;
-    margin-left: 73%;
+    margin-left: 75%;
     margin-top: -32%;
     background: #ffffff;
     width: 20%;
-    height: 11%;
+    height: 13%;
     border-radius: 25px;
 }
 .wishlist_prd_home {
@@ -644,7 +645,7 @@ ul {
     display: block;
     background-size: 379%;
     background-position: -70px;
-    margin-top: 9%;
+    margin-top: 5%;
     margin-left: 9%;
 }
 .owl-theme .owl-controls .owl-page span {
@@ -1450,4 +1451,24 @@ div.row {
     padding: 6px 12px;
     border-bottom: 4px solid #044651;
 }
+.product-pic-catalog {
+    /*height: 205px;
+    width: 205px;*/
+    font-weight: bold;
+}
 /*category end*/
+
+/*page produit start*/
+.product-img-connexe a img {
+    max-width: 190px !important;
+    max-height: 200px !important;
+    transition: width .3s;
+}
+.product-img-connexe {
+    position: relative;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+/*page produit end*/

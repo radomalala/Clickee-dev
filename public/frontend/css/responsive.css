@@ -2,17 +2,17 @@
 @media (min-width: 992px) and (max-width: 1169px) {
 
 .wishlist_prd_place_home {
-    margin-left: 70%;
-    margin-top: -26%;
-    width: 18%;
-    height: 11%;
+    margin-left: 68%;
+    margin-top: -33%;
+    width: 20%;
+    height: 14%;
     border-radius: 25px;
 }
 .wishlist_prd_home {
     width: 35px;
     height: 35px;
-    margin-top: 14%;
-    margin-left: 18%;
+    margin-top: 8%;
+    margin-left: 11%;
 }
 .simple-btn-brand{
   width: 48%;
@@ -1864,6 +1864,13 @@ a#scrollUp {
 /* end max-width 767px */ 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+.wishlist_prd_place_home {
+    margin-left: 78%;
+    margin-top: -38%;
+}
+.wishlist_prd_home {
+    margin-left: 8%;
+}
 .simple-btn-brand{
   width: 98%;
 }
