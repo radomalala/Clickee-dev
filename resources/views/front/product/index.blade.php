@@ -111,7 +111,7 @@
                             @for($i=1;$i<=$average_rating;$i++)
                                 <a title="1" class="star fullStar"></a>
                             @endfor
-                            @for($i=5;$i>=$average_rating;$i--)
+                            @for($i=4;$i>=$average_rating;$i--)
                                 <a title="1" class="star"></a>
                             @endfor
                             <span style="font-size: 15px;">&nbsp;&nbsp;{!! (count($reviews) > 0) ? "(".count($reviews). " avis)" : "" !!}</span>
