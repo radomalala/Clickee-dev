@@ -1,5 +1,10 @@
 @extends('front.layout.master')
-
+@section('additional-css')
+    {!! Html::style('frontend/css/style.css') !!}
+    {!! Html::style('frontend/css/style-clickee.css') !!}
+    {!! Html::style('frontend/css/responsive.css') !!}
+    {!! Html::style('css/style_custom.css') !!}
+@stop   
 @section('content')
 
     <div class="">

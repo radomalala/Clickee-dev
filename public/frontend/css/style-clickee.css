@@ -1278,8 +1278,8 @@ div.row {
     border: 1px solid #489082;
     overflow: hidden;
     margin-bottom: 4px;
-    width: 95%;
-    margin: 0 auto;
+    width: 350px;
+    margin: 0 6px;
     margin-top: 5px;
 }
 .shopping-cart .cart-list .cart-img {
@@ -1296,12 +1296,12 @@ div.row {
 .shopping-cart .cart-list .cart-info {
     float: left;
     text-align: left;
-    width: 45%;
+    width: 160px;
     padding-left: 0px;
     line-height: 1;
     padding-top: 11px;
     color: #212b52;
-    margin-left: 10%;
+    margin-left: 35px;
 }
 .shopping-cart .cart-list .cart-info h4:first-child {
   margin-bottom:0;
@@ -1324,7 +1324,7 @@ div.row {
     margin-top: 27px;
     margin-left: -25px;
     font-weight: 600;
-    width: 180%;
+    width: 245px;
 }
 .shopping-cart .mini-cart-total {
   width: 100%;
@@ -1336,7 +1336,7 @@ div.row {
 }
 .shopping-cart .cart-list .pro-del {
   float: right;
-  width: 10%;
+  width: 20px;
   margin-top: -20px;
 }
 .shopping-cart .cart-list .pro-del a i {
