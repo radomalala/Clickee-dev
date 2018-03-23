@@ -93,7 +93,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown menu-large"> 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> FEMME </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>FEMME</span></a>
 
                     <ul class="menu-femme dropdown-menu megamenu row">
                         <li class="container ptb-10">
@@ -131,7 +131,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large"> 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> HOMME </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span> HOMME</span></a>
 
                     <ul class="menu-homme dropdown-menu megamenu row">
                         <li class="container ptb-10">
@@ -169,7 +169,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large"> 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> ENFANT </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>ENFANT</span></a>
 
                     <ul class="menu-enfant dropdown-menu megamenu row">
                         <li class="container ptb-10">
@@ -207,7 +207,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> BEAUTÉ/SANTÉ </a>    
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "><span>BEAUTÉ/SANTÉ</span> </a>    
                     <ul class="menu-beaute dropdown-menu megamenu row ">
                         <li class="container ptb-10">
                             
@@ -215,7 +215,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large"> 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> ÉPICERIE FINE </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>ÉPICERIE FINE</span> </a>
 
                     <ul class="menu-epicerie dropdown-menu megamenu row">
                         <li class="container ptb-10">
@@ -253,7 +253,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> INTÉRIEUR </a>   
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "><span>INTÉRIEUR</span></a>   
                     <ul class="menu-interieur dropdown-menu megamenu row ">
                         <li class="container ptb-10">
                             
@@ -261,7 +261,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> LOISIR </a>  
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "><span>LOISIR</span></a>  
                     <ul class="menu-loisir dropdown-menu megamenu row ">
                         <li class="container ptb-10">
                             
@@ -269,7 +269,7 @@
                     </ul>
                 </li>
                 <li class="dropdown menu-large">    
-                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "> IDÉES CADEAUX </a>   
+                    <a href="# " class="dropdown-toggle " data-toggle="dropdown "><span>IDÉES CADEAUX</span></a>   
                     <ul class="menu-cadeaux dropdown-menu megamenu row ">
                         <li class="container ptb-10">
                             
