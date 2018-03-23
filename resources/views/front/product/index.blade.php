@@ -540,7 +540,7 @@
                             </div>
                             <div class="product-content pt-10">                                
                                 <!-- whishlist add/remove -->
-                                <div class="wishlist_prd_place_home" style="height: 12%;">
+                                <div class="wishlist_prd_place_home" style="height: 12%;width: 24%;">
                                     <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

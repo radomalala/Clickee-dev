@@ -61,8 +61,15 @@
                             </li>
                             <li class="dropdown espace-header">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-                                    <span class="icon icon-panier"></span>   
+                                    <?php 
+                                        $class = ($cart_count > 0) ? "icon-panier-not-empty" : "icon-panier";
+                                    ?>
+                                    <span class="icon {!! $class !!}"></span>   
                                 </a>
+                                <?php
+                                    $nombre = ($cart_count < 10) ? '0'.$cart_count : $cart_count;
+                                ?>
+                                <span class="sell_pannier">{!! $nombre !!}</span>
                                 @include('front.layout.cart-recent')
                             </li>
                         </ul>

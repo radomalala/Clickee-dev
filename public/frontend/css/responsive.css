@@ -6,14 +6,14 @@
 .wishlist_prd_place_home {
     margin-left: 68%;
     margin-top: -33%;
-    width: 20%;
+    width: 24%;
     border-radius: 25px;
 }
 .wishlist_prd_home {
     width: 35px;
     height: 35px;
-    margin-top: 8%;
-    margin-left: 11%;
+    margin-top: 14%;
+    margin-left: 12%;
 }
 .simple-btn-brand{
   width: 48%;
@@ -1895,11 +1895,12 @@ a#scrollUp {
     width: 94% !important;
 }
 .wishlist_prd_place_home {
-    margin-left: 78%;
+    margin-left: 69%;
+    width: 27%;
     margin-top: -38%;
 }
 .wishlist_prd_home {
-    margin-left: 8%;
+    margin-left: 11%;
 }
 .simple-btn-brand{
   width: 98%;
@@ -2049,6 +2050,9 @@ text-align: center !important;
 }
 
 @media (max-width: 480px) {
+.wishlist_prd_place_home{
+  width: 20%;
+}
 .section-avantage-content {
     height: 14.3rem;
     margin-bottom: 10px;

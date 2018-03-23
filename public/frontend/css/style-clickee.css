@@ -159,19 +159,47 @@ body {
     width: 35px;
     height: 35px;
     display: block;
-    background-size: 400%;
+    /*background-size: 400%;*/
 }
 .icon-search {
-    background-position: 2px;
+    background-position-x: 0px;
 }
 .icon-user {
-    background-position: -35px;
+    background-position-x: -35px;
 }
 .icon-heart {
-    background-position: -73px;
+    background-position-x: -71px;
 }
 .icon-panier {
-    background-position: -108px;
+    background-position-x: -106px;
+}
+.icon-search:hover {
+    background-position-y: -36px;
+}
+.icon-user:hover {
+    background-position-y: -36px;
+}
+.icon-heart:hover {
+    background-position-y: -36px;
+}
+.icon-panier:hover {
+    background-position-y: -36px;
+}
+.icon-heart-not-empty {
+  background: url(../../images/icon/all_icons.svg) no-repeat;
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-position-x: -71px;
+  background-position-y: -36px;
+}
+.icon-panier-not-empty {
+  background: url(../../images/icon/all_icons.svg) no-repeat;
+  width: 35px;
+  height: 35px;
+  display: block;  
+  background-position-x: -106px;
+  background-position-y: -36px;
 }
 .icon-shop {  
     background: url(../../images/icon/shop.svg) no-repeat;
@@ -182,6 +210,14 @@ body {
     display: inline-block;
     background-size: 100%;
     background-position-y: 4px;
+}
+.sell_pannier {
+    color: #65bb9f;
+    font-weight: bold;
+    font-size: 17px;
+    position: absolute;
+    margin-left: -26px;
+    margin-top: -25px;
 }
 .btn-clickee-primary {
     padding: 10px 15px;
@@ -620,11 +656,11 @@ ul {
 }
 .wishlist_prd_place_home {
     position: absolute;
-    margin-left: 75%;
-    margin-top: -32%;
+    margin-left: 66%;
+    margin-top: -38%;
     background: #ffffff;
-    width: 20%;
-    height: 11%;
+    width: 25%;
+    height: 13%;
     border-radius: 25px;
 }
 .wishlist_prd_home {
@@ -632,10 +668,14 @@ ul {
     width: 35px;
     height: 35px;
     display: block;
-    background-size: 379%;
-    background-position: -70px;
-    margin-top: 7%;
-    margin-left: 9%;
+    /* background-size: 379%; */
+    cursor: pointer;
+    background-position-x: -71px;
+    margin-top: 15%;
+    margin-left: 12%;
+}
+.wishlist_prd_home:hover {
+  background-position-y: -36px; 
 }
 .owl-theme .owl-controls .owl-page span {
     width: 16px;
