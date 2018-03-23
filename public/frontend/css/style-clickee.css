@@ -1518,4 +1518,108 @@ element.style {
     vertical-align: middle;
     text-align: center;
 }
+.contain-product-info {
+  margin-left: 6%;
+}
+.price {
+  font-weight: 600;
+}
+.color-box .color {
+    display: inline-block;
+    margin-left: 5px;
+}
+.color-box label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #212b52;
+    text-transform: uppercase;
+}
+.attribute-select-box{ -moz-appearance: none;-webkit-appearance: none; appearance: none;padding: 5px}
+.vcenter{display:inline-block;float: none;vertical-align: middle}
+.product-input-select{
+    border: 3px solid #044651;
+    padding: 10px 55px 10px 10px;
+    margin-left: 10px;
+    color: rgb(0, 107, 121);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: white;
+    background: url("../../images/arrow_select.svg") white no-repeat calc(100% - 10px) !important;
+    text-indent: 0.01px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.btn-clickee-info {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #044651;
+}
+.btn-clickee-info:hover {
+    color: #65bb9f;
+    border-color: #65bb9f;
+    background-color: #fff !important;
+}
+.tabs-more-details{
+    position: relative;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 35px;
+}
+.tabs-more-details > input {
+  font-size: 17px;
+  border: 0px;  
+  outline: none;
+}
+.tabs-more-details > input:hover{
+    border: 1px solid #65bb9f;
+    border-color: #65bb9f;
+    background-color: #fff !important;
+}
+.share-social-network{
+    padding: 20px 0px 0px 0px;
+    width: 115%;
+    text-align: center;
+    border-top: 4px solid #044651;
+}
+.share{
+    padding: 23px 20px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0% 0 0 5%;
+    background-size: 100%;
+    transition: background-position-y 0.3s;
+    cursor: pointer; 
+}
+.share-to-facebook {
+    background:url("../../images/rs-fb.svg") no-repeat;
+    background-size: 100%;
+}
+.share-to-twitter {
+    background:url("../../images/rs-twiter.svg") no-repeat;
+    background-size: 100%;
+}
+.share-to-google {
+    background:url("../../images/rs-google.svg") no-repeat;
+    background-size: 100%;
+}
+ #add-cart {
+    width: 130%;
+ }
+ #add-to-wishlist {
+    padding: 23px 0px;
+    display: inline-block;
+    background:url("../../images/icon/all_icons.svg") -110px 0px no-repeat;
+    width: 60px;
+    height: 60px;
+    margin: 0% 0 0 5%;
+    background-size: 370%;
+    transition: background-position-y 0.3s;
+}
 /*page produit end*/

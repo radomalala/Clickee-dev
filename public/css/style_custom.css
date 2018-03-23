@@ -112,10 +112,7 @@
     float: left;
 }
 */
-.color-box .color {
-    display: inline-block;
-    margin-left: 5px;
-}
+
 
 .price-info {
     text-align: center;
@@ -1547,9 +1544,9 @@ table .notification-btn{padding: 4px;}
 .cat-tree h2.title { margin-bottom: 15px!important;}
 .btn-twitter { margin-bottom: 11px!important;/*padding: 3px 12px!important;*//*margin-left: 10px;*/}
 .twitter-sharing{margin-right: 10px;}
-.vcenter{display:inline-block;float: none;vertical-align: middle}
+
 #share-buttons{margin-top: 15px;}
-.attribute-select-box{ -moz-appearance: none;-webkit-appearance: none; appearance: none;padding: 5px}
+
 .home-product { min-height: 108px;}
 .morecontent span {  display: none;  }
 .morelink {  display: block;  }
@@ -1562,18 +1559,16 @@ table .notification-btn{padding: 4px;}
     color: #fff;
     border: 1px solid white;
 }
-.add-cart .add-to-cart:active{
+/*.add-cart .add-to-cart:active{
     border-radius: 50px !important;
     border: 1px red;
  }
- #add-cart {
-    width: 130%;
- }
+ */
  /*#add-cart a:hover{
     background: white !important;
     border-color: #f4a137;
  }*/
-.add-cart .add-to-cart:first-child {
+/*.add-cart .add-to-cart:first-child {
     background-color: #212b52 !important;
     border: 1px solid transparent;
     color: #fff;
@@ -1585,12 +1580,12 @@ table .notification-btn{padding: 4px;}
     margin-right: 1%;
     margin-top: -14% !important;
     font-size: 15px;
-}
-.add-cart .add-to-cart:hover {
+}*/
+/*.add-cart .add-to-cart:hover {
     color: #f8ac31;
     border: 1px solid #f7ac33;
     background-color: #ffffff !important;
-}
+}*/
 .share-community{text-align: left}
 .share-community p{margin: 0;padding: 0}
 .product_description { margin-top: 50px!important;}
@@ -1815,78 +1810,5 @@ span {
     outline: none;
     background: url(../../images/FLECHE.svg) white no-repeat calc(100% - 10px) !important;
     background-size: 6% !important;
-}
-
-.product-input-select{
-    border: 3px solid #044651;
-    padding: 10px 55px 10px 10px;
-    margin-left: 10px;
-    color: rgb(0, 107, 121);
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background-color: white;
-    background: url("../images/arrow_select.svg") white no-repeat calc(100% - 10px) !important;
-    text-indent: 0.01px;
-    width: -webkit-fill-available;
-    width: -moz-available;
-}
-.btn-clickee-info {
-    color: white;
-    padding: 10px 30px;
-    border-radius: 0px;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
-    background-color: #044651;
-}
-.btn-clickee-info:hover {
-    color: #65bb9f;
-    border-color: #65bb9f;
-    background-color: #fff !important;
-}
-.tabs-more-details{
-    position: relative;
-    text-align: center;
-    padding-top: 4px;
-    padding-bottom: 35px;
-}
-.tabs-more-details > input {
-  font-size: 17px;
-  border: 0px;  
-  outline: none;
-}
-.tabs-more-details > input:hover{
-    border: 1px solid #65bb9f;
-    border-color: #65bb9f;
-    background-color: #fff !important;
-}
-.share-social-network{
-    padding: 20px 0px 0px 0px;
-    width: 115%;
-    text-align: center;
-    border-top: 4px solid #044651;
-}
-.share{
-    padding: 23px 20px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 0% 0 0 5%;
-    background-size: 100%;
-    transition: background-position-y 0.3s;
-    cursor: pointer; 
-}
-.share-to-facebook {
-    background:url("../images/rs-fb.svg") no-repeat;
-    background-size: 100%;
-}
-.share-to-twitter {
-    background:url("../images/rs-twiter.svg") no-repeat;
-    background-size: 100%;
-}
-.share-to-google {
-    background:url("../images/rs-google.svg") no-repeat;
-    background-size: 100%;
 }
 

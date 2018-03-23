@@ -59,7 +59,7 @@
 <div class="dropdown-menu cart-none" data-animations="pulse fadeInLeft fadeInUp fadeInRight">
     <div class="shopping-cart text-center">
         <h4 class="ct mt-20 mb--10">VOTRE PANIER EST VIDE!</h4>
-        <span class="al">Continuer à shoppez</span>                    
+        <span class="al">Continuez à shopper</span>                    
     </div>
 </div>
 
