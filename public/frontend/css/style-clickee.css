@@ -217,7 +217,7 @@ body {
     font-size: 17px;
     position: absolute;
     margin-left: -26px;
-    margin-top: -25px;
+    margin-top: -4.2rem;
 }
 .btn-clickee-primary {
     padding: 10px 15px;
@@ -1482,9 +1482,12 @@ element.style {
     height: 35px;
     display: block;
     background-size: 400%;
-    background-position: -73px;
-    margin-top: 15%;
+    background-position-x: -70px;
+    margin-top: 17%;
     margin-left: 15%;
+}
+.wishlist_prd:hover {
+  background-position-y: -36px; 
 }
 .product-content h4 {
     margin: 0 0 0 0 !important;
