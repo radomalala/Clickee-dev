@@ -89,7 +89,7 @@
                 <a class="nav-title" id="mieux_note-tab" data-toggle="tab" href="#mieux_note" role="tab" aria-controls="mieux_note" aria-selected="false">MIEUX NOTÉS</a>
             </li>
         </ul>
-        <div class="tab-content section-marque-align" id="productTabContent">
+        <div class="tab-content" id="productTabContent">
             <!-- start coup de coeur -->
             <div class="tab-pane fade in active" id="coup_de_coeur" role="tabpanel" aria-labelledby="coup_de_coeur-tab">
                 <div class="related-product-container">
