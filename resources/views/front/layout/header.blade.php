@@ -69,7 +69,7 @@
                                 <?php
                                     $nombre = ($cart_count < 10) ? '0'.$cart_count : $cart_count;
                                 ?>
-                                <span class="sell_pannier">{!! $nombre !!}</span>
+                                <span class="sell_pannier">{!! ($nombre == '00') ? "" : $nombre; !!}</span>
                                 @include('front.layout.cart-recent')
                             </li>
                         </ul>
