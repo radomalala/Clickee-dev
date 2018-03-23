@@ -96,7 +96,38 @@
                     @if(!empty($special_products['heart_stroke']) && count($special_products['heart_stroke'])>0)
                     <div class="related-products-area ptb-30">
                         <div class="related-products-active">
-                
+                            
+                            <?php for ($i = 1; $i <= 5; $i++) { ?>
+                            <div class="col-lg-12">
+                                
+                                <div class="product-wrapper-home pb-5">
+                                    <div class="product-img-connexe product-pic">
+                                        <a href="houdini-jacket">
+                                            <img src="{!! URL::to('/') !!}/upload/product/h{!! $i !!}.png" alt="" class="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content pt-10">
+                                        
+                                        <div class="wishlist_prd_place_home">
+                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span>NOM MARQUE</span>
+                                        </div>
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="houdini-jacket">Nom produit</a>
+                                        </div>
+                                        
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span class="new-price">00,00 €</span>         
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <?php } ?>
+                            
                             @foreach($special_products['heart_stroke'] as $product)
                             <?php $product_translation=$product->getByLanguageId(app('language')->language_id);?>
                             
@@ -132,217 +163,8 @@
                                 </div>
                                 <!-- single product end -->
                             </div>
-                            @endforeach
-                            <div class="col-lg-12">
-                                <!-- single-product-start -->
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/24141_NPTR.jpg" alt="Veste Houdini" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span style="font-family: Roboto, sans-serif;">Patagonia
-                                            </span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Veste Houdini</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price" style="font-family: Roboto, sans-serif;">119.99 <i class="fa fa-eur" aria-hidden="true"></i></span>      
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-start -->
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/24141_NPTR.jpg" alt="Veste Houdini" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span style="font-family: Roboto, sans-serif;">Patagonia
-                                            </span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Veste Houdini</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price" style="font-family: Roboto, sans-serif;">119.99 <i class="fa fa-eur" aria-hidden="true"></i></span>      
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-start -->
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/24141_NPTR.jpg" alt="Veste Houdini" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span style="font-family: Roboto, sans-serif;">Patagonia
-                                            </span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Veste Houdini</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price" style="font-family: Roboto, sans-serif;">119.99 <i class="fa fa-eur" aria-hidden="true"></i></span>      
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-start -->
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/24141_NPTR.jpg" alt="Veste Houdini" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span style="font-family: Roboto, sans-serif;">Patagonia
-                                            </span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Veste Houdini</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price" style="font-family: Roboto, sans-serif;">119.99 <i class="fa fa-eur" aria-hidden="true"></i></span>      
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-start -->
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/24141_NPTR.jpg" alt="Veste Houdini" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span style="font-family: Roboto, sans-serif;">Patagonia
-                                            </span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Veste Houdini</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price" style="font-family: Roboto, sans-serif;">119.99 <i class="fa fa-eur" aria-hidden="true"></i></span>      
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-start -->
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="https://db-alternateeve-csi7douue.stackpathdns.com/upload/product/24141_NPTR.jpg" alt="Veste Houdini" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        <!-- whishlist add/remove -->
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span style="font-family: Roboto, sans-serif;">Patagonia
-                                            </span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Veste Houdini</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price" style="font-family: Roboto, sans-serif;">119.99 <i class="fa fa-eur" aria-hidden="true"></i></span>      
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                            </div>
-                            <!-- <?php for ($i = 1; $i <= 5; $i++) { ?>
-                            <div class="col-lg-12">
-                                
-                                <div class="product-wrapper-home pb-5">
-                                    <div class="product-img-connexe product-pic">
-                                        <a href="houdini-jacket">
-                                            <img src="{!! URL::to('/') !!}/upload/product/h{!! $i !!}.png" alt="" class="">
-                                        </a>
-                                    </div>
-                                    <div class="product-content pt-10">
-                                        
-                                        <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span>NOM MARQUE</span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <a href="houdini-jacket">Nom produit</a>
-                                        </div>
-                                        
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <span class="new-price">00,00 €</span>         
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <?php } ?> -->
+                            @endforeach                            
+                            
                         </div>
                         
                     </div>
