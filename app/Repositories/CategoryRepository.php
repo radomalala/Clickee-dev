@@ -28,8 +28,8 @@ class CategoryRepository implements CategoryRepositoryInterface
 		$categories_array = [];
 		foreach ($categories as $index => $category) {
 			$parent_ids = [];
-			$categories_array[$index]['title'] = $category->english->category_name;
-			$categories_array[$index]['english_title'] = $category->english->category_name;
+			/*$categories_array[$index]['title'] = $category->english->category_name;
+			$categories_array[$index]['english_title'] = $category->english->category_name;*/
 			$categories_array[$index]['french_title'] = (!empty($category->french->category_name)) ? $category->french->category_name :$category->english->category_name;
 			$categories_array[$index]['key'] = $category->category_id;
 			$categories_array[$index]['target_url'] = $category->url->target_url;
@@ -67,8 +67,8 @@ class CategoryRepository implements CategoryRepositoryInterface
 		$categories_array = [];
 		if (count($category->subCategory) > 0) {
 			foreach ($category->subCategory as $index => $sub_cat) {
-				$categories_array[$index]['title'] = $sub_cat->english->category_name;
-				$categories_array[$index]['english_title'] = $sub_cat->english->category_name;
+				/*$categories_array[$index]['title'] = $sub_cat->english->category_name;
+				$categories_array[$index]['english_title'] = $sub_cat->english->category_name;*/
 				$categories_array[$index]['french_title'] = (!empty($sub_cat->french->category_name)) ? $sub_cat->french->category_name :$sub_cat->english->category_name;
 				$categories_array[$index]['key'] = $sub_cat->category_id;
 				$categories_array[$index]['target_url'] = $sub_cat->url->target_url;
@@ -93,13 +93,13 @@ class CategoryRepository implements CategoryRepositoryInterface
 		$this->model->created_by = auth()->guard('admin')->user()->admin_id;
 		$this->model->save();
 
-		if(!empty($input['en_category_name']) || !empty($input['en_description'])){
+		/*if(!empty($input['en_category_name']) || !empty($input['en_description'])){
 			$category_translation = new CategoryTranslation();
 			$category_translation->category_name = $input['en_category_name'];
 			$category_translation->description = $input['en_description'];
 			$category_translation->language_id = '1';
 			$this->model->translation()->save($category_translation);
-		}
+		}*/
 
 		if(!empty($input['fr_category_name']) || !empty($input['fr_description'])){
 			$category_translation = new CategoryTranslation();
