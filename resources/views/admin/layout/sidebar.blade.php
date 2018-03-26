@@ -82,11 +82,11 @@
                                 href="{!! URL::to('/admin/page') !!}"><i class="fa fa-circle-o"></i> Gestion de page</a>
                     </li>
                     @endif
-                    <!-- @if(check_user_access(['faq.index', 'faq.create', 'faq.edit']))
+                    @if(check_user_access(['faq.index', 'faq.create', 'faq.edit']))
                     <li class="treeview {{ set_active(['admin/faq','admin/faq/*']) }}">
-                        <a href="{!! url('admin/faq') !!}"><i class="fa fa-circle-o"></i><span> FAQ Manager</span></a>
+                        <a href="{!! url('admin/faq') !!}"><i class="fa fa-circle-o"></i><span> Gestion de FAQ </span></a>
                     </li>
-                    @endif -->
+                    @endif
                     <!-- @if(check_user_access('coupon'))
                     <li class="{{ set_active(['admin/coupon','admin/coupon/*']) }}"><a href="{!! route('coupon') !!}"><i
                                     class="fa fa-circle-o"></i> Coupon Manager</a></li>
