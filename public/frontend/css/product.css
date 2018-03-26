@@ -1,11 +1,4 @@
-.color ul li img.active {
-    border: 1px solid #a5a5a5;
-    padding: 4px !important;
-}
-.color ul li img:hover {
-  border: 1px solid #b5b5b5;
-  cursor: pointer;
-}
+
 #for-product{
   margin-top: 5px;
     margin-left: -73px;
@@ -15,50 +8,18 @@
   position: relative;
   background: #ffffff;
 }
-.color-box label {
-    margin-left: 10px;
-    font-size: 16px;
-    color: #212b52;
-    text-transform: uppercase;
-}
+
 .product-wrapper {
   border-radius: 8px !important;
 }
-.price {
-	font-weight: 600;
-}
+
 #auto-contain > div.parent {
 	/*border: 1px solid #a9b0ca;*/
 }
-.main-image:hover {
-  cursor: url("https://www.alternateeve.com/images/icon/LOUPE.svg"), auto;
-}
-.zoomImg:hover {
- cursor: url("https://www.alternateeve.com/images/icon/LOUPE.svg"), auto; 
-}
-#auto-contain > div.parent > .panzoom {
-  height: 585px;
-  vertical-align: middle;
-  display: table-cell; 
-} 
-#add-to-wishlist {
-    margin-left: -72px;
-    width: 114.8%;
-}
-.section-title{
-	text-align: center;
-	color: #212B52;	
-	}
-.section-title h2 {
-  padding: 6px 0;
-  font-weight: bold;
-  font-size: 27px;
-	text-transform: uppercase;
-}
-.related-product-container{
-	background: #D2D2CD;
-  position: relative;
-}
+
+
+
+
 .tabs-details{
   position: relative;
   background: #ffffff;
@@ -66,12 +27,7 @@
   padding-top: 4px;
   padding-bottom: 35px;
 }
-.tabs-limit {
-  height: 11rem;
-  margin-top: -10.5rem;
-  background-image: linear-gradient(transparent,white);
-  filter: blur(1px) opacity(84.5%);
-}
+
 .tabs-details > input {
   background: #ffffff;
   border: 0px;
@@ -83,39 +39,18 @@
 .tabs-details > input:hover {
   color: #f6ac33;
  }
-.height-content{
-  height:45rem;
-  overflow:hidden;
-}
+
 .reviews-height{
   height: 425px;
 }
 .product-content{
 	height: 11.5rem;
 }
-.wishlist_prd_index {
-  display:block;
-  width:21px;
-  line-height:19px;
-  background:url("../../images/icon/all_icons.svg") no-repeat;
-  text-decoration:none;
-  margin-left: -2.8rem;
-  margin-top: 0px;
-  transition: background-position-y 0.3s;
-  cursor: pointer;
-}
+
 .wishlist_prd_index:hover{
   background-position-y: -27px;
 }
-#add-to-wishlist {
-    padding: 22px 0px;
-    display: inline-block;
-    background: url(../../images/icon/all_icons.svg) -89px 0px no-repeat;
-    width: 46px;
-    margin: 0% 0 0 5%;
-    background-size: 393%;
-    transition: background-position-y 0.3s;
-}
+
 #add-to-wishlist:hover{
   background-position-y: -44px;
 }
@@ -123,15 +58,9 @@
 	font-size: 15px;
 	color: #212B51;
 }
-.contain-product-info {
-  margin-left: 6%;
-}
-.image-thumb {
-  margin-left: -30%;
-}
-#auto-contain {
-  margin-left: 30%;
-  }
+
+
+
 .owl-theme .owl-controls {
     margin-top: 10px !important;
 }
@@ -162,16 +91,8 @@
   background: #f6ac33;
   text-decoration:none;
   }
-.more {
-	color: #212B52 !important;
-	font-size: 15px !important;
-	font-weight: 400;
-	line-height: 2.5;
-}
-.product-tabs-content-inner p {
-	color: #212B52 !important;
-	font-size: 15px;
-}
+
+
 .review-login {
     text-align: center;
     color: #212B52;
@@ -236,10 +157,7 @@
     border: 5.5px solid #fff !important;
     box-shadow:  0 0 0 0.8px #212b52;
 }
-#product-detail-tab.nav-tabs>li {
-    width: 50%;
-    margin: 0 -6px;
-}
+
 .table-padding{
   padding-top: 4%;
   padding-bottom: 4%;

@@ -1876,4 +1876,96 @@ img {max-width:100%;height:auto}
 .coeur_gm{
     background-position-y: -44px !important;
 }
+
+.image-thumb {
+  margin-left: -30%;
+}
+#auto-contain {
+  margin-left: 30%;
+}
+#auto-contain > div.parent > .panzoom {
+  height: 585px;
+  vertical-align: middle;
+  display: table-cell; 
+} 
+.contain-product-info {
+  margin-left: 6%;
+}
+.price {
+  font-weight: 600;
+}
+.color-box label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #212b52;
+    text-transform: uppercase;
+}
+.wishlist_prd_index {
+  line-height:19px;
+  text-decoration:none;
+  margin-left: -2.8rem;
+  margin-top: 0px;
+  cursor: pointer;
+}
+#add-to-wishlist {
+    padding: 22px 0px;
+    display: inline-block;
+    background: url(../../images/icon/all_icons.svg) -89px 0px no-repeat;
+    width: 46px;
+    margin: 0% 0 0 5%;
+    background-size: 393%;
+    transition: background-position-y 0.3s;
+}
+#product-detail-tab.nav-tabs>li {
+    width: 50%;
+    margin: 0 -6px;
+}
+.height-content{
+  height:45rem;
+  overflow:hidden;
+}
+.more {
+  color: #212B52 !important;
+  font-size: 15px !important;
+  font-weight: 400;
+  line-height: 2.5;
+}
+.product-tabs-content-inner p {
+  color: #212B52 !important;
+  font-size: 15px;
+}
+.tabs-limit {
+  height: 11rem;
+  margin-top: -10.5rem;
+  background-image: linear-gradient(transparent,white);
+  filter: blur(1px) opacity(84.5%);
+};
+.related-product-container{
+  background: #D2D2CD;
+  position: relative;
+}
+.section-title{
+  text-align: center;
+  color: #212B52; 
+  }
+.section-title h2 {
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+.main-image:hover {
+  cursor: url("https://www.alternateeve.com/images/icon/LOUPE.svg"), auto;
+}
+.zoomImg:hover {
+ cursor: url("https://www.alternateeve.com/images/icon/LOUPE.svg"), auto; 
+}
+.color ul li img.active {
+    border: 1px solid #a5a5a5;
+    padding: 4px !important;
+}
+.color ul li img:hover {
+  border: 1px solid #b5b5b5;
+  cursor: pointer;
+}
 /*for wishlist end*/
