@@ -1016,6 +1016,9 @@ ul {
     color: #65bb9f !important;
     background-color: #044651 !important;
 }
+.navbar-nav>li>a:hover span {
+  border-bottom: 1px solid #65bb9f;
+}
 /*end menu*/
 
 /*register merchant start*/
