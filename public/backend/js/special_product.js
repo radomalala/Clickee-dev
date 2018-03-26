@@ -29,6 +29,7 @@ var $document = $(document);
                                 if ($.trim(req.term) == value.product_name) {
                                     count = 1;
                                 }
+                                console.log(value.product_name);
                                 suggestions_test.label = value.product_name;
                                 suggestions_test.value = value.product_id;
                                 suggestions.push(suggestions_test);
