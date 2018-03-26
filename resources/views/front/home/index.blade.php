@@ -66,7 +66,7 @@
                     </a>
                     <div class="banner-caption-right-bottom text-center">
                             <h1>TENDANCES DÉCO</h1>
-                            <h1>qui a dit old school ?</h1>   
+                            <h1>qui a dit old school?</h1>
                     </div> -->
                 </div>    
             </div>
