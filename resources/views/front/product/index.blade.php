@@ -94,7 +94,7 @@
                         <img src="{!! ($product->brand->parent_id==null) ? $product->brand->getCdnImagePath() : $product->brand->parent->getCdnImagePath() !!}">
                     </div>
                     <h2 class="mr-l-15">{!! $product_translation->product_name !!}</h2>
-                    <div class="col-lg-12 price">
+                    <div class="price">
                         @if($product->original_price != $product->best_price)
                                             <span class="new-price fs-25">{!! format_price($product->best_price) !!}</span>
                                              <span class="old-price fs-25">&nbsp;<del>{!! format_price($product->original_price) !!}</del></span>
@@ -104,7 +104,7 @@
                                         @endif
                     </div>
                 </div>
-                <div class="review-total mt-60 ml-15 ptb-10">   
+                <div class="review-total ptb-10">   
                         <div class="stars_review" style="overflow: show !important;">
                             @for($i=1;$i<=$average_rating;$i++)
                                 <a title="1" class="star fullStar"></a>
