@@ -17,7 +17,7 @@ class AttributeSetRepository implements AttributeSetRepositoryInterface
 
 	public function getAll()
 	{
-		return $this->model->with('admin','attributes','attributes.english')->orderBy('attribute_set_id', 'desc')->get();
+		return $this->model->with('admin','attributes','attributes.english','attributes.french')->orderBy('attribute_set_id', 'desc')->get();
 	}
 
 	public function save($input)

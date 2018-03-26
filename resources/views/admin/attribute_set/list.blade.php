@@ -41,7 +41,7 @@
                                         <td>{!! $attribute_set->set_name !!}</td>
                                         <td>
                                             @foreach($attribute_set->attributes as $attribute)
-                                                <span class="badge bg-green mr-5">{!! $attribute->english->attribute_name !!}</span>
+                                                <span class="badge bg-green mr-5">{!! $attribute->french->attribute_name !!}</span>
                                             @endforeach
                                         </td>
                                         <td>{!! $attribute_set->admin->first_name.' '.$attribute_set->admin->last_name !!}</td>
