@@ -5,8 +5,8 @@
         var wG_class = '.wG' + idP;
         /*var url = 'wishlist/' + id_product;*/
         if ($(wG_class).hasClass('coeur_gm') || $(w_class).hasClass('coeur_pm')) {
-            /*var urlid = base_url + language_code + '/wishlist/findid/' + idP +'§'+ idU;*/
-            var urlid = 'wishlist/findid/' + idP +'§'+ idU;
+            var urlid = base_url + language_code + '/wishlist/findid/' + idP +'§'+ idU;
+            /*var urlid = 'wishlist/findid/' + idP +'§'+ idU;*/ /*si local*/
             
             $.ajax({
             type: 'GET',
@@ -18,8 +18,8 @@
             success: function (response, status) { 
                 console.log("Toute response : "+response);
                 console.log(response[1]);
-                /*var urld = base_url + language_code + '/wishlist/remove/' + response[1];*/
-                var urld = 'wishlist/remove/' + response[1];
+                var urld = base_url + language_code + '/wishlist/remove/' + response[1];
+                /*var urld = 'wishlist/remove/' + response[1];*/ /*si local*/
 
                 $.ajax({
                     type: 'GET',
@@ -50,8 +50,8 @@
         });        
 
         }else{
-            /*var url = base_url + language_code + '/wishlist/' + idP;*/
-            var url = 'wishlist/' + idP;            
+            var url = base_url + language_code + '/wishlist/' + idP;
+            /*var url = 'wishlist/' + idP;*/ /*si local*/            
             $.ajax({
                 type: 'GET',
                 url: url,
