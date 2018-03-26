@@ -184,7 +184,7 @@
                          <input type="text" class="form-control-product-input col-lg-2" id="qty" name="qty" value="1">
                     </div> -->
                     <!-- start other information -->
-                    <div class="other-information">
+                    <div class="other-information row">
                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
                             <!-- a href="javascript://" class="btn btn-block btn-primary btn-lg" id="buy_locally">{!! trans('product.buy_it_locally_txt')." (".getPrice($product->best_price).")" !!}</a -->
@@ -539,7 +539,18 @@
                             <div class="product-content pt-10">                                
                                 <!-- whishlist add/remove -->
                                 <div class="wishlist_prd_place_home" style="height: 12%;width: 24%;">
-                                    <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+
+                                    <?php 
+                                     $wishlist_del = (in_array($related_product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
+                                        if ($is_user_login) {
+                                            $idU = \Auth::user()->user_id;
+                                        }else{
+                                            $idU = '';
+                                        }                                            
+                                    ?>
+
+                                    <a class="wishlist_prd_home w{!! $related_product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $related_product->product_id !!}','{!! $idU !!}');"> &nbsp; </a>
+                                    
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <span>{!! 

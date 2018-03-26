@@ -455,11 +455,11 @@ a#scrollUp {
     margin-left: -7rem;
 }
 .wishlist_prd_place {
-    margin-top: -31%;
+    /*margin-top: -31%;*/
 }
 .wishlist_prd{
-    margin-top: 11%;
-    margin-left: 10%;
+    margin-left: 11% !important;
+    margin-top: 15% !important;
 }
 .service-area-register {
     margin-left: -28%;
@@ -1005,8 +1005,8 @@ a#scrollUp {
   background-size: 170% !important;
 }
 .wishlist_prd {
-    margin-top: 10%;
-    margin-left: 11%;
+    margin-top: 17% !important;
+    margin-left: 13% !important;
 }
 .owl-theme .owl-controls .owl-buttons div {
     margin-left: -8%;
@@ -1051,10 +1051,10 @@ a#scrollUp {
     clear: none !important;
 }
 .wishlist_prd_place {
-    margin-left: 67%;
-    margin-top: -45%;
-    width: 28%;
-    height: 13%;
+    width: 29% !important;
+    height: 16% !important;
+    margin-left: 66% !important;
+    margin-top: -41% !important;
 }
 .bootstrap-duallistbox-container .buttons {
   width: 95% !important;
@@ -1891,6 +1891,12 @@ a#scrollUp {
 /* end max-width 767px */ 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .sell_coeur {
+    margin-left: -11px;
+}
+.sell_pannier {
+    margin-left: -10px;
+}
   .share-social-network {
     width: 94% !important;
 }
@@ -1922,14 +1928,13 @@ a#scrollUp {
 text-align: center !important;
 }
 .wishlist_prd {
-    margin-top: 18%;
-    margin-left: 16%;
+    margin-left: 22% !important;
+    margin-top: 24% !important;
 }
 .wishlist_prd_place {
-    margin-left: 74%;
-    margin-top: -18%;
-    width: 12%;
-    height: 9%;
+    margin-left: 79% !important;
+    width: 15% !important;
+    margin-top: -23% !important;
 }
 .single-service-3 {
   margin-top: 10px;
@@ -2050,6 +2055,12 @@ text-align: center !important;
 }
 
 @media (max-width: 480px) {
+    .sell_coeur {
+    margin-left: -10px;
+}
+.sell_pannier {
+    margin-left: -9px;
+}
 .wishlist_prd_place_home{
   width: 20%;
 }
@@ -2071,11 +2082,10 @@ text-align: center !important;
   font-size: 13px;
  }
 .wishlist_prd {
-    margin-left: 17%;
+    /*margin-left: 17%;*/
 }
 .wishlist_prd_place {
-    width: 19%;
-    height: 12%;
+    height: 13% !important;
 }
 .category-grid {
   width: 100% !important;

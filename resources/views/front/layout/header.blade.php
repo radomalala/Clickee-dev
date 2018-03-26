@@ -56,8 +56,19 @@
                             </li>
                             <li class="dropdown espace-header">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="icon icon-heart"></span>   
+                                    <?php 
+                                        $classc = (count_wishlist() > 0) ? "icon-heart-not-empty" : "icon-heart";
+                                    ?>
+                                    <span class="icon {!! $classc !!}"></span>   
                                 </a>
+                                <?php
+                                    $wishlist_count = count_wishlist();
+                                    if($wishlist_count>0)
+                                        $nbr = ($wishlist_count < 10) ? '0'.$wishlist_count : $wishlist_count;
+                                    else
+                                        $nbr = "";
+                                ?>  
+                                <span class="sell_coeur">{!! $nbr !!}</span>
                             </li>
                             <li class="dropdown espace-header">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">

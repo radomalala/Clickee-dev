@@ -71,8 +71,20 @@
                                                 </div>
                                                 <div class="product-content mt-10">
                                                     <!-- whishlist add/remove -->
-                                                    <div class="wishlist_prd_place">
+                                                    <!-- <div class="wishlist_prd_place">
                                                         <a class="wishlist_prd" onclick=""> &nbsp; </a>
+                                                    </div> -->
+                                                    <div class="wishlist_prd_place_home wishlist_prd_place">
+                                                    <?php 
+                                                     /*$wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
+                                                        if ($is_user_login) {
+                                                            $idU = \Auth::user()->user_id;
+                                                        }else{
+                                                            $idU = '';
+                                                        }*/                                            
+                                                    ?>
+
+                                                    <a class="wishlist_prd_home wishlist_prd" onclick=""> &nbsp; </a>
                                                     </div>
                                                     <span>NOM MARQUE</span>
                                                     <h4>

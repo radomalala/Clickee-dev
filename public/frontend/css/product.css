@@ -108,19 +108,17 @@
   background-position-y: -27px;
 }
 #add-to-wishlist {
-    padding: 23px 0px;
+    padding: 22px 0px;
     display: inline-block;
-    background:url("../../images/icon/all_icons.svg") -110px 0px no-repeat;
-    width: 60px;
-    height: 60px;
+    background: url(../../images/icon/all_icons.svg) -89px 0px no-repeat;
+    width: 46px;
     margin: 0% 0 0 5%;
-    background-size: 370%;
+    background-size: 393%;
     transition: background-position-y 0.3s;
 }
-/*#add-to-wishlist:hover{
-  background-position-y: -64px;
-  background-size: 100%;
-}*/
+#add-to-wishlist:hover{
+  background-position-y: -44px;
+}
 .category-parent-product a, .category-parent-product span{ 
 	font-size: 15px;
 	color: #212B51;
@@ -189,9 +187,9 @@
   margin-top: 7px;
 }
 .sell_coeur {
-  -moz-margin-top : 0px !important;
+  /*-moz-margin-top : 0px !important;
   -o-margin-top : -10px !important;
-  margin-top: -10px !important;
+  margin-top: -10px !important;*/
 }
 .review-make{
   color: #ffffff;

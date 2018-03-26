@@ -143,7 +143,18 @@
                                     <div class="product-content pt-10">
                                         <!-- whishlist add/remove -->
                                         <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+
+                                            <?php 
+                                             $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
+                                                if ($is_user_login) {
+                                                    $idU = \Auth::user()->user_id;
+                                                }else{
+                                                    $idU = '';
+                                                }                                            
+                                            ?>
+
+                                            <a class="wishlist_prd_home w{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"> &nbsp; </a>
+
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <span>{!! 
@@ -195,7 +206,16 @@
                                     <div class="product-content pt-10">
                                         <!-- whishlist add/remove -->
                                         <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                            <?php 
+                                             $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
+                                                if ($is_user_login) {
+                                                    $idU = \Auth::user()->user_id;
+                                                }else{
+                                                    $idU = '';
+                                                }                                            
+                                            ?>
+
+                                            <a class="wishlist_prd_home w{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"> &nbsp; </a>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <span>{!! 
@@ -246,7 +266,16 @@
                                     <div class="product-content pt-10">
                                         <!-- whishlist add/remove -->
                                         <div class="wishlist_prd_place_home">
-                                            <a class="wishlist_prd_home" onclick=""> &nbsp; </a>
+                                            <?php 
+                                             $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_pm' : '';
+                                                if ($is_user_login) {
+                                                    $idU = \Auth::user()->user_id;
+                                                }else{
+                                                    $idU = '';
+                                                }                                            
+                                            ?>
+
+                                            <a class="wishlist_prd_home w{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"> &nbsp; </a>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <span>{!! 
