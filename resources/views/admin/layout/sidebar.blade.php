@@ -40,10 +40,10 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                         @if(check_user_access('product'))
+                         <!-- @if(check_user_access('product'))
                         <li class="{{ set_active(['admin/product','admin/product/*']) }}"><a
                                     href="{!! route('product') !!}"><i class="fa fa-circle-o"></i> Liste des produits</a></li>
-                        @endif
+                        @endif -->
                         @if(check_user_access('category'))
                         <li class="{{ set_active(['admin/category','admin/category/*']) }}"><a
                                     href="{!! route('category') !!}"><i class="fa fa-circle-o"></i> Gestion des catégories </a>

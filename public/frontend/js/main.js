@@ -1,6 +1,12 @@
 (function ($) {
  "use strict";
 
+/*hover menu avec fleche*/
+$(".menu-femme").hover(function(){
+	console.log('ici');
+	$(".arrow-bottom").trigger('hover');
+});
+
  /*datepicker*/
  $('.datepicker').datepicker({
         format: "dd-mm-yyyy",
