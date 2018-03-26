@@ -1755,26 +1755,30 @@ img {max-width:100%;height:auto}
     border-top: 4px solid #044651;
 }
 .share{
-    padding: 23px 20px;
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 0% 0 0 5%;
-    background-size: 100%;
-    transition: background-position-y 0.3s;
-    cursor: pointer; 
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background:url("../../images/rs-in-product.svg") no-repeat; 
+    transition: background-position-y 0s;
 }
 .share-to-facebook {
-    background:url("../../images/rs-fb.svg") no-repeat;
-    background-size: 100%;
+    background-position-x: 0px; 
 }
 .share-to-twitter {
-    background:url("../../images/rs-twiter.svg") no-repeat;
-    background-size: 100%;
+    background-position-x: -47px;   
 }
 .share-to-google {
-    background:url("../../images/rs-google.svg") no-repeat;
-    background-size: 100%;
+    background-position-x: -95px;
+}
+.share-to-facebook:hover {
+    background-position-y: -47px;
+}
+.share-to-twitter:hover {
+    background-position-y: -47px;
+}
+.share-to-google:hover {
+    background-position-y: -47px;
 }
  #add-cart {
     width: 121%;
