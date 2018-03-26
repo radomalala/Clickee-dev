@@ -978,7 +978,7 @@ ul {
   width: 100%;
   background: #EFEFED;
 }
-.megamenu:after {
+/*.megamenu:after {
   content: "";
   width: 0;
   height: 0;
@@ -1011,6 +1011,17 @@ ul {
 }
 .menu-cadeaux:after{
   right: 15%;
+}*/
+.arrow-bottom:hover::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 105%;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: #EFEFED transparent;
+    left: 42%;
 }
 .navbar-nav>li>a:hover {
     color: #65bb9f !important;
@@ -1342,6 +1353,7 @@ element.style {
 }
 .dropdown-menu {
   border-radius: 0px;
+  border: 1px solid #efefef;
 }
 .shopping-cart .cart-list {
     border: 1px solid #489082;
@@ -1973,3 +1985,4 @@ img {max-width:100%;height:auto}
   cursor: pointer;
 }
 /*for wishlist end*/
+
