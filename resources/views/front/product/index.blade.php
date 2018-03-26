@@ -1,8 +1,5 @@
 @extends('front.layout.master')
-@section('additional-css')
-    {!! Html::style('frontend/css/product.css') !!}
-    {!! Html::style('frontend/css/responsive.css') !!}
-@stop   
+   
 @section('content')
     <?php
         $product_translation = $product->getByLanguageId(app('language')->language_id);
