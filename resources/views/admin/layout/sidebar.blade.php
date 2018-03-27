@@ -26,7 +26,7 @@
             @if(check_user_access(['dashboard']))
             <li class="active treeview">
                 <a href="{!! route('dashboard') !!}">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
                 </a>
             </li>
             @endif
