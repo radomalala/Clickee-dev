@@ -1,6 +1,6 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
     jQuery.browser = {};
-    (function () {
+    (function() {
         jQuery.browser.msie = false;
         jQuery.browser.version = 0;
         if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
@@ -17,10 +17,10 @@ jQuery(document).ready(function () {
     var manage_category = base_url + 'admin/category';
     var delete_category = base_url + 'admin/category/destroy/';
 
-    $('#add-category').click(function () {
+    $('#add-category').click(function() {
 
         $('#category_form').validate({
-            errorPlacement: function (error, element) {
+            errorPlacement: function(error, element) {
                 var element_id = element.attr("id");
                 if (element_id == "fileInput") {
                     return error.insertAfter(element.parent().parent().parent());
@@ -41,34 +41,33 @@ jQuery(document).ready(function () {
         checkbox: false,
         selectMode: 2,
         children: $.parseJSON(category_tree_data),
-        onSelect: function (select, node) {
+        onSelect: function(select, node) {
             // Display list of selected nodes
             var selNodes = node.tree.getSelectedNodes();
             // convert to title/key array
-            var selKeys = $.map(selNodes, function (node) {
+            var selKeys = $.map(selNodes, function(node) {
                 return "[" + node.data.key + "]: '" + node.data.title + "'";
             });
             $("#echoSelection2").text(selKeys.join(", "));
         },
-        onClick: function (node, event) {
+        onClick: function(node, event) {
             var category_id = node.data.key;
             if (typeof category_id != "undefined" && category_id > 0) {
                 $.ajax({
                     type: "GET",
                     url: edit_category + category_id,
                     data: "",
-                    beforeSend: function () {
-                    },
-                    complete: function (response) {
+                    beforeSend: function() {},
+                    complete: function(response) {
                         var category = response.responseJSON;
                         $("#category_form").find("input[name='en_category_name']").val(category.english.category_name);
-                        $("#category_form").find("input[name='fr_category_name']").val((category.french != null) ? category.french.category_name:'');
+                        $("#category_form").find("input[name='fr_category_name']").val((category.french != null) ? category.french.category_name : '');
                         $("#category_form").find("input[name='category_url']").val(category.url.request_url);
                         $("#category_form").find("input[name='is_active']").prop('checked', (category.is_active == '1') ? true : false);
                         $("#category_form").find("input[name='parent_id']").val(category.parent_id);
                         $("#category_form").find("input[name='url_id']").val(category.url.sys_url_rewrite_id);
                         $('#category_form').find("#en_category_description").text(category.english.description);
-                        $('#category_form').find("#fr_category_description").text((category.french != null)?category.french.description:'');
+                        $('#category_form').find("#fr_category_description").text((category.french != null) ? category.french.description : '');
                         $('#category_form').attr('action', manage_category + '/' + category.category_id);
                     }
                 });
@@ -77,32 +76,32 @@ jQuery(document).ready(function () {
             if (node.getEventTargetType(event) == "title")
                 node.toggleSelect();
         },
-        onKeydown: function (node, event) {
+        onKeydown: function(node, event) {
             if (event.which == 32) {
                 node.toggleSelect();
                 return false;
             }
         },
         dnd: {
-            onDragStart: function (node) {
+            onDragStart: function(node) {
                 return true;
             },
             autoExpandMS: 1000,
             preventVoidMoves: true, // Prevent dropping nodes 'before self', etc.
-            onDragEnter: function (node, sourceNode) {
+            onDragEnter: function(node, sourceNode) {
                 if (node.data.key == 0) {
                     return false;
                 }
                 return true;
             },
-            onDragOver: function (node, sourceNode, hitMode) {
+            onDragOver: function(node, sourceNode, hitMode) {
                 if (hitMode == 'before' && node.data.key == 0) {
                     return false;
                 }
                 if (node.isDescendantOf(sourceNode))
                     return false;
             },
-            onDrop: function (node, sourceNode, hitMode, ui, draggable) {
+            onDrop: function(node, sourceNode, hitMode, ui, draggable) {
                 sourceNode.move(node, hitMode);
                 node.expand();
                 if (hitMode == 'before' && node.data.key == 0) {
@@ -110,7 +109,7 @@ jQuery(document).ready(function () {
                 }
                 var dict = $("#category").dynatree("getTree");
                 var parent_node = dict.getNodeByKey(sourceNode.parent.data.key);
-                $(parent_node.childList).each(function (index,category) {
+                $(parent_node.childList).each(function(index, category) {
                     child_array.push(category.data.key);
                 });
                 parent_id = sourceNode.parent.data.key;
@@ -119,12 +118,12 @@ jQuery(document).ready(function () {
                 }
                 xhr_b = $.ajax({
                     type: "POST",
-                    url: base_url+'admin/category/update-order',
+                    url: base_url + 'admin/category/update-order',
                     data: {
                         "child_data": child_array,
                         "parent_id": parent_id
                     },
-                    complete: function (response_mesg) {
+                    complete: function(response_mesg) {
                         child_array = [];
                     }
                 });
@@ -133,12 +132,12 @@ jQuery(document).ready(function () {
 
     });
 
-    $("#category").dynatree("getRoot").visit(function (node) {
+    $("#category").dynatree("getRoot").visit(function(node) {
         node.expand(true);
     });
 
-    $document.on('click', '#add_root_category', function () {
-        $("#category").dynatree("getRoot").visit(function (node) {
+    $document.on('click', '#add_root_category', function() {
+        $("#category").dynatree("getRoot").visit(function(node) {
             node.select(false);
         });
         $('#category_form').trigger('reset');
@@ -149,14 +148,14 @@ jQuery(document).ready(function () {
         $('#category_form').find("#description").text('');
 
     });
-    $document.on('click', '#add_sub_category', function () {
+    $document.on('click', '#add_sub_category', function() {
         var active_node = $("#category").dynatree("getActiveNode");
         if (active_node == null) {
             $('.ajax-request-alert').find('.alert-message').text('Please select category');
             $('.ajax-request-alert').removeClass('hidden').addClass('alert-danger').fadeIn(1000);
             return false;
         }
-        $("#category").dynatree("getRoot").visit(function (node) {
+        $("#category").dynatree("getRoot").visit(function(node) {
             node.select(false);
         });
         $('#category_form').trigger('reset');
@@ -165,20 +164,20 @@ jQuery(document).ready(function () {
         $("#category_form").find("input[name='parent_id']").val(active_node.data.key);
         $("#category_form").find("input[name='url_id']").val('');
     });
-    $document.on('click', '#delete_category', function () {
+    $document.on('click', '#delete_category', function() {
         var active_node = $("#category").dynatree("getActiveNode");
         if (active_node == null) {
             $('.ajax-request-alert').find('.alert-message').text('Please select category');
             $('.ajax-request-alert').removeClass('hidden').addClass('alert-danger').fadeIn(1000);
             return false;
         }
-        $('#confirm').modal({backdrop: 'static', keyboard: false})
-            .one('click', '#delete', function () {
+        $('#confirm').modal({ backdrop: 'static', keyboard: false })
+            .one('click', '#delete', function() {
                 location.href = delete_category + active_node.data.key;
             });
     });
-    $document.on('keyup keypress change', "#en_category_name", function (e) {
-        var clone_text = $("#en_category_name").val();
+    $document.on('keyup keypress change', "#fr_category_name", function(e) {
+        var clone_text = $("#fr_category_name").val();
         clone_text = $.trim(clone_text);
         clone_text = normalize_string(clone_text);
         clone_text = clone_text.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-').replace(/\_/g, '');

@@ -111,7 +111,6 @@ class PageController extends Controller
     {
         $rules = array(
             'en_page_title' => 'required',
-            'en_content_heading' => 'required',
             'url_key' => 'required',
         );
         $validator = Validator::make($request->all(), $rules);

@@ -216,7 +216,7 @@ class ProductController extends Controller
 
 	public function store(ProductRequest $product_request)
 	{
-		
+		\Log::Info("Bonjour tous le monde");
 		$product = $this->product_repository->save($product_request->all());
 		if ($product_request->get('searchproduct')) {
 			$this->saveAffiliateProduct($product->product_id, $product_request->all());
