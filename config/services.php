@@ -29,11 +29,11 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'stripe' => [
+    /*'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
-    ],
+    ],*/
     'twitter' => [
         'client_id'     => env('TWITTER_ID','nMF6CrRFecJjbXklkIsKm4Xdv  '),
         'client_secret' => env('TWITTER_SECRET','JFgCxlGohhx11vvuBzSIH1Lalte6csxjZLGBcpnYhVWrQdZ6ED'),
@@ -51,8 +51,9 @@ return [
         'redirect' => 'http://www.alternateeve.com/auth/google/callback'
     ],
 	'stripe' => [
-		'secret' => env('STRIPE_SECRATE_KEY'),
-		'publishable_key'=>env('STRIPE_PUBLISHABLE_KEY')
+	    'model' => App\User::class,
+		'secret' => 'sk_test_UZ3ohJqXDAyI6bsyl627dJOJ',
+		'publishable_key'=>'pk_test_rdJFSe25nYPpahU8w0xXJ5cn'
 	],
 	'mailchimp' => [
 		'MAILCHIMP_API_KEY' => env('MAILCHIMP_API_KEY'),

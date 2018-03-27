@@ -19,7 +19,7 @@ class ReCaptcha
             'https://www.google.com/recaptcha/api/siteverify',
             ['form_params'=>
                 [
-                    'secret'=>env('GOOGLE_RECAPTCHA_SECRET'),
+                    'secret'=>'6LdYJE8UAAAAAAFd9qLkFl4aTA0UqPGi435rEAvo',
                     'response'=>$value
                  ]
             ]

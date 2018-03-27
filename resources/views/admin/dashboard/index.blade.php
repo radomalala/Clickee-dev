@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Dashboard
+            Tableau de bord
         </h1>
     </section>
 
@@ -15,7 +15,7 @@
                         <span class="info-box-icon bg-aqua"><i class="ion ion-bag"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Products</span>
+                            <span class="info-box-text">Produits</span>
                             <span class="info-box-number">{!! $product_count !!}</span>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                         <span class="info-box-icon bg-red"><i class="fa ion-briefcase"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Stores</span>
+                            <span class="info-box-text">Magasins</span>
                             <span class="info-box-number">{!! $store_count !!}</span>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
+                            <span class="info-box-text">Ventes</span>
                             <span class="info-box-number">{!! $sales_count !!}</span>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">New Members</span>
+                            <span class="info-box-text">Nouveaux membres</span>
                             <span class="info-box-number">{!! $member_count !!}</span>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <div class="col-md-6">
                             <div class="box box-danger">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Latest Members</h3>
+                                    <h3 class="box-title">Derniers membres</h3>
                                     <div class="box-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                                         </button>
@@ -80,14 +80,14 @@
                                     </ul>
                                 </div>
                                 <div class="box-footer text-center">
-                                    <a href="{!! url('admin/customer') !!}" class="uppercase">View All Users</a>
+                                    <a href="{!! url('admin/customer') !!}" class="uppercase">Voir tous les utilisateurs</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Recently Added Products</h3>
+                                    <h3 class="box-title">Produits récemment ajoutés</h3>
 
                                     <div class="box-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -116,7 +116,7 @@
                                     </ul>
                                 </div>
                                 <div class="box-footer text-center">
-                                    <a href="{!! url('admin/product') !!}" class="uppercase">View All Products</a>
+                                    <a href="{!! url('admin/product') !!}" class="uppercase">Voir tous les produits</a>
                                 </div>
                             </div>
 
@@ -127,7 +127,7 @@
                 <div class="col-md-4">
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Recently Added Stores</h3>
+                            <h3 class="box-title">Magasins récemment ajoutéss</h3>
 
                             <div class="box-tools pull-right">
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -155,7 +155,7 @@
                             </ul>
                         </div>
                         <div class="box-footer text-center">
-                            <a href="{!! url('admin/store') !!}" class="uppercase">View All Stores</a>
+                            <a href="{!! url('admin/store') !!}" class="uppercase">Voir tous les magasins</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
             <div class="row">
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Latest Orders</h3>
+                        <h3 class="box-title">Dernières commandes</h3></h3>
 
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -177,10 +177,10 @@
                             <table class="table no-margin">
                                 <thead>
                                 <tr>
-                                    <th>Order ID</th>
-                                    <th>Customer</th>
-                                    <th>Status</th>
-                                    <th>Order Date</th>
+                                    <th>ID commande</th>
+                                    <th>Client</th>
+                                    <th>Statut</th>
+                                    <th>Date de la commande</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -199,7 +199,7 @@
                         </div>
                     </div>
                     <div class="box-footer clearfix">
-                        <a href="{!! url('admin/sales/1') !!}" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+                        <a href="{!! url('admin/sales/1') !!}" class="btn btn-sm btn-default btn-flat pull-right">Voir tous les commandes</a>
                     </div>
                 </div>
             </div>

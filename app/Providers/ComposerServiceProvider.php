@@ -27,7 +27,7 @@ class ComposerServiceProvider extends ServiceProvider
         View::share('layout','admin.layout.master');
         View::share('categories_search', Category::allFirstChild());
         View::share('local_dev',$yes_no_local);
-        View::share('categories', $category_repository->getTreeData());
+        View::share('categories_data', $category_repository->getTreeData());
         View::composer('*', function ($view) {
 //            $language_code=($this->app->request->is('admin*'))?[]:app('language');
 //            $language_code=($this->app->request->is('admin*'))?[]:app()->getLocale();

@@ -55,7 +55,7 @@
                                                class="btn btn-default btn-sm" title="Edit"><i
                                                         class="fa fa-fw fa-edit"></i></a>
                                             {!! Form::open(array('url' => 'admin/'.$type .'/'. $user->user_id, 'class' => 'pull-right')) !!}
-                                            {!! Form::hidden('_method', 'SUPPRIMER') !!}
+                                            {!! Form::hidden('_method', 'DELETE') !!}
                                             {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn delete-btn btn-default btn-sm','title'=>'Supprimer'] ) !!}
                                             {{ Form::close() }}
                                         </div>

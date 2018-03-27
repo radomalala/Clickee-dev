@@ -508,7 +508,7 @@ function getCategories($categories, $title_name,$selected_category)
             echo "<li class='dropdown menu-large'> ";
             $selected_class=($selected_category==$category['key'])?'selected':'';
             $cat_title = strtolower(str_replace(' ', '-', $category['title']));
-            echo "<a data-id='" . $category['key'] . "' href='#' class='dropdown-toggle arrow-bottom $selected_class' data-toggle='dropdown' data-parent='#" . $category['title'] . "' data-type='category-filter'>" . $category['french_title'] . "</a>";  
+            echo "<a data-id='" . $category['key'] . "' href='#' onclick='window.location.href=\"".Url::to('/fr/search?q=&category='.$category['key'])."\"' class='dropdown-toggle arrow-bottom $selected_class' data-toggle='dropdown' data-parent='#" . $category['title'] . "' data-type='category-filter'>" . $category['french_title'] . "</a>";  
             if (!empty($category['children'])) {
                 getChildCategory($category['children'], $title_name, $selected_category, $cat_title);
             }
@@ -528,7 +528,7 @@ function getChildCategory($categories, $title_name,$selected_category,$name)
             $selected_class=($selected_category==$category['key'])?'selected':'';
             $class = !empty($category['children']) ? 'fa fa-caret-up category-drop' : '';
             echo '<div class="col-sm-6 col-md-2">';
-            echo "<a data-id='" . $category['key'] . "' href='#'  class='filter $selected_class' data-toggle='collapse' data-parent-ids='".$category['parent_ids']."' data-parent='#" . $cat_title . "' data-type='category-filter'>" . $category['french_title'] . "</a> 
+            echo "<a data-id='" . $category['key'] . "' href='#' onclick='window.location.href=\"".Url::to('/fr/search?q=&category='.$category['key'])."\"'  class='filter $selected_class' data-toggle='collapse' data-parent-ids='".$category['parent_ids']."' data-parent='#" . $cat_title . "' data-type='category-filter'>" . $category['french_title'] . "</a> 
             <i class='$class' data-href='#" . $cat_title . "'></i>";  // <i class='pe-7s-smile'></i> code smile 
             echo '</div>';
             /*if (!empty($category['children'])) {

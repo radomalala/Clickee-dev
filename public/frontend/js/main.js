@@ -539,7 +539,8 @@
 		}
 	});
 	$('.navbar').find('.megamenu').mouseover(function() {
-		$('.menu-large').trigger('hover');
+		$(this).parents('.menu-large').trigger('hover');
+		console.log('hover the menu parent');
 	});
 
 })(jQuery);

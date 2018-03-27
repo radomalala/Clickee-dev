@@ -17,7 +17,8 @@ class Store extends Model
 	protected $primaryKey = 'store_id';
 
 	const LOGO_IMG_PATH = 'upload/logo';
-
+	const SHOP_IMG_PATH = 'upload/shop';
+	
 
 	public function users()
 	{

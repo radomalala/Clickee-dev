@@ -180,12 +180,12 @@
                         <h2>MANAGERS</h2>
                     </div>
 
-                    <div class="row">
+                    <div class="row hidden">
                         <div class="col-md-6 mr-l-25">
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" checked>
                                     Même que le compte principal
                                 </label>
                             </div>
@@ -194,7 +194,7 @@
                     </div>
                     @include('admin.store.manager')
                 </section>
-                <section class="content brand_sales">
+                <!--<section class="content brand_sales">
                     <div class="store-header">
                         <h2>LES MARQUES DE VENTE</h2>
                     </div>
@@ -246,7 +246,7 @@
                             </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
 
                         </div>

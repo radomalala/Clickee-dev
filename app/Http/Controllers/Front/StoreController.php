@@ -118,7 +118,7 @@ class StoreController extends Controller
 					]);
 					$user->stripe_id = $stripe_user['id'];
 					$user->save();
-				} 
+				}
 
 				\Event::fire(new UserRegistered($user));
 				Auth::login($user);

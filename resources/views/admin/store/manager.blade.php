@@ -37,26 +37,26 @@
         </div>
         <div class="col-md-4">
             <div class="box-body mr-t-10">
-                <div class="form-group">
+                <div class="form-group hidden">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="manager[{!! $index !!}][global_manager]" id="global_manager" {!! ($user->pivot->is_global_manager == '1') ? "checked":'' !!} value="1">
+                            <input checked type="checkbox" name="manager[{!! $index !!}][global_manager]" id="global_manager" {!! ($user->pivot->is_global_manager == '1') ? "checked":'' !!} value="1">
                             Compte principal / propriétaire
                         </label>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group hidden">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="manager[{!! $index !!}][receive_request]" id="receive_request" {!! ($user->pivot->receive_request == '1') ? "checked":'' !!} value="1">
+                            <input checked type="checkbox" name="manager[{!! $index !!}][receive_request]" id="receive_request" {!! ($user->pivot->receive_request == '1') ? "checked":'' !!} value="1">
                             Recevoir une demande d'achat
                         </label>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group hidden">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="manager[{!! $index !!}][reply_request]" id="reply_request" {!! ($user->pivot->reply_request == '1') ? "checked":'' !!} value="1">
+                            <input checked type="checkbox" name="manager[{!! $index !!}][reply_request]" id="reply_request" {!! ($user->pivot->reply_request == '1') ? "checked":'' !!} value="1">
                             Peut répondre à une demande
                         </label>
                     </div>
@@ -116,25 +116,25 @@
     <div class="col-md-4">
         <div class="box-body mr-t-10">
             <div class="form-group">
-                <div class="checkbox">
+                <div class="checkbox hidden">
                     <label>
-                        <input type="checkbox" name="manager[1][global_manager]" id="global_manager" value="1">
+                        <input checked type="checkbox" name="manager[1][global_manager]" id="global_manager" value="1">
                         Compte principal / propriétaire
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <div class="checkbox">
+                <div class="checkbox hidden">
                     <label>
-                        <input type="checkbox" name="manager[1][receive_request]" id="receive_request" value="1">
+                        <input checked type="checkbox" name="manager[1][receive_request]" id="receive_request" value="1">
                         Recevoir une demande d'achat
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <div class="checkbox">
+                <div class="checkbox hidden">
                     <label>
-                        <input type="checkbox" name="manager[1][reply_request]" id="reply_request" value="1">
+                        <input checked  type="checkbox" name="manager[1][reply_request]" id="reply_request" value="1">
                         Peut répondre à une demande
                     </label>
                 </div>

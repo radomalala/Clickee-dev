@@ -1,6 +1,5 @@
     <div class="account-area">
             <div class="row account">
-                @include('notification')
                 <div class="col-lg-12">
                     <div class="account-title title text-uppercase mb-26 text-center mt-40">
                         <h2>
@@ -263,7 +262,7 @@
                                     <div class="form-group">
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" checked="checked" name="manager[{!! $key !!}"][global_manager]" id="global_manager" value="1" {!! ($user->pivot->is_global_manager=='1') ? "checked":'' !!}>
+                                                <input type="checkbox" checked="checked" name='manager[{!! $key !!}][global_manager]' id="global_manager" value="1" {!! ($user->pivot->is_global_manager=='1') ? "checked":'' !!}>
                                                 {!! trans('merchant.main_account_owner') !!}
                                             </label>
                                         </div>
