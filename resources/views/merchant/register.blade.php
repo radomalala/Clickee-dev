@@ -368,9 +368,11 @@
                         <div class="text-center add-user-alignement mb-20">
                             <button type="button" class="btn btn-clickee-primary call_add_user">{!! trans('merchant.add_user') !!}</button>
                         </div>
-                    </div>
+
+                    @endif
+                    
                     <div class="recaptcha">  
-                                <div class="g-recaptcha col-lg-6 col-sm-7 mt-30 mb-50" data-sitekey="6LdYJE8UAAAAABfaQjZfA4j0UJNmPuDD6fUPeaCg"></div>
+                        <div class="g-recaptcha col-lg-6 col-sm-7 mt-30 mb-50" data-sitekey="6LdYJE8UAAAAABfaQjZfA4j0UJNmPuDD6fUPeaCg"></div>
                     </div>
                     
                     <div class="text-center mr-t-btn">
