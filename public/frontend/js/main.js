@@ -539,7 +539,7 @@
 		}
 	});
 	$('.navbar').find('.megamenu').mouseover(function() {
-		console.log("je suis en hover");
+		$('.menu-large').trigger('hover');
 	});
 
 })(jQuery);

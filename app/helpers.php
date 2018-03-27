@@ -689,9 +689,12 @@ function all_product_id_wishlist(){
         }
     }else{
         if(Cookie::has('id_user_browser')){
+            $products_user = [];
             $id_user = Cookie::get('id_user_browser');
             $all_wishlist_products = (\Cache::has('wishlist_product')) ? \Cache::get('wishlist_product') : [];
-            $products_user = $all_wishlist_products[$id_user];
+            if (isset($all_wishlist_products[$id_user])) {
+                $products_user = $all_wishlist_products[$id_user];
+            }
             $id_products = array_keys($products_user);
         }
     }
