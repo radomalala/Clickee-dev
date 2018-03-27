@@ -68,22 +68,27 @@ class StoreController extends Controller
 	{
 		$rules = array(
 			'shop_name' => 'required',
+			'registration_number' => 'required',
 			'address1' => 'required',
-			'phone' => 'required',
-			'tva_number' => 'required',
-			'siret_number' => 'required',
-			'banque_number' => 'required',
-			'eban' => 'required',
-			'bic' => 'required',
-			'banque_domicile' => 'required',
-			'banque_address' => 'required',
-			/*'email' => ['required',
+			'city' => 'required',
+			'zip_code' => 'required',
+			'country_id' => 'required',
+			'state_id' => 'required',
+			'latitude' => 'required',
+			'longitude' => 'required',
+			'main_phone' => 'required',
+			'main_email' => 'required',
+			'g-recaptcha-response'=>'required|recaptcha'
+/*			'last_name' => 'required',
+			'first_name' => 'required',
+			'position' => 'required',
+			'sms' => 'required',
+			'email' => ['required',
 				Rule::unique('users')->where(function ($query) {
 					$query->where('role_id', 2);
 				})
-			],*/
-			'email' => 'required|Email',
-			'password' => 'required'
+			],
+			'password' => 'required'*/
 		);
 		$validator = \Validator::make($request->all(), $rules);
 		if ($validator->fails()) {
@@ -97,26 +102,30 @@ class StoreController extends Controller
 					$logo_name = $this->upload_service->upload($file, Store::LOGO_IMG_PATH);
 					$all_input['logo_image'] = $logo_name;
 				}
+				$shop_image = "";
+				if ($request->hasFile("shop_image")) {
+					$file = $request->file("shop_image");
+					$shop_image = $this->upload_service->upload($file, Store::SHOP_IMG_PATH);
+					$all_input['shop_image'] = $shop_image;
+				}
 
-				$user = $this->store_repository->add($all_input);
+				$users = $this->store_repository->add($all_input);
 
-				/*$stripe = Stripe::make(config('services.stripe.secret'));*/
-				/*foreach ($users as $user){
+				$stripe = Stripe::make(config('services.stripe.secret'));
+				foreach ($users as $user){
 					$stripe_user = $stripe->customers()->create([
 						'email' => $user->email,
 					]);
 					$user->stripe_id = $stripe_user['id'];
 					$user->save();
-				} */
+				} 
 
 				\Event::fire(new UserRegistered($user));
 				Auth::login($user);
 				flash()->success(trans('form.register_success_message'));
 			}catch (\Exception $e){
 				flash()->error(trans('form.register_error_message'));
-				//\Log::Info('The error message : ');
-				\Log::debug($e->getMessage());
-				//return \Redirect::back()->withInput()->withErrors($validator);
+				return \Redirect::back()->withInput()->withErrors($validator);
 			}
 		}
 
@@ -150,21 +159,27 @@ class StoreController extends Controller
     {
 		$rules = array(
 			'shop_name' => 'required',
+			'registration_number' => 'required',
 			'address1' => 'required',
-			'phone' => 'required',
-			'tva_number' => 'required',
-			'siret_number' => 'required',
-			'banque_number' => 'required',
-			'eban' => 'required',
-			'bic' => 'required',
-			'banque_domicile' => 'required',
-			'banque_address' => 'required',
-			/*'email' => ['required',
-				Rule::unique('users')->where(function ($query) {
+			'city' => 'required',
+			'zip_code' => 'required',
+			'country_id' => 'required',
+			'state_id' => 'required',
+			'latitude' => 'required',
+			'longitude' => 'required',
+			'main_phone' => 'required',
+			'main_email' => 'required',
+			'g-recaptcha-response'=>'required|recaptcha'
+/*			'last_name' => 'required',
+			'first_name' => 'required',
+			'position' => 'required',
+			'sms' => 'required',
+			'email' => ['required',
+				Rule::unique('users')->ignore($store_request->get('user_id'), 'user_id')->where(function ($query) {
 					$query->where('role_id', 2);
 				})
-			],*/
-			'email' => 'required|Email'
+			],
+			'password' => 'required'*/
 		);
 		$validator = \Validator::make($store_request->all(), $rules);
 		if ($validator->fails()) {
@@ -177,11 +192,14 @@ class StoreController extends Controller
 				$logo_name = $this->upload_service->upload($file, Store::LOGO_IMG_PATH);
 				$all_input['logo_image'] = $logo_name;
 			}
+			$shop_image = "";
+			if ($store_request->hasFile("shop_image")) {
+				$file = $store_request->file("shop_image");
+				$shop_image = $this->upload_service->upload($file, Store::SHOP_IMG_PATH);
+				$all_input['shop_image'] = $shop_image;
+			}
 			$store = $this->store_repository->update($id, $all_input);
 			flash()->success(config('message.store.update-success'));
-		}
-		foreach(Auth::user()->store as $index=>$stor){
-			$id_store = $stor->store_id;
 		}
 		return Redirect('fr/store/'.$id_store.'/edit');
 	}
