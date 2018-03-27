@@ -502,42 +502,44 @@ function getProductPrice($product,$symbol='CDN$')
 
 function getCategories($categories, $title_name,$selected_category)
 {
-	$language_id = app('language')->language_id;
-    echo "<div class='list-group category-filter'>";
+    echo '<ul class="nav navbar-nav">';
     foreach ($categories as $category) {
         if (!empty($category['title'])) {
+            echo "<li class='dropdown menu-large'> ";
             $selected_class=($selected_category==$category['key'])?'selected':'';
             $cat_title = strtolower(str_replace(' ', '-', $category['title']));
-            $class = !empty($category['children']) ? 'fa fa-caret-up category-drop' : '';
-            echo "<a data-id='" . $category['key'] . "' class='filter $selected_class' data-toggle='collapse' data-parent='#" . $category['title'] . "' data-type='category-filter'><i class='fa icon-check'></i>" . (($language_id=='1') ? $category['english_title'] : $category['french_title']) . "</a>
-             <i class='$class ' data-href='#" . $cat_title . "'></i>";  //<i class='pe-7s-science'></i> 
+            echo "<a data-id='" . $category['key'] . "' href='#' class='dropdown-toggle arrow-bottom $selected_class' data-toggle='dropdown' data-parent='#" . $category['title'] . "' data-type='category-filter'>" . $category['french_title'] . "</a>";  
             if (!empty($category['children'])) {
                 getChildCategory($category['children'], $title_name, $selected_category, $cat_title);
             }
+            echo "</li>";
         }
     }
-    echo "</div>";
+    echo '</ul>';
 }
 
 function getChildCategory($categories, $title_name,$selected_category,$name)
 {
-	$language_id = app('language')->language_id;
-	echo "<div class='collapse list-group-submenu' id='".$name."'>";
+	echo  '<ul class="'.$name.' dropdown-menu megamenu row">
+	        <li class="container ptb-10">';
     foreach ($categories as $category) {
         if (!empty($category['title'])) {
             $cat_title = strtolower(str_replace(' ', '-', $category['title']));
             $selected_class=($selected_category==$category['key'])?'selected':'';
             $class = !empty($category['children']) ? 'fa fa-caret-up category-drop' : '';
-            echo "<a data-id='" . $category['key'] . "'  class='filter $selected_class' data-toggle='collapse' data-parent-ids='".$category['parent_ids']."' data-parent='#" . $cat_title . "' data-type='category-filter'>" . (($language_id=='1') ?       $category['english_title'] : $category['french_title']) . "</a> 
+            echo '<div class="col-sm-6 col-md-2">';
+            echo "<a data-id='" . $category['key'] . "' href='#'  class='filter $selected_class' data-toggle='collapse' data-parent-ids='".$category['parent_ids']."' data-parent='#" . $cat_title . "' data-type='category-filter'>" . $category['french_title'] . "</a> 
             <i class='$class' data-href='#" . $cat_title . "'></i>";  // <i class='pe-7s-smile'></i> code smile 
-            if (!empty($category['children'])) {
+            echo '</div>';
+            /*if (!empty($category['children'])) {
                 echo getChildCategory($category['children'], $title_name, $selected_category, $cat_title);
-            }
+            }*/
+            
         }
     }
-    echo "</div>";
+    echo " </li> 
+           </ul>";
 }
-
 function parse_youtube($link)
 {
     $regexstr = '~

@@ -1,4 +1,5 @@
 <header>
+    <?php \Log::info("Bonjour zlzlzlzlzlzlzl");?>
     <!-- Action changement langue -->
     {!! Form::open(array('url' =>'search' ,'method'=>'GET','id' =>'language_form','class'=>'language-convert')) !!}
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 hidden">
@@ -102,8 +103,9 @@
             <span class="icon-bar"></span>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown menu-large"> 
+            {!! getCategories($categories['tree_data'], '', '') !!}
+            
+                <!--<li class="dropdown menu-large"> 
                     <a href="#" class="dropdown-toggle arrow-bottom" data-toggle="dropdown"><span>FEMME</span></a>
 
                     <ul class="menu-femme dropdown-menu megamenu row">
@@ -286,8 +288,8 @@
                             
                         </li>
                     </ul>
-                </li>
-            </ul>
+                </li>-->
+            <!--</ul>-->
         </div>
     </div>
     <!-- menu area end -->

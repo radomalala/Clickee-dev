@@ -55,7 +55,7 @@ class SpecialProductRepository implements SpecialProductRepositoryInterface
     }
 
     public function deleteSpecialProduct($id){
-        SpecialProduct::where('type',$id)->delete();
+        return SpecialProduct::where('type',$id)->delete();
     }
 
     public function deleteById($id)
