@@ -26,7 +26,7 @@
             @if(check_user_access(['dashboard']))
             <li class="active treeview">
                 <a href="{!! route('dashboard') !!}">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
                 </a>
             </li>
             @endif
@@ -40,10 +40,10 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                         @if(check_user_access('product'))
+                         <!-- @if(check_user_access('product'))
                         <li class="{{ set_active(['admin/product','admin/product/*']) }}"><a
                                     href="{!! route('product') !!}"><i class="fa fa-circle-o"></i> Liste des produits</a></li>
-                        @endif
+                        @endif -->
                         @if(check_user_access('category'))
                         <li class="{{ set_active(['admin/category','admin/category/*']) }}"><a
                                     href="{!! route('category') !!}"><i class="fa fa-circle-o"></i> Gestion des catégories </a>
@@ -82,11 +82,11 @@
                                 href="{!! URL::to('/admin/page') !!}"><i class="fa fa-circle-o"></i> Gestion de page</a>
                     </li>
                     @endif
-                    <!-- @if(check_user_access(['faq.index', 'faq.create', 'faq.edit']))
+                    @if(check_user_access(['faq.index', 'faq.create', 'faq.edit']))
                     <li class="treeview {{ set_active(['admin/faq','admin/faq/*']) }}">
-                        <a href="{!! url('admin/faq') !!}"><i class="fa fa-circle-o"></i><span> FAQ Manager</span></a>
+                        <a href="{!! url('admin/faq') !!}"><i class="fa fa-circle-o"></i><span> Gestion de FAQ </span></a>
                     </li>
-                    @endif -->
+                    @endif
                     <!-- @if(check_user_access('coupon'))
                     <li class="{{ set_active(['admin/coupon','admin/coupon/*']) }}"><a href="{!! route('coupon') !!}"><i
                                     class="fa fa-circle-o"></i> Coupon Manager</a></li>

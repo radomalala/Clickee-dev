@@ -55,7 +55,7 @@ class SpecialProductRepository implements SpecialProductRepositoryInterface
     }
 
     public function deleteSpecialProduct($id){
-        SpecialProduct::where('type',$id)->delete();
+        return SpecialProduct::where('type',$id)->delete();
     }
 
     public function deleteById($id)
@@ -66,7 +66,7 @@ class SpecialProductRepository implements SpecialProductRepositoryInterface
 
     public function getProducts($keyword)
     {
-        return ProductTranslation::where('product_name', 'like', "%$keyword%")->groupBy('product_id')->get();
+        return ProductTranslation::where('product_name', 'like', "%$keyword%")->where('language_id',2)->groupBy('product_id')->get();
     }
 
     public function getspecialProducts(){

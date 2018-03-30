@@ -30,8 +30,7 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>English Question</th>
-                                <th>French Question</th>
+                                <th>Question</th>
                                 <th>Type</th>
                                 <th>Status</th>
                                 <th class="no-sort">Action</th>
@@ -40,7 +39,6 @@
                             <tbody>
                             @foreach($faqs->data as $faq)
                                 <tr>
-                                    <td>{!! $faq->english_question !!}</td>
                                     <td>{!! $faq->french_question !!}</td>
                                     <td>
                                         @if($faq->type == '1')

@@ -60,21 +60,21 @@ class SpecialProductController extends Controller
 
 	public function update($id, Request $request)
 	{
-
 		$product = $this->special_product_repository->updateById($id, $request->all());
 		flash()->success(config('message.special-product.update-success'));
 		return Redirect::to('admin/special-product');
 	}
 
 
-	public function destroy($product_id)
+	public function destroy($type)
 	{
-		if ($this->special_product_repository->deleteById($product_id)) {
+		
+		if ($this->special_product_repository->deleteSpecialProduct($type)) {
 			flash()->success(config('message.special-product.delete-success'));
 		} else {
 			flash()->error(config('message.special-product.delete-error'));
 		}
-		return redirect()->route('product');
+		return Redirect::to('admin/special-product');
 	}
 
     public function getProduct(Request $request){

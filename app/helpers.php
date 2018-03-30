@@ -502,42 +502,44 @@ function getProductPrice($product,$symbol='CDN$')
 
 function getCategories($categories, $title_name,$selected_category)
 {
-	$language_id = app('language')->language_id;
-    echo "<div class='list-group category-filter'>";
+    echo '<ul class="nav navbar-nav">';
     foreach ($categories as $category) {
         if (!empty($category['title'])) {
+            echo "<li class='dropdown menu-large'> ";
             $selected_class=($selected_category==$category['key'])?'selected':'';
             $cat_title = strtolower(str_replace(' ', '-', $category['title']));
-            $class = !empty($category['children']) ? 'fa fa-caret-up category-drop' : '';
-            echo "<a data-id='" . $category['key'] . "' class='filter $selected_class' data-toggle='collapse' data-parent='#" . $category['title'] . "' data-type='category-filter'><i class='fa icon-check'></i>" . (($language_id=='1') ? $category['english_title'] : $category['french_title']) . "</a>
-             <i class='$class ' data-href='#" . $cat_title . "'></i>";  //<i class='pe-7s-science'></i> 
+            echo "<a data-id='" . $category['key'] . "' href='#' onclick='window.location.href=\"".Url::to('/fr/search?q=&category='.$category['key'])."\"' class='dropdown-toggle arrow-bottom $selected_class' data-toggle='dropdown' data-parent='#" . $category['title'] . "' data-type='category-filter'>" . $category['french_title'] . "</a>";  
             if (!empty($category['children'])) {
                 getChildCategory($category['children'], $title_name, $selected_category, $cat_title);
             }
+            echo "</li>";
         }
     }
-    echo "</div>";
+    echo '</ul>';
 }
 
 function getChildCategory($categories, $title_name,$selected_category,$name)
 {
-	$language_id = app('language')->language_id;
-	echo "<div class='collapse list-group-submenu' id='".$name."'>";
+	echo  '<ul class="'.$name.' dropdown-menu megamenu row">
+	        <li class="container ptb-10">';
     foreach ($categories as $category) {
         if (!empty($category['title'])) {
             $cat_title = strtolower(str_replace(' ', '-', $category['title']));
             $selected_class=($selected_category==$category['key'])?'selected':'';
             $class = !empty($category['children']) ? 'fa fa-caret-up category-drop' : '';
-            echo "<a data-id='" . $category['key'] . "'  class='filter $selected_class' data-toggle='collapse' data-parent-ids='".$category['parent_ids']."' data-parent='#" . $cat_title . "' data-type='category-filter'>" . (($language_id=='1') ?       $category['english_title'] : $category['french_title']) . "</a> 
+            echo '<div class="col-sm-6 col-md-2">';
+            echo "<a data-id='" . $category['key'] . "' href='#' onclick='window.location.href=\"".Url::to('/fr/search?q=&category='.$category['key'])."\"'  class='filter $selected_class' data-toggle='collapse' data-parent-ids='".$category['parent_ids']."' data-parent='#" . $cat_title . "' data-type='category-filter'>" . $category['french_title'] . "</a> 
             <i class='$class' data-href='#" . $cat_title . "'></i>";  // <i class='pe-7s-smile'></i> code smile 
-            if (!empty($category['children'])) {
+            echo '</div>';
+            /*if (!empty($category['children'])) {
                 echo getChildCategory($category['children'], $title_name, $selected_category, $cat_title);
-            }
+            }*/
+            
         }
     }
-    echo "</div>";
+    echo " </li> 
+           </ul>";
 }
-
 function parse_youtube($link)
 {
     $regexstr = '~
@@ -687,9 +689,12 @@ function all_product_id_wishlist(){
         }
     }else{
         if(Cookie::has('id_user_browser')){
+            $products_user = [];
             $id_user = Cookie::get('id_user_browser');
             $all_wishlist_products = (\Cache::has('wishlist_product')) ? \Cache::get('wishlist_product') : [];
-            $products_user = $all_wishlist_products[$id_user];
+            if (isset($all_wishlist_products[$id_user])) {
+                $products_user = $all_wishlist_products[$id_user];
+            }
             $id_products = array_keys($products_user);
         }
     }

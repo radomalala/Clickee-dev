@@ -44,9 +44,10 @@
                                             <a href="{{ URL::to('admin/special-product/' . $special_product[0]->type . '/edit') }}"
                                                class="btn btn-default btn-sm" title="Edit"><i
                                                         class="fa fa-fw fa-edit"></i></a>
-
-                                            <a href="{{ URL::to('admin/special-product/destroy/' . $special_product[0]->type ) }}"
-                                               class="btn btn-default btn-sm delete-btn" title="Delete"><i class="fa fa-fw fa-trash"></i></a>
+                                            {!! Form::open(array('url' => route('special-product.destroy', $special_product[0]->type), 'class' => 'pull-right')) !!}
+                                            {!! Form::hidden('_method', 'DELETE') !!}
+                                            {!! Form::button('<i class="fa fa-fw fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-default btn-sm'] ) !!}
+                                            {{ Form::close() }}
                                         </div>
                                     </td>
                                 </tr>

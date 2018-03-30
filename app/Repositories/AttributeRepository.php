@@ -28,13 +28,13 @@ class AttributeRepository implements AttributeRepositoryInterface
 		$this->model->is_required = (isset($input['is_required'])) ? $input['is_required'] : 0;
 		$this->model->created_by = auth()->guard('admin')->user()->admin_id;
 		$this->model->save();
-/*
-		if(isset($input['en_attribute_name']) && !empty($input['en_attribute_name'])){
+
+		/*if(isset($input['en_attribute_name']) && !empty($input['en_attribute_name'])){*/
 			$translation = new AttributeTranslation();
-			$translation->attribute_name = $input['en_attribute_name'];
+			$translation->attribute_name = '';
 			$translation->language_id = '1';
 			$this->model->translation()->save($translation);
-		}*/
+		/*}*/
 
 		if(isset($input['fr_attribute_name']) && !empty($input['fr_attribute_name'])){
 			$translation = new AttributeTranslation();
@@ -54,13 +54,13 @@ class AttributeRepository implements AttributeRepositoryInterface
 			$attribute_option->sort_order = 0;
 			$option = $this->model->options()->save($attribute_option);
 
-		/*	if(isset($attribute['en_name']) && !empty($attribute['en_name'])){
+			/*if(isset($attribute['en_name']) && !empty($attribute['en_name'])){*/
 				$option_translation = new AttributeOptionTranslation();
-				$option_translation->option_name = $attribute['en_name'];
+				$option_translation->option_name = '';
 				$option_translation->language_id = '1';
 				$option_translation->attribute_translation_num = $i;
 				$option->translation()->save($option_translation);
-			}*/
+			/*}*/
 			if(isset($attribute['fr_name']) && !empty($attribute['fr_name'])){
 				$option_translation = new AttributeOptionTranslation();
 				$option_translation->option_name = $attribute['fr_name'];

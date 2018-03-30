@@ -44,7 +44,7 @@
                                             <div class="form-group">
                                                 {!! Form::label('input_type', "Type d'input", ['class' => 'col-sm-2 control-label']) !!}
                                                 <div class="col-sm-10">
-                                                    {!! Form::select('input_type', [''=>"Selectionner le type d'input",'1' => 'Color', '2' => 'Select Box'],($attribute) ? $attribute->type : null,['class'=>'form-control required','id'=>'input_type']) !!}
+                                                    {!! Form::select('input_type', [''=>"Selectionner le type d'input",'1' => 'Couleur', '2' => 'Case à cocher'],($attribute) ? $attribute->type : null,['class'=>'form-control required','id'=>'input_type']) !!}
                                                 </div>
                                             </div>
 {{--

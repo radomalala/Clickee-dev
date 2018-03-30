@@ -1,5 +1,8 @@
 @extends('front.layout.master')
-
+@section('additional-css')
+    {!! Html::style('css/style_custom.css') !!}
+    {!! Html::style('frontend/css/style.css') !!}
+@stop
 @section('content')
     <div id="googleMap" class="mr-t-20"></div>
     <div class="contact-area ptb-25">

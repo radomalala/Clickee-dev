@@ -70,7 +70,7 @@ jQuery(document).ready(function () {
     if (jQuery('.dataTables_filter').length > 0) {
         jQuery('.dataTables_filter').find('input').addClass('form-control')
     }
-    $document.on('click','.add_size',function () {
+    $document.on('click','.add_option',function () {
         var row_count = parseInt($('.size_option_row:last').attr('id'));
         var attribute_type = $(".attribute_type_list").val();
         var row_index = row_count + 1;

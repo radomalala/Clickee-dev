@@ -28,7 +28,7 @@ class ProductRepository implements ProductRepositoryInterface
         try {
             $this->model->sku = $input['serial_number'];
             $this->model->brand_id = $input['brand_id'];
-            $this->model->is_active = $input['is_active'];
+            $this->model->is_active = 1;
             $this->model->original_price = $input['original_price'];
             $this->model->best_price = $input['best_price'];
             $this->model->attribute_set_id = $input['attribute_set'];
@@ -143,7 +143,7 @@ class ProductRepository implements ProductRepositoryInterface
         $product = $this->model->findOrNew($product_id);
         $product->brand_id = $input['brand_id'];
         $product->sku = $input['serial_number'];
-        $product->is_active = $input['is_active'];
+        $product->is_active = 1;
         $product->original_price = $input['original_price'];
         $product->best_price = $input['best_price'];
         $product->responsible = $input['responsible'];

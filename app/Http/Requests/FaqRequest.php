@@ -24,8 +24,8 @@ class FaqRequest extends FormRequest
 	public function rules()
 	{
 		return [
-			'english_question' => 'required',
-			'english_answer' => 'required'
+			'french_question' => 'required',
+			'french_answer' => 'required'
 		];
 	}
 }

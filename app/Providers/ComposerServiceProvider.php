@@ -10,6 +10,7 @@ use Illuminate\Support\ServiceProvider;
 use Cart;
 use App\Category;
 use App\Models\WishList;
+use App\Repositories\CategoryRepository;
 
 class ComposerServiceProvider extends ServiceProvider
 {
@@ -20,10 +21,13 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     { 
+        $category_repository = new CategoryRepository(new Category());
+        
         $yes_no_local = "oui";
         View::share('layout','admin.layout.master');
         View::share('categories_search', Category::allFirstChild());
         View::share('local_dev',$yes_no_local);
+        View::share('categories_data', $category_repository->getTreeData());
         View::composer('*', function ($view) {
 //            $language_code=($this->app->request->is('admin*'))?[]:app('language');
 //            $language_code=($this->app->request->is('admin*'))?[]:app()->getLocale();

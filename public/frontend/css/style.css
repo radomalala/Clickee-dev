@@ -130,7 +130,7 @@
   36. product-left-sidebar
   37. product-deal
   38. products-by-category
-  39. products-best-selling
+  39. products-bestselling
   40. products-featured
   41. products-top-rate
   42. products-recent
@@ -5260,12 +5260,6 @@ input[name="memoty"] {
   margin-left: 3px;
   margin-top: 5px;
 }*/
-.sell_coeur { 
-  color: #044651;
-  font-size: 14px;
-  position: absolute;
-  margin-left: 4px; 
-}
 .ct {
   text-align: center;
 }

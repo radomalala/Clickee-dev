@@ -21,7 +21,7 @@
                         <div class="footer-menu">
                             <ul>
                                 <span class="top-link-footer">{!! trans("common/label.customers")!!}</span>
-                                <li class="footer-menu"> <a href="#">{!! trans("common/label.how_it_work")!!}</a></li>
+                                <li class="footer-menu"> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/fonctionnement') !!}">{!! trans("common/label.how_it_work")!!}</a></li>
                                 <li> <a href="{!! url(LaravelLocalization::getCurrentLocale()."/search")."?q=" !!}">Catalogue</a></li>
                                 <li> <a href="{!! url(LaravelLocalization::getCurrentLocale().'/faq') !!}">{!! trans("common/label.faq")!!}</a></li>
                             </ul>
@@ -38,7 +38,7 @@
                                     <span class="top-link-footer">{!! trans("common/label.merchants")!!}</span>
                                     <ul>
                                         <li class="footer-menu">
-                                            <a href="#">{!! trans("common/label.make_money")!!}</a>
+                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/vendre avec nous') !!}">{!! trans("common/label.make_money")!!}</a>
                                         </li>
                                         @if(!$is_user_login || Auth::user()->role_id==2)                               
                                             @if($is_user_login)
@@ -58,13 +58,13 @@
                                      <span class="top-link-footer">CLICKEE</span>
                                     <ul>
                                         <li class="footer-menu">
-                                            <a href="#">Fondation</a>
+                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/fondation-url') !!}">Fondation</a>
                                         </li>
                                         <li>
-                                            <a href="#">{!! trans("common/label.investor")!!}</a>
+                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/investisseurs') !!}">{!! trans("common/label.investor")!!}</a>
                                         </li>
                                         <li>
-                                            <a href="#">{!! trans("common/label.contact_us")!!}</a>
+                                            <a href="{!! url(LaravelLocalization::getCurrentLocale().'/contact-us') !!}">{!! trans("common/label.contact_us")!!}</a>
                                         </li>
                                     </ul>
                                 </div>
