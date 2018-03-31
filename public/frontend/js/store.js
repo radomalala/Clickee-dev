@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-
+    console.log('ca marche');
     var $document = $(document);
 
    // title_brands_select = "MARQUES RÉPERTORIÉES DANS NOTRE SYSTÈME";
@@ -185,62 +185,7 @@ jQuery(document).ready(function () {
         $(this).parents('.master_manager').remove();
     });
 
-    /* Modification des boutons */
-    $('.box1').find('.btn-group .btn:nth-child(1)').addClass('col-lg-3').removeClass('moveall');   
-    $('.box1').find('.btn-group .btn:nth-child(2)').addClass('col-lg-3 col-lg-offset-1').removeClass('move').css({'width':'115px'});
-    $('.box1').find('.btn-group').addClass('row').removeClass('btn-group');
-    $('.box1').find('select').css('height', '450px');
-    $('.box1 select:focus').css({'border-color': 'none','box-shadow':'none','-webkit-box-shadow':'none'});
-    $('.box1 select').focus(function(){$(this).css({'border-color': 'none','box-shadow':'none','-webkit-box-shadow':'none'});});
-    $('.box1 input').css({'position': 'absolute','margin-left': '10%','width': '85%','padding': '23px 10px','font-size':'16px' });
     
-    $('.box2').find('.btn-group .btn:nth-child(1)').addClass('col-lg-3 col-lg-offset-2').removeClass('remove').css({'width':'115px'});
-    $('.box2').find('.btn-group .btn:nth-child(2)').addClass('col-lg-3 col-lg-offset-1').removeClass('removeall').css({'width':'115px'});
-    $('.box2').find('.btn-group').addClass('row').removeClass('btn-group');
-    $('.box2').find('select').css('height', '450px');
-    $('.box2').css('margin-top', '52px');
-
-    $('.bootstrap-duallistbox-container .buttons button:nth-child(1)').css({'color':'#212b52','margin-left':'45px', 'width':'115px'});
-    $('.bootstrap-duallistbox-container .buttons button:nth-child(1)').css({'color':'#212b52','margin-left':'45px', 'width':'115px'});
-    
-    $('.box2 select').focus(function(){$(this).css({'border-color': 'none','box-shadow':'none','-webkit-box-shadow':'none'});});
-    $('.box2 input').css('display', 'none');
-    $('.box2 .info-container').css('display', 'none');
-    $('.bootstrap-duallistbox-container .buttons').css({'margin-left':'0px',
-                                                 'background':'rgb(239, 239, 237)'});
-    $('.bootstrap-duallistbox-container .info').css({'font-family':'Roboto, sans-serif','width': '98%', 'font-size':'16px','height':'40px','color':'#212b52','font-weight':'400'});
-    $('<div class="col-lg-11"><h2 class="title-brand-filter">'+lang['title_brands_select1']+'</h2></div>').insertAfter('.box1 input');
-    $('<div class="col-lg-11"><h2 class="title-brand-filter">'+lang['title_brands_select2']+'</h2></div>').insertAfter('.box2 input');
-    $('.dual-list').css('margin-left', '3%');
-    
-    console.log('The code execute');
-    if(window.innerWidth < 1199){
-        $('.box1 input').css({'margin-left':'0px'});
-         $('.box2').css('margin-top', '12.5%');
-        $('.bootstrap-duallistbox-container .info').css({'width':'100%'});
-        $('.bootstrap-duallistbox-container .buttons button:nth-child(1)').css({'margin-left':'10%', 'width':'35%'});
-        $('.bootstrap-duallistbox-container .buttons button:nth-child(2)').css({'margin-left':'10%', 'width':'35%'});
-    }
-    if(window.innerWidth < 991){
-        $('.box1 input').css({'margin-left':'0px'});
-        $('.bootstrap-duallistbox-container .info').css({'width':'100%'});
-    }
-    if(window.innerWidth < 768){     
-        $('.box1 input').css({'margin-left':'0px'});
-        $('.bootstrap-duallistbox-container .info').css({'width':'100%'});
-        $('.bootstrap-duallistbox-container .buttons button:nth-child(1)').css({'margin-left':'18%'});
-        $('.bootstrap-duallistbox-container .buttons button:nth-child(2)').css({'margin-left':'18%'});
-    }
-    if(window.innerWidth < 480){
-        $('.bootstrap-duallistbox-container .buttons button:nth-child(1)').css({'margin-left':'5%', 'width':'40%'});
-        $('.bootstrap-duallistbox-container .buttons button:nth-child(2)').css({'margin-left':'5%', 'width':'40%'});
-    }
-    //$('.box2 .info-container').append('<input class="filter form-control" type="text" placeholder="Filter">');
-/*
-    $('.box2 .info-container input').change(function(){
-        $('.box1 input').val($(this).val());
-        console.log('On deonne un valeur');
-    });*/
 });
 
 function confirmPassword(cle){

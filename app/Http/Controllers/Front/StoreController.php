@@ -118,7 +118,7 @@ class StoreController extends Controller
 					]);
 					$user->stripe_id = $stripe_user['id'];
 					$user->save();
-				}
+				} 
 
 				\Event::fire(new UserRegistered($user));
 				Auth::login($user);
@@ -169,7 +169,7 @@ class StoreController extends Controller
 			'longitude' => 'required',
 			'main_phone' => 'required',
 			'main_email' => 'required',
-			'g-recaptcha-response'=>'required|recaptcha'
+			/*'g-recaptcha-response'=>'required|recaptcha'*/
 /*			'last_name' => 'required',
 			'first_name' => 'required',
 			'position' => 'required',
@@ -201,7 +201,8 @@ class StoreController extends Controller
 			$store = $this->store_repository->update($id, $all_input);
 			flash()->success(config('message.store.update-success'));
 		}
-		return Redirect('fr/store/'.$id_store.'/edit');
+		/*dd($store);*/
+		return Redirect('fr/store/'.$store->store_id.'/edit');
 	}
 
    public function getCoordinates(Request $request)

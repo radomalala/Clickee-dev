@@ -72,7 +72,7 @@
     </section>
 @stop
 
-@section('additional-scripts')
+@section('additional-script')
     {!! Html::script('backend/plugins/datatables/jquery.dataTables.min.js') !!}
     {!! Html::script('backend/plugins/datatables/dataTables.bootstrap.min.js') !!}
 @stop
@@ -81,8 +81,6 @@
     <script>
         if (jQuery('table.table').length > 0) {
             jQuery('table.table').DataTable({
-                "processing": true,
-                "serverSide": true,
                 "responsive": true,
                 "bPaginate": true,
                 "bLengthChange": true,

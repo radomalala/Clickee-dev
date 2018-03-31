@@ -79,7 +79,7 @@
     </section>
 
 @endsection
-@section('additional-scripts')
+@section('additional-script')
     {!! Html::script('backend/plugins/datatables/jquery.dataTables.min.js') !!}
     {!! Html::script('backend/plugins/datatables/dataTables.bootstrap.min.js') !!}
 @stop

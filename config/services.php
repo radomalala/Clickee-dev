@@ -52,8 +52,8 @@ return [
     ],
 	'stripe' => [
 	    'model' => App\User::class,
-		'secret' => 'sk_test_UZ3ohJqXDAyI6bsyl627dJOJ',
-		'publishable_key'=>'pk_test_rdJFSe25nYPpahU8w0xXJ5cn'
+		'secret' => 'sk_test_5CbhD8NXUtPa5JJS82pOuSRe',
+		'publishable_key'=>'pk_test_6cdssMcfB8ANMpuYrunjIdda'
 	],
 	'mailchimp' => [
 		'MAILCHIMP_API_KEY' => env('MAILCHIMP_API_KEY'),

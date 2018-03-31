@@ -53,7 +53,12 @@
 {!! Html::script('backend/js/functions.js') !!}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
-
+<script type="text/javascript">
+    Stripe.setPublishableKey('{!! config('services.stripe.publishable_key') !!}');
+    var base_url = {!! "'".URL::to('/')."/'" !!};
+    var base_secure_url = {!! "'".URL::to('/', [], true)."/'" !!};
+    var language_code = "{!! LaravelLocalization::getCurrentLocale() !!}";
+</script>
 @yield('additional-script')
 @yield('footer-scripts')
 </body>
