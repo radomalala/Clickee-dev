@@ -182,7 +182,7 @@
                     </div> -->
                     <!-- start other information -->
                     <div class="other-information row">
-                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-7 col-xs-12">
 
                             <!-- a href="javascript://" class="btn btn-block btn-primary btn-lg" id="buy_locally">{!! trans('product.buy_it_locally_txt')." (".getPrice($product->best_price).")" !!}</a -->
 
@@ -209,7 +209,7 @@
 
                             <div class="row add-cart mb-20" id="add-cart">
                                 <!-- <p> {!! trans('product.product_available_with_selected_area') !!}</p> -->
-                                <button type="submit" class="btn btn-clickee-info col-md-8 col-xs-8 col-sm-8 col-lg-8" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
+                                <button type="submit" class="btn btn-clickee-info col-lg-8 col-md-8 col-sm-8 col-xs-8" id="add-to-cart">{!! trans("product.add_to_cart")!!}</button>
 
                                 <?php 
                                         $wishlist_del = (in_array($product->product_id,all_product_id_wishlist())) ? 'coeur_gm' : '';
@@ -220,7 +220,7 @@
                                         }                                            
                                     ?>    
 
-                                <a id="add-to-wishlist" class="wishlist_prd_index col-md-3 col-xs-3 col-sm-3 col-lg-3 wG{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"></a>
+                                <a id="add-to-wishlist" class="wishlist_prd_index col-lg-3 col-md-3 col-sm-3 col-xs-3 wG{!! $product->product_id !!} {!! $wishlist_del !!}" onclick="addwishlist('{!! $product->product_id !!}','{!! $idU !!}');"></a>
                             </div>
                             <div class="share-social-network">
                                 <a class="share share-to-facebook"></a>
@@ -327,7 +327,7 @@
         <div class="product-overview-tab">
             <div class="container" >
                 <div class="row" >
-                    <div class="col-xs-12" id="tab-container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tab-container">
                         <div class="product-tab-inner">
                             <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                                 <li class="active"><a href="#description"
